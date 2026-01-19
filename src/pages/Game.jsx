@@ -1,0 +1,411 @@
+import { useState, useEffect } from "react";
+import story from "../story.json";
+import background from "../assets/background.png";
+import characterImg from "../assets/person_prin.png";
+
+// Character Imports
+import char1 from "../assets/char1.png";
+import char2 from "../assets/char2.png";
+import char3 from "../assets/char3.png";
+
+const CHARACTERS = [
+  { id: 1, src: char1, name: "Adventurer" },
+  { id: 2, src: char2, name: "Mage" },
+  { id: 3, src: char3, name: "Hacker" },
+  { id: 4, src: char1, name: "Explorer" },
+  { id: 5, src: char2, name: "Sorcerer" },
+  { id: 6, src: char3, name: "Cyber" },
+];
+
+const PROLOGUE_TEXTS = [
+  "Bienvenue dans une nouvelle ère...",
+  "Le monde tel que vous le connaissez a changé.",
+  "Vos choix détermineront le destin de l'humanité.",
+  "Préparez-vous..."
+];
+
+const backgrounds = {
+  "/assets/background.png": background
+};
+
+export default function Game({ language, userData, setUserData }) {
+  // Game Phases: 'loading', 'selection', 'pseudo', 'context', 'playing'
+  const [phase, setPhase] = useState("loading");
+  const [tempChar, setTempChar] = useState(null);
+  const [tempPseudo, setTempPseudo] = useState("");
+
+  // Context Phase State
+  const [contextIndex, setContextIndex] = useState(0);
+
+  // Visual Novel State
+  const [scene, setScene] = useState(() => {
+    return localStorage.getItem("vn_scene") || "start";
+  });
+  const [showChoices, setShowChoices] = useState(false);
+  const [dialogueIndex, setDialogueIndex] = useState(0);
+
+  useEffect(() => {
+    // If user already has data, check if we should skip to playing
+    if (userData && userData.character && userData.pseudo) {
+      setPhase("playing");
+    } else {
+      setPhase("selection");
+    }
+  }, []);
+
+  // Persist Scene
+  useEffect(() => {
+    localStorage.setItem("vn_scene", scene);
+  }, [scene]);
+
+  // Reset dialogue index when scene changes
+  useEffect(() => {
+    setDialogueIndex(0);
+    setShowChoices(false);
+  }, [scene]);
+
+  // --- Handlers ---
+
+  const handleCharSelect = (charId) => {
+    setTempChar(charId);
+    setPhase("pseudo");
+  };
+
+  const handlePseudoSubmit = (e) => {
+    e.preventDefault();
+    if (tempPseudo.trim() !== "") {
+      setUserData({
+        character: tempChar,
+        pseudo: tempPseudo
+      });
+      // Go to Context instead of playing immediately
+      setPhase("context");
+    }
+  };
+
+  const handleContextClick = () => {
+    if (contextIndex < PROLOGUE_TEXTS.length - 1) {
+      setContextIndex(contextIndex + 1);
+    } else {
+      setPhase("playing");
+    }
+  };
+
+  // VN Logic
+  const current = story[scene];
+
+  const handleSceneChange = (nextScene) => {
+    setScene(nextScene);
+    // showChoices and dialogueIndex handled by useEffect
+  };
+
+  const handleDialogueAdvance = () => {
+    if (Array.isArray(current.text)) {
+      if (dialogueIndex < current.text.length - 1) {
+        setDialogueIndex(dialogueIndex + 1);
+      } else {
+        if (current.choices) setShowChoices(true);
+      }
+    } else {
+      if (current.choices) setShowChoices(true);
+    }
+  };
+
+  const getCurrentText = () => {
+    if (Array.isArray(current.text)) {
+      return current.text[dialogueIndex];
+    }
+    return current.text;
+  };
+
+  // --- Renders ---
+
+  if (phase === "selection") {
+    return (
+      <div style={styles.container}>
+        <h1 style={styles.header}>{language === 'fr' ? "CHOISISSEZ VOTRE PERSONNAGE" : "CHOOSE YOUR CHARACTER"}</h1>
+        <div style={styles.grid}>
+          {CHARACTERS.map((char) => (
+            <div
+              key={char.id}
+              onClick={() => handleCharSelect(char.id)}
+              style={styles.card}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = "scale(1.05)";
+                e.currentTarget.style.borderColor = "#fdb933";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = "scale(1)";
+                e.currentTarget.style.borderColor = "transparent";
+              }}
+            >
+              <img src={char.src} alt={char.name} style={styles.charImg} />
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
+  if (phase === "pseudo") {
+    return (
+      <div style={styles.container}>
+        <h1 style={styles.header}>{language === 'fr' ? "ENTREZ VOTRE PSEUDO" : "ENTER YOUR NICKNAME"}</h1>
+        <form onSubmit={handlePseudoSubmit} style={styles.form}>
+          <input
+            type="text"
+            value={tempPseudo}
+            onChange={(e) => setTempPseudo(e.target.value)}
+            style={styles.input}
+            placeholder="..."
+            autoFocus
+          />
+          <button type="submit" style={styles.button}>
+            {language === 'fr' ? "CONFIRMER" : "CONFIRM"}
+          </button>
+        </form>
+      </div>
+    );
+  }
+
+  // CONTEXT PHASE
+  if (phase === "context") {
+    return (
+      <div style={styles.contextContainer} onClick={handleContextClick}>
+        <p style={styles.contextText}>
+          {PROLOGUE_TEXTS[contextIndex]}
+        </p>
+        <div style={styles.clickHint}>
+          {language === 'fr' ? "(Cliquez pour continuer...)" : "(Click to continue...)"}
+        </div>
+      </div>
+    );
+  }
+
+  // PLAYING PHASE (Existing Game Logic)
+  return (
+    <div style={{
+      flex: 1,
+      backgroundImage: `url(${backgrounds[current.background] || current.background})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      display: "flex",
+      flexDirection: "column",
+      justifyContent: "flex-end",
+      padding: "0",
+      color: "white",
+      position: "relative",
+      width: "100%",
+      height: "100vh"
+    }}>
+
+      {/* Interaction Layer */}
+      <div style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        zIndex: 10,
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "flex-end",
+        alignItems: "center",
+        pointerEvents: "none"
+      }}>
+
+        {showChoices && current.choices ? (
+          <div style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "15px",
+            width: "50%",
+            maxWidth: "600px",
+            pointerEvents: "auto",
+            marginBottom: "15vh"
+          }}>
+            {current.choices.map((choice, i) => (
+              <button
+                key={i}
+                onClick={() => handleSceneChange(choice.next)}
+                style={{
+                  background: "rgba(255, 255, 255, 0.95)",
+                  border: "none",
+                  borderRadius: "50px",
+                  padding: "20px 30px",
+                  fontSize: "1.1rem",
+                  color: "#333",
+                  fontWeight: "600",
+                  fontStyle: "italic",
+                  cursor: "pointer",
+                  boxShadow: "0 4px 15px rgba(0,0,0,0.2)",
+                  transition: "transform 0.2s, background 0.2s",
+                  width: "100%",
+                  textAlign: "center"
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = "scale(1.05)";
+                  e.currentTarget.style.background = "rgba(255, 255, 255, 1)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = "scale(1)";
+                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.95)";
+                }}
+              >
+                {choice.label}
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div
+            onClick={handleDialogueAdvance}
+            style={{
+              pointerEvents: "auto",
+              cursor: (current.choices || (Array.isArray(current.text) && dialogueIndex < current.text.length - 1)) ? "pointer" : "default",
+              background: "rgba(255, 255, 255, 0.95)",
+              color: "#333",
+              padding: "30px 100px",
+              borderRadius: "40px",
+              margin: "0 auto",
+              marginBottom: "5vh",
+              width: "80%",
+              maxWidth: "800px",
+              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+              fontFamily: "'Segoe UI', sans-serif",
+              fontSize: "1.2rem",
+              lineHeight: "1.6",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              minHeight: "120px"
+            }}
+          >
+            <p style={{ margin: 0, fontStyle: "italic", fontWeight: 500, paddingLeft: "70px" }}>
+              {getCurrentText()}
+            </p>
+            {/* Show hint if there are more lines OR if there are choices next */}
+            {((current.choices) || (Array.isArray(current.text) && dialogueIndex < current.text.length - 1)) && (
+              <div style={{
+                fontSize: "0.8rem",
+                color: "#666",
+                marginTop: "10px",
+                textAlign: "right",
+                alignSelf: "flex-end"
+              }}>
+                (Cliquez pour continuer)
+              </div>
+            )}
+          </div>
+        )}
+      </div>
+
+      {current.character && (
+        <img
+          src={characterImg}
+          alt="Character"
+          style={{
+            position: "absolute",
+            bottom: "0",
+            left: "60px",
+            height: "45vh",
+            zIndex: 20,
+            objectFit: "contain",
+            filter: "drop-shadow(2px 2px 5px rgba(0,0,0,0.4))",
+            pointerEvents: "none"
+          }}
+        />
+      )}
+    </div>
+  );
+}
+
+const styles = {
+  container: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#2c3e50",
+    color: "white",
+    height: "100vh",
+    width: "100%"
+  },
+  contextContainer: {
+    flex: 1,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "black",
+    color: "white",
+    height: "100vh",
+    width: "100%",
+    cursor: "pointer",
+    padding: "2rem",
+    textAlign: "center"
+  },
+  contextText: {
+    fontSize: "2rem",
+    maxWidth: "800px",
+    lineHeight: "1.5",
+    animation: "fadeIn 1s ease-in"
+  },
+  clickHint: {
+    position: "absolute",
+    bottom: "50px",
+    fontSize: "1rem",
+    opacity: 0.7
+  },
+  header: {
+    marginBottom: "40px",
+    color: "#fdb933",
+    fontSize: "2rem"
+  },
+  grid: {
+    display: "grid",
+    gridTemplateColumns: "repeat(3, 1fr)",
+    gap: "20px",
+    maxWidth: "800px"
+  },
+  card: {
+    width: "150px",
+    height: "150px",
+    borderRadius: "15px",
+    overflow: "hidden",
+    cursor: "pointer",
+    border: "3px solid transparent",
+    transition: "all 0.3s ease",
+    background: "#34495e"
+  },
+  charImg: {
+    width: "100%",
+    height: "100%",
+    objectFit: "contain"
+  },
+  form: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px"
+  },
+  input: {
+    padding: "15px",
+    fontSize: "1.2rem",
+    borderRadius: "10px",
+    border: "2px solid #fdb933",
+    background: "rgba(255,255,255,0.1)",
+    color: "white",
+    textAlign: "center",
+    width: "300px"
+  },
+  button: {
+    padding: "15px 30px",
+    fontSize: "1rem",
+    fontWeight: "bold",
+    backgroundColor: "#fdb933",
+    color: "#2c3e50",
+    border: "none",
+    borderRadius: "25px",
+    cursor: "pointer"
+  }
+};

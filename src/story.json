@@ -1,0 +1,30 @@
+{
+  "start": {
+    "background": "/assets/background.png",
+    "character": "/assets/person_prin.png",
+    "text": [
+      "Bienvenue dans ton visual novel !",
+      "Ceci est un exemple de texte sur plusieurs lignes.",
+      "Cliquez encore pour voir les choix..."
+    ],
+    "choices": [
+      { "label": "Dire bonjour", "next": "bonjour" },
+      { "label": "Rester silencieux", "next": "silence" }
+    ]
+  },
+  "bonjour": {
+    "background": "/assets/background.png",
+    "character": "/assets/person_prin.png",
+    "text": "Tu dis bonjour ! La personne sourit.",
+    "choices": [
+      { "label": "Dis au revoir", "next": "au_revoir" },
+      { "label": "parler avec lui", "next": "parler" }
+    ]
+  },
+  "silence": {
+    "background": "/assets/background.png",
+    "character": "/assets/person_prin.png",
+    "text": "Tu restes silencieux… malaise."
+  }
+}
+
