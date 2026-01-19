@@ -41,7 +41,7 @@ const Home = ({ language, onNavigate }) => {
           onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
           onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
         >
-          {btnPlayText}
+          {btnPlay}
         </button>
 
         <button

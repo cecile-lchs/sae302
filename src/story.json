@@ -4,7 +4,20 @@
     "character": "/assets/person_prin.png",
     "text": [
       "Bienvenue dans ton visual novel !",
-      "Ceci est un exemple de texte sur plusieurs lignes.",
+      {
+        "text": "Salut ! Je suis un autre personnage.",
+        "character": "/assets/char1.png",
+        "sound": "/assets/click.mp3"
+      },
+      {
+        "text": "Et moi encore un autre ! (Changement de décor)",
+        "character": "/assets/char2.png",
+        "background": "/assets/parametres.png"
+      },
+      {
+        "text": "On revient au personnage principal et au décor de base.",
+        "background": "/assets/background.png"
+      },
       "Cliquez encore pour voir les choix..."
     ],
     "choices": [
@@ -21,10 +34,16 @@
       { "label": "parler avec lui", "next": "parler" }
     ]
   },
+
+
   "silence": {
     "background": "/assets/background.png",
     "character": "/assets/person_prin.png",
-    "text": "Tu restes silencieux… malaise."
+    "text":[ 
+      "Tu restes silencieux… \n malaise.",
+      "Je suis la" 
+  ]
+
   }
 }
 

@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import story from "../story.json";
 import background from "../assets/background.png";
+import parametresBg from "../assets/parametres.png";
 import characterImg from "../assets/person_prin.png";
 
 // Character Imports
@@ -25,7 +26,8 @@ const PROLOGUE_TEXTS = [
 ];
 
 const backgrounds = {
-  "/assets/background.png": background
+  "/assets/background.png": background,
+  "/assets/parametres.png": parametresBg
 };
 
 export default function Game({ language, userData, setUserData }) {
@@ -118,6 +120,50 @@ export default function Game({ language, userData, setUserData }) {
     return current.text;
   };
 
+  // --- Sound Logic ---
+  useEffect(() => {
+    // Determine which sound to play
+    let soundPath = null;
+
+    // Check if current dialogue line has specific sound
+    if (Array.isArray(current.text)) {
+      const line = current.text[dialogueIndex];
+      if (typeof line === 'object' && line.sound) {
+        soundPath = line.sound;
+      }
+    }
+
+    // Fallback to scene sound if not playing a line-specific sound?
+    // Or maybe scene sound plays once on entry?
+    // For now, let's prioritize line sound, then scene sound if just entering scene
+    if (!soundPath && dialogueIndex === 0 && current.sound) {
+      soundPath = current.sound;
+    }
+
+    if (soundPath) {
+      // Since we don't have imports yet, we assume soundPath works as a direct src
+      // In a real app with bundlers, you might need a map like for images
+      // For now, logging and attempting to play
+      console.log("Attempting to play sound:", soundPath);
+
+      const audio = new Audio(soundPath);
+      audio.play().catch(e => console.warn("Audio play failed (user interaction needed?):", e));
+    }
+  }, [scene, dialogueIndex, current]);
+
+  const getCurrentBackground = () => {
+    let bgPath = current.background;
+
+    if (Array.isArray(current.text)) {
+      const line = current.text[dialogueIndex];
+      if (typeof line === 'object' && line.background) {
+        bgPath = line.background;
+      }
+    }
+
+    return backgrounds[bgPath] || bgPath;
+  };
+
   // --- Renders ---
 
   if (phase === "selection") {
@@ -186,7 +232,7 @@ export default function Game({ language, userData, setUserData }) {
   return (
     <div style={{
       flex: 1,
-      backgroundImage: `url(${backgrounds[current.background] || current.background})`,
+      backgroundImage: `url(${getCurrentBackground()})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       display: "flex",
@@ -281,7 +327,10 @@ export default function Game({ language, userData, setUserData }) {
             }}
           >
             <p style={{ margin: 0, fontStyle: "italic", fontWeight: 500, paddingLeft: "70px" }}>
-              {getCurrentText()}
+              {(() => {
+                const txt = getCurrentText();
+                return typeof txt === 'object' ? txt.text : txt;
+              })()}
             </p>
             {/* Show hint if there are more lines OR if there are choices next */}
             {((current.choices) || (Array.isArray(current.text) && dialogueIndex < current.text.length - 1)) && (
@@ -301,7 +350,30 @@ export default function Game({ language, userData, setUserData }) {
 
       {current.character && (
         <img
-          src={characterImg}
+          src={(() => {
+            // 1. Check if the current dialogue line has a specific character override
+            let lineChar = null;
+            if (Array.isArray(current.text)) {
+              const line = current.text[dialogueIndex];
+              if (typeof line === 'object' && line.character) {
+                lineChar = line.character;
+              }
+            }
+
+            // 2. Identify the path to use validation: line override > node default
+            const charPath = lineChar || current.character;
+
+            // 3. Map string paths to imported assets
+            // Note: Ensure all employed paths in story.json match these keys or strict logic
+            const charMap = {
+              "/assets/person_prin.png": characterImg,
+              "/assets/char1.png": char1,
+              "/assets/char2.png": char2,
+              "/assets/char3.png": char3,
+            };
+
+            return charMap[charPath] || charPath;
+          })()}
           alt="Character"
           style={{
             position: "absolute",
