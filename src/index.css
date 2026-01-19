@@ -70,3 +70,19 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.name-tag {
+  position: absolute;
+  top: -25px;
+  left: 40px;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 25px;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  border: 1px solid #ddd;
+  z-index: 100;
+  font-style: italic;
+}

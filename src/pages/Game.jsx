@@ -40,11 +40,56 @@ export default function Game({ language, userData, setUserData }) {
   const [contextIndex, setContextIndex] = useState(0);
 
   // Visual Novel State
-  const [scene, setScene] = useState(() => {
-    return localStorage.getItem("vn_scene") || "start";
-  });
+  const [scene, setScene] = useState("start");
   const [showChoices, setShowChoices] = useState(false);
   const [dialogueIndex, setDialogueIndex] = useState(0);
+
+  // Helper to flatten the dialogue logic
+  // Returns an array of step objects: { text, background, character, speaker, sound }
+  const getFlattenedDialogue = (sceneData) => {
+    if (!sceneData) return [];
+
+    const rootProps = {
+      background: sceneData.background,
+      character: sceneData.character,
+      speaker: sceneData.speaker,
+      sound: sceneData.sound
+    };
+
+    let flatList = [];
+
+    // Helper to process an item (string or object) and add to list
+    const processItem = (item, parentProps) => {
+      if (typeof item === 'string') {
+        flatList.push({ ...parentProps, text: item });
+      } else if (typeof item === 'object') {
+        const itemProps = { ...parentProps, ...item };
+        if (Array.isArray(item.text)) {
+          // Recursively process nested arrays
+          item.text.forEach(subText => processItem(subText, itemProps));
+        } else {
+          // It's a single item object
+          flatList.push(itemProps);
+        }
+      }
+    };
+
+    // Main entry
+    if (Array.isArray(sceneData.text)) {
+      sceneData.text.forEach(item => processItem(item, rootProps));
+    } else {
+      processItem(sceneData.text, rootProps);
+    }
+
+    return flatList;
+  };
+
+  // Memoize the queue for the current scene
+  // We strictly re-calc ONLY when logical scene changes
+  const dialogueQueue = getFlattenedDialogue(story[scene]);
+
+  // Safe access to current step
+  const activeStep = dialogueQueue[dialogueIndex] || {};
 
   useEffect(() => {
     // If user already has data, check if we should skip to playing
@@ -54,11 +99,6 @@ export default function Game({ language, userData, setUserData }) {
       setPhase("selection");
     }
   }, []);
-
-  // Persist Scene
-  useEffect(() => {
-    localStorage.setItem("vn_scene", scene);
-  }, [scene]);
 
   // Reset dialogue index when scene changes
   useEffect(() => {
@@ -94,7 +134,8 @@ export default function Game({ language, userData, setUserData }) {
   };
 
   // VN Logic
-  const current = story[scene];
+  // const current = story[scene]; // REPLACED by dialogueQueue and activeStep usage
+  const rawSceneData = story[scene];
 
   const handleSceneChange = (nextScene) => {
     setScene(nextScene);
@@ -102,66 +143,40 @@ export default function Game({ language, userData, setUserData }) {
   };
 
   const handleDialogueAdvance = () => {
-    if (Array.isArray(current.text)) {
-      if (dialogueIndex < current.text.length - 1) {
-        setDialogueIndex(dialogueIndex + 1);
-      } else {
-        if (current.choices) setShowChoices(true);
-      }
+    // Check key length of our flattened queue
+    if (dialogueIndex < dialogueQueue.length - 1) {
+      setDialogueIndex(dialogueIndex + 1);
     } else {
-      if (current.choices) setShowChoices(true);
+      // End of text, check for choices
+      if (rawSceneData.choices) setShowChoices(true);
     }
   };
 
   const getCurrentText = () => {
-    if (Array.isArray(current.text)) {
-      return current.text[dialogueIndex];
-    }
-    return current.text;
+    return activeStep.text || "";
   };
 
   // --- Sound Logic ---
   useEffect(() => {
-    // Determine which sound to play
-    let soundPath = null;
-
-    // Check if current dialogue line has specific sound
-    if (Array.isArray(current.text)) {
-      const line = current.text[dialogueIndex];
-      if (typeof line === 'object' && line.sound) {
-        soundPath = line.sound;
-      }
-    }
-
-    // Fallback to scene sound if not playing a line-specific sound?
-    // Or maybe scene sound plays once on entry?
-    // For now, let's prioritize line sound, then scene sound if just entering scene
-    if (!soundPath && dialogueIndex === 0 && current.sound) {
-      soundPath = current.sound;
-    }
+    // Sound Logic - simplified
+    const soundPath = activeStep.sound; // The flattened step has the sound prop resolved
 
     if (soundPath) {
-      // Since we don't have imports yet, we assume soundPath works as a direct src
-      // In a real app with bundlers, you might need a map like for images
-      // For now, logging and attempting to play
       console.log("Attempting to play sound:", soundPath);
-
       const audio = new Audio(soundPath);
-      audio.play().catch(e => console.warn("Audio play failed (user interaction needed?):", e));
+      audio.play().catch(e => console.warn("Audio play failed/need interaction:", e));
     }
-  }, [scene, dialogueIndex, current]);
+  }, [scene, dialogueIndex]);
 
   const getCurrentBackground = () => {
-    let bgPath = current.background;
-
-    if (Array.isArray(current.text)) {
-      const line = current.text[dialogueIndex];
-      if (typeof line === 'object' && line.background) {
-        bgPath = line.background;
-      }
-    }
-
+    const bgPath = activeStep.background || rawSceneData.background; // Fallback to raw if logic fails? 
+    // actually getFlattenedDialogue merges root props, so activeStep.background should handle it.
+    // unless activeStep is empty?
     return backgrounds[bgPath] || bgPath;
+  };
+
+  const getCurrentSpeaker = () => {
+    return activeStep.speaker;
   };
 
   // --- Renders ---
@@ -260,7 +275,24 @@ export default function Game({ language, userData, setUserData }) {
         pointerEvents: "none"
       }}>
 
-        {showChoices && current.choices ? (
+        {/* PLAYER CHARACTER (Bottom Left) */}
+        {userData && userData.character && (
+          <img
+            src={CHARACTERS.find(c => c.id === userData.character)?.src}
+            alt="Player"
+            style={{
+              position: "absolute",
+              bottom: "0",
+              left: "20px",
+              height: "50vh", // Specific height for player
+              zIndex: 30, // Higher than NPC? Or same?
+              objectFit: "contain",
+              filter: "drop-shadow(2px 2px 5px rgba(0,0,0,0.4))",
+            }}
+          />
+        )}
+
+        {showChoices && rawSceneData.choices ? (
           <div style={{
             display: "flex",
             flexDirection: "column",
@@ -270,7 +302,7 @@ export default function Game({ language, userData, setUserData }) {
             pointerEvents: "auto",
             marginBottom: "15vh"
           }}>
-            {current.choices.map((choice, i) => (
+            {rawSceneData.choices.map((choice, i) => (
               <button
                 key={i}
                 onClick={() => handleSceneChange(choice.next)}
@@ -306,8 +338,9 @@ export default function Game({ language, userData, setUserData }) {
           <div
             onClick={handleDialogueAdvance}
             style={{
+              position: "relative", // Needed for Name Tag absolute positioning
               pointerEvents: "auto",
-              cursor: (current.choices || (Array.isArray(current.text) && dialogueIndex < current.text.length - 1)) ? "pointer" : "default",
+              cursor: (rawSceneData.choices || (dialogueIndex < dialogueQueue.length - 1)) ? "pointer" : "default",
               background: "rgba(255, 255, 255, 0.95)",
               color: "#333",
               padding: "30px 100px",
@@ -326,42 +359,43 @@ export default function Game({ language, userData, setUserData }) {
               minHeight: "120px"
             }}
           >
+            {/* NAME TAG */}
+            {(() => {
+              const speaker = getCurrentSpeaker();
+              // Condition: Show if speaker exists AND is not "Moi" (or matches player pseudo if we wanted, but logic is 'Moi' for now)
+              if (speaker && speaker !== "Moi") {
+                return <div className="name-tag">{speaker}</div>;
+              }
+              return null;
+            })()}
+
             <p style={{ margin: 0, fontStyle: "italic", fontWeight: 500, paddingLeft: "70px" }}>
               {(() => {
                 const txt = getCurrentText();
                 return typeof txt === 'object' ? txt.text : txt;
               })()}
             </p>
-            {/* Show hint if there are more lines OR if there are choices next */}
-            {((current.choices) || (Array.isArray(current.text) && dialogueIndex < current.text.length - 1)) && (
-              <div style={{
-                fontSize: "0.8rem",
-                color: "#666",
-                marginTop: "10px",
-                textAlign: "right",
-                alignSelf: "flex-end"
-              }}>
-                (Cliquez pour continuer)
-              </div>
-            )}
+            {/* Show hint if there are more lines OR if there are choices next */}{
+              ((rawSceneData.choices) || (dialogueIndex < dialogueQueue.length - 1)) && (
+                <div style={{
+                  fontSize: "0.8rem",
+                  color: "#666",
+                  marginTop: "10px",
+                  textAlign: "right",
+                  alignSelf: "flex-end"
+                }}>
+                  (Cliquez pour continuer)
+                </div>
+              )}
           </div>
         )}
       </div>
 
-      {current.character && (
+      {activeStep.character && activeStep.character !== 'none' && (
         <img
           src={(() => {
-            // 1. Check if the current dialogue line has a specific character override
-            let lineChar = null;
-            if (Array.isArray(current.text)) {
-              const line = current.text[dialogueIndex];
-              if (typeof line === 'object' && line.character) {
-                lineChar = line.character;
-              }
-            }
-
-            // 2. Identify the path to use validation: line override > node default
-            const charPath = lineChar || current.character;
+            // simplified lookup
+            const charPath = activeStep.character;
 
             // 3. Map string paths to imported assets
             // Note: Ensure all employed paths in story.json match these keys or strict logic
@@ -377,10 +411,10 @@ export default function Game({ language, userData, setUserData }) {
           alt="Character"
           style={{
             position: "absolute",
-            bottom: "0",
-            left: "60px",
-            height: "45vh",
-            zIndex: 20,
+            bottom: "160px",
+            right: "25%", // Moved to Right
+            height: "60vh", // Larger for NPC
+            zIndex: 0,
             objectFit: "contain",
             filter: "drop-shadow(2px 2px 5px rgba(0,0,0,0.4))",
             pointerEvents: "none"

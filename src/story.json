@@ -1,22 +1,38 @@
 {
+
+
+
+
   "start": {
     "background": "/assets/background.png",
-    "character": "/assets/person_prin.png",
+    "character": "none", 
+    "speaker": "Directeur",
+    "sound": "/assets/click.mp3",
     "text": [
-      "Bienvenue dans ton visual novel !",
       {
-        "text": "Salut ! Je suis un autre personnage.",
-        "character": "/assets/char1.png",
-        "sound": "/assets/click.mp3"
+        "text": [
+          "Bonjour à toutes et à tous. Je vous souhaite la bienvenue à la faculté d'Orléans,",
+          " un lieu où l’imagination rencontre la logique et où chaque bug est une opportunité de créativité. ",
+          "Cette année, comme chaque année, nous allons explorer des territoires fascinants",
+          ": de l’intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore un peu mystérieuses.",
+          "Mais au-delà des langages et des frameworks, ce que nous cherchons à vous transmettre, c’est l’esprit critique, la curiosité et la capacité à résoudre des problèmes… même ceux qui semblent impossibles au premier abord. Merci."
+        ]
+      },
+      {
+        "text": "coucou",
+        "character" : "assets/char1.png"
       },
       {
         "text": "Et moi encore un autre ! (Changement de décor)",
         "character": "/assets/char2.png",
+        "speaker": "Professeur",
         "background": "/assets/parametres.png"
       },
       {
         "text": "On revient au personnage principal et au décor de base.",
-        "background": "/assets/background.png"
+        "character": "none",
+        "background": "/assets/background.png",
+        "speaker": "Moi"
       },
       "Cliquez encore pour voir les choix..."
     ],
@@ -25,9 +41,13 @@
       { "label": "Rester silencieux", "next": "silence" }
     ]
   },
+
+
+
   "bonjour": {
     "background": "/assets/background.png",
     "character": "/assets/person_prin.png",
+    "speaker": "Moi",
     "text": "Tu dis bonjour ! La personne sourit.",
     "choices": [
       { "label": "Dis au revoir", "next": "au_revoir" },
@@ -39,8 +59,9 @@
   "silence": {
     "background": "/assets/background.png",
     "character": "/assets/person_prin.png",
+    "speaker": "Moi",
     "text":[ 
-      "Tu restes silencieux… \n malaise.",
+      "Tu restes silencieux… malaise.",
       "Je suis la" 
   ]
 
