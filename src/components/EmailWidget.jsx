@@ -9,7 +9,7 @@ const EmailWidget = ({ hasNotification, onClick }) => {
       style={{
         position: 'absolute',
         top: '20px',
-        right: '25px',
+        right: '90px',
         zIndex: 100, // Highest z-index to be on top of everything
         cursor: 'pointer',
         transition: 'transform 0.2s ease',

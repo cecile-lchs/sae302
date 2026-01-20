@@ -20,6 +20,10 @@ export default function App() {
     character: null
   });
 
+  // Chapter State
+  const [unlockedChapters, setUnlockedChapters] = useState(["chapter1"]);
+  const [activeChapter, setActiveChapter] = useState("chapter1");
+
   // Temporary testing function: toggle notification when clicking the email icon
   const handleEmailClick = () => {
     setHasNotification(!hasNotification);
@@ -42,9 +46,32 @@ export default function App() {
       case "docs":
         return <Documentation language={language} onNavigate={handleNavigate} />;
       case "game":
-        return <Game language={language} userData={userData} setUserData={setUserData} />;
+        return (
+          <Game
+            language={language}
+            userData={userData}
+            setUserData={setUserData}
+            activeChapter={activeChapter}
+            onChapterComplete={(nextChapterId) => {
+              if (nextChapterId && !unlockedChapters.includes(nextChapterId)) {
+                setUnlockedChapters([...unlockedChapters, nextChapterId]);
+              }
+              // Optional: Navigate to Cinema or show success
+              setCurrentPage('cinema');
+            }}
+          />
+        );
       case "cinema":
-        return <Cinema language={language} />;
+        return (
+          <Cinema
+            language={language}
+            unlockedChapters={unlockedChapters}
+            onSelectChapter={(chapterId) => {
+              setActiveChapter(chapterId);
+              setCurrentPage('game');
+            }}
+          />
+        );
       default:
         return <Home language={language} onNavigate={handleNavigate} />;
     }

@@ -1,10 +1,10 @@
 import React from 'react';
 import './Sidebar.css';
-import homeIcon from '../assets/page-daccueil.png';
-import documentIcon from '../assets/documentation.png';
-import playIcon from '../assets/jouer.png';
-import parametreIcon from '../assets/parametres.png';
-import clapIcon from '../assets/clap.png';
+import homeIcon from '../assets/page-daccueil.svg';
+import documentIcon from '../assets/documentation.svg';
+import playIcon from '../assets/jouer.svg';
+import parametreIcon from '../assets/parametres.svg';
+import clapIcon from '../assets/clap.svg';
 
 
 const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {

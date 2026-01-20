@@ -5,9 +5,13 @@ import parametresBg from "../assets/parametres.png";
 import characterImg from "../assets/person_prin.png";
 
 // Character Imports
-import char1 from "../assets/char1.png";
-import char2 from "../assets/char2.png";
-import char3 from "../assets/char3.png";
+import char1 from "../assets/perso1/neutre_bouche_fermee.png";
+import char2 from "../assets/perso2/neutre_bouche_fermee.png";
+import char3 from "../assets/perso3/neutre_bouche_fermee.png";
+import fullscreenIcon from "../assets/fullscreen.svg";
+import fullscreenExitIcon from "../assets/close_fullscreen.svg";
+
+const characterAssets = import.meta.glob('../assets/perso*/*.png', { eager: true });
 
 const CHARACTERS = [
   { id: 1, src: char1, name: "Adventurer" },
@@ -30,7 +34,7 @@ const backgrounds = {
   "/assets/parametres.png": parametresBg
 };
 
-export default function Game({ language, userData, setUserData }) {
+export default function Game({ language, userData, setUserData, activeChapter = "chapter1", onChapterComplete }) {
   // Game Phases: 'loading', 'selection', 'pseudo', 'context', 'playing'
   const [phase, setPhase] = useState("loading");
   const [tempChar, setTempChar] = useState(null);
@@ -44,6 +48,29 @@ export default function Game({ language, userData, setUserData }) {
   const [showChoices, setShowChoices] = useState(false);
   const [dialogueIndex, setDialogueIndex] = useState(0);
 
+  // Fullscreen Logic
+  const [isFullscreen, setIsFullscreen] = useState(false);
+
+  const toggleFullScreen = () => {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen().catch((err) => {
+        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+      });
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  };
+
+  useEffect(() => {
+    const handleFullScreenChange = () => {
+      setIsFullscreen(!!document.fullscreenElement);
+    };
+    document.addEventListener('fullscreenchange', handleFullScreenChange);
+    return () => document.removeEventListener('fullscreenchange', handleFullScreenChange);
+  }, []);
+
   // Helper to flatten the dialogue logic
   // Returns an array of step objects: { text, background, character, speaker, sound }
   const getFlattenedDialogue = (sceneData) => {
@@ -53,7 +80,8 @@ export default function Game({ language, userData, setUserData }) {
       background: sceneData.background,
       character: sceneData.character,
       speaker: sceneData.speaker,
-      sound: sceneData.sound
+      sound: sceneData.sound,
+      playerExpression: sceneData.playerExpression
     };
 
     let flatList = [];
@@ -84,9 +112,13 @@ export default function Game({ language, userData, setUserData }) {
     return flatList;
   };
 
+  // Resolve the current chapter data
+  const currentChapterData = story[activeChapter] || story["chapter1"];
+  const currentScenes = currentChapterData.scenes || {};
+
   // Memoize the queue for the current scene
-  // We strictly re-calc ONLY when logical scene changes
-  const dialogueQueue = getFlattenedDialogue(story[scene]);
+  // We strictly re-calc ONLY when logical scene changes or chapter changes
+  const dialogueQueue = getFlattenedDialogue(currentScenes[scene]);
 
   // Safe access to current step
   const activeStep = dialogueQueue[dialogueIndex] || {};
@@ -135,7 +167,7 @@ export default function Game({ language, userData, setUserData }) {
 
   // VN Logic
   // const current = story[scene]; // REPLACED by dialogueQueue and activeStep usage
-  const rawSceneData = story[scene];
+  const rawSceneData = currentScenes[scene] || {};
 
   const handleSceneChange = (nextScene) => {
     setScene(nextScene);
@@ -148,7 +180,15 @@ export default function Game({ language, userData, setUserData }) {
       setDialogueIndex(dialogueIndex + 1);
     } else {
       // End of text, check for choices
-      if (rawSceneData.choices) setShowChoices(true);
+      if (rawSceneData.choices) {
+        setShowChoices(true);
+      } else {
+        // End of chapter/scene (no next choices matches 'none')
+        console.log("End of chapter reached");
+        if (onChapterComplete) {
+          onChapterComplete();
+        }
+      }
     }
   };
 
@@ -275,19 +315,63 @@ export default function Game({ language, userData, setUserData }) {
         pointerEvents: "none"
       }}>
 
+        {/* Fullscreen Toggle Button */}
+        <div
+          onClick={toggleFullScreen}
+          style={{
+            position: "absolute",
+            top: "20px",
+            right: "20px",
+            zIndex: 100,
+            cursor: "pointer",
+            pointerEvents: "auto",
+            backgroundColor: "rgba(255, 255, 255, 0.2)",
+            borderRadius: "50%",
+            padding: "10px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            transition: "background-color 0.3s ease"
+          }}
+          title={isFullscreen ? "Quitter le plein écran" : "Plein écran"}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)"}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)"}
+        >
+          <img
+            src={isFullscreen ? fullscreenExitIcon : fullscreenIcon}
+            alt="Fullscreen Toggle"
+            style={{ width: "30px", height: "30px", display: "block" }}
+          />
+        </div>
+
         {/* PLAYER CHARACTER (Bottom Left) */}
         {userData && userData.character && (
           <img
-            src={CHARACTERS.find(c => c.id === userData.character)?.src}
+            src={(() => {
+              const charId = userData.character;
+              // Default to Neutre1 if no expression specified
+              const expression = activeStep.playerExpression || "Neutre1";
+
+              // Try to find the dynamic asset: ../assets/perso{id}/{expression}.png
+              const dynamicKey = `../assets/perso${charId}/${expression}.png`;
+
+              if (characterAssets[dynamicKey]) {
+                return characterAssets[dynamicKey].default;
+              }
+
+              // Fallback to the static CHARACTERS array if dynamic asset not found
+              return CHARACTERS.find(c => c.id === charId)?.src;
+            })()}
             alt="Player"
             style={{
               position: "absolute",
               bottom: "0",
               left: "20px",
               height: "50vh", // Specific height for player
-              zIndex: 30, // Higher than NPC? Or same?
+              zIndex: 30,
               objectFit: "contain",
               filter: "drop-shadow(2px 2px 5px rgba(0,0,0,0.4))",
+              transition: "src 0.2s ease"
             }}
           />
         )}
@@ -432,8 +516,8 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#2c3e50",
-    color: "white",
+    backgroundColor: "#fffcf4",
+    color: "#2c3e50",
     height: "100vh",
     width: "100%"
   },
@@ -499,8 +583,8 @@ const styles = {
     fontSize: "1.2rem",
     borderRadius: "10px",
     border: "2px solid #fdb933",
-    background: "rgba(255,255,255,0.1)",
-    color: "white",
+    background: "rgba(0,0,0,0.05)",
+    color: "#2c3e50",
     textAlign: "center",
     width: "300px"
   },

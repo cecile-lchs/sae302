@@ -16,7 +16,7 @@ const Home = ({ language, onNavigate }) => {
       justifyContent: 'center',
       alignItems: 'center',
       height: '100vh',
-      backgroundColor: '#2c3e50',
+      backgroundColor: '#fffcf4',
       color: 'white',
       flexDirection: 'column',
       gap: '2rem'

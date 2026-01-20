@@ -1,70 +1,449 @@
 {
-
-
-
-
-  "start": {
-    "background": "/assets/background.png",
-    "character": "none", 
-    "speaker": "Directeur",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
+  "chapter1": {
+    "title": "Chapitre 1 : Première Année",
+    "scenes": {
+      "start": {
+        "background": "/assets/background.png",
+        "character": "none", 
+        "speaker": "Directeur",
+        "sound": "/assets/click.mp3",
         "text": [
-          "Bonjour à toutes et à tous. Je vous souhaite la bienvenue à la faculté d'Orléans,",
-          " un lieu où l’imagination rencontre la logique et où chaque bug est une opportunité de créativité. ",
-          "Cette année, comme chaque année, nous allons explorer des territoires fascinants",
-          ": de l’intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore un peu mystérieuses.",
-          "Mais au-delà des langages et des frameworks, ce que nous cherchons à vous transmettre, c’est l’esprit critique, la curiosité et la capacité à résoudre des problèmes… même ceux qui semblent impossibles au premier abord. Merci."
+          {
+            "text": [
+              "Bonjour à toutes et à tous. Je vous souhaite la bienvenue à la faculté d'Orléans,",
+              " un lieu où l’imagination rencontre la logique et où chaque bug est une opportunité de créativité. ",
+              "Cette année, comme chaque année, nous allons explorer des territoires fascinants",
+              ": de l’intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore un peu mystérieuses.",
+              "Mais au-delà des langages et des frameworks, ce que nous cherchons à vous transmettre, c’est l’esprit critique, la curiosité et la capacité à résoudre des problèmes… même ceux qui semblent impossibles au premier abord. Merci."
+            ]
+          },
+          {
+            "text": [
+              "Je suis votre professeur de calcul formel, Antoine Robert. Avant, j’étais comme vous",
+               "un élève de cette fac, assis sur les mêmes sièges que vous. En écoutant les cours et en travaillant bien",
+               "j’ai réussi à obtenir ce poste de professeur. Je suis maintenant enseignant chercheur, ce qui consiste à -..."
+            ],
+            "character": "/assets/char3.png",
+            "background": "/assets/classe.png",
+            "speaker": "Professeur",
+            "sound": "/assets/click.mp3",
+            "playerExpression": "Neutre1"
+          },
+          {
+            "text": "Le protagoniste a le choix entre continuer d’écouter le professeur ou entamer une discussion avec son voisin de table.",
+            "background": "/assets/background.png",
+            "sound": "/assets/click.mp3",
+            "speaker": "Moi"
+          }
+        ],
+        "choices": [
+          { "label": "Continuer d'écouter", "next": "ecouter" },
+          { "label": "Discuter", "next": "discuter" }
         ]
       },
-      {
-        "text": "coucou",
-        "character" : "assets/char1.png"
-      },
-      {
-        "text": "Et moi encore un autre ! (Changement de décor)",
-        "character": "/assets/char2.png",
-        "speaker": "Professeur",
-        "background": "/assets/parametres.png"
-      },
-      {
-        "text": "On revient au personnage principal et au décor de base.",
-        "character": "none",
+
+      "ecouter": {
         "background": "/assets/background.png",
-        "speaker": "Moi"
+        "character": "/assets/char3.png",
+        "speaker": "Professeur",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Je continue d’écouter mon professeur."
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  "...enseigner dans des établissements scolaires tout en faisant des recherches le reste du temps. Maintenant que vous connaissez mon parcours,",
+                  " je vais aborder le contenu de mon cours. Nous aurons un partiel à la fin du semestre et une dizaine de cours de TD et TP pour s’y préparer. ",
+                  " Chaque cours sera divisé en deux parties -..."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "Le protagoniste a à nouveau le choix entre continuer d’écouter son professeur ou d’entamer une discussion avec son voisin de table."
+          }
+        ],
+        "choices": [
+          { "label": "Continuer d'écouter", "next": "ecouter2" },
+          { "label": "Discuter", "next": "discuter2" }
+        ]
       },
-      "Cliquez encore pour voir les choix..."
-    ],
-    "choices": [
-      { "label": "Dire bonjour", "next": "bonjour" },
-      { "label": "Rester silencieux", "next": "silence" }
-    ]
+
+
+      "discuter": {
+        "background": "/assets/background.png",
+        "character": "/assets/voisin.png",
+        "speaker": "Voisin",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Le protagoniste entame une discussion avec son voisin de table."
+          },
+          {
+            "text": "Je devrais essayer de me faire des amis. Je me tourne vers mon voisin de table.",
+             "playerExpression": "Joie",
+             "speaker": "moi"
+          },
+          {
+            "text": "cece Salut !",
+            "character": "/assets/char1.png",
+            "speaker": "Voisin"
+          },
+          {
+            "text": " Salut ! Tu viens d’Orléans ?"
+          },
+          {
+            "speaker": "Moi",
+            "text": " Pas du tout, je viens d’Alsace ! Et toi ?"
+          },
+
+          {
+            "text": "Je viens d’Orléans. Je m’appelle Martin, et toi ?"
+          },
+          {
+            "text": " [Je passe le reste des cours à discuter avec Martin et la fin et la journée arrive avant même que je m’en rende compte.]"
+          },
+          {
+            "speaker": "Messagerie - Nouveau message martin",
+            "text": "Salut ! Est-ce que tu veux venir à la soirée d’intégration ?"
+          },
+          {
+            "speaker": "Moi",
+            "text": "Le protagoniste a le choix entre accompagner Martin à la soirée d’intégration de la fac ou rester chez lui."
+          }
+        ],
+        "choices": [
+          { "label": "Aller à la soirée", "next": "aller" },
+          { "label": "Décliner l'invitation", "next": "decliner" }
+        ]
+      },
+
+
+      "ecouter2": {
+        "background": "/assets/background.png",
+        "character": "/assets/prof.png",
+        "speaker": "Professeur",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Le protagoniste continue d’écouter son professeur."
+          },
+          {
+            "text": "Professeur Dans l’une, nous aborderons le cours de façon théorique et illustrerons avec des exemples. J’attends de vous que vous preniez des notes et que vous posiez des questions dès que vous ne comprenez pas quelque chose. Dans la seconde, je -..."
+          },
+          {
+            "text": "Protagoniste Intérieurement J’écoute M. Robert en silence. Le reste de la journée passe lentement et j’attends avec impatience de pouvoir rentrer chez moi."
+          },
+          {
+            "text": "Notification L’offre d’emploi “Emploi étudiant” publiée par Leclerc Orléans correspond à votre profil."
+          }
+        ],
+        "choices": [
+          { "label": "Postuler", "next": "postuler" },
+          { "label": "Ignorer", "next": "ignorer" }
+        ]
+      },
+
+     "discuter2": {
+        "background": "/assets/background.png",
+        "character": "/assets/voisin.png",
+        "speaker": "Voisin",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Le protagoniste entame une discussion avec son voisin de table."
+          },
+          {
+            "text": "Protagoniste IntérieurementJe devrais essayer de me faire des amis. Je me tourne vers mon voisin de table."
+          },
+          {
+            "text": "Protagoniste Salut !"
+          },
+          {
+            "text": "Voisin de table Salut ! Tu viens d’Orléans ?"
+          },
+          {
+            "text": "Protagoniste Pas du tout, je viens d’Alsace ! Et toi ?"
+          },
+
+          {
+            "text": "Voisin de table Je viens d’Orléans. Je m’appelle Martin, et toi ?"
+          },
+          {
+            "text": "Protagoniste Intérieurement Je passe le reste des cours à discuter avec Martin et la fin et la journée arrive avant même que je m’en rende compte."
+          },
+          {
+            "text": "Martin Par messagesSalut ! Est-ce que you want to come to the integration party ?"
+          },
+          {
+            "text": "Le protagoniste a le choix entre accompagner Martin à la soirée d’intégration de la fac ou rester chez lui."
+          }
+        ],
+        "choices": [
+          { "label": "Aller à la soirée", "next": "aller" },
+          { "label": "Décliner l'invitation", "next": "decliner" }
+        ]
+      },
+
+       "postuler": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "speaker": "Directeur",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Le protagoniste postule à l’offre d’emploi."
+          },
+          {
+            "text": "Notification Votre candidature a été retenue."
+          },
+          {
+            "text": "Directeur (sur l’estrade) Je vous remercie toutes et tous pour cette année. J’ai pu y rencontrer des élèves très doués et débordats d’idées. Je compte sur vous pour continuer sur cette voie l’an prochain. Les relevés de notes sont disponibles sur le site de la fac."
+          },
+          {
+            "text": "Relevé de notes Vous n’avez pas reçu l’aval du conseil de département pour intégrer la deuxième année."
+          },
+          {
+            "text": "Protagoniste ..."
+          },
+          {
+            "text": "Protagoniste Intérieurement J’attends la fin de la journée la boule au ventre. Je mets plusieurs heures avant de réaliser pleinement ce qu’il se passe."
+          },
+          {
+            "text": [
+              "Protagoniste Intérieurement Je m’y attendais un peu… mais ça fait quand même mal. J’aurais voulu faire mieux. J’aurais voulu prouver que je pouvais gérer les cours et le boulot en même temps, mais j’y suis pas arrivé.",
+              " Tous ces soirs à rentrer tard du travail… À m’endormir sur mes cours… À repousser mes révisions parce que j’étais trop épuisé pour réfléchir. C’était trop pour moi, je pensais que je pourrais tenir, que ça irait, que c’était normal d’être fatigué, mais j’avais l’esprit ailleurs en cours, je n’arrivais plus à suivre.",
+              "J’ai l’impression d’avoir fait tout ce que je pouvais, et pourtant ça n’a pas suffi."
+            ]
+          },
+          {
+            "text": "Notification de messagerie"
+          },
+          {
+            "text": "Maman Coucou Loulou ! Tu as reçu ton relevé de notes ? Tu passes en deuxième année ?",
+            "background": "/assets/background.png",
+            "character": "/assets/maman.png",
+            "speaker": "Maman",
+            "sound": "/assets/click.mp3"
+          },
+          {
+            "text": "L’utilisateur a le choix entre avouer son échec à sa mère ou lui cacher."
+          }
+        ],
+        "choices": [
+          { "label": "Dire la vérité", "next": "verite" },
+          { "label": "Mentir", "next": "mentir" }
+        ]
+      },
+
+      "aller": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Le protagoniste va à la soirée."
+          },
+          {
+            "background": "/assets/background.png",
+            "background": "/assets/background.png"
+          },
+          {
+            "speaker": "Directeur",
+            "text": " Je vous remercie toutes et tous pour cette année. J’ai pu y rencontrer des élèves très doués et débordats d’idées. Je compte sur vous pour continuer sur cette voie l’an prochain. Les relevés de notes sont disponibles sur le site de la fac."
+          },
+          {
+            "background":"/assets/background.png",
+            "speaker": "Interface intranet",
+            "text": "Vous n’avez pas reçu l’aval du conseil de département pour intégrer la deuxième année."
+          },
+          {
+            "text": "..."
+          },
+          {
+            "text": "[J’attends la fin de la journée la boule au ventre. Je mets plusieurs heures avant de réaliser pleinement ce qu’il se passe.]",
+            "playerExpression":"Tristesse"
+          },
+          {
+            "text": [
+              "[ ... J’arrive pas à y croire. Refusé. Comment c’est possible ? Au lycée, j’étais bon. Vraiment bon. Je comprenais vite, j’avais de bonnes notes sans trop forcer… On me disait même que j’étais fait pour aller loin. Je suis pas stupide.]",
+              "[ Alors… qu’est-ce qui a dérapé ? …Non. Je le sais très bien. Les sorties. Les soirées. Les retards.Les cours que j’écoutais à moitié… ou pas du tout. Les devoirs bâclés à la dernière minute, quand je les faisais .]",
+              "[ Je croyais que ça passerait quand même. Que j’étais suffisamment bon pour m’en sortir sans bosser. Comme au lycée, quoi. Je me suis saboté tout seul]"
+            ],
+            "playerExpression":"Pleure"
+          },
+          {
+            "playerExpression":"Tristesse",
+            "text": "Notification de messagerie"
+          },
+          {
+            "playerExpression":"Tristesse", 
+            "text": "Coucou Loulou ! Tu as reçu ton relevé de notes ? Tu passes en deuxième année ?",
+            "background": "/assets/background.png",
+            "character": "/assets/maman.png",
+            "speaker": "Maman",
+            "sound": "/assets/click.mp3"
+          },
+          {
+            "text": "L’utilisateur a le choix entre avouer son échec à sa mère ou lui cacher."
+          }
+        ],
+        "choices": [
+          { "label": "Dire la vérité", "next": "verite2" },
+          { "label": "Mentir", "next": "mentir2" }
+        ]
+      },
+
+      "decliner": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "speaker": "Directeur",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "Le protagoniste décline l’invitation de Martin."
+          },
+          {
+            "text": "Notification L’offre d’emploi “Emploi étudiant” publiée par Leclerc Orléans correspond à votre profil."
+          },
+          {
+            "text": "Le protagoniste a le choix entre postuler à l’offre d’emploi ou l’ignorer."
+          }
+        ],
+        "choices": [
+          { "label": "Postuler", "next": "postuler2" },
+          { "label": "Ignorer", "next": "ignorer2" }
+        ]
+      },
+
+      "verite2": {
+        "background": "/assets/background.png",
+        "character": "/assets/person_prin.png",
+        "speaker": "Maman",
+        "sound": "/assets/click.mp3",
+
+        "text": [
+          {
+            "speaker":"Moi",
+            "text": "Le protagoniste se confie à ses parents."
+          },
+          {
+            "speaker":"Moi",
+            "text": "[ Il faut que j’assume.]"
+          },
+          {
+            "text": "Coucou Loulou ! Ca va ? Tu as l’air… inquiet."
+          },
+          {
+            "speaker":"moi",
+            "text": "Oui… j’ai reçu la réponse pour mon passage en deuxième année."
+          },
+          {
+            "speaker":"Papa",
+            "text": "Papa (soupire) Enfin. Alors ? C’est bon ?"
+          },
+          {
+            "speaker":"moi",
+            "text": "... Non. J’ai été refusé"
+          }
+        ]
+      },
+
+      "postuler2": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "speaker": "Directeur",
+        "sound": "/assets/click.mp3",
+
+        "text": [
+          {
+            "text": "Le protagoniste postule à l’offre d’emploi."
+          },
+          {
+            "text": "Notification Votre candidature a été retenue."
+          },
+          {
+            "text": "Directeur (sur l’estrade) Je vous remercie toutes et tous pour cette année. J’ai pu y rencontrer des élèves très doués et débordats d’idées. Je compte sur vous pour continuer sur cette voie l’an prochain. Les relevés de notes sont disponibles sur le site de la fac."
+          },
+          {
+            "text": "Martin Je suis au dessus de la moyenne de la classe dans toutes les matières, héhé !"
+          },
+          {
+            "text": "Protagoniste Je te dépasse surement, haha !"
+          },
+          {
+            "text": "Relevé de notes Vous n’avez pas reçu l’aval du conseil de département pour intégrer la deuxième année."
+          },{
+            "text": "Martin Haha ! Alors comme ça, t’es meilleur que moi ?"
+          },
+          {
+            "text": "Protagoniste ..."
+          },
+          {
+            "text": "Protagoniste Intérieurement J’attends la fin de la journée la boule au ventre sous les moqueries de mes amis. Je mets plusieurs heures avant de réaliser pleinement ce qu’il se passe."
+          },
+          {
+            "text": [
+              "Protagoniste IntérieurementRefusé… Je pensais que ça me ferait un choc… mais en fait, c’est surtout un drôle de mélange. De la surprise… et en même temps, pas vraiment.",
+              "Au lycée, j’étais bon. Vraiment bon. Tout le monde me disait que j’avais du potentiel, que j’étais “fait pour les études”. Pourtant j’ai complètement décroché. La vérité… c’est que ça ne m’intéressait pas. J’ai essayé de m’en convaincre, j’ai suivi le parcours que tout le monde attendait de moi mais chaque cours me paraissait… vide.",
+              " Loin de ce que je voulais vraiment faire. Et forcément, à force de ne pas être motivé… j’ai rien donné. Je faisais le minimum, parfois rien du tout. Comment j’aurais pu réussir comme ça ? Ce n’était pas pour moi. Et je m’en rends compte seulement maintenant, trop tard."
+            ]
+          },
+          {
+            "text": "Notification de messagerie"
+          },
+          {
+            "text": "Maman Coucou Loulou ! Tu as reçu ton relevé de notes ? Tu passes en deuxième année ?",
+            "background": "/assets/background.png",
+            "character": "/assets/maman.png",
+            "speaker": "Maman",
+            "sound": "/assets/click.mp3"
+          },
+          {
+            "text": "L’utilisateur a le choix entre avouer son échec à sa mère ou lui cacher."
+          }
+        ],
+         "choices": [
+          { "label": "Dire la vérité", "next": "verite3" },
+          { "label": "Mentir", "next": "mentir3" }
+        ]
+      },
+
+      "bonjour": {
+        "background": "/assets/background.png",
+        "character": "/assets/person_prin.png",
+        "speaker": "Moi",
+        "text": "Tu dis bonjour ! La personne sourit.",
+        "choices": [
+          { "label": "Dis au revoir", "next": "au_revoir" },
+          { "label": "parler avec lui", "next": "parler" }
+        ]
+      },
+
+      "silence": {
+        "background": "/assets/background.png",
+        "character": "/assets/person_prin.png",
+        "speaker": "Moi",
+        "text":[ 
+          "Tu restes silencieux… malaise.",
+          "JC'est loi" 
+        ]
+      }
+    }
   },
 
-
-
-  "bonjour": {
-    "background": "/assets/background.png",
-    "character": "/assets/person_prin.png",
-    "speaker": "Moi",
-    "text": "Tu dis bonjour ! La personne sourit.",
-    "choices": [
-      { "label": "Dis au revoir", "next": "au_revoir" },
-      { "label": "parler avec lui", "next": "parler" }
-    ]
+  "chapter2": {
+    "title": "Chapitre 2 : Deuxième Année",
+    "description": "À venir...",
+    "scenes": {}
   },
 
-
-  "silence": {
-    "background": "/assets/background.png",
-    "character": "/assets/person_prin.png",
-    "speaker": "Moi",
-    "text":[ 
-      "Tu restes silencieux… malaise.",
-      "JC'est loi" 
-  ]
-
+    "chapter3": {
+    "title": "Chapitre 3 : Troisième Année",
+    "description": "À venir...",
+    "scenes": {}
   }
 }
-
