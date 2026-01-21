@@ -1,9 +1,10 @@
 {
   "chapter1": {
     "title": "Chapitre 1 : Première Année",
-    "scenes": {
+    "description": "Les doutes s’installent. Un choix s’impose.",
+     "scenes": {
       "start": {
-        "background": "/assets/background.png",
+        "background": "/assets/amphi.png",
         "character": "none", 
         "speaker": "Directeur",
         "sound": "/assets/click.mp3",
@@ -20,8 +21,8 @@
           {
             "text": [
               "Je suis votre professeur de calcul formel, Antoine Robert. Avant, j’étais comme vous",
-               "un élève de cette fac, assis sur les mêmes sièges que vous. En écoutant les cours et en travaillant bien",
-               "j’ai réussi à obtenir ce poste de professeur. Je suis maintenant enseignant chercheur, ce qui consiste à -..."
+              " un élève de cette fac, assis sur les mêmes sièges que vous. En écoutant les cours et en travaillant bien",
+              " j’ai réussi à obtenir ce poste de professeur. Je suis maintenant enseignant chercheur, ce qui consiste à -..."
             ],
             "character": "/assets/char3.png",
             "background": "/assets/classe.png",
@@ -31,7 +32,7 @@
           },
           {
             "text": "Le protagoniste a le choix entre continuer d’écouter le professeur ou entamer une discussion avec son voisin de table.",
-            "background": "/assets/background.png",
+            "background": "/assets/classe.png",
             "sound": "/assets/click.mp3",
             "speaker": "Moi"
           }
@@ -43,7 +44,7 @@
       },
 
       "ecouter": {
-        "background": "/assets/background.png",
+        "background": "/assets/classe.png",
         "character": "/assets/char3.png",
         "speaker": "Professeur",
         "sound": "/assets/click.mp3",
@@ -107,6 +108,7 @@
             "text": " [Je passe le reste des cours à discuter avec Martin et la fin et la journée arrive avant même que je m’en rende compte.]"
           },
           {
+            "background": "/assets/chambre.png",
             "speaker": "Messagerie - Nouveau message martin",
             "text": "Salut ! Est-ce que tu veux venir à la soirée d’intégration ?"
           },
@@ -148,7 +150,7 @@
       },
 
      "discuter2": {
-        "background": "/assets/background.png",
+        "background": "/assets/classe.png",
         "character": "/assets/voisin.png",
         "speaker": "Voisin",
         "sound": "/assets/click.mp3",
@@ -157,25 +159,31 @@
             "text": "Le protagoniste entame une discussion avec son voisin de table."
           },
           {
-            "text": "Protagoniste IntérieurementJe devrais essayer de me faire des amis. Je me tourne vers mon voisin de table."
+            "text": "[Je devrais essayer de me faire des amis. Je me tourne vers mon voisin de table.]"
           },
           {
-            "text": "Protagoniste Salut !"
+            "speaker":"Moi",
+            "text": "Salut !"
           },
           {
-            "text": "Voisin de table Salut ! Tu viens d’Orléans ?"
+            "speaker":"Voisin",
+            "text": "Salut ! Tu viens d’Orléans ?",
+            "character": "/assets/voisin.png"
           },
           {
-            "text": "Protagoniste Pas du tout, je viens d’Alsace ! Et toi ?"
+            "speaker":"Moi",
+            "text": "Pas du tout, je viens d’Alsace ! Et toi ?"
           },
 
           {
-            "text": "Voisin de table Je viens d’Orléans. Je m’appelle Martin, et toi ?"
+            "speaker":"Voisin",
+            "text": "Je viens d’Orléans. Je m’appelle Martin, et toi ?"
           },
           {
-            "text": "Protagoniste Intérieurement Je passe le reste des cours à discuter avec Martin et la fin et la journée arrive avant même que je m’en rende compte."
+            "text": "[Je passe le reste des cours à discuter avec Martin et la fin et la journée arrive avant même que je m’en rende compte.]"
           },
           {
+            "background": "/assets/chambre.png",
             "text": "Martin Par messagesSalut ! Est-ce que you want to come to the integration party ?"
           },
           {
@@ -189,8 +197,7 @@
       },
 
        "postuler": {
-        "background": "/assets/background.png",
-        "character": "/assets/directeur.png",
+        "background": "/assets/chambre.png",
         "speaker": "Directeur",
         "sound": "/assets/click.mp3",
         "text": [
@@ -240,7 +247,7 @@
       },
 
       "aller": {
-        "background": "/assets/background.png",
+        "background": "/assets/bar.png",
         "character": "/assets/directeur.png",
         "sound": "/assets/click.mp3",
         "text": [
@@ -248,10 +255,10 @@
             "text": "Le protagoniste va à la soirée."
           },
           {
-            "background": "/assets/background.png",
             "background": "/assets/background.png"
           },
           {
+            "background": "/assets/amphi.png",
             "speaker": "Directeur",
             "text": " Je vous remercie toutes et tous pour cette année. J’ai pu y rencontrer des élèves très doués et débordats d’idées. Je compte sur vous pour continuer sur cette voie l’an prochain. Les relevés de notes sont disponibles sur le site de la fac."
           },
@@ -437,13 +444,13 @@
 
   "chapter2": {
     "title": "Chapitre 2 : Deuxième Année",
-    "description": "À venir...",
+    "description": "Une nouvelle voie s’ouvre. À toi de la saisir.",
     "scenes": {}
   },
 
-    "chapter3": {
+  "chapter3": {
     "title": "Chapitre 3 : Troisième Année",
-    "description": "À venir...",
+    "description": "Ta voie se précise. Chaque étape te rapproche de ton avenir.",
     "scenes": {}
   }
 }

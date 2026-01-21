@@ -1,77 +1,153 @@
+import { useState } from 'react';
 import { translations } from '../translations';
-// import UiButton from '../components/UiButton'; // Removed as it does not exist
+import partieJouerBg from '../assets/PartieJouer.png';
+import partieDocumentBg from '../assets/PartieDocument.png';
+
+import './Home.css';
 
 const Home = ({ language, onNavigate }) => {
-  const t = translations[language].home;
+  const [hoverSide, setHoverSide] = useState(null); // 'left', 'right', or null
 
-  // Update translations for new buttons if not present, or hardcode/add to translation file later
-  // For now I'll use hardcoded or generic keys if available, or just add them dynamically
   const btnPlay = language === 'fr' ? "JOUER" : "PLAY";
   const btnDocs = language === 'fr' ? "DOCUMENTATION" : "DOCUMENTATION";
 
   return (
-    <div style={{
-      flex: 1,
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      height: '100vh',
-      backgroundColor: '#fffcf4',
-      color: 'white',
-      flexDirection: 'column',
-      gap: '2rem'
-    }}>
-      <h1 style={{ fontSize: '4rem', marginBottom: '20px', color: '#fdb933' }}>VISUAL NOVEL</h1>
+    <div className="home-container">
+      {/* Title Overlay */}
+      <div className="title-overlay">
+        <h1 className="home-title">A CONTRE COURANT</h1>
+      </div>
 
-      <div style={{ display: 'flex', gap: '2rem' }}>
-        <button
-          onClick={() => onNavigate('game')}
+      {/* Left Side - JOUER */}
+      <div
+        className={`split-section split-left`}
+        style={{
+          // We keep the flex logic for desktop/landscape interaction, CSS overrides it for portrait tablet
+          flex: hoverSide === 'left' ? 1.5 : (hoverSide === 'right' ? 0.8 : 1),
+          filter: hoverSide === 'right' ? 'brightness(0.6)' : 'brightness(1)'
+        }}
+        onClick={() => onNavigate('game')}
+        onMouseEnter={() => setHoverSide('left')}
+        onMouseLeave={() => setHoverSide(null)}
+      >
+        <div
+          className="section-overlay"
           style={{
-            padding: '1.5rem 3rem',
-            fontSize: '1.5rem',
-            fontWeight: 'bold',
-            backgroundColor: '#fdb933',
-            color: '#2c3e50',
-            border: 'none',
-            borderRadius: '50px',
-            cursor: 'pointer',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-            transition: 'transform 0.2s',
-          }}
-          onMouseEnter={(e) => e.target.style.transform = 'scale(1.05)'}
-          onMouseLeave={(e) => e.target.style.transform = 'scale(1)'}
-        >
-          {btnPlay}
-        </button>
-
-        <button
-          onClick={() => onNavigate('docs')}
-          style={{
-            padding: '1.5rem 3rem',
-            fontSize: '1.5rem',
-            fontWeight: 'bold',
-            backgroundColor: 'transparent',
-            color: '#fdb933',
-            border: '3px solid #fdb933',
-            borderRadius: '50px',
-            cursor: 'pointer',
-            boxShadow: '0 4px 15px rgba(0,0,0,0.3)',
-            transition: 'transform 0.2s, background 0.2s',
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.transform = 'scale(1.05)';
-            e.target.style.backgroundColor = 'rgba(253, 185, 51, 0.1)';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.transform = 'scale(1)';
-            e.target.style.backgroundColor = 'transparent';
+            backgroundColor: hoverSide === 'left' ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.4)',
+            transform: hoverSide === 'left' ? 'scale(1.1)' : 'scale(1)'
           }}
         >
-          {btnDocs}
-        </button>
+          <h2 className="button-text">{btnPlay}</h2>
+        </div>
+      </div>
+
+      {/* Separator Line */}
+      <div className="separator"></div>
+
+      {/* Right Side - DOCUMENTATION */}
+      <div
+        className={`split-section split-right`}
+        style={{
+          flex: hoverSide === 'right' ? 1.5 : (hoverSide === 'left' ? 0.8 : 1),
+          filter: hoverSide === 'left' ? 'brightness(0.6)' : 'brightness(1)'
+        }}
+        onClick={() => onNavigate('docs')}
+        onMouseEnter={() => setHoverSide('right')}
+        onMouseLeave={() => setHoverSide(null)}
+      >
+        <div
+          className="section-overlay"
+          style={{
+            backgroundColor: hoverSide === 'right' ? 'rgba(0,0,0,0.6)' : 'rgba(0,0,0,0.4)',
+            transform: hoverSide === 'right' ? 'scale(1.1)' : 'scale(1)'
+          }}
+        >
+          <h2 className="button-text">{btnDocs}</h2>
+        </div>
       </div>
     </div>
   );
 };
+
+const styles = {
+  container: {
+    display: 'flex',
+    width: '100%',
+    height: '100vh',
+    position: 'relative',
+    overflow: 'hidden'
+  },
+  titleOverlay: {
+    position: 'absolute',
+    top: '10%',
+    left: '0',
+    width: '100%',
+    textAlign: 'center',
+    zIndex: 10,
+    pointerEvents: 'none' // Allows clicking through the title
+  },
+  title: {
+    fontSize: '5rem',
+    color: '#fdb933',
+    textShadow: '2px 2px 4px rgba(0,0,0,0.5)',
+    margin: 0,
+    fontFamily: "'Segoe UI', sans-serif", // Or your custom font
+    letterSpacing: '5px'
+  },
+  splitLeft: {
+    flex: 1,
+    backgroundImage: `url(${partieJouerBg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    cursor: 'pointer',
+    position: 'relative',
+    transition: 'flex 0.3s ease'
+  },
+  splitRight: {
+    flex: 1,
+    backgroundImage: `url(${partieDocumentBg})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    cursor: 'pointer',
+    position: 'relative',
+    transition: 'flex 0.3s ease'
+  },
+  overlay: {
+    backgroundColor: 'rgba(0,0,0,0.4)', // Darker for Play side image
+    padding: '20px 40px',
+    borderRadius: '10px',
+    transition: 'background-color 0.3s ease'
+  },
+  overlayRight: {
+    backgroundColor: 'transparent',
+    padding: '20px 40px',
+    borderRadius: '10px',
+    border: '3px solid #fdb933'
+  },
+  buttonText: {
+    fontSize: '3rem',
+    color: 'white',
+    margin: 0,
+    textTransform: 'uppercase',
+    textShadow: '1px 1px 3px rgba(0,0,0,0.6)',
+    // Different color for docs text since background is light?
+    // Let's make right side text dark if bg is light, or add darker overlay
+  },
+  separator: {
+    width: '4px',
+    backgroundColor: '#fdb933',
+    height: '100%',
+    zIndex: 5
+  }
+};
+
+// Add hover effects via CSS-in-JS logic or just keep simple for now. 
+// For better hover handling in inline-styles, we'd need state, but for simplicity:
 
 export default Home;

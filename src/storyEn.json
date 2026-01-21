@@ -1,0 +1,446 @@
+{
+  "chapter1": {
+    "title": "Chapter 1: First Year",
+    "scenes": {
+      "start": {
+        "background": "/assets/background.png",
+        "character": "none", 
+        "speaker": "Director",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": [
+              "Hello everyone. I welcome you to the Faculty of Orléans,",
+              " a place where imagination meets logic and where every bug is an opportunity for creativity.",
+              "This year, as every year, we will explore fascinating territories",
+              ": from artificial intelligence to distributed systems, web development to quantum architectures still somewhat mysterious.",
+              "But beyond languages and frameworks, what we seek to transmit to you is critical thinking, curiosity, and the ability to solve problems... even those that seem impossible at first. Thank you."
+            ]
+          },
+          {
+            "text": [
+              "I am your formal calculus professor, Antoine Robert. Before, I was like you",
+              " a student of this faculty, sitting in the same seats as you. By listening to lectures and working well",
+              " I managed to get this professor position. I am now a teacher-researcher, which consists of -..."
+            ],
+            "character": "/assets/char3.png",
+            "background": "/assets/classe.png",
+            "speaker": "Professor",
+            "sound": "/assets/click.mp3",
+            "playerExpression": "Neutre1"
+          },
+          {
+            "text": "The protagonist has the choice between continuing to listen to the professor or starting a discussion with their neighbor.",
+            "background": "/assets/background.png",
+            "sound": "/assets/click.mp3",
+            "speaker": "Me"
+          }
+        ],
+        "choices": [
+          { "label": "Continue listening", "next": "ecouter" },
+          { "label": "Chat", "next": "discuter" }
+        ]
+      },
+
+      "ecouter": {
+        "background": "/assets/background.png",
+        "character": "/assets/char3.png",
+        "speaker": "Professor",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "I continue listening to my professor."
+          },
+          {
+            "text": [
+              {
+                "text": [
+                  "...teach in schools while doing research the rest of the time. Now that you know my background,",
+                  " I will address the content of my course. We will have a midterm at the end of the semester and a dozen tutorial and practical sessions to prepare for it.",
+                  " Each course will be divided into two parts -..."
+                ]
+              }
+            ]
+          },
+          {
+            "text": "The protagonist again has the choice between continuing to listen to their professor or starting a discussion with their neighbor."
+          }
+        ],
+        "choices": [
+          { "label": "Continue listening", "next": "ecouter2" },
+          { "label": "Chat", "next": "discuter2" }
+        ]
+      },
+
+      "discuter": {
+        "background": "/assets/background.png",
+        "character": "/assets/voisin.png",
+        "speaker": "Neighbor",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "The protagonist starts a discussion with their neighbor."
+          },
+          {
+            "text": "I should try to make friends. I turn to my neighbor.",
+             "playerExpression": "Joie",
+             "speaker": "Me"
+          },
+          {
+            "text": "Hi!",
+            "character": "/assets/char1.png",
+            "speaker": "Neighbor"
+          },
+          {
+            "text": " Hi! Are you from Orléans?"
+          },
+          {
+            "speaker": "Me",
+            "text": " Not at all, I come from Alsace! And you?"
+          },
+
+          {
+            "text": "I come from Orléans. Inside I'm Martin, and you?"
+          },
+          {
+            "text": " [I spend the rest of the classes chatting with Martin and the day ends before I even realize it.]"
+          },
+          {
+            "speaker": "Messages - New message form Martin",
+            "text": "Hi! Do you want to come to the integration party?"
+          },
+          {
+            "speaker": "Me",
+            "text": "The protagonist has the choice between accompanying Martin to the integration party or staying home."
+          }
+        ],
+        "choices": [
+          { "label": "Go to the party", "next": "aller" },
+          { "label": "Decline invitation", "next": "decliner" }
+        ]
+      },
+
+      "ecouter2": {
+        "background": "/assets/background.png",
+        "character": "/assets/prof.png",
+        "speaker": "Professor",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "The protagonist continues to listen to their professor."
+          },
+          {
+            "text": "Professor: In one, we will approach the course theoretically and illustrate with examples. I expect you to take notes and ask questions as soon as you don't understand something. In the second, I -..."
+          },
+          {
+            "text": "Protagonist (Internally): I listen to Mr. Robert in silence. The rest of the day passes slowly and I wait impatiently to be able to go home."
+          },
+          {
+            "text": "Notification: The job offer 'Student Job' published by Leclerc Orléans matches your profile."
+          }
+        ],
+        "choices": [
+          { "label": "Apply", "next": "postuler" },
+          { "label": "Ignore", "next": "ignorer" }
+        ]
+      },
+
+     "discuter2": {
+        "background": "/assets/background.png",
+        "character": "/assets/voisin.png",
+        "speaker": "Neighbor",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "The protagonist starts a discussion with their neighbor."
+          },
+          {
+            "text": "Protagonist (Internally): I should try to make friends. I turn to my neighbor."
+          },
+          {
+            "text": "Protagonist: Hi!"
+          },
+          {
+            "text": "Neighbor: Hi! Are you from Orléans?"
+          },
+          {
+            "text": "Protagonist: Not at all, I come from Alsace! And you?"
+          },
+
+          {
+            "text": "Neighbor: I come from Orléans. I'm Martin, and you?"
+          },
+          {
+            "text": "Protagonist (Internally): I spend the rest of the classes chatting with Martin and the day ends before I even realize it."
+          },
+          {
+            "text": "Martin (Messages): Hi! Do you want to come to the integration party?"
+          },
+          {
+            "text": "The protagonist has the choice between accompanying Martin to the integration party or staying home."
+          }
+        ],
+        "choices": [
+          { "label": "Go to the party", "next": "aller" },
+          { "label": "Decline invitation", "next": "decliner" }
+        ]
+      },
+
+       "postuler": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "speaker": "Director",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "The protagonist applies to the job offer."
+          },
+          {
+            "text": "Notification: Your application has been accepted."
+          },
+          {
+            "text": "Director (on stage): I thank you all for this year. I was able to meet very gifted students bursting with ideas. I count on you to continue on this path next year. Transcripts are available on the faculty website."
+          },
+          {
+            "text": "Transcript: You have not received the approval of the department council to enter the second year."
+          },
+          {
+            "text": "Protagonist: ..."
+          },
+          {
+            "text": "Protagonist (Internally): I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening."
+          },
+          {
+            "text": [
+              "Protagonist (Internally): I expected it a little... but it still hurts. I wanted to do better. I wanted to prove that I could handle classes and work at the same time, but I couldn't.",
+              " All those nights coming home late from work... Falling asleep on my lessons... Putting off my revisions because I was too exhausted to think. It was too much for me, I thought I could hold on, that it would be fine, that it was normal to be tired, but my mind was elsewhere in class, I couldn't follow anymore.",
+              "I feel like I did everything I could, and yet it wasn't enough."
+            ]
+          },
+          {
+            "text": "Message Notification"
+          },
+          {
+            "text": "Mom: Hi Sweetie! Did you get your transcript? Are you going to second year?",
+            "background": "/assets/background.png",
+            "character": "/assets/maman.png",
+            "speaker": "Mom",
+            "sound": "/assets/click.mp3"
+          },
+          {
+            "text": "The user has the choice between admitting their failure to their mother or hiding it."
+          }
+        ],
+        "choices": [
+          { "label": "Tell the truth", "next": "verite" },
+          { "label": "Lie", "next": "mentir" }
+        ]
+      },
+
+      "aller": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "The protagonist goes to the party."
+          },
+          {
+            "background": "/assets/background.png"
+          },
+          {
+            "speaker": "Director",
+            "text": " I thank you all for this year. I was able to meet very gifted students bursting with ideas. I count on you to continue on this path next year. Transcripts are available on the faculty website."
+          },
+          {
+            "background":"/assets/background.png",
+            "speaker": "Intranet Interface",
+            "text": "You have not received the approval of the department council to enter the second year."
+          },
+          {
+            "text": "..."
+          },
+          {
+            "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]",
+            "playerExpression":"Tristesse"
+          },
+          {
+            "text": [
+              "[ ... I can't believe it. Refused. How is it possible? In high school, I was good. Really good. I understood quickly, I got good grades without trying too hard... People even told me I was made to go far. I'm not stupid.]",
+              "[ So... what went wrong? ...No. I know very well. The outings. The parties. The lateness. The classes I half-listened to... or not at all. The homework botched at the last minute, when I did them.]",
+              "[ I thought it would pass anyway. That I was good enough to get by without working. Like in high school, basically. I sabotaged myself.]"
+            ],
+            "playerExpression":"Pleure"
+          },
+          {
+            "playerExpression":"Tristesse",
+            "text": "Message Notification"
+          },
+          {
+            "playerExpression":"Tristesse", 
+            "text": "Hi Sweetie! Did you get your transcript? Are you going to second year?",
+            "background": "/assets/background.png",
+            "character": "/assets/maman.png",
+            "speaker": "Mom",
+            "sound": "/assets/click.mp3"
+          },
+          {
+            "text": "The user has the choice between admitting their failure to their mother or hiding it."
+          }
+        ],
+        "choices": [
+          { "label": "Tell the truth", "next": "verite2" },
+          { "label": "Lie", "next": "mentir2" }
+        ]
+      },
+
+      "decliner": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "speaker": "Director",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "text": "The protagonist declines Martin's invitation."
+          },
+          {
+            "text": "Notification: The job offer 'Student Job' published by Leclerc Orléans matches your profile."
+          },
+          {
+            "text": "The protagonist has the choice between applying to the job offer or ignoring it."
+          }
+        ],
+        "choices": [
+          { "label": "Apply", "next": "postuler2" },
+          { "label": "Ignore", "next": "ignorer2" }
+        ]
+      },
+
+      "verite2": {
+        "background": "/assets/background.png",
+        "character": "/assets/person_prin.png",
+        "speaker": "Mom",
+        "sound": "/assets/click.mp3",
+
+        "text": [
+          {
+            "speaker":"Me",
+            "text": "The protagonist confides in their parents."
+          },
+          {
+            "speaker":"Me",
+            "text": "[ I have to face it.]"
+          },
+          {
+            "text": "Hi Sweetie! Are you okay? You look... worried."
+          },
+          {
+            "speaker":"Me",
+            "text": "Yes... I got the answer for my second year admission."
+          },
+          {
+            "speaker":"Dad",
+            "text": "Dad (sighs): Finally. So? Is it good?"
+          },
+          {
+            "speaker":"Me",
+            "text": "... No. I was refused."
+          }
+        ]
+      },
+
+      "postuler2": {
+        "background": "/assets/background.png",
+        "character": "/assets/directeur.png",
+        "speaker": "Director",
+        "sound": "/assets/click.mp3",
+
+        "text": [
+          {
+            "text": "The protagonist applies to the job offer."
+          },
+          {
+            "text": "Notification: Your application has been accepted."
+          },
+          {
+            "text": "Director (on stage): I thank you all for this year. I was able to meet very gifted students bursting with ideas. I count on you to continue on this path next year. Transcripts are available on the faculty website."
+          },
+          {
+            "text": "Martin: I am above the class average in all subjects, hehe!"
+          },
+          {
+            "text": "Protagonist: I probably beat you, haha!"
+          },
+          {
+            "text": "Transcript: You have not received the approval of the department council to enter the second year."
+          },{
+            "text": "Martin: Haha! So, you're better than me?"
+          },
+          {
+            "text": "Protagonist: ..."
+          },
+          {
+            "text": "Protagonist (Internally): I wait for the end of the day with a knot in my stomach under the mockery of my friends. It takes me several hours to fully realize what is happening."
+          },
+          {
+            "text": [
+              "Protagonist (Internally): Refused... I thought it would be a shock... but effectively, it's mostly a funny mix. Surprise... and at the same time, not really.",
+              "In high school, I was good. Really good. Everyone told me I had potential, that I was 'made for studies'. Yet I completely dropped out. The truth... is that it didn't interest me. I tried to convince myself, I followed the path everyone expected of me but every class seemed... empty.",
+              " Far from what I really wanted to do. And inevitably, by dint of not being motivated... I gave nothing. I did the minimum, sometimes nothing at all. How could I have succeeded like that? It wasn't for me. And I realize it only now, too late."
+            ]
+          },
+          {
+            "text": "Message Notification"
+          },
+          {
+            "text": "Mom: Hi Sweetie! Did you get your transcript? Are you going to second year?",
+            "background": "/assets/background.png",
+            "character": "/assets/maman.png",
+            "speaker": "Mom",
+            "sound": "/assets/click.mp3"
+          },
+          {
+            "text": "The user has the choice between admitting their failure to their mother or hiding it."
+          }
+        ],
+         "choices": [
+          { "label": "Tell the truth", "next": "verite3" },
+          { "label": "Lie", "next": "mentir3" }
+        ]
+      },
+
+      "bonjour": {
+        "background": "/assets/background.png",
+        "character": "/assets/person_prin.png",
+        "speaker": "Me",
+        "text": "You say hello! The person smiles.",
+        "choices": [
+          { "label": "Say goodbye", "next": "au_revoir" },
+          { "label": "Talk with him", "next": "parler" }
+        ]
+      },
+
+      "silence": {
+        "background": "/assets/background.png",
+        "character": "/assets/person_prin.png",
+        "speaker": "Me",
+        "text":[ 
+          "You stay silent... awkward.",
+          "It's the law" 
+        ]
+      }
+    }
+  },
+
+  "chapter2": {
+    "title": "Chapter 2: Second Year",
+    "description": "Coming soon...",
+    "scenes": {}
+  },
+
+  "chapter3": {
+    "title": "Chapter 3: Third Year",
+    "description": "Coming soon...",
+    "scenes": {}
+  }
+}

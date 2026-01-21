@@ -36,36 +36,34 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
         <div
           className={`nav-item ${activePage === 'home' ? 'active' : ''}`}
           onClick={() => onNavigate('home')}
-          title={t.home}
         >
           <img src={homeIcon} alt={t.home} className="icon" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+          <span className="nav-label">{t.home}</span>
         </div>
 
         <div
           className={`nav-item ${activePage === 'docs' ? 'active' : ''}`}
           onClick={() => onNavigate('docs')}
-          title={t.docs}
         >
           <img src={documentIcon} alt={t.docs} className="icon" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+          <span className="nav-label">{t.docs}</span>
         </div>
 
         {/* Updated "Play" Button - Central/Bulge */}
         <div
           className={`nav-item ${activePage === 'game' ? 'active' : ''}`}
           onClick={() => onNavigate('game')}
-          title={t.play}
         >
-
           <img src={playIcon} alt={t.play} className="icon" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
-
+          <span className="nav-label">{t.play}</span>
         </div>
 
         <div
           className={`nav-item ${activePage === 'cinema' ? 'active' : ''}`}
           onClick={() => onNavigate('cinema')}
-          title={t.cinema}
         >
           <img src={clapIcon} alt={t.cinema} className="icon" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+          <span className="nav-label">{t.cinema}</span>
         </div>
       </div>
 
@@ -76,9 +74,9 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
         <div
           className={`nav-item ${activePage === 'settings' ? 'active' : ''}`}
           onClick={() => onNavigate('settings')}
-          title={t.settings}
         >
           <img src={parametreIcon} alt={t.settings} className="icon" style={{ width: '40px', height: '40px', objectFit: 'contain' }} />
+          <span className="nav-label">{t.settings}</span>
         </div>
       </div>
     </div>

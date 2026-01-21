@@ -1,14 +1,20 @@
 import React from 'react';
-import story from '../story.json';
+import storyFr from '../storyFr.json';
+import storyEn from '../storyEn.json';
 
-const Cinema = ({ unlockedChapters = [], onSelectChapter }) => {
+const Cinema = ({ language, unlockedChapters = [], onSelectChapter }) => {
+  const story = language === 'en' ? storyEn : storyFr;
   // Get all chapter keys (chapter1, chapter2, etc.)
   const chapters = Object.keys(story);
 
   return (
     <div style={styles.container}>
-      <h1 style={styles.header}>🎬 Clap Cinéma</h1>
-      <p style={styles.subtitle}>Sélectionnez un chapitre pour commencer ou rejouer.</p>
+      <h1 style={styles.header}>Les facettes de la réorientation</h1>
+      <p style={styles.subtitle}>
+        {language === 'fr'
+          ? "Sélectionnez un chapitre pour commencer ou rejouer."
+          : "Select a chapter to start or replay."}
+      </p>
 
       <div style={styles.grid}>
         {chapters.map((chapterId) => {
@@ -32,9 +38,13 @@ const Cinema = ({ unlockedChapters = [], onSelectChapter }) => {
               }}
             >
               <div style={styles.cardContent}>
-                <h2 style={styles.cardTitle}>{chapterData.title || chapterId}</h2>
-                <p style={styles.cardDesc}>{chapterData.description || "Aucune description"}</p>
-                {!isUnlocked && <div style={styles.lockOverlay}>🔒 Verrouillé</div>}
+                <h2 style={styles.cardTitle}>
+                  {chapterData.title || chapterId}
+                </h2>
+                <p style={styles.cardDesc}>
+                  {chapterData.description || (language === 'fr' ? "Aucune description" : "No description")}
+                </p>
+                {!isUnlocked && <div style={styles.lockOverlay}>🔒 {language === 'fr' ? "Verrouillé" : "Locked"}</div>}
               </div>
             </div>
           );

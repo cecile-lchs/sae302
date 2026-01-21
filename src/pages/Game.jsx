@@ -1,13 +1,22 @@
 import { useState, useEffect } from "react";
-import story from "../story.json";
+import storyFr from "../storyFr.json";
+import storyEn from "../storyEn.json";
 import background from "../assets/background.png";
 import parametresBg from "../assets/parametres.png";
+import amphi from "../assets/amphi.png";
+import classe from "../assets/classe.png";
+import chambre from "../assets/chambre.png";
+import bar from "../assets/bar.png";
 import characterImg from "../assets/person_prin.png";
+import DisclaimerPopup from "../components/DisclaimerPopup";
 
 // Character Imports
 import char1 from "../assets/perso1/neutre_bouche_fermee.png";
 import char2 from "../assets/perso2/neutre_bouche_fermee.png";
 import char3 from "../assets/perso3/neutre_bouche_fermee.png";
+import char4 from "../assets/perso4/neutre_bouche_fermee.png";
+import char5 from "../assets/perso5/neutre_bouche_fermee.png";
+import char6 from "../assets/perso6/neutre_bouche_fermee.png";
 import fullscreenIcon from "../assets/fullscreen.svg";
 import fullscreenExitIcon from "../assets/close_fullscreen.svg";
 
@@ -17,21 +26,37 @@ const CHARACTERS = [
   { id: 1, src: char1, name: "Adventurer" },
   { id: 2, src: char2, name: "Mage" },
   { id: 3, src: char3, name: "Hacker" },
-  { id: 4, src: char1, name: "Explorer" },
-  { id: 5, src: char2, name: "Sorcerer" },
-  { id: 6, src: char3, name: "Cyber" },
+  { id: 4, src: char4, name: "Explorer" },
+  { id: 5, src: char5, name: "Sorcerer" },
+  { id: 6, src: char6, name: "Cyber" },
 ];
 
-const PROLOGUE_TEXTS = [
-  "Bienvenue dans une nouvelle ère...",
-  "Le monde tel que vous le connaissez a changé.",
-  "Vos choix détermineront le destin de l'humanité.",
-  "Préparez-vous..."
-];
+const PROLOGUE_TEXTS = {
+  fr: [
+    "C’est la rentrée.",
+    "Après le lycée, tu as accepté une place dans une université d’informatique à Orléans.",
+    "Aujourd’hui, tu assistes à ta première réunion de rentrée.",
+    "Autour de toi, des étudiants que tu ne connais pas encore, des enseignants, de nouvelles salles, une nouvelle vie qui commence.",
+    "C’est ici que ton parcours débute.",
+    "À toi de faire tes choix et de tracer ton propre chemin."
+  ],
+  en: [
+    "It's the start of the school year.",
+    "After high school, you accepted a spot at a computer science university in Orléans.",
+    "Today, you are attending your first introductory meeting.",
+    "Around you are students you don't know yet, teachers, new classrooms, a new life beginning.",
+    "This is where your journey starts.",
+    "It's up to you to make your choices and carve your own path."
+  ]
+};
 
 const backgrounds = {
   "/assets/background.png": background,
-  "/assets/parametres.png": parametresBg
+  "/assets/parametres.png": parametresBg,
+  "/assets/amphi.png": amphi,
+  "/assets/classe.png": classe,
+  "/assets/chambre.png": chambre,
+  "/assets/bar.png": bar
 };
 
 export default function Game({ language, userData, setUserData, activeChapter = "chapter1", onChapterComplete }) {
@@ -113,6 +138,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   };
 
   // Resolve the current chapter data
+  const story = language === 'en' ? storyEn : storyFr;
   const currentChapterData = story[activeChapter] || story["chapter1"];
   const currentScenes = currentChapterData.scenes || {};
 
@@ -152,13 +178,18 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         character: tempChar,
         pseudo: tempPseudo
       });
-      // Go to Context instead of playing immediately
-      setPhase("context");
+      // Go to Disclaimer instead of context immediately
+      setPhase("disclaimer");
     }
   };
 
+  const handleDisclaimerContinue = () => {
+    setPhase("context");
+  };
+
   const handleContextClick = () => {
-    if (contextIndex < PROLOGUE_TEXTS.length - 1) {
+    const currentTextArray = PROLOGUE_TEXTS[language] || PROLOGUE_TEXTS['fr'];
+    if (contextIndex < currentTextArray.length - 1) {
       setContextIndex(contextIndex + 1);
     } else {
       setPhase("playing");
@@ -269,12 +300,21 @@ export default function Game({ language, userData, setUserData, activeChapter = 
     );
   }
 
+  if (phase === "disclaimer") {
+    return (
+      <DisclaimerPopup
+        onContinue={handleDisclaimerContinue}
+        language={language}
+      />
+    );
+  }
+
   // CONTEXT PHASE
   if (phase === "context") {
     return (
       <div style={styles.contextContainer} onClick={handleContextClick}>
         <p style={styles.contextText}>
-          {PROLOGUE_TEXTS[contextIndex]}
+          {(PROLOGUE_TEXTS[language] || PROLOGUE_TEXTS['fr'])[contextIndex]}
         </p>
         <div style={styles.clickHint}>
           {language === 'fr' ? "(Cliquez pour continuer...)" : "(Click to continue...)"}
@@ -312,12 +352,18 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         flexDirection: "column",
         justifyContent: "flex-end",
         alignItems: "center",
-        pointerEvents: "none"
-      }}>
+        pointerEvents: getCurrentText() ? "none" : "auto", // Allow full click if no text
+        cursor: getCurrentText() ? "default" : "pointer"    // Pointer if background only
+      }}
+        onClick={getCurrentText() ? undefined : handleDialogueAdvance} // Handle click on background if no text
+      >
 
         {/* Fullscreen Toggle Button */}
         <div
-          onClick={toggleFullScreen}
+          onClick={(e) => {
+            e.stopPropagation(); // Prevent advancing dialogue when toggling fullscreen
+            toggleFullScreen();
+          }}
           style={{
             position: "absolute",
             top: "20px",
@@ -345,7 +391,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         </div>
 
         {/* PLAYER CHARACTER (Bottom Left) */}
-        {userData && userData.character && (
+        {userData && userData.character && getCurrentText() && ( // Hide player if no text
           <img
             src={(() => {
               const charId = userData.character;
@@ -389,7 +435,10 @@ export default function Game({ language, userData, setUserData, activeChapter = 
             {rawSceneData.choices.map((choice, i) => (
               <button
                 key={i}
-                onClick={() => handleSceneChange(choice.next)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleSceneChange(choice.next);
+                }}
                 style={{
                   background: "rgba(255, 255, 255, 0.95)",
                   border: "none",
@@ -419,63 +468,68 @@ export default function Game({ language, userData, setUserData, activeChapter = 
             ))}
           </div>
         ) : (
-          <div
-            onClick={handleDialogueAdvance}
-            style={{
-              position: "relative", // Needed for Name Tag absolute positioning
-              pointerEvents: "auto",
-              cursor: (rawSceneData.choices || (dialogueIndex < dialogueQueue.length - 1)) ? "pointer" : "default",
-              background: "rgba(255, 255, 255, 0.95)",
-              color: "#333",
-              padding: "30px 100px",
-              borderRadius: "40px",
-              margin: "0 auto",
-              marginBottom: "5vh",
-              width: "80%",
-              maxWidth: "800px",
-              boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-              fontFamily: "'Segoe UI', sans-serif",
-              fontSize: "1.2rem",
-              lineHeight: "1.6",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              minHeight: "120px"
-            }}
-          >
-            {/* NAME TAG */}
-            {(() => {
-              const speaker = getCurrentSpeaker();
-              // Condition: Show if speaker exists AND is not "Moi" (or matches player pseudo if we wanted, but logic is 'Moi' for now)
-              if (speaker && speaker !== "Moi") {
-                return <div className="name-tag">{speaker}</div>;
-              }
-              return null;
-            })()}
-
-            <p style={{ margin: 0, fontStyle: "italic", fontWeight: 500, paddingLeft: "70px" }}>
+          getCurrentText() && ( // Only show dialogue box if there is text
+            <div
+              onClick={(e) => {
+                e.stopPropagation(); // Handle click locally
+                handleDialogueAdvance();
+              }}
+              style={{
+                position: "relative", // Needed for Name Tag absolute positioning
+                pointerEvents: "auto",
+                cursor: (rawSceneData.choices || (dialogueIndex < dialogueQueue.length - 1)) ? "pointer" : "default",
+                background: "rgba(255, 255, 255, 0.95)",
+                color: "#333",
+                padding: "30px 100px",
+                borderRadius: "40px",
+                margin: "0 auto",
+                marginBottom: "5vh",
+                width: "80%",
+                maxWidth: "800px",
+                boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
+                fontFamily: "'Segoe UI', sans-serif",
+                fontSize: "1.2rem",
+                lineHeight: "1.6",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                minHeight: "120px"
+              }}
+            >
+              {/* NAME TAG */}
               {(() => {
-                const txt = getCurrentText();
-                return typeof txt === 'object' ? txt.text : txt;
+                const speaker = getCurrentSpeaker();
+                // Condition: Show if speaker exists AND is not "Moi" (or matches player pseudo if we wanted, but logic is 'Moi' for now)
+                if (speaker && speaker !== "Moi") {
+                  return <div className="name-tag">{speaker}</div>;
+                }
+                return null;
               })()}
-            </p>
-            {/* Show hint if there are more lines OR if there are choices next */}{
-              ((rawSceneData.choices) || (dialogueIndex < dialogueQueue.length - 1)) && (
-                <div style={{
-                  fontSize: "0.8rem",
-                  color: "#666",
-                  marginTop: "10px",
-                  textAlign: "right",
-                  alignSelf: "flex-end"
-                }}>
-                  (Cliquez pour continuer)
-                </div>
-              )}
-          </div>
+
+              <p style={{ margin: 0, fontStyle: "italic", fontWeight: 500, paddingLeft: "70px" }}>
+                {(() => {
+                  const txt = getCurrentText();
+                  return typeof txt === 'object' ? txt.text : txt;
+                })()}
+              </p>
+              {/* Show hint if there are more lines OR if there are choices next */}{
+                ((rawSceneData.choices) || (dialogueIndex < dialogueQueue.length - 1)) && (
+                  <div style={{
+                    fontSize: "0.8rem",
+                    color: "#666",
+                    marginTop: "10px",
+                    textAlign: "right",
+                    alignSelf: "flex-end"
+                  }}>
+                    (Cliquez pour continuer)
+                  </div>
+                )}
+            </div>
+          )
         )}
       </div>
 
-      {activeStep.character && activeStep.character !== 'none' && (
+      {activeStep.character && activeStep.character !== 'none' && getCurrentText() && ( // HIDE NPC IF NO TEXT
         <img
           src={(() => {
             // simplified lookup
@@ -566,10 +620,14 @@ const styles = {
     cursor: "pointer",
     border: "3px solid transparent",
     transition: "all 0.3s ease",
-    background: "#34495e"
+    background: "#ffffff",
+    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center"
   },
   charImg: {
-    width: "100%",
+    width: "120%",
     height: "100%",
     objectFit: "contain"
   },

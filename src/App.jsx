@@ -7,12 +7,14 @@ import Cinema from "./pages/Cinema";
 import Settings from "./pages/Settings";
 import EmailWidget from "./components/EmailWidget";
 import SettingsModal from "./components/SettingsModal";
+import PageTransition from "./components/PageTransition";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [showSettings, setShowSettings] = useState(false);
   const [hasNotification, setHasNotification] = useState(false); // State for email notification
   const [language, setLanguage] = useState("fr"); // 'fr' or 'en'
+  const [isTransitioning, setIsTransitioning] = useState(false); // Transition state
 
   // New Global User State
   const [userData, setUserData] = useState({
@@ -27,16 +29,30 @@ export default function App() {
   // Temporary testing function: toggle notification when clicking the email icon
   const handleEmailClick = () => {
     setHasNotification(!hasNotification);
-    // You might want to navigate to an 'Email' page or open a modal here
+  };
+
+  const handleTransitionNavigate = (page) => {
+    if (page === currentPage) {
+      if (page === 'settings') setShowSettings(true);
+      return;
+    }
+
+    if (page === "settings") {
+      setShowSettings(true);
+      return;
+    }
+
+    setIsTransitioning(true);
+
+    setTimeout(() => {
+      setCurrentPage(page);
+      setShowSettings(false);
+      setIsTransitioning(false);
+    }, 1100);
   };
 
   const handleNavigate = (page) => {
-    if (page === "settings") {
-      setShowSettings(true);
-    } else {
-      setCurrentPage(page);
-      setShowSettings(false); // Close settings if navigating elsewhere
-    }
+    handleTransitionNavigate(page);
   };
 
   const renderPage = () => {
@@ -56,8 +72,7 @@ export default function App() {
               if (nextChapterId && !unlockedChapters.includes(nextChapterId)) {
                 setUnlockedChapters([...unlockedChapters, nextChapterId]);
               }
-              // Optional: Navigate to Cinema or show success
-              setCurrentPage('cinema');
+              handleTransitionNavigate('cinema');
             }}
           />
         );
@@ -68,7 +83,7 @@ export default function App() {
             unlockedChapters={unlockedChapters}
             onSelectChapter={(chapterId) => {
               setActiveChapter(chapterId);
-              setCurrentPage('game');
+              handleTransitionNavigate('game');
             }}
           />
         );
@@ -77,11 +92,13 @@ export default function App() {
     }
   };
 
-  // Sidebar logic: The instructions imply sidebar appears "when on the game".
-  const showSidebar = currentPage !== 'home';
+  // Sidebar logic
+  const showSidebar = currentPage !== 'home' && currentPage !== 'docs';
 
   return (
     <div style={{ display: "flex", width: "100%", height: "100vh", overflow: "hidden", position: "relative" }}>
+      <PageTransition isVisible={isTransitioning} />
+
       {showSidebar && (
         <Sidebar onNavigate={handleNavigate} activePage={showSettings ? "settings" : currentPage} language={language} />
       )}

@@ -32,77 +32,59 @@
   transition: all 0.3s ease;
 }
 
-.nav-item:hover {
-  transform: scale(1.1);
-}
-
+/* Active State with visual indicator */
 .nav-item.active {
-  height: 100px; /* Taller for the bulge */
-  z-index: 20;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-left: 4px solid #fff;
 }
 
-/* The Bulge Effect */
-.bulge-container {
+/* Hover effect */
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: none; /* Disable scale to avoid jitter with tooltip */
+}
+
+.nav-item:hover .icon {
+  transform: scale(1.1);
+  transition: transform 0.2s;
+}
+
+/* Tooltip Label Styling */
+.nav-label {
   position: absolute;
+  left: 100%;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90px;
-  height: 90px;
-  background-color: #f39c12; /* Slightly darker/different orange for the circle */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transform: translateY(-50%) translateX(10px);
+  background-color: #2c3e50;
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s ease;
+  z-index: 100;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
-/* To connect the bulge to the sidebar cleanly, we might need some pseudo elements, 
-   but strictly following the PNG, it looks like a circle sitting on top or merged.
-   Let's try a simple circle first. */
-   
-.bulge-container::before {
+/* Arrow for tooltip */
+.nav-label::before {
   content: '';
   position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px; /* Match sidebar width */
-  height: 40px;
-  background: transparent;
-  /* Complex curve logic omitted for simplicity unless requested pixel perfect */
+  top: 50%;
+  right: 100%;
+  margin-top: -6px;
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent #2c3e50 transparent transparent;
 }
 
-/* Icons styling */
-.icon {
-  width: 32px;
-  height: 32px;
-  stroke-width: 2px;
-}
-
-.active .icon {
-  width: 40px;
-  height: 40px;
-}
-
-.badge {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  width: 18px;
-  height: 18px;
-  background-color: #4cd137; /* Greenish/Teal from image */
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: white;
-  border: 2px solid #fdb933;
-}
-
-.badge.blue {
-  background-color: #00cec9;
+.nav-item:hover .nav-label {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(-50%) translateX(15px);
 }
 
 .spacer {

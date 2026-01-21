@@ -1,0 +1,115 @@
+.home-container {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.title-overlay {
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.home-title {
+  font-size: 5rem;
+  color: #fdb933;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+  margin: 0;
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.split-section {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.25, 1, 0.5, 1), filter 0.6s ease;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.split-left {
+  background-image: url('../assets/PartieJouer.png');
+}
+
+.split-right {
+  background-image: url('../assets/PartieDocument.png');
+}
+
+/* Hover effects (managed by inline styles in JS for dynamic flex, but overlay transition helps) */
+.section-overlay {
+  background-color: rgba(0,0,0,0.4);
+  padding: 1rem 3rem;
+  border: 4px solid #fff;
+  color: #fff;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.4s ease;
+  backdrop-filter: blur(5px);
+}
+
+.button-text {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.separator {
+  width: 4px;
+  background-color: #fdb933;
+  z-index: 5;
+  box-shadow: 0 0 15px #fdb933;
+}
+
+/* --- Responsive Adjustments --- */
+
+/* Tablets (Portrait) */
+@media screen and (max-width: 1024px) and (orientation: portrait) {
+  .home-title {
+    font-size: 3.5rem;
+    top: 5%;
+  }
+  
+  .button-text {
+    font-size: 1.5rem;
+  }
+  
+  .home-container {
+    flex-direction: column; /* Stack on portrait tablets if desired, or keep split vertical */
+    /* User said "Tablet leave vertical", which implies the device is held vertically. 
+       Usually split screen vertical looks bad if it's side-by-side. 
+       Let's stack them top/bottom for better portrait experience. */
+    flex-direction: column;
+  }
+  
+  .split-section {
+    width: 100% !important;
+    height: 50% !important;
+    flex: 1 !important; /* Override flex logic from JS */
+  }
+
+  .separator {
+    width: 100%;
+    height: 4px;
+  }
+}
+
+/* Mobile Landscape (Small screens but horizontal) */
+@media screen and (max-width: 900px) and (orientation: landscape) {
+  .home-title {
+    font-size: 3rem;
+  }
+
+  .button-text {
+    font-size: 1.2rem;
+  }
+}
