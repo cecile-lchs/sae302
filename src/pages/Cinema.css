@@ -1,0 +1,145 @@
+.cinema-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #fffcf4;
+  color: #2c3e50;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.cinema-header {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #fdb933;
+  text-align: center;
+}
+
+.cinema-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #666;
+  text-align: center;
+}
+
+.chapters-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.chapter-card {
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.chapter-card.locked {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: scale(0.95);
+  filter: grayscale(100%);
+}
+
+.chapter-card:hover:not(.locked) {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.card-desc {
+  font-size: 1rem;
+  color: #7f8c8d;
+}
+
+.lock-overlay {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+/* Responsive Media Queries */
+
+/* Mobile Landscape (Height < 600px) */
+@media (max-height: 600px) {
+  .cinema-header {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  .cinema-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .chapters-grid {
+    gap: 15px;
+    grid-template-columns: repeat(3, 1fr); /* Force 3 columns if they fit, or auto-fit with smaller min */
+  }
+
+  .chapter-card {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+  }
+
+  .card-desc {
+    font-size: 0.8rem;
+  }
+}
+
+/* Very Short Screens */
+@media (max-height: 450px) {
+  .cinema-container {
+    padding: 1rem;
+  }
+
+  .cinema-header {
+    font-size: 1.5rem;
+  }
+
+  .chapter-card {
+    height: 130px;
+  }
+}
+
+/* Mobile Portrait (Width < 600px) */
+@media (max-width: 600px) {
+  .cinema-header {
+    font-size: 2rem;
+  }
+  
+  .chapters-grid {
+    grid-template-columns: 1fr; /* Stack on portrait */
+  }
+  
+  .chapter-card {
+    height: auto;
+    min-height: 150px;
+  }
+}

@@ -8,6 +8,7 @@ import Settings from "./pages/Settings";
 import EmailWidget from "./components/EmailWidget";
 import SettingsModal from "./components/SettingsModal";
 import PageTransition from "./components/PageTransition";
+import PortraitOverlay from "./components/PortraitOverlay";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -97,6 +98,7 @@ export default function App() {
 
   return (
     <div style={{ display: "flex", width: "100%", height: "100vh", overflow: "hidden", position: "relative" }}>
+      <PortraitOverlay language={language} />
       <PageTransition isVisible={isTransitioning} />
 
       {showSidebar && (

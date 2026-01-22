@@ -5,9 +5,9 @@
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: #2c3e50;
-  color: white;
-  z-index: 9999;
+  background-color: #000000; /* Deep black for immersion */
+  color: #fdb933; /* Theme yellow/gold */
+  z-index: 10000; /* Higher than everything else */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -18,7 +18,8 @@
 /* Only show on screens smaller than tablets (phones) and in portrait mode */
 /* Standard tablet width is 768px. We want to affect phones. */
 /* iPhone 14 Pro Max width is ~430px. iPads are 768px+. */
-@media screen and (max-width: 767px) and (orientation: portrait) {
+/* Mobile Portrait: Show overlay when screen is narrow (typically phones) */
+@media screen and (max-width: 900px) and (orientation: portrait) {
   .portrait-overlay {
     display: flex;
   }

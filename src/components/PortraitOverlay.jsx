@@ -1,6 +1,6 @@
 import React from 'react';
 import './PortraitOverlay.css';
-import rotateIcon from '../assets/rotate_phone.svg'; // We might need an icon, or just text. I'll use text for now or simple CSS shape.
+// Icon handled via CSS/Text currently to avoid external assets
 
 const PortraitOverlay = ({ language }) => {
   return (

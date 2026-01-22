@@ -9,6 +9,11 @@ import chambre from "../assets/chambre.png";
 import bar from "../assets/bar.png";
 import characterImg from "../assets/person_prin.png";
 import DisclaimerPopup from "../components/DisclaimerPopup";
+import martin from "../assets/martin.png";
+import prof from "../assets/prof.png";
+import directeur from "../assets/directeur.png";
+import "./Game.css";
+
 
 // Character Imports
 import char1 from "../assets/perso1/neutre_bouche_fermee.png";
@@ -254,24 +259,18 @@ export default function Game({ language, userData, setUserData, activeChapter = 
 
   if (phase === "selection") {
     return (
-      <div style={styles.container}>
-        <h1 style={styles.header}>{language === 'fr' ? "CHOISISSEZ VOTRE PERSONNAGE" : "CHOOSE YOUR CHARACTER"}</h1>
-        <div style={styles.grid}>
+
+      <div className="game-container">
+        <h1 className="selection-header">{language === 'fr' ? "CHOISISSEZ VOTRE PERSONNAGE" : "CHOOSE YOUR CHARACTER"}</h1>
+        <div className="char-grid">
           {CHARACTERS.map((char) => (
             <div
               key={char.id}
               onClick={() => handleCharSelect(char.id)}
-              style={styles.card}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.transform = "scale(1.05)";
-                e.currentTarget.style.borderColor = "#fdb933";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.transform = "scale(1)";
-                e.currentTarget.style.borderColor = "transparent";
-              }}
+              className="char-card"
+            // Keep hover inline or move to CSS (it is in CSS now as :hover)
             >
-              <img src={char.src} alt={char.name} style={styles.charImg} />
+              <img src={char.src} alt={char.name} className="char-img" />
             </div>
           ))}
         </div>
@@ -281,18 +280,19 @@ export default function Game({ language, userData, setUserData, activeChapter = 
 
   if (phase === "pseudo") {
     return (
-      <div style={styles.container}>
-        <h1 style={styles.header}>{language === 'fr' ? "ENTREZ VOTRE PSEUDO" : "ENTER YOUR NICKNAME"}</h1>
-        <form onSubmit={handlePseudoSubmit} style={styles.form}>
+
+      <div className="game-container">
+        <h1 className="selection-header">{language === 'fr' ? "ENTREZ VOTRE PSEUDO" : "ENTER YOUR NICKNAME"}</h1>
+        <form onSubmit={handlePseudoSubmit} className="pseudo-form">
           <input
             type="text"
             value={tempPseudo}
             onChange={(e) => setTempPseudo(e.target.value)}
-            style={styles.input}
+            className="pseudo-input"
             placeholder="..."
             autoFocus
           />
-          <button type="submit" style={styles.button}>
+          <button type="submit" className="pseudo-button">
             {language === 'fr' ? "CONFIRMER" : "CONFIRM"}
           </button>
         </form>
@@ -312,11 +312,12 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   // CONTEXT PHASE
   if (phase === "context") {
     return (
-      <div style={styles.contextContainer} onClick={handleContextClick}>
-        <p style={styles.contextText}>
+
+      <div className="context-container" onClick={handleContextClick}>
+        <p className="context-text">
           {(PROLOGUE_TEXTS[language] || PROLOGUE_TEXTS['fr'])[contextIndex]}
         </p>
-        <div style={styles.clickHint}>
+        <div className="click-hint">
           {language === 'fr' ? "(Cliquez pour continuer...)" : "(Click to continue...)"}
         </div>
       </div>
@@ -474,27 +475,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
                 e.stopPropagation(); // Handle click locally
                 handleDialogueAdvance();
               }}
-              style={{
-                position: "relative", // Needed for Name Tag absolute positioning
-                pointerEvents: "auto",
-                cursor: (rawSceneData.choices || (dialogueIndex < dialogueQueue.length - 1)) ? "pointer" : "default",
-                background: "rgba(255, 255, 255, 0.95)",
-                color: "#333",
-                padding: "30px 100px",
-                borderRadius: "40px",
-                margin: "0 auto",
-                marginBottom: "5vh",
-                width: "80%",
-                maxWidth: "800px",
-                boxShadow: "0 10px 25px rgba(0,0,0,0.1)",
-                fontFamily: "'Segoe UI', sans-serif",
-                fontSize: "1.2rem",
-                lineHeight: "1.6",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                minHeight: "120px"
-              }}
+              className={`dialogue-box ${rawSceneData.choices || (dialogueIndex < dialogueQueue.length - 1) ? 'clickable' : 'default-cursor'}`}
             >
               {/* NAME TAG */}
               {(() => {
@@ -506,7 +487,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
                 return null;
               })()}
 
-              <p style={{ margin: 0, fontStyle: "italic", fontWeight: 500, paddingLeft: "70px" }}>
+              <p className="dialogue-text">
                 {(() => {
                   const txt = getCurrentText();
                   return typeof txt === 'object' ? txt.text : txt;
@@ -514,13 +495,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
               </p>
               {/* Show hint if there are more lines OR if there are choices next */}{
                 ((rawSceneData.choices) || (dialogueIndex < dialogueQueue.length - 1)) && (
-                  <div style={{
-                    fontSize: "0.8rem",
-                    color: "#666",
-                    marginTop: "10px",
-                    textAlign: "right",
-                    alignSelf: "flex-end"
-                  }}>
+                  <div className="dialogue-hint">
                     (Cliquez pour continuer)
                   </div>
                 )}
@@ -563,97 +538,4 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   );
 }
 
-const styles = {
-  container: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#fffcf4",
-    color: "#2c3e50",
-    height: "100vh",
-    width: "100%"
-  },
-  contextContainer: {
-    flex: 1,
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "black",
-    color: "white",
-    height: "100vh",
-    width: "100%",
-    cursor: "pointer",
-    padding: "2rem",
-    textAlign: "center"
-  },
-  contextText: {
-    fontSize: "2rem",
-    maxWidth: "800px",
-    lineHeight: "1.5",
-    animation: "fadeIn 1s ease-in"
-  },
-  clickHint: {
-    position: "absolute",
-    bottom: "50px",
-    fontSize: "1rem",
-    opacity: 0.7
-  },
-  header: {
-    marginBottom: "40px",
-    color: "#fdb933",
-    fontSize: "2rem"
-  },
-  grid: {
-    display: "grid",
-    gridTemplateColumns: "repeat(3, 1fr)",
-    gap: "20px",
-    maxWidth: "800px"
-  },
-  card: {
-    width: "150px",
-    height: "150px",
-    borderRadius: "15px",
-    overflow: "hidden",
-    cursor: "pointer",
-    border: "3px solid transparent",
-    transition: "all 0.3s ease",
-    background: "#ffffff",
-    boxShadow: "0 5px 15px rgba(0,0,0,0.1)",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  charImg: {
-    width: "120%",
-    height: "100%",
-    objectFit: "contain"
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "20px"
-  },
-  input: {
-    padding: "15px",
-    fontSize: "1.2rem",
-    borderRadius: "10px",
-    border: "2px solid #fdb933",
-    background: "rgba(0,0,0,0.05)",
-    color: "#2c3e50",
-    textAlign: "center",
-    width: "300px"
-  },
-  button: {
-    padding: "15px 30px",
-    fontSize: "1rem",
-    fontWeight: "bold",
-    backgroundColor: "#fdb933",
-    color: "#2c3e50",
-    border: "none",
-    borderRadius: "25px",
-    cursor: "pointer"
-  }
-};
+
