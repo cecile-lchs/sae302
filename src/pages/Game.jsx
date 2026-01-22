@@ -9,9 +9,9 @@ import chambre from "../assets/chambre.png";
 import bar from "../assets/bar.png";
 import characterImg from "../assets/person_prin.png";
 import DisclaimerPopup from "../components/DisclaimerPopup";
-import martin from "../assets/martin.png";
 import prof from "../assets/prof.png";
 import directeur from "../assets/directeur.png";
+import voisin from "../assets/voisin.png";
 import "./Game.css";
 
 
@@ -22,8 +22,7 @@ import char3 from "../assets/perso3/neutre_bouche_fermee.png";
 import char4 from "../assets/perso4/neutre_bouche_fermee.png";
 import char5 from "../assets/perso5/neutre_bouche_fermee.png";
 import char6 from "../assets/perso6/neutre_bouche_fermee.png";
-import fullscreenIcon from "../assets/fullscreen.svg";
-import fullscreenExitIcon from "../assets/close_fullscreen.svg";
+
 
 const characterAssets = import.meta.glob('../assets/perso*/*.png', { eager: true });
 
@@ -78,28 +77,6 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   const [showChoices, setShowChoices] = useState(false);
   const [dialogueIndex, setDialogueIndex] = useState(0);
 
-  // Fullscreen Logic
-  const [isFullscreen, setIsFullscreen] = useState(false);
-
-  const toggleFullScreen = () => {
-    if (!document.fullscreenElement) {
-      document.documentElement.requestFullscreen().catch((err) => {
-        console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-      });
-    } else {
-      if (document.exitFullscreen) {
-        document.exitFullscreen();
-      }
-    }
-  };
-
-  useEffect(() => {
-    const handleFullScreenChange = () => {
-      setIsFullscreen(!!document.fullscreenElement);
-    };
-    document.addEventListener('fullscreenchange', handleFullScreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullScreenChange);
-  }, []);
 
   // Helper to flatten the dialogue logic
   // Returns an array of step objects: { text, background, character, speaker, sound }
@@ -359,37 +336,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         onClick={getCurrentText() ? undefined : handleDialogueAdvance} // Handle click on background if no text
       >
 
-        {/* Fullscreen Toggle Button */}
-        <div
-          onClick={(e) => {
-            e.stopPropagation(); // Prevent advancing dialogue when toggling fullscreen
-            toggleFullScreen();
-          }}
-          style={{
-            position: "absolute",
-            top: "20px",
-            right: "20px",
-            zIndex: 100,
-            cursor: "pointer",
-            pointerEvents: "auto",
-            backgroundColor: "rgba(255, 255, 255, 0.2)",
-            borderRadius: "50%",
-            padding: "10px",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            transition: "background-color 0.3s ease"
-          }}
-          title={isFullscreen ? "Quitter le plein écran" : "Plein écran"}
-          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.4)"}
-          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "rgba(255, 255, 255, 0.2)"}
-        >
-          <img
-            src={isFullscreen ? fullscreenExitIcon : fullscreenIcon}
-            alt="Fullscreen Toggle"
-            style={{ width: "30px", height: "30px", display: "block" }}
-          />
-        </div>
+
 
         {/* PLAYER CHARACTER (Bottom Left) */}
         {userData && userData.character && getCurrentText() && ( // Hide player if no text
@@ -514,9 +461,9 @@ export default function Game({ language, userData, setUserData, activeChapter = 
             // Note: Ensure all employed paths in story.json match these keys or strict logic
             const charMap = {
               "/assets/person_prin.png": characterImg,
-              "/assets/char1.png": char1,
-              "/assets/char2.png": char2,
-              "/assets/char3.png": char3,
+              "/assets/directeur.png": directeur,
+              "/assets/voisin.png": voisin,
+              "/assets/prof.png": prof,
             };
 
             return charMap[charPath] || charPath;

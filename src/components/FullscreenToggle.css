@@ -1,0 +1,39 @@
+.fullscreen-toggle-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999; /* Ensure it stays above most content */
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.fullscreen-toggle-btn:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+}
+
+.fullscreen-icon {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+/* Optional: Adjust position on mobile if needed */
+@media (max-width: 600px) {
+  .fullscreen-toggle-btn {
+      top: 15px;
+      right: 15px;
+      padding: 8px;
+  }
+  .fullscreen-icon {
+      width: 24px;
+      height: 24px;
+  }
+}

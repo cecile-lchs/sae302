@@ -9,6 +9,8 @@ import EmailWidget from "./components/EmailWidget";
 import SettingsModal from "./components/SettingsModal";
 import PageTransition from "./components/PageTransition";
 import PortraitOverlay from "./components/PortraitOverlay";
+import FullScreenPopup from "./components/FullScreenPopup";
+import FullscreenToggle from "./components/FullscreenToggle";
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -99,6 +101,8 @@ export default function App() {
   return (
     <div style={{ display: "flex", width: "100%", height: "100vh", overflow: "hidden", position: "relative" }}>
       <PortraitOverlay language={language} />
+      <FullScreenPopup />
+      <FullscreenToggle />
       <PageTransition isVisible={isTransitioning} />
 
       {showSidebar && (
