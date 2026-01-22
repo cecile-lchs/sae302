@@ -199,7 +199,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         // End of chapter/scene (no next choices matches 'none')
         console.log("End of chapter reached");
         if (onChapterComplete) {
-          onChapterComplete();
+          onChapterComplete(activeChapter);
         }
       }
     }

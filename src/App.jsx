@@ -16,7 +16,7 @@ export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
   const [showSettings, setShowSettings] = useState(false);
   const [hasNotification, setHasNotification] = useState(false); // State for email notification
-  const [language, setLanguage] = useState("fr"); // 'fr' or 'en'
+  const [language, setLanguage] = useState("en"); // 'fr' or 'en'
   const [isTransitioning, setIsTransitioning] = useState(false); // Transition state
 
   // New Global User State
@@ -71,10 +71,9 @@ export default function App() {
             userData={userData}
             setUserData={setUserData}
             activeChapter={activeChapter}
-            onChapterComplete={(nextChapterId) => {
-              if (nextChapterId && !unlockedChapters.includes(nextChapterId)) {
-                setUnlockedChapters([...unlockedChapters, nextChapterId]);
-              }
+            unlockedChapters={unlockedChapters} // Pass unlockedChapters
+            onChapterComplete={(completedChapterId) => {
+              handleChapterComplete(completedChapterId); // Use the new handler
               handleTransitionNavigate('cinema');
             }}
           />

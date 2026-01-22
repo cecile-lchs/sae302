@@ -174,58 +174,7 @@ const SettingsModal = ({ isOpen, onClose, language = "fr", setLanguage }) => {
           </div>
         </div>
 
-        {/* Graphics Section */}
-        <div style={styles.section}>
-          <div style={styles.sectionTitle}>{t.graphics}</div>
 
-          <div style={{ marginBottom: '1rem' }}>
-            <span style={styles.label}>{t.quality}</span>
-            <div style={styles.buttonGroup}>
-              <button style={styles.optionButton(true)}>{t.high}</button>
-              <button style={styles.optionButton(false)}>{t.low}</button>
-              <button style={styles.optionButton(false)}>{t.custom}</button>
-            </div>
-          </div>
-
-          <div style={styles.row}>
-            <span style={styles.label}>{t.low_textures}</span>
-            <ToggleSwitch checked={false} onChange={() => { }} />
-          </div>
-
-          <div style={{ marginTop: '1rem', marginBottom: '1rem' }}>
-            <div style={styles.row}>
-              <span style={styles.label}>{t.fps_limit}</span>
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button style={{ ...styles.optionButton(false), flex: 'none', width: '60px' }}>30</button>
-                <button style={{ ...styles.optionButton(true), flex: 'none', width: '60px' }}>60</button>
-              </div>
-            </div>
-          </div>
-
-          <div style={{ marginBottom: '1rem' }}>
-            <div style={styles.row}>
-              <span style={styles.label}>{t.res_limit}</span>
-              <div style={{ display: 'flex', gap: '0.5rem' }}>
-                <button style={{ ...styles.optionButton(true), flex: 'none', width: '80px' }}>720p</button>
-                <button style={{ ...styles.optionButton(false), flex: 'none', width: '80px' }}>1080p</button>
-              </div>
-            </div>
-          </div>
-
-          <div style={styles.row}>
-            <span style={styles.label}>{t.disable_blur}</span>
-            <ToggleSwitch checked={true} onChange={() => { }} />
-          </div>
-        </div>
-
-        {/* Event Section */}
-        <div style={styles.section}>
-          <div style={styles.sectionTitle}>{t.event}</div>
-          <div style={styles.row}>
-            <span style={styles.label}>{t.disable_event_anim}</span>
-            <ToggleSwitch checked={true} onChange={() => { }} />
-          </div>
-        </div>
 
         {/* Language Section - NEW */}
         <div style={styles.section}>

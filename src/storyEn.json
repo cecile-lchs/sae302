@@ -26,10 +26,9 @@
         "text": "I am your formal calculation professor, Antoine Robert. I used to be just like you: a student at this university, sitting in the same seats as you. By listening to lectures and working hard, I managed to get this teaching position. I am now a research professor, which involves..."
       },
       {
-        "speaker": "none",
+        "background": "/assets/classe.png",
         "text": "The protagonist has the choice between continuing to listen to the professor or chatting with the person sitting next to him."
-      },
-      "Click again to see the options..."
+      }
     ],
     "choices": [
       { "label": "Continue listening", "next": "ecouter" },
@@ -42,7 +41,6 @@
     "sound": "/assets/click.mp3",
     "text": [
       {
-        "speaker":"none",
         "text": "The protagonist keeps listening to his teacher."
       },
       {
@@ -58,7 +56,6 @@
         ]
       },
       {
-        "speaker": "none",
         "text": "The protagonist once again has the choice between continuing to listen to the professor or chatting with the person sitting next to him."
       }
     ],
@@ -69,50 +66,55 @@
   },
 
   "discuter": {
-    "background": "/assets/classe.png",
     "speaker": "Moi",
+    "background": "/assets/messagerie.png",
     "sound": "/assets/click.mp3",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/classe.png",
         "text": "The protagonist starts a conversation with the person sitting next to him."
       },
       {
+        "background": "/assets/classe.png",
         "text": "[I should try to make friends. I turn to my seatmate.]"
       },
       {
+        "background": "/assets/classe.png",
         "text": "Hi !"
       },
       {
+        "background": "/assets/classe.png",
         "character": "/assets/voisin.png",
         "speaker": "Classmate",
         "text": "Hi ! Are you from Orleans?"
       },
       {
+        "background": "/assets/classe.png",
         "text": "Not at all, I'm from Alsace! And you?"
       },
 
       {
+        "background": "/assets/classe.png",
         "character": "/assets/voisin.png",
         "speaker": "Classmate",
         "text": "I'm from Orleans. My name is Martin, and you?"
       },
       {
+        "background": "/assets/classe.png",
         "text": "[Internally I spend the rest of the class chatting with Martin, and the end of the day arrives before I even realize it.]"
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "none",
         "text": "Message notification"
       },
       {
         "background": "/assets/messagerie.png",
-         "speaker": "Martin",
+        "speaker": "Martin",
+        "character": "/assets/voisin.png",
         "text": "Via messages Hi! Do you want to come to the integration party?"
       },
       {
-        "background": "/assets/chambre.png",
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between accompanying Martin to the university's integration party or staying home."
       }
     ],
@@ -122,32 +124,36 @@
     ]
   },
   "ecouter2": {
+    "background": "/assets/appli.png",
     "speaker": "Moi",
-    "background": "/assets/classe.png",
     "sound": "/assets/click.mp3",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/classe.png",
         "text": "The protagonist keeps listening to his teacher."
       },
       {
         "character": "/assets/prof.png",
         "speaker": "Professor",
-
+        "background": "/assets/classe.png",
         "text": "In one, we will approach the course theoretically and illustrate with examples. I expect you to take notes and ask questions as soon as you don't understand something. In the second, I -..."
       },
       {
-        "text": "[Internally I listen to Mr. Robert in silence. The rest of the day passes slowly, and I eagerly await the moment when I can go home.]"
+        "background": "/assets/classe.png",
+        "text": "[I listen to Mr. Robert in silence. The rest of the day passes slowly, and I eagerly await the moment when I can go home.]"
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "Notification",
         "text": "Smartphone notification"
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "speaker": "Notification",
         "text": "The “Student Job” job posting published by Leclerc Orléans matches your profile."
+      },
+      {
+        "background": "/assets/appli.png",
+        "text": "The protagonist has the choice between applying to the job offer or ignoring it."
       }
     ],
     "choices": [
@@ -157,13 +163,13 @@
   },
 
   "ignorer": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist ignores the job offer."
       },
       {
@@ -182,6 +188,7 @@
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
@@ -192,17 +199,20 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Message notification"
       },
       {
+        "background": "/assets/messagerie.png",
+
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?"
       },
       {
-        "speaker": "none",
-        "text": "The user has the choice between telling his mother the truth about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+
+        "text": "The protagonist has the choice between telling his mother the truth about his failure or lying to her."
       }
     ],
     "choices": [
@@ -212,15 +222,17 @@
   },
 
   "mentir5": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/appart.png",
 
     "text": [
       {
+        "background": "/assets/messagerie.png",
         "text": "The protagonist lies to his parents about his failure."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I explain this to my parents? “I failed because I didn't really believe in it”? That sounds so ridiculous... I need to ask myself the right questions.]",
           "What do I want to do? What really motivates me? Continuing down a path that doesn't suit me will only lead to more failures. Well... I need to find something that suits me. And this time... I need to really commit to it."
@@ -234,28 +246,36 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "ment" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "ment" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "ment"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "ment"
+      }
     ]
   },
 
   "verite5": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
+
         "text": "The protagonist tells the truth to his parents."
       },
       {
-        "text": "I have to face up to it. I'll never be able to make a fresh start if I hide something this important from my own parents."
+        "background": "/assets/messagerie.png",
+        "text": "[I have to face up to it. I'll never be able to make a fresh start if I hide something this important from my own parents.]"
       },
       {
         "character": "/assets/maman.png",
@@ -264,113 +284,136 @@
         "text": "Hi sweetheart! Are you okay? You seem...worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes... I received the answer regarding my transition to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it good?"
       },
       {
+        "background": "/assets/appel.png",
         "text": " …No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "What? You weren't accepted? But… why?"
       },
       {
+        "background": "/assets/appel.png",
         "text": " I… I didn't invest enough in my studies. I had trouble getting interested in what I was doing and… I didn't give my best."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Oh… my dear… We knew it could be tough, but… hearing that hurts."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "We are disappointed, yes! But ... We really believed you could succeed. It's not just about disappointment for you… we're sad to see you suffer and lose confidence."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I'm sorry."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Listen… it's not the end of the world. You made a mistake, that's all. But you need to understand what didn't work to improve the situation. We'll look at the possible options for you together."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I want to give myself fully this time. I don't want to make the same mistakes."
       },
       {
+        "background": "/assets/chambre.png",
         "text": [
           "[I thought it would be a disaster… that it would end in screams, accusations, ... But… they didn't reject me. They wanted to understand. They listened to me. They even told me they still believe in me.]",
           "[I did well by confessing. In any case, hiding it wouldn't have changed anything… and now, at least, I'm not alone anymore. I feel like I've finally stopped running away.]"
         ]
       },
       {
+        "background": "/assets/messagerie.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "I haven't found any other programs where I'm sure you'll be accepted, even in June and with catastrophic grades. Choose between a BA in history or in literature."
       },
 
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "discuter2": {
-    "background": "/assets/classe.png",
+    "background": "/assets/messagerie.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/classe.png",
         "text": "The protagonist starts a conversation with the person sitting next to him."
       },
       {
+        "background": "/assets/classe.png",
         "text": "[I should try to make friends. I turn to my seatmate.]"
       },
       {
+        "background": "/assets/classe.png",
         "text": "Hi !"
       },
       {
+        "background": "/assets/classe.png",
         "character": "/assets/voisin.png",
         "speaker": "Classmate",
         "text": "Hi ! Are you from Orleans?"
       },
       {
+        "background": "/assets/classe.png",
         "text": "Not at all, I'm from Alsace! And you?"
       },
 
       {
+        "background": "/assets/classe.png",
         "character": "/assets/voisin.png",
         "speaker": "Classmate",
         "text": "I'm from Orleans. My name is Martin, and you?"
       },
       {
+        "background": "/assets/classe.png",
         "text": "[I spend the rest of the class chatting with Martin, and the end of the day arrives before I even realize it.]"
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "none",
         "text": "Message notification"
       },
       {
         "background": "/assets/messagerie.png",
-
+        "character": "/assets/voisin.png",
         "speaker": "Martin",
         "text": "Via messages Hi! Do you want to come to the integration party?"
       },
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between accompanying Martin to the university welcome party or staying at home."
       }
     ],
@@ -381,26 +424,24 @@
   },
 
   "decliner2": {
-    "background": "/assets/chambre.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/appli.png",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist declines Martin's invitation."
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "none",
         "text": "Message notification"
       },
       {
         "background": "/assets/appli.png",
-        "speaker": "none",
         "text": "The “Student Job” job posting published by Leclerc Orléans matches your profile."
       },
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist has the choice between applying to the job offer or ignoring it."
       }
     ],
@@ -411,13 +452,13 @@
   },
 
   "ignorer3": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist ignores the job offer."
       },
       {
@@ -436,6 +477,7 @@
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
@@ -443,7 +485,7 @@
         "text": "[I keep replaying every moment of the year over and over again, trying to figure out what I could have done wrong. I had very good grades in high school; I was even one of the best in my class. What could have happened?]"
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Notification de messagerie"
       },
       {
@@ -453,7 +495,8 @@
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?"
       },
       {
-        "text": "The user has the choice between telling his mother the truth about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling his mother the truth about his failure or lying to her."
       }
     ],
     "choices": [
@@ -463,16 +506,17 @@
   },
 
   "mentir0": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/appart.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist lies to his parents about his failure."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I explain this to my parents? “I failed because I didn't really believe in it”? That sounds so ridiculous... I need to ask myself the right questions.]",
           "[What do I want to do? What really motivates me? Continuing down a path that doesn't suit me will only lead to more failures. Well... I need to find something that suits me. And this time... I need to really commit to it.]"
@@ -486,27 +530,34 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "ment" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "ment" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "ment"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "ment"
+      }
     ]
   },
 
   "verite0": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "[I can't keep hiding the situation from them. Pretending that I'm managing, that I'm holding on... is exhausting. And it's even harder now that I know I've failed.]"
       },
       {
@@ -516,43 +567,53 @@
         "text": "Hey, sweetheart ! How are you? You seem... worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes... I received the answer regarding my transition to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it good?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "…No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "What? You weren’t accepted? But… why?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "I... I didn't put enough effort into my studies. I had trouble getting interested in what I was doing and... I didn't give it my best."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Oh… my dear… We knew it could be tough, but… hearing that hurts."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "We are disappointed, yes! But... we really believed you could succeed. It's not just about disappointment for you… we're sad to see you suffer and lose confidence."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I'm sorry."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Listen… this isn't the end of the world. You made a mistake, that's all. But you need to take stock of what went wrong so you can improve. We'll look at the possible options for you together."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I want to give it my all this time. I don't want to make the same mistakes."
       },
       {
@@ -563,46 +624,56 @@
         ]
       },
       {
+        "background": "/assets/messagerie.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "I found only these two programs where I'm sure you'll be accepted, even in June and with catastrophic grades. Choose between a BA in history or in literature."
       },
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "postuler3": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist applies for the job offer."
       },
       {
+        "background": "/assets/appli.png",
         "speaker": "Notification",
         "text": "Your application has been accepted."
       },
       {
-        "background":"/assets/amphi.png",
+        "background": "/assets/amphi.png",
         "speaker": "Director",
         "character": "/assets/directeur.png",
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
+        "background": "/assets/amphi.png",
         "character": "/assets/voisin.png",
         "speaker": "Martin",
         "text": "I'm above average in all subjects, hehe!"
       },
       {
+        "background": "/assets/amphi.png",
         "text": "I'm definitely better than you, haha!"
       },
       {
@@ -617,13 +688,15 @@
         "text": "Haha! So you're better than me, are you?"
       },
       {
+        "background": "/assets/amphi.png",
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
-        "background":"/assets/chambre.png",
+        "background": "/assets/chambre.png",
         "text": [
           "[Rejected... I thought it would be a shock... but actually, it's more of a strange mix of feelings. Surprise... and at the same time, not really. In high school, I was good. Really good. Everyone told me I had potential, that I was “cut out for studying.” Yet I completely dropped out.]",
           "[The truth is... I wasn't interested. I tried to convince myself otherwise, I followed the path everyone expected of me, but every class seemed... empty. Far from what I really wanted to do. And of course, because I wasn't motivated...]",
@@ -632,7 +705,6 @@
       },
       {
         "background": "/assets/appart.png",
-        "speaker": "none",
         "text": "Message notification"
       },
       {
@@ -643,8 +715,8 @@
         "sound": "/assets/click.mp3"
       },
       {
-        "speaker": "none",
-        "text": "The user has the choice between telling his mother the truth about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling his mother the truth about his failure or lying to her."
       }
     ],
     "choices": [
@@ -654,16 +726,17 @@
   },
 
   "mentir7": {
-    "background": "/assets/background.png",
+    "background": "/assets/appart.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist lies to his parents about his failure."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I explain this to my parents? “I failed because I couldn't manage work and school anymore.” That sounds like an excuse.]",
           "[I worked hard to get out of it, to be independent, to not ask for help all the time… If I find another formation quickly… a reorientation, a parallel program, anything…",
@@ -678,27 +751,34 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "ment" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "ment" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "ment"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "ment"
+      }
     ]
   },
 
   "verite7": {
-    "background": "/assets/background.png",
+    "background": "/assets/messagerie.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "[But I can't keep hiding the situation from them anymore. Pretending that I'm coping, that I'm holding up... it's exhausting. And it's even harder now that I know I've failed.]"
       },
       {
@@ -708,43 +788,53 @@
         "text": "Hey, sweetheart ! How are you? You seem... worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes... I received the answer regarding my transition to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it good?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "…No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Oh… sweetheart…"
       },
       {
+        "background": "/assets/appel.png",
         "text": "I... I'm sorry. I did everything I could, but between classes and work... I couldn't do it anymore. I was coming home too late, I was exhausted, I couldn't even study properly anymore. I tried to keep going, I really did... but I couldn't do it."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "You don’t have to apologize. You fought to get out of it, you worked hard to earn your money and follow your studies. It wasn’t your fault. It was just… too much for you."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We saw how exhausted you were these past months. You couldn’t carry everything alone. We are proud of you, do you hear? Not disappointed. Proud of your courage."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I thought that... you would be angry with me. That you would be disappointed in me."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Disappointed? Come on… You worked hard, you took responsibility, you gave your best in a difficult situation. It’s not a shameful failure. Even adults don’t always manage to handle things so well."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We will think together about what you want to do. Whether it's starting over, changing direction, or lightening your workload... You are not alone."
@@ -763,24 +853,30 @@
         "text": "I found only these two programs where I am sure you will be accepted, even in June and with catastrophic grades. Choose between a BA in history or a BA in literature."
       },
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "aller2": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist goes to the party."
       },
       {
@@ -790,16 +886,20 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
+        "background": "/assets/interface.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[…I can't believe it. Rejected. How is that possible? In high school, I was good. Really good. I was a quick learner, I got good grades without trying too hard… People even told me I was destined for great things. I'm not stupid. So… what went wrong? ...No.]",
           "[I know exactly what went wrong. Going out. Partying. Being late. Classes I only half listened to... or didn't listen to at all. Homework rushed at the last minute, if I did it at all. ]",
@@ -807,7 +907,7 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Message notification"
       },
       {
@@ -817,8 +917,8 @@
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?"
       },
       {
-        "speaker": "none",
-        "text": "The user has the choice between telling his mother the truth about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling his mother the truth about his failure or lying to her."
       }
     ],
     "choices": [
@@ -828,15 +928,16 @@
   },
 
   "mentir6": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
-
+    "background": "/assets/appart.png",
     "text": [
       {
+        "background": "/assets/messagerie.png",
         "text": "The protagonist chose to hide it from his parents."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I tell my parents? They would be furious. Disappointed. I can't go home and tell them that. If I can find another course quickly... a change of direction, a parallel program, anything...]",
           "[Maybe they won't notice anything. I'll just say it's a choice, a change of direction. I have to fix things... absolutely.]"
@@ -850,27 +951,34 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "ment" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "ment" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "ment"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "ment"
+      }
     ]
   },
 
   "verite6": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
+    "background": "/assets/appart.png",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "[I have to face it.]"
       },
       {
@@ -880,127 +988,154 @@
         "text": "Hi sweetheart! Are you okay? You seem...worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes... I received the answer regarding my transition to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it good?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "…No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Rejected? What do you mean, rejected? They told you it was possible if you made an effort in the second semester!"
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Wait. They refused you for what exactly?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "They said my results weren't up to par. That my grades are too low and I'm not serious enough."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Well, well... That's exactly what we've been telling you for months! Going out all the time and sleeping in class was bound to come back to bite you in the end!"
       },
       {
+        "background": "/assets/appel.png",
         "text": "I know... I'm sorry. I really messed up. I thought it would pass, that I'd have time to make up for it."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "The problem is that you didn't take the situation seriously when you should have. We are disappointed, but mostly worried about your future."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "What's more, you're going to have a hard time changing direction. It's already the end of June, and Parcoursup closed a while ago."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "You're going to have to find a program near the house so we can keep an eye on you."
       },
       {
+        "background": "/assets/appel.png",
         "text": "... Okay. I don't want to make the same mistakes again."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We'll look at the options together. But this time, you stick to it. We don't want to see you sabotage your future like that anymore."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I understand. And I promise I'll get down to it seriously. Thank you... for giving me a second chance."
       },
       {
-        "background":"/assets/appart.png",
+        "background": "/assets/appart.png",
         "text": [
           "[I spent the night researching. With Parcoursup closing several weeks ago, it will be very difficult for me to find a program that will accept me.]",
           "[I am forced to turn to subjects that never fill up classes and that readily accept students regardless of their grades, such as literature or history.]"
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "postuler": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
+    "background": "/assets/messagerie.png",
     "sound": "/assets/click.mp3",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist applies for the job offer."
       },
       {
+        "background": "/assets/appli.png",
         "speaker": "Notification",
         "text": "Your application has been accepted."
       },
       {
+        "background": "/assets/amphi.png",
         "character": "/assets/directeur.png",
         "speaker": "Director",
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Transcripts are available on the university website."
       },
       {
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[I kind of expected it... but it still hurts. I wanted to do better. I wanted to prove that I could handle school and work at the same time, but I didn't make it. All those nights coming home late from work... Falling asleep on my homework... ]",
           "[Putting off studying because I was too exhausted to think. It was too much for me. I thought I could handle it, that it would be okay, that it was normal to be tired, but my mind was elsewhere in class, and I couldn't keep up. I feel like I did everything I could, and yet it wasn't enough.]"
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Message notification"
       },
       {
+        "background": "/assets/messagerie.png",
         "speaker": "Mom",
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year",
         "character": "/assets/maman.png"
       },
       {
-        "speaker": "none",
-        "text": "The user has the choice between telling his mother about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling his mother about his failure or lying to her."
       }
     ],
     "choices": [
@@ -1010,16 +1145,17 @@
   },
 
   "mentir": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/appart.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist hides his failure from his parents."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[I can't believe I have to tell them this. They'll be furious. Disappointed. I can't go home and tell them this. If I find another program quickly… a reorientation, a parallel program, anything…]",
           "[Maybe they won't notice. I'll just say it's a choice, a change of direction. I have to fix things... absolutely.]"
@@ -1034,7 +1170,7 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
@@ -1053,9 +1189,11 @@
   "aller": {
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
+
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist goes to the party"
       },
       {
@@ -1065,6 +1203,7 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
+        "background": "/assets/amphi.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -1074,6 +1213,7 @@
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
@@ -1085,19 +1225,19 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Message notification"
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?",
-        "background": "/assets/interface.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "sound": "/assets/click.mp3"
       },
       {
-        "speaker": "none",
-        "text": "The user has the choice between telling the truth to his mother or lying."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling the truth to his mother or lying."
       }
     ],
     "choices": [
@@ -1107,16 +1247,17 @@
   },
 
   "mentir2": {
-    "background": "/assets/background.png",
-    "character": "/assets/protagoniste.png",
+    "background": "/assets/appart.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
+        "background": "/assets/messagerie.png",
         "text": "The protagonist lies to his parents about his failure."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I tell them? They would be furious. Disappointed. I can’t go home and tell them that. If I can find another course quickly... a change of direction, a parallel program, anything...]",
           "[Perhaps they won’t notice anything. I’ll just say it’s a choice, a change of direction. I must fix things... absolutely.]"
@@ -1127,7 +1268,7 @@
         "text": "[I spent the night doing research. With Parcoursup closing several weeks ago, it will be very difficult for me to find a program that will accept me. I am forced to turn to programs that never fill up and easily accept students, regardless of their grades, such as literature or history.]"
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
@@ -1139,77 +1280,94 @@
 
   "verite2": {
     "speaker": "Moi",
+    "background": "/assets/appart.png",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "[I have to face it.]"
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Hi sweetheart! Are you okay? You seem...worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes… I received the response for my passage to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it okay?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "…No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Mom",
         "character": "/assets/maman.png",
         "text": "Refused? What do you mean, refused? They told you it was doable if you made an effort in the second semester!"
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Dad",
         "character": "/assets/papa.png",
         "text": "Wait. They refused you because of what exactly?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "They said my results weren't up to par. That my grades are too low and I'm not serious enough."
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Mom",
         "character": "/assets/maman.png",
         "text": "Well, well... That's exactly what we've been telling you for months! Going out all the time and sleeping in class was bound to come back to bite you!"
       },
       {
+        "background": "/assets/appel.png",
         "text": "I know… I'm sorry. I really messed up. I thought it would pass, that I would have time to catch up."
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Dad",
         "character": "/assets/papa.png",
         "text": "The problem, is that you didn't take the situation seriously when it was needed. We are disappointed, but mostly worried about your future."
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Mom",
         "character": "/assets/maman.png",
         "text": "What's more, you're going to have a hard time reorienting yourself. It's already the end of June, and Parcoursup closed a while ago."
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Dad",
         "character": "/assets/papa.png",
         "text": "You're going to come back and look for a course near home so we can keep an eye on you."
       },
       {
+        "background": "/assets/appel.png",
         "text": "... Okay. I don't want to make the same mistakes again."
       },
       {
+        "background": "/assets/appel.png",
         "speaker": "Mom",
         "character": "/assets/maman.png",
         "text": "We'll look at the options together. But this time, you stick to it. We don't want to see you sabotage your future like that anymore."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I understand. And I promise I'll give it my all. Thank you... for giving me a second chance."
       },
       {
@@ -1220,37 +1378,42 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "decliner": {
-    "background": "/assets/chambre.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/appli.png",
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist declines Martin's invitation."
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "none",
         "text": "Smartphone notification"
       },
       {
-        "background": "/assets/chambre.png",
+        "background": "/assets/appli.png",
         "speaker": "Notification",
         "text": "The “Student Job” job posting published by Leclerc Orléans matches your profile."
       },
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist has the choice between applying to the job offer or ignoring it."
       }
     ],
@@ -1261,12 +1424,13 @@
   },
 
   "ignorer2": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
+        "background": "/assets/appli.png",
         "text": "The protagonist ignores the job offer."
       },
       {
@@ -1283,10 +1447,10 @@
       {
         "background": "/assets/amphi.png",
         "sound": "/assets/brouhaha.mp3",
-
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach. It takes me several hours to fully realize what is happening.]"
       },
       {
@@ -1294,7 +1458,7 @@
         "text": "[I keep replaying every moment of the year over and over again, trying to figure out what I could have done wrong. I had very good grades in high school; I was even one of the best in my class. What could have happened?]"
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Message notification"
       },
       {
@@ -1304,8 +1468,8 @@
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?"
       },
       {
-        "speaker": "none",
-        "text": "The user has the choice between telling his mother the truth about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling his mother the truth about his failure or lying to her."
       }
     ],
     "choices": [
@@ -1315,15 +1479,17 @@
   },
 
   "mentir4": {
-    "background": "/assets/background.png",
+    "background": "/assets/appart.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
+        "background": "/assets/messagerie.png",
         "text": "The protagonist hides his failure from his parents."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I explain this to my parents? “I failed because I didn’t really believe in it.”? That sounds so ridiculous… I need to ask myself the right questions.]",
           "[What do I want to do? What truly motivates me? Continuing in a path that doesn’t suit me will only lead to more failures. Well… I need to find something that suits me. And this time… I’ll actually commit.]"
@@ -1337,7 +1503,7 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
@@ -1348,17 +1514,18 @@
   },
 
   "verite4": {
-    "background": "/assets/background.png",
+    "background": "/assets/messagerie.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
-        "text": "I have to face up to it. I'll never be able to make a fresh start if I hide something this important from my own parents."
+        "background": "/assets/messagerie.png",
+        "text": "[I have to face up to it. I'll never be able to make a fresh start if I hide something this important from my own parents.]"
       },
       {
         "background": "/assets/appel.png",
@@ -1367,43 +1534,53 @@
         "text": "Hi sweetheart! Are you okay? You seem... worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes… I received the response for my passage to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it okay?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "…No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "What? You weren’t accepted? But… why?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "I... I didn't put enough effort into my studies. I had trouble getting interested in what I was doing and... I didn't give it my best."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Oh... my dear. We knew it could be difficult, but... hearing it hurts."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "We are disappointed, yes! But ... we really believed you could succeed. It's not just about disappointment for you… we're also sad to see you suffer and lose confidence."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I'm sorry."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
-        "text": "listen... it's not the end of the world. You made a mistake, that's all. But you need to realize what went wrong so you can improve the situation. We'll look at the options available to you together."
+        "text": "Listen... it's not the end of the world. You made a mistake, that's all. But you need to realize what went wrong so you can improve the situation. We'll look at the options available to you together."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I want to give it my all this time. I don't want to make the same mistakes again."
       },
       {
@@ -1414,32 +1591,40 @@
         ]
       },
       {
+        "background": "/assets/messagerie.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "I haven't found any other programs where I'm sure you'll be accepted, even in June and with catastrophic grades. Choose between a BA in history or in literature."
       },
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "postuler2": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/appli.png",
         "text": "The protagonist applies for the job offer."
       },
       {
+        "background": "/assets/appli.png",
         "speaker": "Notification",
         "text": "Your application has been accepted."
       },
@@ -1449,11 +1634,13 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
-        "character": "/assets/martin.png",
+        "background": "/assets/amphi.png",
+        "character": "/assets/voisin.png",
         "speaker": "Martin",
         "text": "I'm above average in all subjects, hehe!"
       },
       {
+        "background": "/assets/amphi.png",
         "text": "I'm definitely better than you, haha!"
       },
       {
@@ -1464,14 +1651,16 @@
       },
       {
         "background": "/assets/amphi.png",
-        "character": "/assets/martin.png",
+        "character": "/assets/voisin.png",
         "speaker": "Martin",
         "text": "Haha! So you're better than me, are you?"
       },
       {
+        "background": "/assets/amphi.png",
         "text": "..."
       },
       {
+        "background": "/assets/amphi.png",
         "text": "[I wait for the end of the day with a knot in my stomach, enduring my friends' mockery. It takes me several hours to fully realize what is happening.]"
       },
       {
@@ -1485,7 +1674,7 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "Message notification"
       },
       {
@@ -1495,7 +1684,8 @@
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?"
       },
       {
-        "text": "The user has the choice between telling his mother the truth about his failure or lying to her."
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist has the choice between telling his mother the truth about his failure or lying to her."
       }
     ],
     "choices": [
@@ -1505,16 +1695,17 @@
   },
 
   "mentir3": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
+    "background": "/assets/appart.png",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist chose to hide it from his parents."
       },
       {
+        "background": "/assets/appart.png",
         "text": [
           "[How could I explain this to my parents? “I failed because I couldn't manage work and school anymore.” That sounds like an excuse.]",
           "[I worked hard to get by, to be independent, so I wouldn't have to ask them for help all the time... If I can find another training program quickly... a change of direction, a parallel program, anything...]",
@@ -1529,27 +1720,34 @@
         ]
       },
       {
-        "speaker": "none",
+        "background": "/assets/appart.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "ment" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "ment" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "ment"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "ment"
+      }
     ]
   },
 
   "verite3": {
-    "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
+    "background": "/assets/messagerie.png",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "[But I can no longer continue to hide the situation from them. Pretending that I'm coping, that I'm holding up... is exhausting. And it's even harder now that I know I've failed.]"
       },
       {
@@ -1559,43 +1757,53 @@
         "text": "Hi sweetheart! Are you okay? You seem...worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes... I received the answer regarding my transition to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Is it good?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "…No. I was refused."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Oh… sweetheart…"
       },
       {
+        "background": "/assets/appel.png",
         "text": "I... I'm sorry. I did everything I could, but between classes and work... I couldn't do it anymore. I was coming home too late, I was exhausted, I couldn't even study properly anymore. I tried to keep going, I really did... but I couldn't."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "You don't have to apologize. You fought to get out of it, you worked hard to earn your money and follow your studies. It's not your fault. It was just... too much for you."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We saw how exhausted you were these past few months. You couldn't carry everything on your own. We're proud of you, do you hear me? Not disappointed. Proud of your courage."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I thought that... you would be angry with me. That you would be disappointed in me."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Disappointed? Come on... You worked hard, you took responsibility, you did your best in a difficult situation. It's not a shameful failure. Even adults don't always manage to handle things so well."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We'll think together about what you want to do. Whether it's starting over, changing your path, or lightening your workload… You're not alone."
@@ -1609,7 +1817,6 @@
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "none",
         "text": "Smartphone notification"
       },
       {
@@ -1619,26 +1826,34 @@
         "text": "I only found these two programs where I'm sure you'll be accepted, even in June and with terrible grades. Choose between a bachelor's degree in history or a bachelor's degree in literature."
       },
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
   },
 
   "verite": {
     "speaker": "Moi",
+    "background": "/assets/messagerie.png",
     "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist confides in his parents."
       },
       {
+        "background": "/assets/messagerie.png",
         "text": "[But I can no longer continue to hide the situation from them. Pretending that I'm coping, that I'm holding up... is exhausting. And it's even harder now that I know I've failed.]"
       },
       {
@@ -1648,64 +1863,87 @@
         "text": "Hey, sweetheart ! How are you? You seem... worried."
       },
       {
+        "background": "/assets/appel.png",
         "text": "Yes... I received the answer regarding my transition to the second year."
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Finally. So? Did you get in?"
       },
       {
+        "background": "/assets/appel.png",
         "text": "...No. I was rejected."
       },
       {
+        "background": "/assets/appel.png",
+        "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "Oh... my dear..."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I... I'm sorry. I did everything I could, but between classes and work... I couldn't do it anymore. I was coming home too late, I was exhausted, I couldn't even study properly anymore. I tried to keep going, I really did... but I couldn't."
       },
       {
+        "background": "/assets/appel.png",
+        "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We saw how exhausted you were these past few months. You couldn't carry everything on your own. We're proud of you, you hear me? Not disappointed. Proud of your courage."
       },
       {
+        "background": "/assets/appel.png",
         "text": "I thought that... you would be angry with me. That you would be disappointed in me"
       },
       {
+        "background": "/assets/appel.png",
         "character": "/assets/papa.png",
         "speaker": "Dad",
         "text": "Disappointed? Come on... You worked hard, you took responsibility, you did your best in a difficult situation. It's not a shameful failure. Even adults don't always manage to handle things so well."
       },
       {
+        "background": "/assets/appel.png",
+        "character": "/assets/maman.png",
         "speaker": "Mom",
         "text": "We'll think together about what you want to do. Whether it's starting over, changing direction, or lightening your workload... You're not alone."
       },
       {
         "background": "/assets/chambre.png",
-        "text": "[They... supported me. They really understood. I thought they would be disappointed, that they would blame me for my choices... But they listened to me. They believed me. And they didn't minimize what I went through. I did the right thing by telling them. I had kept it all to myself for so long, carrying the burden alone... Ifeel lighter. I'm not alone. They're with me, and I'm going to start over without making any more mistakes.]"
+        "text": [
+          "[They... supported me. They really understood. I thought they would be disappointed, that they would blame me for my choices... But they listened to me. They believed me.",
+          "And they didn't minimize what I went through. I did the right thing by telling them. I had kept it all to myself for so long, carrying the burden alone... Ifeel lighter.",
+          "I'm not alone. They're with me, and I'm going to start over without making any more mistakes.]"
+        ]
       },
       {
         "background": "/assets/chambre.png",
-        "speaker": "none",
         "text": "Notification"
       },
       {
+        "background": "/assets/messagerie.png",
         "speaker": "Mom",
         "character": "/assets/maman.png",
-        "text": "I only found these two programs where I'm sure you'll be accepted, even in June and with your terrible grades. Choose between a BA in history or a BA in literature."
+        "text": "I only found these two programs where I'm sure you'll be accepted, even in June and with your terrible grades. Choose between a BA in history or in literature."
       },
       {
-        "speaker": "none",
+        "background": "/assets/messagerie.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
     ],
     "choices": [
-      { "label": "Register for a Bachelor of Arts (BA) in literature", "next": "avoue" },
-      { "label": "Register for a Bachelor of Arts (BA) in history", "next": "avoue" }
+      {
+        "label": "Register for a Bachelor of Arts (BA) in literature",
+        "next": "avoue"
+      },
+      {
+        "label": "Register for a Bachelor of Arts (BA) in history",
+        "next": "avoue"
+      }
     ]
-  }
- 
+  
+}
+}
   },
 
   "chapter2": {
@@ -1719,5 +1957,5 @@
     "description": "Coming soon...",
     "scenes": {}
   }
-}
+
 }
