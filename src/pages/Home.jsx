@@ -15,7 +15,7 @@ const Home = ({ language, onNavigate }) => {
     <div className="home-container">
       {/* Title Overlay */}
       <div className="title-overlay">
-        <h1 className="home-title">A CONTRE COURANT</h1>
+        <h1 className="home-title">{language === 'fr' ? "A CONTRE COURANT" : "AGAINST THE CURRENT"}</h1>
       </div>
 
       {/* Left Side - JOUER */}

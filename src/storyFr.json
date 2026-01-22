@@ -3,7 +3,7 @@
     "title": "Chapitre 1 : Première Année",
     "description": "Les doutes s’installent. Un choix s’impose.",
      "scenes": {
-    "start": {
+   "start": {
     "background": "/assets/background.png",
     "speaker": "Moi",
     "sound": "/assets/click.mp3",
@@ -1459,7 +1459,7 @@
       },
       {
         "background": "/assets/messagerie.png",
-        "character": "/assets/maman.png",
+        "character": "maman",
         "speaker": "Maman",
         "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
       },
@@ -1669,18 +1669,10 @@
       { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
       { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
     ]
-  },
-  "avoue": {
-    "background": "/assets/background.png",
-    "speaker": "none",
-    "text": "Fin du chapitre 1. Suite à venir..."
-  },
-  "ment": {
-    "background": "/assets/background.png",
-    "speaker": "none",
-    "text": "Fin du chapitre 1. Suite à venir..."
   }
-     }
+}
+
+
      
     },
   "chapter2": {

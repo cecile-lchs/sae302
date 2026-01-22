@@ -392,7 +392,371 @@ const Documentation = ({ language, onNavigate }) => {
     }
   ];
 
-  const themesEn = themesFr;
+  const themesEn = [
+    {
+      title: "Family Pressure",
+      color: "#FFD7B5",
+      sections: [
+        {
+          title: "1. What is family pressure?",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>
+                Academic reorientation is a key moment in a student's life. While it can represent an opportunity to better align with one's interests and ambitions, it is often accompanied by stress and uncertainty.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                Family pressure is defined as the set of implicit or explicit expectations, recommendations, or demands from parents regarding their children's academic and professional path. It can take very diverse forms:
+              </p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Expectations of academic success:</strong> some parents insist that their children choose fields deemed prestigious or with "good career prospects".</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Comparisons with other students or family members:</strong> measuring the student's success against that of a sibling or friends can create a constant feeling of inadequacy.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Indirect control:</strong> some families adopt a subtle posture, valuing certain choices or minimizing others, thus guiding the student's decision without direct confrontation.</li>
+              </ul>
+            </div>
+          )
+        },
+        {
+          title: "2. Why families exert this pressure",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>
+                Parental pressure is not necessarily malicious. In most cases, it stems from concerns for the child's protection and well-being. However, several factors can accentuate this pressure:
+              </p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Fear of failure:</strong> Parents want their child to have a "secure" and stable path to avoid financial or professional difficulties in the future.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Cultural or social heritage:</strong> In some families, certain professions or fields are socially valued, and deviating from this norm can be perceived as a risk or disappointment.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Personal projections:</strong> Some parents project their own ambitions or regrets onto their children, unconsciously influencing their choices.</li>
+              </ul>
+            </div>
+          )
+        },
+        {
+          title: "3. The effects of family pressure on the student",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>
+                The consequences of this pressure can be multiple and affect several aspects of the student's life:
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                <strong>Stress and anxiety:</strong> The fear of disappointing can cause physical and psychological symptoms: sleep disorders, headaches, tension, chronic anxiety, or even academic burnout.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                <strong>Self-doubt and loss of motivation:</strong> The student may feel incapable of making an autonomous choice or following a path that suits them. This lack of confidence can hinder their ability to explore new options or reorient themselves.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>
+                <strong>Late or conflicting decisions:</strong> Some students delay their reorientation for fear of offending their parents, or alternate between several options without ever deciding.
+              </p>
+              <p>
+                <strong>Impact on well-being and mental health:</strong> Continuous pressure can contribute to depression, social isolation, or loss of interest in studies.
+              </p>
+            </div>
+          )
+        },
+        {
+          title: "4. Identifying and understanding family pressure",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>
+                Before managing pressure, it is essential to recognize and analyze it:
+              </p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}>Observe situations where you feel judged or constrained.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Distinguish between parental benevolence and emotional burden.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Understand the motivations behind parental expectations (security, prestige, personal experience).</li>
+              </ul>
+            </div>
+          )
+        },
+        {
+          title: "5. Strategies for managing family pressure",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>
+                Managing family pressure is a gradual process that combines communication, preparation, and external support:
+              </p>
+              <p style={{ marginBottom: '1rem' }}><strong>Open and respectful dialogue:</strong> Expressing your motivations and explaining the reorientation project can reduce tensions.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>Information and planning:</strong> Presenting concrete information reassures parents.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>External support:</strong> Guidance counselors or psychologists can help.</p>
+              <p><strong>Set your own priorities:</strong> Identify what is most important to you (passion, personal fulfillment).</p>
+            </div>
+          )
+        },
+        {
+          title: "6. Conclusion",
+          content: <p>Reorientation is never a failure, but a moment of personal reflection and growth. Family pressure, although often motivated by concern for the child's well-being, can represent an obstacle if it becomes too strong or misunderstood.</p>
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://sherpas.com/blog/la-pression-des-parents-pour-les-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Sherpas, La pression des parents pour les études</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-gerer_pression_parents_etudes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo, Gérer la pression des parents sur les études</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://objectif-ast.fr/influence-famille-choix-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Objectif AST, L’influence de la famille sur le choix des études</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://campus.studywatt.fr/articles/stress-des-etudiants-a-la-rentree-6-causes-courantes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>StudyWatt, Stress des étudiants</a></li>
+              <li><a href="https://www.kotplanet.be/conseils-vie-etudiante/comment-gerer-la-pression-de-tes-parents-pour-tes-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>KotPlanet, Comment gérer la pression de tes parents</a></li>
+            </ul>
+          )
+        }
+      ]
+    },
+    {
+      title: "Academic Failure",
+      color: "#A8E6CF",
+      sections: [
+        {
+          title: "Introduction",
+          content: <p>Academic failure in higher education refers to all situations where a student fails to validate their years, courses, or degree, and sometimes ends up dropping out of their curriculum before obtaining a degree. This phenomenon affects a significant portion of students and is a major issue.</p>
+        },
+        {
+          title: "📉 What is failure and dropping out?",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>A student is considered in a situation of academic failure when they fail their exams, do not validate teaching units, or stagnate in their results. University dropout goes further: it involves a student who definitively leaves their curriculum without a degree.</p>
+              <p>In France, it is estimated that more than 20% of students leave higher education without a degree, with a significant concentration of these dropouts in the first year.</p>
+            </div>
+          )
+        },
+        {
+          title: "🎯 The main causes of academic failure",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Failure and dropout generally result from a set of interconnected difficulties:</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>1. Unsuitable orientation:</strong> Many students choose a program that does not match their interests or level.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>2. Academic difficulties:</strong> The requirements of higher education are higher than high school. Gaps or a lack of method can lead to failures.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>3. Social integration:</strong> A feeling of not belonging to the university community and isolation contribute to dropout.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>4. Personal problems:</strong> Stress, anxiety, fragile mental health, or fatigue.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>5. Financial constraints:</strong> Precariousness forcing work alongside studies reduces the time available to succeed.</li>
+              </ul>
+            </div>
+          )
+        },
+        {
+          title: "📊 The consequences of academic failure",
+          content: (
+            <ul style={{ paddingLeft: '2rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}>Delay or loss of degree.</li>
+              <li style={{ marginBottom: '0.5rem' }}>Difficulties in professional insertion.</li>
+              <li style={{ marginBottom: '0.5rem' }}>Psychological impact (discouragement, loss of confidence).</li>
+              <li style={{ marginBottom: '0.5rem' }}>Increased economic pressure.</li>
+            </ul>
+          )
+        },
+        {
+          title: "🤝 How to prevent and bounce back?",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}><strong>Support and guidance:</strong> Orientation services and psychologists are valuable resources.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>Reorientation and adaptation:</strong> Changing paths is not a definitive failure, but a step.</p>
+              <p><strong>Financial and social support:</strong> Financial aid, scholarships, social support.</p>
+            </div>
+          )
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://info-jeunes.fr/etudes-superieures-comment-rebondir-en-cas-de-decrochage/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Info-Jeunes — Études supérieures : comment rebondir</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://resources.readyeducation.com/hubfs/Ready%20France/FR%20-%20GUIDE%20-%20dropouts%20-%20Jan%2023.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ready Education — Guide sur les abandons</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://shs.hal.science/halshs-04628088/document" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>HAL Sciences Sociales — Article sur le décrochage</a></li>
+              <li><a href="https://diplomeo.com/actualite-echec_etude_superieures" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo — Actualité sur l’échec</a></li>
+            </ul>
+          )
+        }
+      ]
+    },
+    {
+      title: "Administrative Reorientation",
+      color: "#FDFFAB",
+      sections: [
+        {
+          title: "Definition",
+          content: <p>Administrative reorientation corresponds to all the official procedures that a student must carry out when they wish to change formation, field, or institution. It involves a new administrative registration and engaging in precise procedures.</p>
+        },
+        {
+          title: "The process and steps",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Reorientation can take place during the year (often end of the 1st semester) or at the end of the academic year.</p>
+              <p style={{ marginBottom: '1rem' }}>Procedures:</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}>Inquire about access modalities (Parcoursup or direct university).</li>
+                <li style={{ marginBottom: '0.5rem' }}>Compile a file (motivations, results).</li>
+                <li style={{ marginBottom: '0.5rem' }}>Passage through an educational commission to evaluate the coherence of the project.</li>
+              </ul>
+            </div>
+          )
+        },
+        {
+          title: "Impact and support",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Reorientation has consequences on student status: scholarships, housing, social security. It is crucial to verify the conservation of ECTS credits.</p>
+              <p>Guidance and schooling services support students to avoid administrative errors.</p>
+            </div>
+          )
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F31063" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-public.fr – Réorientation</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.education.gouv.fr/la-reorientation-dans-l-enseignement-superieur-306702" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministère de l’Éducation nationale</a></li>
+              <li><a href="https://www.youzful-by-ca.fr/les-etudes-superieures/comment-reussir-sa-reorientation-la-fac" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Youzful – Réussir sa réorientation</a></li>
+            </ul>
+          )
+        }
+      ]
+    },
+    {
+      title: "Scholarships",
+      color: "#FFB7B2",
+      sections: [
+        {
+          title: "Functioning",
+          content: <p>The higher education scholarship based on social criteria is financial aid from the State. It aims to reduce inequalities and allow access to studies.</p>
+        },
+        {
+          title: "Application and Conditions",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>The application is made via the <strong>Student Social File (DSE)</strong> each year. It is essential, even in case of reorientation.</p>
+              <p>The amount depends on family income, charges, and distance. It is paid over 10 months.</p>
+            </div>
+          )
+        },
+        {
+          title: "Scholarships and Reorientation",
+          content: <p>A student is entitled to 7 scholarship rights in total. Reorientation does not cause the loss of the scholarship as long as progression in studies is justified (validation of ECTS credits).</p>
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.enseignementsup-recherche.gouv.fr/fr/bo/21/Hebdo26/ESRS2117943C.htm" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministère de l’Enseignement supérieur - Modalités</a></li>
+              <li><a href="https://www.etudiant.gouv.fr/fr/jusqu-7-bourses-successives-durant-vos-etudes-2974" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Étudiant.gouv - 7 bourses successives</a></li>
+            </ul>
+          )
+        }
+      ]
+    },
+    {
+      title: "Mental Health",
+      color: "#BFD7ED",
+      sections: [
+        {
+          title: "Introduction",
+          content: <p>Mental health is a state of well-being that allows one to cope with life's difficulties. Among students, stress and anxiety are sharply increasing.</p>
+        },
+        {
+          title: "Student risk factors",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>The student period is a fragile transition (autonomy, academic pressure). Financial precariousness and isolation are often added.</p>
+            </div>
+          )
+        },
+        {
+          title: "Link with reorientation",
+          content: <p>Doubt, fear of failure, and the gaze of others make reorientation stressful. It can be experienced as a personal failure, risking mental health fragility.</p>
+        },
+        {
+          title: "Support systems",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>It is crucial not to remain alone. University health services (SSE), psychologists, and helplines exist.</p>
+              <p>Developing psychosocial skills (stress management) is part of prevention.</p>
+            </div>
+          )
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.emd.fr/sante-mentale-etudiants/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>EMD – Santé mentale des étudiants</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://eduscol.education.fr/4063/agir-pour-favoriser-la-sante-mentale-et-le-bien-etre-des-eleves" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Eduscol – Agir pour la santé mentale</a></li>
+              <li><a href="https://rrapps-bfc.org/sites/default/files/publications/fichiers/2023/2023-ReferentielSanteMentale.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>RRAPPS – Référentiel Santé Mentale</a></li>
+            </ul>
+          )
+        }
+      ]
+    },
+    {
+      title: "Work-Study Aid",
+      color: "#E0BBE4",
+      sections: [
+        {
+          title: "1. What aid for work-study students?",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>In work-study programs, salary and student status are combined, which opens rights to several aids:</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Housing:</strong> APL (CAF) and Mobili-Jeune (Action Logement).</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Housing guarantees:</strong> Visale Guarantee (free deposit) and Loca-Pas Advance.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Others:</strong> Activity bonus (CAF), transport aid, driving license aid (€500).</li>
+              </ul>
+            </div>
+          )
+        },
+        {
+          title: "2. Focus on Mobili-Jeune",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>This is specific aid for work-study students under 30 with a salary &le; Minimum Wage.</p>
+              <p>It covers part of the rent (between €10 and €100 per month) AFTER deduction of APL. The application is made on the Action Logement website.</p>
+            </div>
+          )
+        },
+        {
+          title: "3. Advice",
+          content: <p>Start your procedures early! Aids like Mobili-Jeune have strict deadlines (application close to the start of the contract).</p>
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F38630" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-Public - Apprenti aides financières</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.actionlogement.fr/l-aide-mobili-jeune" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Action Logement - Aide MOBILI-JEUNE</a></li>
+              <li><a href="https://money.wizbii.com/advices/aide-alternance-le-guide-pour-la-rentree" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Wizbii - Guide rentrée alternance</a></li>
+            </ul>
+          )
+        }
+      ]
+    },
+    {
+      title: "APL (Housing Aid)",
+      color: "#957DAD",
+      sections: [
+        {
+          title: "1. What is APL?",
+          content: <p>Financial aid paid by the CAF to reduce the amount of rent. It depends on income, rent, type of housing, and location.</p>
+        },
+        {
+          title: "2. Conditions",
+          content: <p>Be a tenant of a contracted housing, be a student, and meet resource criteria.</p>
+        },
+        {
+          title: "3. Application",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Everything is done online on the CAF website. You must provide the lease, a bank account confirmation (RIB), and proof of income.</p>
+              <p>Attention: the aid is not retroactive, apply as soon as you enter the housing.</p>
+            </div>
+          )
+        },
+        {
+          title: "Sources",
+          content: (
+            <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-nord/offre-de-service/logement/l-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF - Aide au logement étudiant</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.gestetud.fr/apl-etudiant-toutes-les-conditions-et-demarches-pour-beneficier-de-laide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Gestetud - Conditions et démarches</a></li>
+              <li><a href="https://diplomeo.com/actualite-quel_document_pour_demande_apl" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo - Documents APL</a></li>
+            </ul>
+          )
+        }
+      ]
+    }
+  ];
 
   const themes = language === 'en' ? themesEn : themesFr;
 
@@ -511,7 +875,7 @@ const Documentation = ({ language, onNavigate }) => {
               <div className="nav-arrow-container" onClick={handlePrev}>
                 <span style={{ fontSize: '2.5rem', marginRight: '1rem' }}>&#8592;</span>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', opacity: 0.7, fontWeight: 'bold' }}>Précédent</span>
+                  <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', opacity: 0.7, fontWeight: 'bold' }}>{language === 'fr' ? "Précédent" : "Previous"}</span>
                   <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{prevTheme.title}</span>
                 </div>
               </div>
@@ -535,7 +899,7 @@ const Documentation = ({ language, onNavigate }) => {
             {nextTheme ? (
               <div className="nav-arrow-container" onClick={handleNext}>
                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-end' }}>
-                  <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', opacity: 0.7, fontWeight: 'bold' }}>Suivant</span>
+                  <span style={{ fontSize: '0.9rem', textTransform: 'uppercase', opacity: 0.7, fontWeight: 'bold' }}>{language === 'fr' ? "Suivant" : "Next"}</span>
                   <span style={{ fontWeight: 'bold', fontSize: '1.1rem' }}>{nextTheme.title}</span>
                 </div>
                 <span style={{ fontSize: '2.5rem', marginLeft: '1rem' }}>&#8594;</span>

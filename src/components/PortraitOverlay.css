@@ -3,8 +3,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: #000000; /* Deep black for immersion */
   color: #fdb933; /* Theme yellow/gold */
   z-index: 10000; /* Higher than everything else */
@@ -13,6 +13,7 @@
   align-items: center;
   padding: 2rem;
   text-align: center;
+  box-sizing: border-box; /* Ensure padding doesn't affect total width/height */
 }
 
 /* Only show on screens smaller than tablets (phones) and in portrait mode */
@@ -29,12 +30,22 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* Ensure vertical centering */
   gap: 20px;
+  max-width: 80%; /* Prevent text from touching edges too much */
 }
 
 .rotate-icon {
   font-size: 4rem;
+  margin-bottom: 20px; /* Explicit spacing */
   animation: rotate 2s infinite ease-in-out;
+}
+
+/* Ensure paragraph has no default margin interfering with centering */
+.overlay-content p {
+  margin: 0;
+  font-size: 1.2rem;
+  line-height: 1.5;
 }
 
 @keyframes rotate {

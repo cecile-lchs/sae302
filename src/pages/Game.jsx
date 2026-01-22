@@ -12,6 +12,13 @@ import DisclaimerPopup from "../components/DisclaimerPopup";
 import prof from "../assets/prof.png";
 import directeur from "../assets/directeur.png";
 import voisin from "../assets/voisin.png";
+import papa from "../assets/pere2/neutre_bouche_fermee.png";
+import maman from "../assets/mere2/neutre.png";
+import messagerie from "../assets/messagerie.png";
+import appli from "../assets/appli.png";
+import appart from "../assets/appart.png";
+import appel from "../assets/appel.png";
+import job from "../assets/job.png";
 import "./Game.css";
 
 
@@ -60,7 +67,12 @@ const backgrounds = {
   "/assets/amphi.png": amphi,
   "/assets/classe.png": classe,
   "/assets/chambre.png": chambre,
-  "/assets/bar.png": bar
+  "/assets/bar.png": bar,
+  "/assets/messagerie.png": messagerie,
+  "/assets/appli.png": appli,
+  "/assets/appart.png": appart,
+  "/assets/appel.png": appel,
+  "/assets/job.png": job,
 };
 
 export default function Game({ language, userData, setUserData, activeChapter = "chapter1", onChapterComplete }) {
@@ -443,7 +455,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
               {/* Show hint if there are more lines OR if there are choices next */}{
                 ((rawSceneData.choices) || (dialogueIndex < dialogueQueue.length - 1)) && (
                   <div className="dialogue-hint">
-                    (Cliquez pour continuer)
+                    {language === 'fr' ? "(Cliquez pour continuer)" : "(Click to continue)"}
                   </div>
                 )}
             </div>
@@ -464,6 +476,8 @@ export default function Game({ language, userData, setUserData, activeChapter = 
               "/assets/directeur.png": directeur,
               "/assets/voisin.png": voisin,
               "/assets/prof.png": prof,
+              "/assets/papa.png": papa,
+              "/assets/maman.png": maman,
             };
 
             return charMap[charPath] || charPath;

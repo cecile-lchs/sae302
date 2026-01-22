@@ -10,7 +10,9 @@ const Cinema = ({ language, unlockedChapters = [], onSelectChapter }) => {
 
   return (
     <div className="cinema-container">
-      <h1 className="cinema-header">Les facettes de la réorientation</h1>
+      <h1 className="cinema-header">
+        {language === 'fr' ? "Les facettes de la réorientation" : "The Facets of Reorientation"}
+      </h1>
       <p className="cinema-subtitle">
         {language === 'fr'
           ? "Sélectionnez un chapitre pour commencer ou rejouer."

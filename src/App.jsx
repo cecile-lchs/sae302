@@ -58,6 +58,19 @@ export default function App() {
     handleTransitionNavigate(page);
   };
 
+  const handleChapterComplete = (completedChapterId) => {
+    // Logic to unlock the next chapter
+    const chapterOrder = ["chapter1", "chapter2", "chapter3", "chapter4", "chapter5"];
+    const currentIndex = chapterOrder.indexOf(completedChapterId);
+
+    if (currentIndex !== -1 && currentIndex < chapterOrder.length - 1) {
+      const nextChapter = chapterOrder[currentIndex + 1];
+      if (!unlockedChapters.includes(nextChapter)) {
+        setUnlockedChapters(prev => [...prev, nextChapter]);
+      }
+    }
+  };
+
   const renderPage = () => {
     switch (currentPage) {
       case "home":

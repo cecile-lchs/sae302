@@ -1,6 +1,5 @@
 import React from 'react';
-import emailIcon from '../assets/email.png';
-import emailNotifIcon from '../assets/email_notif.png';
+import documentationIcon from '../assets/documentation.png';
 
 const EmailWidget = ({ hasNotification, onClick }) => {
   return (
@@ -21,11 +20,11 @@ const EmailWidget = ({ hasNotification, onClick }) => {
       }}
       onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
       onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
-      title={hasNotification ? "Nouveau message !" : "Messagerie"}
+      title="Documentation"
     >
       <img
-        src={hasNotification ? emailNotifIcon : emailIcon}
-        alt="Email"
+        src={documentationIcon}
+        alt="Documentation"
         style={{
           width: '100%',
           height: '100%',

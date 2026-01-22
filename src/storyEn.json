@@ -1,6 +1,7 @@
 {
   "chapter1": {
     "title": "Chapter 1: First Year",
+    "description": "Doubts are setting in. A choice must be made",
     "scenes": {
   "start": {
     "background": "/assets/classe.png",
@@ -111,7 +112,7 @@
         "background": "/assets/messagerie.png",
         "speaker": "Martin",
         "character": "/assets/voisin.png",
-        "text": "Via messages Hi! Do you want to come to the integration party?"
+        "text": " Hi! Do you want to come to the integration party?"
       },
       {
         "background": "/assets/messagerie.png",
@@ -147,12 +148,12 @@
         "text": "Smartphone notification"
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "speaker": "Notification",
         "text": "The “Student Job” job posting published by Leclerc Orléans matches your profile."
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist has the choice between applying to the job offer or ignoring it."
       }
     ],
@@ -169,7 +170,7 @@
 
     "text": [
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist ignores the job offer."
       },
       {
@@ -179,7 +180,7 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Transcripts are available on the university website."
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -437,11 +438,11 @@
         "text": "Message notification"
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The “Student Job” job posting published by Leclerc Orléans matches your profile."
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist has the choice between applying to the job offer or ignoring it."
       }
     ],
@@ -458,7 +459,7 @@
 
     "text": [
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist ignores the job offer."
       },
       {
@@ -468,7 +469,7 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -652,11 +653,11 @@
     "background": "/assets/messagerie.png",
     "text": [
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist applies for the job offer."
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "speaker": "Notification",
         "text": "Your application has been accepted."
       },
@@ -677,7 +678,7 @@
         "text": "I'm definitely better than you, haha!"
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -886,7 +887,7 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -1089,11 +1090,11 @@
     "sound": "/assets/click.mp3",
     "text": [
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist applies for the job offer."
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "speaker": "Notification",
         "text": "Your application has been accepted."
       },
@@ -1203,7 +1204,7 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
-        "background": "/assets/amphi.png",
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -1408,12 +1409,12 @@
         "text": "Smartphone notification"
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "speaker": "Notification",
         "text": "The “Student Job” job posting published by Leclerc Orléans matches your profile."
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist has the choice between applying to the job offer or ignoring it."
       }
     ],
@@ -1430,7 +1431,7 @@
 
     "text": [
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist ignores the job offer."
       },
       {
@@ -1440,7 +1441,7 @@
         "text": "Thank you all for this year. I have had the pleasure of meeting some very talented students who are brimming with ideas. I am counting on you to continue in the same vein next year. Grades are available on the university website."
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -1620,11 +1621,11 @@
 
     "text": [
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "text": "The protagonist applies for the job offer."
       },
       {
-        "background": "/assets/appli.png",
+        "background": "/assets/job.png",
         "speaker": "Notification",
         "text": "Your application has been accepted."
       },
@@ -1644,7 +1645,7 @@
         "text": "I'm definitely better than you, haha!"
       },
       {
-        "background": "/assets/interface.png",
+        "background": "/assets/appli.png",
         "sound": "/assets/brouhaha.mp3",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
@@ -1942,19 +1943,29 @@
       }
     ]
   
-}
+},
+    "avoue": {
+      "background": "/assets/background.png",
+      "speaker": "none",
+      "text": "End of Chapter 1. To be continued..."
+    },
+    "ment": {
+      "background": "/assets/chambre.png",
+      "speaker": "moi",
+      "text": "End of Chapter 1. To be continued..."
+    }
 }
   },
 
   "chapter2": {
     "title": "Chapter 2: Second Year",
-    "description": "Coming soon...",
+    "description": "A new path opens up. It’s up to you to take it",
     "scenes": {}
   },
 
   "chapter3": {
     "title": "Chapter 3: Third Year",
-    "description": "Coming soon...",
+    "description": "Your path becomes clearer. Each step brings you closer to your future.",
     "scenes": {}
   }
 
