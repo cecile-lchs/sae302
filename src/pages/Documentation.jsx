@@ -142,7 +142,7 @@ const Documentation = ({ language, onNavigate }) => {
           content: <p>L’échec scolaire en enseignement supérieur désigne l’ensemble des situations où un étudiant ne parvient pas à valider ses années, ses cours ou son diplôme, et finit parfois par abandonner son cursus avant d’obtenir un diplôme. Ce phénomène touche une part significative des étudiant·es et constitue un enjeu majeur.</p>
         },
         {
-          title: "📉 Qu’est-ce que l’échec et le décrochage ?",
+          title: " Qu’est-ce que l’échec et le décrochage ?",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>Un étudiant est considéré en situation d’échec scolaire lorsqu’il échoue à ses examens, ne parvient pas à valider des unités d’enseignement ou stagne dans ses résultats. Le décrochage universitaire va plus loin : il s’agit d’un étudiant qui quitte définitivement son cursus sans diplôme.</p>
@@ -151,7 +151,7 @@ const Documentation = ({ language, onNavigate }) => {
           )
         },
         {
-          title: "🎯 Les causes principales de l’échec scolaire",
+          title: " Les causes principales de l’échec scolaire",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>L’échec et le décrochage résultent généralement d’un ensemble de difficultés interconnectées :</p>
@@ -166,7 +166,7 @@ const Documentation = ({ language, onNavigate }) => {
           )
         },
         {
-          title: "📊 Les conséquences de l’échec scolaire",
+          title: " Les conséquences de l’échec scolaire",
           content: (
             <ul style={{ paddingLeft: '2rem' }}>
               <li style={{ marginBottom: '0.5rem' }}>Retard ou perte de diplôme.</li>
@@ -177,7 +177,7 @@ const Documentation = ({ language, onNavigate }) => {
           )
         },
         {
-          title: "🤝 Comment prévenir et rebondir ?",
+          title: " Comment prévenir et rebondir ?",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}><strong>Soutien et accompagnement :</strong> Les services d’orientation et psychologues sont des ressources précieuses.</p>
@@ -508,7 +508,7 @@ const Documentation = ({ language, onNavigate }) => {
           content: <p>Academic failure in higher education refers to all situations where a student fails to validate their years, courses, or degree, and sometimes ends up dropping out of their curriculum before obtaining a degree. This phenomenon affects a significant portion of students and is a major issue.</p>
         },
         {
-          title: "📉 What is failure and dropping out?",
+          title: " What is failure and dropping out?",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>A student is considered in a situation of academic failure when they fail their exams, do not validate teaching units, or stagnate in their results. University dropout goes further: it involves a student who definitively leaves their curriculum without a degree.</p>
@@ -517,7 +517,7 @@ const Documentation = ({ language, onNavigate }) => {
           )
         },
         {
-          title: "🎯 The main causes of academic failure",
+          title: " The main causes of academic failure",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>Failure and dropout generally result from a set of interconnected difficulties:</p>
@@ -532,7 +532,7 @@ const Documentation = ({ language, onNavigate }) => {
           )
         },
         {
-          title: "📊 The consequences of academic failure",
+          title: " The consequences of academic failure",
           content: (
             <ul style={{ paddingLeft: '2rem' }}>
               <li style={{ marginBottom: '0.5rem' }}>Delay or loss of degree.</li>
@@ -543,7 +543,7 @@ const Documentation = ({ language, onNavigate }) => {
           )
         },
         {
-          title: "🤝 How to prevent and bounce back?",
+          title: " How to prevent and bounce back?",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}><strong>Support and guidance:</strong> Orientation services and psychologists are valuable resources.</p>
