@@ -1,0 +1,92 @@
+
+.top-controls-container {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.control-btn {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: all 0.2s ease;
+  border: 2px solid transparent;
+}
+
+.control-btn:hover {
+  background-color: #ffffff;
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.control-btn:active {
+  transform: scale(0.95);
+}
+
+.control-icon {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+/* Tooltip on hover */
+.control-btn {
+  position: relative;
+}
+
+.control-btn::after {
+  content: attr(title);
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s;
+  pointer-events: none;
+}
+
+.control-btn:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Specific styling for active states if needed */
+.control-btn.active {
+  background-color: #fff;
+  border-color: #fdb933; /* Theme color */
+}
+
+@media (max-width: 600px) {
+  .top-controls-container {
+    top: 10px;
+    right: 10px;
+    gap: 8px;
+  }
+
+  .control-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .control-icon {
+    width: 20px;
+    height: 20px;
+  }
+}

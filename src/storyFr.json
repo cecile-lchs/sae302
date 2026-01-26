@@ -1670,15 +1670,42 @@
       { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
     ]
   }
-}
-
-
-     
-    },
+    }
+  },
   "chapter2": {
     "title": "Chapitre 2 : Deuxième Année",
     "description": "Une nouvelle voie s’ouvre. À toi de la saisir.",
-    "scenes": {}
+    "scenes": {
+      "start": {
+        "speaker": "Moi",
+        "background": "/assets/chambre.png",
+        "sound": "/assets/click.mp3",
+        "text": [
+          {
+            "background": "/assets/messagerie.png",
+            "text": "Le protagoniste se réoriente."
+          },
+          {
+            "background": "/assets/chambre.png",
+            "text": [
+              "Je suis encore au milieu de cette nouvelle formation... et pourtant j'ai déjà l'impression d'échouer. Le pire, c'est que ça n'a rien à voir avec la difficulté. Les cours sont simples, je comprends tout de suite, je fais mes exercices vite, presque mécaniquement. Sur le papier, je suis un bon étudiant. Mais à l'intérieur... il n'y a rien.",
+              "Aucun intérêt. Aucune envie. Je pensais qu'un nouveau départ changerait tout. Je croyais que c'était juste une question de fatigue, ou de mauvaise orientation la première fois. Je croyais que si je recommençais ailleurs, si je le prenais au sérieux, si je suivais les règles, j'arriverais enfin à quelque chose. Mais non. Je retombe exactement au même endroit.",
+              "Je glisse encore, mais cette fois sans excuse. Je n'ai même plus l'énergie d'être en colère contre moi-même. Juste... le vide. Et ce sentiment que, peu importe ce que je fais, je n'avance pas. Et maintenant... je n'ai que trois options.",
+              "Continuer jusqu'à la fin de l'année, serrer les dents, endurer cette formation mentalement épuisante juste pour ne pas perdre ma bourse, abandonner et aller travailler au McDonald's, gagner un peu d'argent, me dire que « c'est mieux que rien », même si ce n'est pas ce que je veux, ou tout arrêter... et ne rien faire. Rester chez moi, regarder les jours passer jusqu'à la prochaine rentrée scolaire où je pourrai me réorienter."
+            ]
+          },
+          {
+            "background": "/assets/chambre.png",
+            "text": "Le protagoniste a le choix entre se forcer à continuer sa licence, abandonner les cours pour aller travailler ou décrocher jusqu'à la prochaine rentrée."
+          }
+        ],
+        "choices": [
+          { "label": "Continuer la formation", "next": "continuerp" },
+          { "label": "Aller travailler au McDonald's", "next": "macdop" },
+          { "label": "Attendre la rentrée prochaine", "next": "attendre" }
+        ]
+      }
+    }
   },
 
   "chapter3": {

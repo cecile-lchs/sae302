@@ -1,0 +1,104 @@
+
+.tutorial-overlay-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000; /* Highest z-index */
+  pointer-events: none; /* Let clicks pass through if needed, but we essentially block interaction on non-highlighted */
+}
+
+/* The dark background path will be handled by SVG mask or clip-path in JS/JSX usually, 
+   but simplistic approach: use a giant border or box-shadow on the spotlight element? 
+   No, reliable way is SVG overlay with a hole. 
+*/
+
+.tutorial-mask {
+  width: 100%;
+  height: 100%;
+  fill: rgba(0, 0, 0, 0.7); /* Dark semi-transparent background */
+  pointer-events: auto; /* Catch clicks on the background */
+  transition: all 0.3s ease;
+}
+
+.tutorial-spotlight {
+  transition: all 0.3s ease;
+}
+
+.tutorial-tooltip {
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  max-width: 300px;
+  z-index: 10001;
+  pointer-events: auto; /* Allow interaction with tooltip buttons */
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tutorial-text {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.tutorial-controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.tutorial-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.tutorial-btn.skip {
+  background-color: transparent;
+  color: #666;
+}
+
+.tutorial-btn.skip:hover {
+  text-decoration: underline;
+  color: #333;
+}
+
+.tutorial-btn.next {
+  background-color: #fdb933; /* App Theme Color */
+  color: white;
+}
+
+.tutorial-btn.next:hover {
+  background-color: #e5a52b;
+}
+
+/* Pulsing effect for the spotlight border */
+.spotlight-border {
+  position: absolute;
+  border: 2px solid #fdb933;
+  border-radius: 50%; /* or matches element border-radius */
+  pointer-events: none;
+  box-shadow: 0 0 15px #fdb933;
+  animation: pulse 2s infinite;
+  transition: all 0.3s ease;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 10px #fdb933; opacity: 1; }
+  50% { transform: scale(1.05); box-shadow: 0 0 20px #fdb933; opacity: 0.7; }
+  100% { transform: scale(1); box-shadow: 0 0 10px #fdb933; opacity: 1; }
+}

@@ -75,7 +75,7 @@ const backgrounds = {
   "/assets/job.png": job,
 };
 
-export default function Game({ language, userData, setUserData, activeChapter = "chapter1", onChapterComplete }) {
+export default function Game({ language, userData, setUserData, activeChapter = "chapter1", onChapterComplete, onHistoryUpdate, onTutorialEvent }) {
   // Game Phases: 'loading', 'selection', 'pseudo', 'context', 'playing'
   const [phase, setPhase] = useState("loading");
   const [tempChar, setTempChar] = useState(null);
@@ -143,6 +143,23 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   // Safe access to current step
   const activeStep = dialogueQueue[dialogueIndex] || {};
 
+  // --- Tutorial Signals ---
+  useEffect(() => {
+    if (onTutorialEvent) {
+      if (phase === 'selection') {
+        // Wait a bit for render
+        setTimeout(() => onTutorialEvent('selection-ready'), 500);
+      }
+      if (phase === 'playing' && activeStep && activeStep.text && !showChoices) {
+        // Signal dialogue is showing
+        setTimeout(() => onTutorialEvent('dialogue-ready'), 500);
+      }
+      if (phase === 'playing' && showChoices) {
+        setTimeout(() => onTutorialEvent('choice-ready'), 500);
+      }
+    }
+  }, [phase, showChoices, activeStep, onTutorialEvent]);
+
   useEffect(() => {
     // If user already has data, check if we should skip to playing
     if (userData && userData.character && userData.pseudo) {
@@ -194,12 +211,31 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   // const current = story[scene]; // REPLACED by dialogueQueue and activeStep usage
   const rawSceneData = currentScenes[scene] || {};
 
-  const handleSceneChange = (nextScene) => {
+  const handleSceneChange = (nextScene, choiceLabel) => {
+
+    // Log choice if provided
+    if (choiceLabel && onHistoryUpdate) {
+      onHistoryUpdate({ type: 'choice', text: choiceLabel });
+    }
+
     setScene(nextScene);
     // showChoices and dialogueIndex handled by useEffect
   };
 
   const handleDialogueAdvance = () => {
+    // Log current dialogue before advancing
+    if (activeStep && activeStep.text && onHistoryUpdate) {
+      // Only log if it's a string (visual novel text usually is)
+      const speakerName = activeStep.speaker || (activeStep.character === "none" ? "Narrator" : "???");
+      const actualText = typeof activeStep.text === 'object' ? activeStep.text.text : activeStep.text;
+
+      onHistoryUpdate({
+        type: 'dialogue',
+        speaker: speakerName === "Moi" && userData ? userData.pseudo : speakerName,
+        text: actualText
+      });
+    }
+
     // Check key length of our flattened queue
     if (dialogueIndex < dialogueQueue.length - 1) {
       setDialogueIndex(dialogueIndex + 1);
@@ -251,7 +287,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
 
       <div className="game-container">
         <h1 className="selection-header">{language === 'fr' ? "CHOISISSEZ VOTRE PERSONNAGE" : "CHOOSE YOUR CHARACTER"}</h1>
-        <div className="char-grid">
+        <div id="char-selection-grid" className="char-grid">
           {CHARACTERS.map((char) => (
             <div
               key={char.id}
@@ -383,21 +419,23 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         )}
 
         {showChoices && rawSceneData.choices ? (
-          <div style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "15px",
-            width: "50%",
-            maxWidth: "600px",
-            pointerEvents: "auto",
-            marginBottom: "15vh"
-          }}>
+          <div
+            id="choice-container"
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              gap: "15px",
+              width: "50%",
+              maxWidth: "600px",
+              pointerEvents: "auto",
+              marginBottom: "15vh"
+            }}>
             {rawSceneData.choices.map((choice, i) => (
               <button
                 key={i}
                 onClick={(e) => {
                   e.stopPropagation();
-                  handleSceneChange(choice.next);
+                  handleSceneChange(choice.next, choice.label);
                 }}
                 style={{
                   background: "rgba(255, 255, 255, 0.95)",
@@ -430,6 +468,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         ) : (
           getCurrentText() && ( // Only show dialogue box if there is text
             <div
+              id="dialogue-box"
               onClick={(e) => {
                 e.stopPropagation(); // Handle click locally
                 handleDialogueAdvance();

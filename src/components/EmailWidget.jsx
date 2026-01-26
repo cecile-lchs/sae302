@@ -22,7 +22,7 @@ const EmailWidget = ({ hasNotification, onClick }) => {
       onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
       title="Documentation"
     >
-      <img
+      {/* <img
         src={documentationIcon}
         alt="Documentation"
         style={{
@@ -31,7 +31,7 @@ const EmailWidget = ({ hasNotification, onClick }) => {
           objectFit: 'contain',
           filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))'
         }}
-      />
+      /> */}
     </div>
   );
 };

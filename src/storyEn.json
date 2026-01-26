@@ -1960,7 +1960,643 @@
   "chapter2": {
     "title": "Chapter 2: Second Year",
     "description": "A new path opens up. It’s up to you to take it",
-    "scenes": {}
+    "scenes": {
+    "start": {
+    "speaker": "Moi",
+    "background": "/assets/chambre.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist is reorienting himself."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "I'm still in the middle of this new course... and yet I already feel like I'm failing. The worst part is that it has nothing to do with the difficulty. The lessons are simple, I understand everything right away, I do my exercises quickly, almost mechanically. On paper, I'm a good student. But inside... there's nothing.",
+          "No interest. No desire. I thought a new start would change everything. I thought it was just a matter of fatigue, or poor guidance the first time around. I believed that if I started over somewhere else, if I took it seriously, if I followed the rules, I would finally achieve something. But no. I'm falling back into exactly the same place. ",
+          "I'm slipping again, but this time without excuse. I don't even have the energy to be angry with myself anymore. Just... emptiness. And this feeling that no matter what I do, I'm not making any progress. And now... I only have three options.",
+          "Keep going until the end of the year, grit my teeth, endure this mentally exhausting training just so I don't lose my scholarship, give up and go work at McDonald's, earn a little money, tell myself that “it's better than nothing,” even if it's not what I want, or give up completely... and do nothing. Stay at home, watch the days go by until the next school year when I can reorient myself."
+        ]
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist has the choice between forcing himself to continue his license, abandoning the courses and going to work or disorienting himself until the next school year."
+      }
+    ],
+    "choices": [
+      { "label": "Continue the course", "next": "continuerp" },
+      { "label": "Go to work at McDonald's", "next": "macdop" },
+      { "label": "Wait until the next school year", "next": "attendre" }
+    ]
+  },
+
+  "attendre": {
+    "speaker": "Moi",
+    "background": "/assets/parcoursup.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist drops out of school for the rest of the year."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I'm scared, of course. Scared of the void, scared of the “what are you doing right now?” question, scared of how others see me. But I'm more tired than scared. Tired of pushing myself, tired of failing, tired of fighting in a direction that isn't mine.]",
+          "[I'm going to think about what I really want, stop rushing into choices out of panic. When Parcoursup reopens, I'll look for something that really speaks to me, that suits me. This time I won't make a mistake. I need to talk to my parents about it.]"
+        ]
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "I've decided to stop studying for the rest of the year. I'm not going to do anything until Parcoursup reopens. I... I need to take a break and think things through."
+      },
+      {
+        "background": "/assets/salon.png",
+        "character": "/assets/maman.png",
+        "speaker": "Mom",
+        "text": "Stop... completely? You mean... stay at home and do nothing?"
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "Yes. I've been forcing myself for too long to do something that doesn't suit me. I want to take the time to figure out what I really want before I start again."
+      },
+      {
+        "background": "/assets/salon.png",
+        "character": "/assets/papa.png",
+        "speaker": "Dad",
+        "text": "I understand... but you know it's not easy. Doing nothing can be hard. You might get bored, lose your rhythm."
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "I know... but I prefer that to continuing to exhaust myself for something that doesn't motivate me. I need this time to reflect and prepare for my real reorientation."
+      },
+      {
+        "background": "/assets/salon.png",
+        "character": "/assets/maman.png",
+        "speaker": "Mom",
+        "text": "We're worried about you... but we can also see that you're serious about what you're saying. We'll be there to help you organize this time, to keep you from sinking."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Dad",
+        "character": "/assets/papa.png",
+        "text": "Exactly. You're taking a step back so you can start again on a stronger footing. We support you. But promise us you'll keep thinking actively about things and use this time for yourself."
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "I promise."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "I should find out about reorientation."
+      },
+
+      {
+        "background": "/assets/wapp.png"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I think I've found several courses that seem perfect for me. There's the BUT MMI, which would allow me to showcase my creativity while putting my IT skills into practice.]",
+          "[There's also the BTS MCO (operational sales management), which will help me develop my leadership skills. And finally, there's a BTS in tourism that could tie in with the course I'm doing this year. I made these different choices on Parcoursup.]"
+        ]
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the BTS MCO response", "next": "mco1" },
+      {
+        "label": "Open the response from the BTS in tourism",
+        "next": "bts1"
+      }
+    ]
+  },
+
+  "continuerp": {
+    "speaker": "Moi",
+    "background": "/assets/parcoursup.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist chooses to finish his school year."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "[I shouldn't force myself.]"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I have decided to continue this course until the end of the year. I want to persevere, not give up, prove that I can see it through to the end. But... is this really what I want to do with my life?]",
+          "[I attend every class, I pass, but I can't seem to muster any interest or passion for it. But... am I continuing here simply for security, or should I try something else? Parcoursup will reopen soon, and maybe I could find something that really interests me. But would I be able to reorient myself once again? I should look into it.]"
+        ]
+      },
+      {
+        "background": "/assets/video1.png",
+        "text": "*There will be the interview we did for the webdoc. It will show a fulfilled person after their reorientation answering several questions.*"
+      },
+      {
+        "background": "/assets/video2.png",
+        "text": "*There will be the interview we did for the webdoc. It will show a fulfilled person after their reorientation answering several questions.*"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "[Wow! Now that I've seen this, I'm sure I need to reorient myself. I need to talk to my parents about it.]"
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "I think I'm going to reorient myself again. This course... it's not for me. I want to try something that really interests me."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "Another reorientation... Are you sure about this, sweetheart? That's a lot of changes."
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "Yes, I know... but staying here isn't doing me any good. I'm doing well in my classes, but I don't feel like I belong. I need to find a path that really motivates me."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Dad",
+        "character": "/assets/papa.png",
+        "text": "It's brave of you to say that. It's not easy to change again. But if you think it's best for you, we'll support you. We've seen how hard you've worked this year. As long as you finish this one, it'll be fine."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "We'll be there, as always. The important thing is that you do something that moves you forward and makes you happy."
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "Thank you... I know it's going to be hard, but I really want to give it a try."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I think I've found several courses that seem perfect for me. There's the BUT MMI, which would allow me to showcase my creativity while putting my IT skills into practice. There's also the BTS MCO (operational sales management), which will help me develop my leadership skills.]",
+          "[And finally, there's a BTS in tourism that could tie in with the course I'm doing this year. I made these different choices on Parcoursup.]"
+        ]
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the BTS MCO response", "next": "mco1" },
+      { "label": "Open the response from the BTS in tourism", "next": "bts1" }
+    ]
+  },
+
+  "mco1": {
+    "background": "/assets/parcoursup.png",
+    "speaker": "Moi",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "text": "The protagonist opens the response from BUT MCO."
+      },
+      {
+        "speaker": "Parcoursup",
+        "text": "You have been refused."
+      },
+      {
+        "text": "The protagonist has the choice between opening the response from the BUT MMI and the BTS in tourism."
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the response from the BTS in tourism", "next": "bts2" }
+    ]
+  },
+
+  "bts2": {
+    "background": "/assets/parcoursup.png",
+    "speaker": "Moi",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "text": "The protagonist opens the answer to the BTS in tourism."
+      },
+      {
+        "speaker": "Parcoursup",
+        "text": "You have been refused."
+      },
+      {
+        "text": "The protagonist can only choose to open the BUT MMI response."
+      }
+    ],
+    "choices": [{ "label": "Open the BUT MMI response", "next": "mmi" }]
+  },
+
+  "bts1": {
+    "background": "/assets/parcoursup.png",
+    "speaker": "Moi",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "text": "The protagonist opens the answer to the BTS in tourism."
+      },
+      {
+        "speaker": "Parcoursup",
+        "text": "You have been refused."
+      },
+      {
+        "text": "The protagonist has the choice between opening the response for the BUT MMI and the BTS MCO."
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the BUT MCO response", "next": "mco2" }
+    ]
+  },
+
+  "mco2": {
+    "background": "/assets/parcoursup.png",
+    "speaker": "Moi",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "text": "The protagonist opens the response from BUT MCO."
+      },
+      {
+        "speaker": "Parcoursup",
+        "text": "You have been refused."
+      },
+      {
+        "text": "The protagonist can only choose to open the BUT MMI response."
+      }
+    ],
+    "choices": [{ "label": "Open the BUT MMI response", "next": "mmi" }]
+  },
+
+  "macdop": {
+    "speaker": "Moi",
+    "background": "/assets/macdo.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist chooses to drop out of school and go work at McDonald's."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "[I shouldn't force myself to continue with these studies. I need to talk to my parents about it.]"
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "I think I'm going to quit the school and. . . work at McDonald's."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "At McDonald's? You mean... as a job? Now?"
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "Yes. I... I can't seem to get through it. I can do it in class, it's not that... but I'm not interested, I can't seem to make any progress. I'm failing again, and... I just want to do something."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Dad",
+        "character": "/assets/papa.png",
+        "text": "Are you sure about this? It's a big decision. Isn't this just a way to run away?"
+      },
+      {
+        "background": "/assets/salon.png",
+        "text": "That's exactly it. I don't know if I'm running away anymore. I just know that I can't stay another year in something that drains me. And if I work... at least... I'm moving forward. One way or another."
+      },
+      {
+        "background": "/assets/salon.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "We'll be there, but promise us you won't close yourself off in the future. McDonald's is a lifeline, not an end."
+      },
+      {
+        "background": "/assets/macdo.png",
+        "text": [
+          "[Working at McDonald's is better than staying in a training program that was draining me. I earn a living, I can breathe, I feel a little lighter. But... should I stay here, just for the security, or should I try something else?]",
+          "[Parcoursup will reopen soon, and maybe I could find something that really interests me. But would I be able to reorient myself again? I should find out.]"
+        ]
+      },
+      {
+        "background": "/assets/wapp.png"
+      },
+      {
+        "background": "/assets/macdo.png",
+        "text": "[Wow! Now that I've talked about that, it's going to be harder to make a choice.]"
+      },
+      {
+        "background": "/assets/macdo.png",
+        "text": "The protagonist has the choice between continuing to work at McDonald's or looking for training for the start of the school year."
+      }
+    ],
+    "choices": [
+      { "label": "Drop out of school completely", "next": "carrierep" },
+      { "label": "Find a new course", "next": "formation" }
+    ]
+  },
+
+  "carrierep": {
+    "background": "/assets/background.png",
+    "speaker": "Moi",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "text": "The protagonist chooses to abandon his studies completely."
+      },
+      {
+        "background": "/assets/img.png"
+      },
+      {
+        "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "formation": {
+    "speaker": "Moi",
+    "background": "/assets/parcoursup.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/macdo.png",
+        "text": "The protagonist decides to continue working at McDonald's until the start of the next school year."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I think I've found several courses that seem perfect for me. There's the BUT MMI, which would allow me to showcase my creativity while putting my IT skills into practice.]",
+          "[There's also the BTS MCO (operational sales management), which will help me develop my leadership skills. And finally, there's a BTS in tourism that could tie in with the course I'm doing this year.]"
+        ]
+      },
+      {
+        "background": "/assets/parcoursup.png",
+        "text": "The protagonist has the choice between opening the response from the BUT MMI, the BTS in management, and the BTS in tourism."
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the BTS MCO response", "next": "mco1" },
+      {
+        "label": "Open the response from the BTS in tourism",
+        "next": "bts1"
+      }
+    ]
+  },
+
+  "ment": {
+    "speaker": "Moi",
+    "background": "/assets/chambre.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/messagerie.png",
+        "text": "The protagonist is reorienting himself."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I'm still in the middle of this new course... and yet I already feel like I'm failing. The worst part is that it has nothing to do with the difficulty. The lessons are simple, I understand everything right away, I do my exercises quickly, almost mechanically. On paper, I'm a good student.]",
+          "[But inside... there's nothing. No interest. No desire. I thought a new start would change everything. I thought it was just a matter of fatigue, or poor guidance the first time around. I believed that if I started over somewhere else, if I took it seriously, if I followed the rules, I would finally achieve something.]",
+          "[But no. I'm falling back into exactly the same place. I'm slipping again, but this time there's no excuse. I don't even have the energy to be angry with myself anymore. Just... emptiness. And this feeling that no matter what I do, I'm not moving forward. Despair is choking me. I can't even talk about it. My parents think everything is fine. I've already hidden a failure from them, I can't admit it now.]",
+          "[I don't want to see their faces when they realize that I still don't know where I'm going. And the worst part is that I'm stuck. I can't give up and do nothing: without a scholarship or income, I'll lose my apartment. Impossible.]",
+          "[I can't end up on the street because I couldn't hold on. So I carry on, forcing myself to return every morning to a course that brings me nothing, just to keep a roof over my head.]",
+          "[I only have two options: carry on until the end of the year to save my scholarship, or drop out now and go and work at McDonald's. At least with a salary, I could pay for the apartment.]"
+        ]
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist has the choice between forcing himself to continue his degree, dropping out of classes and going to work."
+      }
+    ],
+    "choices": [
+      { "label": "Continue the course", "next": "continuero" },
+      { "label": "Go to work at McDonald's", "next": "macdoo" }
+    ]
+  },
+
+  "macdoo": {
+    "speaker": "Moi",
+    "background": "/assets/macdo.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist chooses to drop out of school and go work at McDonald's."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "[I shouldn't force myself to continue with these studies.]"
+      },
+      {
+        "background": "/assets/macdo.png",
+        "text": [
+          "[Working at McDonald's is better than staying in a training program that was draining me. I earn a living, I can breathe, I feel a little lighter. But... should I stay here, just for the security, or should I try something else?]",
+          "[ Parcoursup will reopen soon, and maybe I could find something that really interests me. But would I be able to reorient myself again? I should find out.]"
+        ]
+      },
+      {
+        "background": "/assets/wapp.png"
+      },
+      {
+        "background": "/assets/macdo.png",
+        "text": "[Wow! Now that I've talked about that, it's going to be harder to make a choice.]"
+      },
+      {
+        "background": "/assets/macdo.png",
+        "text": "The protagonist has the choice between continuing to work at McDonald's or looking for training for the start of the school year."
+      }
+    ],
+    "choices": [
+      { "label": "Drop out of school completely", "next": "carriereo" },
+      { "label": "Find a new course", "next": "formationo" }
+    ]
+  },
+
+  "formationo": {
+    "speaker": "Moi",
+    "background": "/assets/parcoursup.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/macdo.png",
+        "text": "The protagonist decides to continue working at McDonald's until the start of the next school year."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I think I've found several courses that seem perfect for me. There's the BUT MMI, which would allow me to showcase my creativity while putting my IT skills into practice. There's also the BTS MCO (operational sales management), which will help me develop my leadership skills.]",
+          "[There's also the BTS MCO (operational sales management), which will help me develop my leadership skills. And finally, there's a BTS in tourism that could tie in with the course I'm taking this year. But before I apply, I need to talk to my parents about it.]"
+        ]
+      },
+      {
+        "background": "/assets/appel.png",
+        "text": [
+          "I have to tell you the truth. Last year, I failed my course... and I didn't tell you. I was too ashamed. For the past few months, I've been working at McDonald's to pay for my apartment and get by.",
+          "But I don't want to stay there indefinitely. I plan to look for a training course for next fall, something that really suits me."
+        ]
+      },
+      {
+        "background": "/assets/appel.png",
+        "character": "/assets/maman.png",
+        "speaker": "Mom",
+        "text": "You... you kept all this from us? But why? We could have helped you."
+      },
+      {
+        "background": "/assets/appel.png",
+        "text": "I was afraid of disappointing you. I tried to handle it on my own, but I finally realized that I had to be honest with you. Now I want to move forward, but in the right way."
+      },
+      {
+        "background": "/assets/appel.png",
+        "character": "/assets/papa.png",
+        "speaker": "Dad",
+        "text": "It's a lot to take in... but you've done what you needed to do to get through it so far. It's not a failure of character. You've found a way to keep living and paying your rent without our help, which is a great sign of maturity despite everything."
+      },
+      {
+        "background": "/assets/appel.png",
+        "character": "/assets/maman.png",
+        "speaker": "Mom",
+        "text": "Yes... and now that you want to go back to school, we'll support you. The important thing is that you're honest with us and that you make a thoughtful choice."
+      },
+      {
+        "background": "/assets/parcoursup.png",
+        "text": "The protagonist has the choice between opening the response from the BUT MMI, the BTS in management, and the BTS in tourism."
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the BTS MCO response", "next": "mco1" },
+      {
+        "label": "Open the response from the BTS in tourism",
+        "next": "bts1"
+      }
+    ]
+  },
+
+  "carriereo": {
+    "background": "/assets/background.png",
+    "speaker": "Moi",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "text": "The protagonist chooses to abandon his studies completely."
+      },
+      {
+        "background": "/assets/img.png"
+      },
+      {
+        "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "continuero": {
+    "speaker": "Moi",
+    "background": "/assets/parcoursup.png",
+    "sound": "/assets/click.mp3",
+
+    "text": [
+      {
+        "background": "/assets/chambre.png",
+        "text": "The protagonist chooses to finish his school year."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "[I shouldn't force myself.]"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I have decided to continue this course until the end of the year. I want to persevere, not give up, prove that I can see it through to the end. But... is this really what I want to do with my life?]",
+          "[I attend every class, I pass, but I can't seem to muster any interest or passion for it. But... am I continuing here simply for security, or should I try something else? Parcoursup will reopen soon, and maybe I could find something that really interests me. But would I be able to reorient myself once again? I should look into it.]"
+        ]
+      },
+      {
+        "background": "/assets/video1.png",
+        "text": "*There will be the interview we did for the webdoc. It will show a fulfilled person after their reorientation answering several questions.*"
+      },
+      {
+        "background": "/assets/video2.png",
+        "text": "*There will be the interview we did for the webdoc. It will show a fulfilled person after their reorientation answering several questions.*"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": "[Wow! Now that I've seen this, I'm sure I need to reorient myself. But... I need to talk to my parents about it before things get too complicated.]"
+      },
+      {
+        "background": "/assets/appel.png",
+        "text": "I need to talk to you... and... it's not easy. I haven't been honest with you."
+      },
+      {
+        "background": "/assets/appel.png",
+        "speaker": "Dad",
+        "character": "/assets/papa.png",
+        "text": "What's going on?"
+      },
+      {
+        "background": "/assets/appel.png",
+        "text": "Last year... I failed my course. I hid it from you because I was afraid of disappointing you, so I secretly started a new one. And this course isn't working out either. I want to reorient myself once again."
+      },
+      {
+        "background": "/assets/appel.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "You failed, and you didn't tell us? Why did you hide that from us?"
+      },
+      {
+        "background": "/assets/appel.png",
+        "text": "Because I was afraid. Because I felt like a failure. And I told myself that if I changed my school, you wouldn't need to know... that I would catch up without you noticing anything."
+      },
+      {
+        "background": "/assets/appel.png",
+        "speaker": "Dad",
+        "character": "/assets/papa.png",
+        "text": "We're not angry. We're... sad that you felt you had to carry this burden alone. You could have talked to us about it. We would have helped you."
+      },
+      {
+        "background": "/assets/appel.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "Sweetheart... you have nothing to be ashamed of. You're going through a difficult time. But lying and hiding yourself away has only isolated you even more. If you want to change direction, we'll listen to you. But we need you to be honest with us."
+      },
+      {
+        "background": "/assets/appel.png",
+        "text": "I'm sorry."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "text": [
+          "[I think I've found several courses that seem perfect for me. There's the BUT MMI, which would allow me to showcase my creativity while putting my IT skills into practice.]",
+          "[There's also the BTS MCO (operational sales management), which will help me develop my leadership skills. And finally, there's a BTS in tourism that could tie in with the course I'm doing this year. I made these different choices on Parcoursup.]"
+        ]
+      }
+    ],
+    "choices": [
+      { "label": "Open the BUT MMI response", "next": "mmi" },
+      { "label": "Open the BTS MCO response", "next": "mco1" },
+      { "label": "Open the response from the BTS in tourism", "next": "bts1" }
+    ]
+  }
+
+    }
   },
 
   "chapter3": {

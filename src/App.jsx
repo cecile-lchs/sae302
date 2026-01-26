@@ -10,7 +10,10 @@ import SettingsModal from "./components/SettingsModal";
 import PageTransition from "./components/PageTransition";
 import PortraitOverlay from "./components/PortraitOverlay";
 import FullScreenPopup from "./components/FullScreenPopup";
-import FullscreenToggle from "./components/FullscreenToggle";
+import TopControls from "./components/TopControls";
+
+import HistoryModal from "./components/HistoryModal";
+import TutorialOverlay from "./components/TutorialOverlay"; // NEW
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState("home");
@@ -29,10 +32,103 @@ export default function App() {
   const [unlockedChapters, setUnlockedChapters] = useState(["chapter1"]);
   const [activeChapter, setActiveChapter] = useState("chapter1");
 
+  // History State
+  const [showHistory, setShowHistory] = useState(false);
+  const [gameHistory, setGameHistory] = useState({
+    conversations: [],
+    choices: []
+  });
+
+  // Tutorial State
+  const [tutorialStatus, setTutorialStatus] = useState('idle'); // idle, intro, waiting-dialogue, dialogue, waiting-choice, choice, completed
+  const [tutorialStep, setTutorialStep] = useState(0);
+  // We track completion to not show again in same session (or use localStorage for perm)
+  const [tutorialCompleted, setTutorialCompleted] = useState({ intro: false, dialogue: false, choice: false });
+
+  // TUTORIAL STEPS DEFINITION
+  const TUTORIAL_INTRO = [
+    { targetId: '#nav-home', position: 'right', content: { fr: "Voici l'accueil. Vous pouvez y revenir à tout moment.", en: "This is Home. You can return here anytime." } },
+    { targetId: '#nav-docs', position: 'right', content: { fr: "Consultez la documentation ici.", en: "Check the documentation here." } },
+    { targetId: '#nav-cinema', position: 'right', content: { fr: "Revoyez vos chapitres débloqués au Cinéma.", en: "Review unlocked chapters in Cinema." } },
+    { targetId: '#btn-history', position: 'bottom', content: { fr: "Accédez à l'historique de vos conversations et choix ici (visible en jeu).", en: "Access conversation and choice history here (visible in-game)." } },
+    { targetId: '#btn-docs', position: 'bottom', content: { fr: "Un accès rapide à la documentation.", en: "Quick access to documentation." } },
+    { targetId: '#btn-fullscreen', position: 'bottom', content: { fr: "Basculez en plein écran pour une meilleure immersion.", en: "Toggle fullscreen for better immersion." } },
+    { targetId: '#char-selection-grid', position: 'left', content: { fr: "C'est l'heure de choisir votre avatar !", en: "Time to choose your avatar!" } },
+  ];
+
+  const TUTORIAL_DIALOGUE = [
+    { targetId: '#dialogue-box', position: 'top', content: { fr: "Voici la zone de dialogue. Cliquez pour avancer.", en: "This is the dialogue box. Click to advance." } }
+  ];
+
+  const TUTORIAL_CHOICE = [
+    { targetId: '#choice-container', position: 'left', content: { fr: "À vous de jouer ! Vos choix influencent l'histoire.", en: "Your turn! Your choices impact the story." } }
+  ];
+
+  // Start Tutorial when entering game if intro not done
+  useEffect(() => {
+    if (currentPage === 'game' && !tutorialCompleted.intro && tutorialStatus === 'idle') {
+      // Small delay to let UI mount
+      setTimeout(() => {
+        setTutorialStatus('intro');
+        setTutorialStep(0);
+      }, 1000);
+    }
+  }, [currentPage, tutorialCompleted.intro, tutorialStatus]);
+
+  const handleTutorialEvent = (event) => {
+    if (event === 'dialogue-ready' && !tutorialCompleted.dialogue && tutorialStatus === 'waiting-dialogue') {
+      setTutorialStatus('dialogue');
+      setTutorialStep(0);
+    }
+    if (event === 'choice-ready' && !tutorialCompleted.choice && (tutorialStatus === 'waiting-choice' || tutorialStatus === 'waiting-dialogue')) {
+      setTutorialStatus('choice');
+      setTutorialStep(0);
+    }
+  };
+
+  const handleTutorialNext = () => {
+    let currentSteps = [];
+    if (tutorialStatus === 'intro') currentSteps = TUTORIAL_INTRO;
+    if (tutorialStatus === 'dialogue') currentSteps = TUTORIAL_DIALOGUE;
+    if (tutorialStatus === 'choice') currentSteps = TUTORIAL_CHOICE;
+
+    if (tutorialStep < currentSteps.length - 1) {
+      setTutorialStep(tutorialStep + 1);
+    } else {
+      // Finished current sequence
+      if (tutorialStatus === 'intro') {
+        setTutorialCompleted(prev => ({ ...prev, intro: true }));
+        setTutorialStatus('waiting-dialogue');
+      } else if (tutorialStatus === 'dialogue') {
+        setTutorialCompleted(prev => ({ ...prev, dialogue: true }));
+        setTutorialStatus('waiting-choice');
+      } else if (tutorialStatus === 'choice') {
+        setTutorialCompleted(prev => ({ ...prev, choice: true }));
+        setTutorialStatus('completed');
+      }
+    }
+  };
+
+  const handleTutorialSkip = () => {
+    // Skip marks current sequence as done
+    if (tutorialStatus === 'intro') {
+      setTutorialCompleted(prev => ({ ...prev, intro: true }));
+      setTutorialStatus('waiting-dialogue');
+    } else if (tutorialStatus === 'dialogue') {
+      setTutorialCompleted(prev => ({ ...prev, dialogue: true }));
+      setTutorialStatus('waiting-choice');
+    } else if (tutorialStatus === 'choice') {
+      setTutorialCompleted(prev => ({ ...prev, choice: true }));
+      setTutorialStatus('completed');
+    }
+  };
+
+
   // Temporary testing function: toggle notification when clicking the email icon
   const handleEmailClick = () => {
     setHasNotification(!hasNotification);
   };
+
 
   const handleTransitionNavigate = (page) => {
     if (page === currentPage) {
@@ -56,6 +152,25 @@ export default function App() {
 
   const handleNavigate = (page) => {
     handleTransitionNavigate(page);
+  };
+
+  // History handling
+  const handleHistoryUpdate = (item) => {
+    if (item.type === 'dialogue') {
+      setGameHistory(prev => ({
+        ...prev,
+        conversations: [...prev.conversations, item]
+      }));
+    } else if (item.type === 'choice') {
+      setGameHistory(prev => ({
+        ...prev,
+        choices: [...prev.choices, item]
+      }));
+    }
+  };
+
+  const toggleHistory = () => {
+    setShowHistory(!showHistory);
   };
 
   const handleChapterComplete = (completedChapterId) => {
@@ -89,6 +204,8 @@ export default function App() {
               handleChapterComplete(completedChapterId); // Use the new handler
               handleTransitionNavigate('cinema');
             }}
+            onHistoryUpdate={handleHistoryUpdate}
+            onTutorialEvent={handleTutorialEvent}
           />
         );
       case "cinema":
@@ -110,15 +227,33 @@ export default function App() {
   // Sidebar logic
   const showSidebar = currentPage !== 'home' && currentPage !== 'docs';
 
+  // Resolve current active tutorial steps
+  let activeSteps = [];
+  if (tutorialStatus === 'intro') activeSteps = TUTORIAL_INTRO;
+  else if (tutorialStatus === 'dialogue') activeSteps = TUTORIAL_DIALOGUE;
+  else if (tutorialStatus === 'choice') activeSteps = TUTORIAL_CHOICE;
+
+  const isTutorialOpen = ['intro', 'dialogue', 'choice'].includes(tutorialStatus);
+
+
   return (
     <div style={{ display: "flex", width: "100%", height: "100vh", overflow: "hidden", position: "relative" }}>
       <PortraitOverlay language={language} />
       <FullScreenPopup />
-      <FullscreenToggle />
+      <TopControls
+        onHistoryClick={toggleHistory}
+        onNavigate={handleNavigate}
+        language={language}
+        showGameTools={currentPage === 'game'}
+      />
       <PageTransition isVisible={isTransitioning} />
 
       {showSidebar && (
-        <Sidebar onNavigate={handleNavigate} activePage={showSettings ? "settings" : currentPage} language={language} />
+        <Sidebar
+          onNavigate={handleNavigate}
+          activePage={showSettings ? "settings" : currentPage}
+          language={language}
+        />
       )}
 
       {showSidebar && <EmailWidget hasNotification={hasNotification} onClick={handleEmailClick} />}
@@ -132,6 +267,25 @@ export default function App() {
         onClose={() => setShowSettings(false)}
         language={language}
         setLanguage={setLanguage}
+      />
+
+      {/* History Modal Layer */}
+      <HistoryModal
+        isOpen={showHistory}
+        onClose={() => setShowHistory(false)}
+        history={gameHistory.conversations}
+        choices={gameHistory.choices}
+        language={language}
+      />
+
+      {/* Tutorial Overlay */}
+      <TutorialOverlay
+        isOpen={isTutorialOpen}
+        steps={activeSteps}
+        currentStepIndex={tutorialStep}
+        onNext={handleTutorialNext}
+        onSkip={handleTutorialSkip}
+        language={language}
       />
     </div>
   );

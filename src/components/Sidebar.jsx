@@ -34,6 +34,7 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
       {/* Top Group */}
       <div className="nav-group">
         <div
+          id="nav-home"
           className={`nav-item ${activePage === 'home' ? 'active' : ''}`}
           onClick={() => onNavigate('home')}
         >
@@ -42,6 +43,7 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
         </div>
 
         <div
+          id="nav-docs"
           className={`nav-item ${activePage === 'docs' ? 'active' : ''}`}
           onClick={() => onNavigate('docs')}
         >
@@ -49,8 +51,11 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
           <span className="nav-label">{t.docs}</span>
         </div>
 
+
+
         {/* Updated "Play" Button - Central/Bulge */}
         <div
+          id="nav-play"
           className={`nav-item ${activePage === 'game' ? 'active' : ''}`}
           onClick={() => onNavigate('game')}
         >
@@ -59,6 +64,7 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
         </div>
 
         <div
+          id="nav-cinema"
           className={`nav-item ${activePage === 'cinema' ? 'active' : ''}`}
           onClick={() => onNavigate('cinema')}
         >
@@ -72,6 +78,7 @@ const Sidebar = ({ onNavigate, activePage, language = "fr" }) => {
       {/* Bottom Group */}
       <div className="nav-group bottom-group">
         <div
+          id="nav-settings"
           className={`nav-item ${activePage === 'settings' ? 'active' : ''}`}
           onClick={() => onNavigate('settings')}
         >
