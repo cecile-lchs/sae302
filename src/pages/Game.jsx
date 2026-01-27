@@ -19,8 +19,18 @@ import appli from "../assets/appli.png";
 import appart from "../assets/appart.png";
 import appel from "../assets/appel.png";
 import job from "../assets/job.png";
+import salon from "../assets/salon.png";
+import classe2 from "../assets/classe2.png";
+import macdo from "../assets/macdo.png";
+import entretien from "../assets/entretien.png";
+import accueil from "../assets/accueil.png";
+import chambre2 from "../assets/chambre2.png";
+import messagerieEn from "../assets/messagerieEn.png";
+import appelEn from "../assets/appelEn.png";
+import jobEn from "../assets/jobEn.png";
+import appliEn from "../assets/appliEn.png";
+import videoBg from "../assets/video.mp4"; // Import video
 import "./Game.css";
-
 
 // Character Imports
 import char1 from "../assets/perso1/neutre_bouche_fermee.png";
@@ -73,8 +83,20 @@ const backgrounds = {
   "/assets/appart.png": appart,
   "/assets/appel.png": appel,
   "/assets/job.png": job,
-};
+  "/assets/video.mp4": videoBg, // Add video to map
+  "/assets/macdo.png": macdo,
+  "/assets/salon.png": salon,
+  "/assets/class2.png": classe2,
+  "/assets/chambre2.png": chambre2,
+  "/assets/accueil.png": accueil,
+  "/assets/entretien.png": entretien,
+  "/assets/messagerieEn.png": messagerieEn,
+  "/assets/appliEn.png": appliEn,
+  "/assets/jobEn.png": jobEn,
+  "/assets/appelEn.png": appelEn
 
+
+};
 export default function Game({ language, userData, setUserData, activeChapter = "chapter1", onChapterComplete, onHistoryUpdate, onTutorialEvent }) {
   // Game Phases: 'loading', 'selection', 'pseudo', 'context', 'playing'
   const [phase, setPhase] = useState("loading");
@@ -88,10 +110,11 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   const [scene, setScene] = useState("start");
   const [showChoices, setShowChoices] = useState(false);
   const [dialogueIndex, setDialogueIndex] = useState(0);
+  const [videoEnded, setVideoEnded] = useState(false);
 
 
   // Helper to flatten the dialogue logic
-  // Returns an array of step objects: { text, background, character, speaker, sound }
+  // Returns an array of step objects: {text, background, character, speaker, sound}
   const getFlattenedDialogue = (sceneData) => {
     if (!sceneData) return [];
 
@@ -172,6 +195,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   // Reset dialogue index when scene changes
   useEffect(() => {
     setDialogueIndex(0);
+    setVideoEnded(false); // Reset video state on scene change
     setShowChoices(false);
   }, [scene]);
 
@@ -270,7 +294,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   }, [scene, dialogueIndex]);
 
   const getCurrentBackground = () => {
-    const bgPath = activeStep.background || rawSceneData.background; // Fallback to raw if logic fails? 
+    const bgPath = activeStep.background || rawSceneData.background; // Fallback to raw if logic fails?
     // actually getFlattenedDialogue merges root props, so activeStep.background should handle it.
     // unless activeStep is empty?
     return backgrounds[bgPath] || bgPath;
@@ -350,10 +374,13 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   }
 
   // PLAYING PHASE (Existing Game Logic)
+  const currentBg = getCurrentBackground();
+  const isVideo = typeof currentBg === 'string' && currentBg.endsWith('.mp4');
+
   return (
     <div style={{
       flex: 1,
-      backgroundImage: `url(${getCurrentBackground()})`,
+      backgroundImage: isVideo ? 'none' : `url(${currentBg})`,
       backgroundSize: "cover",
       backgroundPosition: "center",
       display: "flex",
@@ -363,8 +390,31 @@ export default function Game({ language, userData, setUserData, activeChapter = 
       color: "white",
       position: "relative",
       width: "100%",
-      height: "100vh"
+      height: "100vh",
+      overflow: "hidden"
     }}>
+
+      {/* Background Video Layer */}
+      {isVideo && (
+        <video
+          src={currentBg}
+          autoPlay
+          controls // Add controls
+          onEnded={() => setVideoEnded(true)} // Enable continue when done
+          // muted
+          playsInline
+          style={{
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            width: "30%",
+            height: "100%",
+            objectFit: "cover",
+            transform: "translate(-50%, -50%)",
+            zIndex: 15 // Ensure it is clickable
+          }}
+        />
+      )}
 
       {/* Interaction Layer */}
       <div style={{
@@ -378,10 +428,13 @@ export default function Game({ language, userData, setUserData, activeChapter = 
         flexDirection: "column",
         justifyContent: "flex-end",
         alignItems: "center",
-        pointerEvents: getCurrentText() ? "none" : "auto", // Allow full click if no text
-        cursor: getCurrentText() ? "default" : "pointer"    // Pointer if background only
+        // Pass through events if video is playing so controls are accessible
+        // Block events if text is present
+        // Enable events if video ended (to click and continue)
+        pointerEvents: (getCurrentText() || (isVideo && !videoEnded)) ? "none" : "auto",
+        cursor: (getCurrentText() || (isVideo && !videoEnded)) ? "default" : "pointer"
       }}
-        onClick={getCurrentText() ? undefined : handleDialogueAdvance} // Handle click on background if no text
+        onClick={(getCurrentText() || (isVideo && !videoEnded)) ? undefined : handleDialogueAdvance}
       >
 
 
@@ -485,7 +538,7 @@ export default function Game({ language, userData, setUserData, activeChapter = 
                 return null;
               })()}
 
-              <p className="dialogue-text">
+              <p className={`dialogue-text ${activeStep.font ? `font-${activeStep.font}` : ''}`} style={activeStep.color ? { color: activeStep.color } : {}}>
                 {(() => {
                   const txt = getCurrentText();
                   return typeof txt === 'object' ? txt.text : txt;

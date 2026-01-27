@@ -155,9 +155,24 @@
 
 .dialogue-text {
   margin: 0;
-  font-style: italic;
+  font-style: normal;
   font-weight: 500;
   padding-left: 70px;
+}
+
+.font-normal {
+  font-style: normal;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.font-italic {
+  font-style: italic;
+}
+
+.font-digital {
+  font-family: 'Courier New', monospace;
+  font-style: normal;
+  letter-spacing: 1px;
 }
 
 .dialogue-hint {

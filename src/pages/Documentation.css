@@ -212,7 +212,7 @@
   display: flex;
   align-items: center;
   justify-content: center; /* Changed from space-between for fixed gap layout */
-  gap: 40px; /* Force consistent gap */
+  gap: 140px; /* Force consistent gap */
   width: 100%;
   margin-top: auto;
   padding-bottom: 2rem;

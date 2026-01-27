@@ -1669,6 +1669,16 @@
       { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
       { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
     ]
+  },
+  "avoue": {
+    "speaker": "Moi",
+    "background": "/assets/chambre.png",
+    "sound": "/assets/click.mp3",
+    "text": [
+      {
+        "text": "J'ai choisi de me réorienter. C'est un risque, mais je ne peux plus rester ici."
+      }
+    ]
   }
     }
   },
