@@ -120,7 +120,6 @@ const backgrounds = {
   "/assets/accueil.png": accueil,
   "/assets/entretien.png": entretien,
   "/assets/messagerieEn.png": messagerieEn,
-  "/assets/appli.png": appli,
   "/assets/interface.png": interfaceEn,
   "/assets/appliFr.png": appliFr,
   "/assets/appelEn.png": appelEn,
