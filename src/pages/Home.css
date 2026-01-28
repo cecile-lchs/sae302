@@ -39,11 +39,11 @@
 }
 
 .split-left {
-  background-image: url('src/assets/PartieJouer.png');
+  background-image: url('../assets/PartieJouer.png');
 }
 
 .split-right {
-  background-image: url('src/assets/PartieDocument.png');
+  background-image: url('../assets/PartieDocument.png');
 }
 
 /* Hover effects (managed by inline styles in JS for dynamic flex, but overlay transition helps) */
