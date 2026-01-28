@@ -23,21 +23,37 @@ export default function App() {
   const [isTransitioning, setIsTransitioning] = useState(false); // Transition state
 
   // New Global User State
-  const [userData, setUserData] = useState({
-    pseudo: "",
-    character: null
+  const [userData, setUserData] = useState(() => {
+    const saved = localStorage.getItem("userData");
+    return saved ? JSON.parse(saved) : { pseudo: "", character: null };
   });
 
   // Chapter State
-  const [unlockedChapters, setUnlockedChapters] = useState(["chapter1"]);
+  const [unlockedChapters, setUnlockedChapters] = useState(() => {
+    const saved = localStorage.getItem("unlockedChapters");
+    return saved ? JSON.parse(saved) : ["chapter1"];
+  });
   const [activeChapter, setActiveChapter] = useState("chapter1");
 
   // History State
   const [showHistory, setShowHistory] = useState(false);
-  const [gameHistory, setGameHistory] = useState({
-    conversations: [],
-    choices: []
+  const [gameHistory, setGameHistory] = useState(() => {
+    const saved = localStorage.getItem("gameHistory");
+    return saved ? JSON.parse(saved) : { conversations: [], choices: [] };
   });
+
+  // Persistence Effects
+  useEffect(() => {
+    localStorage.setItem("userData", JSON.stringify(userData));
+  }, [userData]);
+
+  useEffect(() => {
+    localStorage.setItem("unlockedChapters", JSON.stringify(unlockedChapters));
+  }, [unlockedChapters]);
+
+  useEffect(() => {
+    localStorage.setItem("gameHistory", JSON.stringify(gameHistory));
+  }, [gameHistory]);
 
   // Tutorial State
   const [tutorialStatus, setTutorialStatus] = useState('idle'); // idle, intro, waiting-dialogue, dialogue, waiting-choice, choice, completed

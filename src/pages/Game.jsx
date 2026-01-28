@@ -267,6 +267,11 @@ export default function Game({ language, userData, setUserData, activeChapter = 
     setShowChoices(false);
   }, [scene]);
 
+  // Reset scene to start when chapter changes (for replayability)
+  useEffect(() => {
+    setScene("start");
+  }, [activeChapter]);
+
   // --- Handlers ---
 
   const handleCharSelect = (charId) => {
