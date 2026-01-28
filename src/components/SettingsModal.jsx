@@ -161,18 +161,7 @@ const SettingsModal = ({ isOpen, onClose, language = "fr", setLanguage }) => {
           <button style={styles.closeButton} onClick={onClose}>&times;</button>
         </div>
 
-        {/* Audio Section */}
-        <div style={styles.section}>
-          <div style={styles.sectionTitle}>{t.sound}</div>
-          <div style={styles.row}>
-            <span style={styles.label}>{t.sfx}</span>
-            <input type="range" style={styles.slider} />
-          </div>
-          <div style={styles.row}>
-            <span style={styles.label}>{t.music}</span>
-            <input type="range" style={styles.slider} />
-          </div>
-        </div>
+
 
 
 

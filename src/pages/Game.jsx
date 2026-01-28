@@ -58,7 +58,7 @@ import parcoursup from "../assets/parcoursup.png";
 
 
 
-import videoBg from "../assets/video.mp4"; // Import video
+const videoBg = "/video.mp4"; // Reference public video path
 import "./Game.css";
 
 // Character Imports

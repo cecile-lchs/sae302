@@ -705,6 +705,59 @@ const Documentation = ({ language, onNavigate }) => {
         },
 
       ]
+    },
+    {
+      title: "Témoignages",
+      color: "#C7CEEA",
+      sections: [
+        {
+          title: "Vidéo",
+          content: (
+            <div>
+              <video controls width="100%" style={{ borderRadius: '10px', marginBottom: '1rem' }}>
+                <source src="/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )
+        },
+        {
+          title: "Interview Audio",
+          content: (
+            <div>
+              <p style={{ marginBottom: '0.5rem' }}><strong>1. Tu faisais quoi comme études avant?</strong></p>
+              <audio controls src="/messages/message1.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>2. A quel moment t’as commencé à te dire que ta filière initiale c’était pas pour toi ?</strong></p>
+              <audio controls src="/messages/message2.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>3. Qu’est-ce qui t’a fait hésiter au début ?</strong></p>
+              <audio controls src="/messages/message3.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>4. Qu’est-ce qui t’a vraiment poussé à te réorienter ?</strong></p>
+              <audio controls src="/messages/message4.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>5. Avais-tu peur de te réorienter à cause du regard des autres ?</strong></p>
+              <audio controls src="/messages/message5.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>6. Comment tu l’as vécu ? Plutôt stressé, soulagé, un peu des deux ?</strong></p>
+              <audio controls src="/messages/message6.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>7. T’as eu du soutien autour de toi ?</strong></p>
+              <audio controls src="/messages/message7.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>8. Tu as senti une grosse différence avec ton ancienne formation ? Niveau ambiance, rythme, profs, …</strong></p>
+              <audio controls src="/messages/message8.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>9. Et pour l’administratif, ça a été facile ou un peu galère ?</strong></p>
+              <audio controls src="/messages/message9.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>10. Si tu pouvais revenir en arrière, tu ferais les mêmes choix ?</strong></p>
+              <audio controls src="/messages/message10.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+            </div>
+          )
+        }
+      ]
     }
   ];
 
@@ -807,27 +860,79 @@ const Documentation = ({ language, onNavigate }) => {
               <p><strong>Setting personal priorities:</strong> the student must identify what matters most to them: passion, personal fulfillment, skill development, career prospects, or personal balance. This serves as a guide during family discussions.
               </p>
               <p><strong>Accepting time and adjustments:</strong> reorientation may require several steps and discussions before parents understand and accept the choice. Patience and perseverance are key to finding a compromise between family expectations and personal aspirations.
-
               </p>
             </div>
           )
         },
         {
           title: "6. Conclusion",
-          content: <p>Reorientation is never a failure, but rather a moment of personal reflection and growth. Family pressure, although often motivated by concern for the child’s well-being, can become an obstacle if it becomes too strong or poorly understood. Understanding its mechanisms, identifying its effects, and implementing communication and support strategies allows students to make informed and calm decisions while respecting both their aspirations and their family relationships.
+          content: <p>Reorientation is never a failure, but a moment of personal reflection and growth. Family pressure, although often motivated by concern for the child's well-being, can represent an obstacle if it becomes too strong or is misunderstood. Understanding its mechanisms, identifying its effects, and implementing communication and support strategies allow the student to make an informed and serene choice, respecting both their aspirations and familial relationships.
           </p>
         },
         {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://sherpas.com/blog/la-pression-des-parents-pour-les-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Sherpas, Parental pressure for studies</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-gerer_pression_parents_etudes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo, Managing parental pressure on studies</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://objectif-ast.fr/influence-famille-choix-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Objectif AST, The influence of family on study choices</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://campus.studywatt.fr/articles/stress-des-etudiants-a-la-rentree-6-causes-courantes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>StudyWatt, Student stress</a></li>
-              <li><a href="https://www.kotplanet.be/conseils-vie-etudiante/comment-gerer-la-pression-de-tes-parents-pour-tes-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>KotPlanet, How to manage parental pressure</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://sherpas.com/blog/la-pression-des-parents-pour-les-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Sherpas, La pression des parents pour les études</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-gerer_pression_parents_etudes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo, Gérer la pression des parents sur les études</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://objectif-ast.fr/influence-famille-choix-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Objectif AST, L’influence de la famille sur le choix des études</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://campus.studywatt.fr/articles/stress-des-etudiants-a-la-rentree-6-causes-courantes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>StudyWatt, Stress des étudiants</a></li>
+              <li><a href="https://www.kotplanet.be/conseils-vie-etudiante/comment-gerer-la-pression-de-tes-parents-pour-tes-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>KotPlanet, Comment gérer la pression de tes parents</a></li>
             </ul>
           )
+        },
+        {
+          title: "Testimonials",
+          color: "#C7CEEA",
+          sections: [
+            {
+              title: "Video",
+              content: (
+                <div>
+                  <video controls width="100%" style={{ borderRadius: '10px', marginBottom: '1rem' }}>
+                    <source src="/video.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              )
+            },
+            {
+              title: "Audio Interview",
+              content: (
+                <div>
+                  <p style={{ marginBottom: '0.5rem' }}><strong>1. What studies were you doing before?</strong></p>
+                  <audio controls src="/messages/message1.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>2. When did you start thinking that your initial major wasn't for you?</strong></p>
+                  <audio controls src="/messages/message2.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>3. What made you hesitate at first?</strong></p>
+                  <audio controls src="/messages/message3.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>4. What really pushed you to reorient yourself?</strong></p>
+                  <audio controls src="/messages/message4.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>5. Were you afraid to reorient because of how others might see it?</strong></p>
+                  <audio controls src="/messages/message5.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>6. How did you experience it? Stressed, relieved, a bit of both?</strong></p>
+                  <audio controls src="/messages/message6.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>7. Did you have support around you?</strong></p>
+                  <audio controls src="/messages/message7.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>8. Did you feel a big difference compared to your previous training? Atmosphere, pace, teachers...</strong></p>
+                  <audio controls src="/messages/message8.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>9. And for the administrative part, was it easy or a hassle?</strong></p>
+                  <audio controls src="/messages/message9.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+                  <p style={{ marginBottom: '0.5rem' }}><strong>10. If you could go back, would you make the same choices?</strong></p>
+                  <audio controls src="/messages/message10.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+                </div>
+              )
+            }
+          ]
         }
       ]
 
@@ -1381,8 +1486,60 @@ const Documentation = ({ language, onNavigate }) => {
         },
 
       ]
+    },
+    {
+      title: "Testimonials",
+      color: "#C7CEEA",
+      sections: [
+        {
+          title: "Video",
+          content: (
+            <div>
+              <video controls width="100%" style={{ borderRadius: '10px', marginBottom: '1rem' }}>
+                <source src="/video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          )
+        },
+        {
+          title: "Audio Interview",
+          content: (
+            <div>
+              <p style={{ marginBottom: '0.5rem' }}><strong>1. What studies were you doing before?</strong></p>
+              <audio controls src="/messages/message1.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>2. When did you start thinking that your initial major wasn't for you?</strong></p>
+              <audio controls src="/messages/message2.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>3. What made you hesitate at first?</strong></p>
+              <audio controls src="/messages/message3.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>4. What really pushed you to reorient yourself?</strong></p>
+              <audio controls src="/messages/message4.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>5. Were you afraid to reorient because of how others might see it?</strong></p>
+              <audio controls src="/messages/message5.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>6. How did you experience it? Stressed, relieved, a bit of both?</strong></p>
+              <audio controls src="/messages/message6.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>7. Did you have support around you?</strong></p>
+              <audio controls src="/messages/message7.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>8. Did you feel a big difference compared to your previous training? Atmosphere, pace, teachers...</strong></p>
+              <audio controls src="/messages/message8.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>9. And for the administrative part, was it easy or a hassle?</strong></p>
+              <audio controls src="/messages/message9.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>10. If you could go back, would you make the same choices?</strong></p>
+              <audio controls src="/messages/message10.mp3" style={{ width: '100%', marginBottom: '1rem' }}></audio>
+            </div>
+          )
+        }
+      ]
     }
-    
   ];
 
   const themes = language === 'en' ? themesEn : themesFr;
