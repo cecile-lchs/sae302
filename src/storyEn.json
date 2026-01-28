@@ -3,17 +3,16 @@
     "title": "Chapter 1: First Year",
     "description": "Doubts are setting in. A choice must be made",
     "scenes": {
-"start": {
+
+  "start": {
     "background": "/assets/classe.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
         "character": "/assets/directeur.png",
         "background": "/assets/amphi.png",
         "speaker": "Director",
-        "sound": "/assets/brouhaha.mp3",
         "text": [
           "Hello, everyone. Welcome to the University of Orleans, a place where imagination meets logic and where every bug is an opportunity for creativity. ",
           "This year, as every year, we will explore fascinating areas: from artificial intelligence to distributed systems, from web development to quantum architectures that are still somewhat mysterious.",
@@ -23,7 +22,6 @@
       {
         "background": "/assets/classe.png",
         "character": "/assets/prof.png",
-        "sound": "/assets/brouhaha.mp3",
         "speaker": "Professor",
         "text": "I am your formal calculation professor, Antoine Robert. I used to be just like you: a student at this university, sitting in the same seats as you. By listening to lectures and working hard, I managed to get this teaching position. I am now a research professor, which involves..."
       },
@@ -42,7 +40,6 @@
   "ecouter": {
     "background": "/assets/classe.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -77,7 +74,6 @@
   "discuter": {
     "speaker": "Moi",
     "background": "/assets/messagerie.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -144,7 +140,6 @@
   "ecouter2": {
     "background": "/assets/appli.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -189,7 +184,6 @@
 
   "ignorer": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -253,7 +247,6 @@
 
   "mentir5": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/chambre.png",
 
@@ -301,7 +294,6 @@
 
   "verite5": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -396,24 +388,23 @@
         "character": "/assets/maman.png",
         "font": "digital",
         "speaker": "Mom",
-        "text": "I haven't found any other programs where I'm sure you'll be accepted, even in June and with catastrophic grades. Choose between a BA in history or in literature."
+        "text": [
+          "I haven't found any other programme where you'd be sure to be accepted, even in June and with terrible grades.",
+          "But I'll give you the number of a friend of mine, Lucas. You should talk to him, he might be able to help you. ",
+          "And then you can choose between a degree in history or literature."
+        ]
       },
 
       {
-        "color": "#ff6600",
         "font": "italic",
-        "background": "/assets/messagerie.png",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+        "text": "The protagonist receives a contact from his mom.",
+        "color": "#ff6600"  
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
@@ -421,7 +412,6 @@
   "discuter2": {
     "background": "/assets/messagerie.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -486,7 +476,6 @@
 
   "decliner2": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/appli.png",
     "text": [
@@ -521,7 +510,6 @@
 
   "ignorer3": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -584,7 +572,6 @@
 
   "mentir0": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/chambre.png",
 
@@ -632,7 +619,6 @@
 
   "verite0": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -728,30 +714,31 @@
         "character": "/assets/maman.png",
         "speaker": "Mom",
         "font": "digital",
-        "text": "I found only these two programs where I'm sure you'll be accepted, even in June and with catastrophic grades. Choose between a BA in history or in literature."
+        "text":
+        [ "I found only these two programs where I'm sure you'll be accepted, even in June and with catastrophic grades.",
+        " But first, I will give you the number of a friend of mine who changed direction, and then you can choose between a degree in history or literature."
+      ]
       },
       {
-        "color": "#ff6600",
-        "font": "italic",
-        "background": "/assets/messagerie.png",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+        "text": "The protagonist receives a contact from his mom."
+      },
+      {
+         "background": "/assets/messagerie.png",
+         "character": "/assets/maman.png",
+         "speaker": "Mom",
+         "text": "By the way, here is the number of a friend of mine, Lucas. You should talk to him, he might help you."
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
 
   "postuler3": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
     "text": [
@@ -822,8 +809,7 @@
         "speaker": "Mom",
         "font": "digital",
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year",
-        "character": "/assets/maman.png",
-        "sound": "/assets/click.mp3"
+        "character": "/assets/maman.png"
       },
       {
         "color": "#ff6600",
@@ -841,7 +827,6 @@
   "mentir7": {
     "background": "/assets/chambre.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -890,7 +875,6 @@
   "verite7": {
     "background": "/assets/messagerie.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -987,30 +971,31 @@
         "character": "/assets/maman.png",
         "font": "digital",
         "speaker": "Mom",
-        "text": "I found only these two programs where I am sure you will be accepted, even in June and with catastrophic grades. Choose between a BA in history or a BA in literature."
-      },
-      {
-        "color": "#ff6600",
-        "font": "italic",
-        "background": "/assets/messagerie.png",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+        "text":
+        [ "I found only these two programs where I am sure you will be accepted, even in June and with catastrophic grades.",
+        "But first, I will give you the number of a friend of mine who changed direction, and then you can choose between a degree in history or literature."
+      ]
+    },
+    {
+      "text": "The protagonist receives a contact from his mom."
+    },
+    {
+         "background": "/assets/messagerie.png",
+         "character": "/assets/maman.png",
+         "speaker": "Mom",
+         "text": "By the way, here is the number of a friend of mine, Lucas. You should talk to him, he might help you."
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
 
   "aller2": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "background": "/assets/messagerie.png",
     "font": "normal",
 
@@ -1077,7 +1062,6 @@
 
   "mentir6": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/chambre.png",
     "text": [
@@ -1125,7 +1109,6 @@
   "verite6": {
     "speaker": "Moi",
     "background": "/assets/chambre.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -1241,29 +1224,30 @@
           "[I am forced to turn to subjects that never fill up classes and that readily accept students regardless of their grades, such as literature or history.]"
         ]
       },
-      {
-        "color": "#ff6600",
-        "font": "italic",
-        "background": "/assets/chambre.png",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+
+        {
+          "speaker":"Mom",
+          "background": "/assets/messagerie.png",
+          "character": "/assets/maman.png",
+          "font": "digital",
+          "text": "By the way, here is the number of a friend of mine, Lucas. You should talk to him, he might help you."
+        },
+        {
+        "text": "The protagonist receives a contact from his mom."
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
 
+
   "postuler": {
     "speaker": "Moi",
     "background": "/assets/messagerie.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -1333,7 +1317,6 @@
 
   "mentir": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/chambre.png",
 
@@ -1382,7 +1365,6 @@
 
   "aller": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -1406,7 +1388,6 @@
       },
       {
         "background": "/assets/amphi.png",
-        "sound": "/assets/brouhaha.mp3",
         "text": "..."
       },
       {
@@ -1433,8 +1414,7 @@
         "font": "digital",
         "text": "Hey, sweetheart! Did you get your grades? Are you passing to the second year?",
         "character": "/assets/maman.png",
-        "speaker": "Mom",
-        "sound": "/assets/click.mp3"
+        "speaker": "Mom"
       },
       {
         "color": "#ff6600",
@@ -1452,7 +1432,6 @@
   "mentir2": {
     "background": "/assets/chambre.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -1496,7 +1475,6 @@
   "verite2": {
     "speaker": "Moi",
     "background": "/assets/chambre.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -1613,27 +1591,26 @@
         ]
       },
       {
-        "background": "/assets/chambre.png",
-        "color": "#ff6600",
-        "font": "italic",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+          "speaker":"Mom",
+          "background": "/assets/messagerie.png",
+          "character": "/assets/maman.png",
+          "font": "digital",
+          "text": "By the way, here is the number of a friend of mine, Lucas. You should talk to him, he might help you."
+        },
+        {
+        "text": "The protagonist receives a contact from his mom."
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
 
   "decliner": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/appli.png",
     "text": [
@@ -1669,7 +1646,6 @@
 
   "ignorer2": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -1693,7 +1669,6 @@
       },
       {
         "background": "/assets/amphi.png",
-        "sound": "/assets/brouhaha.mp3",
         "text": "..."
       },
       {
@@ -1734,7 +1709,6 @@
   "mentir4": {
     "background": "/assets/chambre.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -1781,7 +1755,6 @@
   "verite4": {
     "background": "/assets/messagerie.png",
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -1876,30 +1849,30 @@
         "character": "/assets/maman.png",
         "font": "digital",
         "speaker": "Mom",
-        "text": "I haven't found any other programs where I'm sure you'll be accepted, even in June and with catastrophic grades. Choose between a BA in history or in literature."
+        "text": [ 
+          "I haven't found any other programme where you'd be sure to be accepted, even in June and with terrible grades.",
+          "But I'll give you the number of a friend of mine, Lucas. You should talk to him, he might be able to help you. ",
+          "And then you can choose between a degree in history or literature."
+        ]
       },
+
       {
-        "color": "#ff6600",
         "font": "italic",
-        "background": "/assets/messagerie.png",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+        "text": "The protagonist receives a contact from his mom.",
+        "color": "#ff6600"  
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
 
+
   "postuler2": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "background": "/assets/messagerie.png",
     "font": "normal",
     "text": [
@@ -1932,7 +1905,6 @@
       },
       {
         "background": "/assets/interface.png",
-        "sound": "/assets/brouhaha.mp3",
         "speaker": "Transcript of grades",
         "text": "You have not received approval from the departmental council to enter the second year."
       },
@@ -1990,7 +1962,6 @@
   "mentir3": {
     "speaker": "Moi",
     "background": "/assets/chambre.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -2038,7 +2009,6 @@
 
   "verite3": {
     "speaker": "Moi",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "background": "/assets/messagerie.png",
 
@@ -2141,23 +2111,20 @@
         "character": "/assets/maman.png",
         "font": "digital",
         "speaker": "Mom",
-        "text": "I only found these two programs where I'm sure you'll be accepted, even in June and with terrible grades. Choose between a bachelor's degree in history or a bachelor's degree in literature."
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "color": "#ff6600",
-        "font": "italic",
-        "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
+        "text": 
+        [
+        "I only found these two programs where I'm sure you'll be accepted, even in June and with terrible grades.",
+        "But first, I will give you the number of a friend of mine who changed direction, and then you can choose between a degree in history or literature."
+      
+    ]},
+        {
+        "text": "The protagonist receives a contact from his mom."
       }
     ],
     "choices": [
       {
-        "label": "Register for a Bachelor of Arts (BA) in literature",
-        "next": "avoue"
-      },
-      {
-        "label": "Register for a Bachelor of Arts (BA) in history",
-        "next": "avoue"
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
       }
     ]
   },
@@ -2165,7 +2132,6 @@
   "verite": {
     "speaker": "Moi",
     "background": "/assets/messagerie.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
 
     "text": [
@@ -2261,14 +2227,249 @@
         "speaker": "Mom",
         "font": "digital",
         "character": "/assets/maman.png",
-        "text": "I only found these two programs where I'm sure you'll be accepted, even in June and with your terrible grades. Choose between a BA in history or in literature."
+        "text": 
+        ["I only found these two programs where I'm sure you'll be accepted, even in June and with your terrible grades.",
+   
+          "But first, I will give you the number of a friend of mine who changed direction, and then you can choose between a degree in history or literature."
+      
+    ]},
+        {
+        "text": "The protagonist receives a contact from his mom."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Contact Lucas",
+        "next": "conversation_lucas"
+      }
+    ]
+  },
+
+  "conversation_lucas": {
+    "text": [
+      {
+        "background": "/assets/messagesEn/message1.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": [
+          "Hello, my parents gave me your number so that I could ask you some questions.",
+          "I am currently considering a career change and they think you could advise me",
+          "Please let me know when you are available."
+        ]
       },
       {
+        "background": "/assets/messagesEn/message2.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": "Hello, I would be happy to help you. I am available right now. ",
+        "character": "/assets/lucas.png"
+      },
+      {
+        "background": "/assets/messagesEn/message3.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": "Thank you very much ! First I would like to know what you were studying at the beginning. "
+      },
+      {
+        "background": "/assets/messagesEn/message4.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": [
+          "When I left secondary school in 2015, I enrolled in a preparatory class for the grandes écoles littéraires, a CPGE,",
+        " with the aim of preparing for the competitive entrance exam to become a teacher of classical literature",
+        "as this was what I had wanted to do since my second year of secondary school."
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message1.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message5.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": "When did you stop enjoying your studies ?  "
+      },
+      {
+        "background": "/assets/messagesEn/message6.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": 
+        [
+          " I quickly realised that this preparatory class was not for me. In December, I realised this very quickly because the teachers were certainly very demanding, but that was a good thing.",
+          "Above all, they made us understand that we were there to prepare for the political science entrance exam. And that was something that didn't interest me at all.",
+          " I had to deal with a lot of disappointment from the teachers in this preparatory class, which led me to reflect and reorient myself in order to really put all the odds in my favour and prepare for the CAPES, the competitive exam for the national education system."
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message2.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message7.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": "What made you hesitate ? "
+      },
+      {
+        "background": "/assets/messagesEn/message8.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": 
+        [
+          "What made me hesitate at first was what my parents and those around me were saying, that it was still a preparatory class for the grandes écoles and that it was still preparing me for a competitive exam, so if it prepared me for the political science exam, it could also prepare me for the exam to become a teacher.",
+          " It's true that at first it made me hesitate a little. But I was told that it would be beneficial. It would teach me methodology and rigour in terms of the quantity of work, the quality of work, everything related to personal work, etc.",
+          " That it would be very positive for the teaching entrance exam later on. And that I had to take advantage of this preparatory class. "
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message3.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message9.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": "What made you decide it was time to make a change ? "
+      },
+      {
+        "background": "/assets/messagesEn/message10.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": [
+          "I decided to follow the advice of those around me and finish this first year of preparatory classes. However, at the end of the first year, I asked to change direction because I didn't feel like doing a second year under those conditions.",
+          " Because, basically, I wanted to take the teaching exam to become a teacher of classical literature. During that preparatory year, I also had a teacher of classical literature who was really demoralising.",
+          "Very demotivating. In everything he made us do. He put us down a lot, which ended up making me a little tired of the subject and made me realise that it wasn't what I wanted to do.",
+          " So, I decided to change direction this time to my second choice, which was still in the national education system, but this time as a Spanish teacher.",
+          "I was able to go straight into the second year and from there I began to study Spanish history, Spanish language, Spanish literature, etc. and so I began to prepare for my competitive examination to become a Spanish teacher. "
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message4.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message11.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": "Were you worried about what others would say ? "
+      },
+      {
+        "background": "/assets/messagesEn/message12.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": "I wasn't afraid at all to change direction because of how others might perceive me. What I do, I do for myself, I don't do it for others. ",
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message5.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message13.png",
+        "speaker": "Moi",
+        "font": "digital",
+        "text": "How did you find the change of direction ? ,Did it make you feel more relived or stressed ?"
+       
+      },
+      {
+        "background": "/assets/messagesEn/message14.png",
+        "speaker": "Lucas",
+        "font":"digital",
+        "text":  [
+          "I really felt relieved by this change of direction, because from that moment on, I was truly able to focus on what I wanted to do and not on what I was tired of,",
+          "since those were really the two choices I was hesitating between. So, I really saw this change of direction to study Spanish at university as a new opportunity.",
+          "I wasn't stressed at all. On the contrary, I saw it as a kind of liberation, finally being able to do what I loved and flourish in what I was doing. "
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message6.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message15.png",
+        "speaker": "Moi",
+        "font":"digital",
+        "text": "Did you receive any support from anyone ? "
+      },
+      {
+        "background": "/assets/messagesEn/message16.png",
+        "speaker": "Lucas",
+        "text":
+        [ 
+          "I really had a lot of support around me, my whole family encouraged me, as did my acquaintances, my friends, and my secondary school teachers.",
+          "They also encouraged me by telling me that if this was really what I wanted, I had to go for it, and that if it was the best thing for me, university would prepare me just as well as the preparatory class."
+      ],
+        "font":"digital",
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message7.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message17.png",
+        "speaker": "Moi",
+        "font":"digital",
+        "text": "Did you notice a big difference compared to your previous school ? "
+      },
+      {
+        "background": "/assets/messagesEn/message18.png",
+        "speaker": "Lucas",
+        "text": [
+          " When I arrived at university, I really felt a big difference compared to prep school, because there, we were much more independent, much freer. In preparatory classes, we had teachers who were very supportive and demanded a lot from us, which forced us to be consistent and work hard.",
+          " So when I arrived at university, having much more autonomy than in preparatory classes helped me. I had acquired during my first year of preparatory classes, I had acquired a great deal of rigour in terms of work, in terms of quality, in terms of seriousness, so when I arrived at university it was really much more relaxed, ",
+          "I was much better organised, I was much more studious, the pace with the preparatory classes was therefore very different in terms of atmosphere as well, since in preparatory classes we were still a class of about thirty, whereas when I arrived at university, there were 12 of us in my year, so being in a really",
+          "small group was great, we could help each other more easily, etc. It was a totally different pace and a totally different atmosphere that I enjoyed much more and found easier to thrive in easier"
+        ],
+        "font":"digital",
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message8.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message19.png",
+        "speaker": "Moi",
+        "font":"digital",
+        "text": "What about the administrative side ?  "
+      },
+      {
+        "background": "/assets/messagesEn/message20.png",
+        "speaker": "Lucas",
+        "font": "digital",
+        "text": [
+          " On the administrative side, no hassle. The change of direction went extremely well.",
+          "The fact that I waited until the end of the preparatory year to change direction meant that it happened naturally, as we had two choices to make.", 
+          "Either we wanted to continue into the second year of the preparatory course, or we wanted to go straight into the second year of a bachelor's degree. "
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message9.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message21.png",
+        "speaker": "Moi",
+        "font":"digital",
+        "text": "Would you make the same choices if you could go back in time ? "
+      },
+      {
+        "background": "/assets/messagesEn/message22.png",
+        "speaker": "Lucas",
+        "font":"digital",
+        "text": [
+          "If I could go back today, I would definitely make the same choices because I flourished in what I was doing.", 
+          "And that's very important when you're studying, to flourish in what you want to do, because that's what shapes your future career.  "
+        ],
+        "character": "/assets/lucas.png",
+        "sound": "/assets/messages/message10.mp3"
+      },
+      {
+        "background": "/assets/messagesEn/message23.png",
+        "speaker": "Moi",
+        "font":"digital",
+        "text": "Thank you very much for your reply! It will help me make up mind. Have a nice day. "
+      },
+      {
+        "background": "/assets/messagesEn/message24.png",
+        "speaker": "Lucas",
+        "font":"digital",
+        "text": "No problem, I'm glad I could help. Have a nice day. ",
+        "character": "/assets/lucas.png"
+      },
+      {
+        "font": "italic",
+        "background": "/assets/chambre.png",
+        "text": "He helped me a lot, I feel better and more confident in my decision to change my academic path."
+      },
+   {
         "color": "#ff6600",
-        "background": "/assets/messagerie.png",
-        "font":"italic",
+        "font": "italic",
+        "background": "/assets/chambre.png",
         "text": "The protagonist has the choice between reorienting himself toward a BA in literature or history in Orléans."
       }
+
     ],
     "choices": [
       {
@@ -2281,16 +2482,15 @@
       }
     ]
   },
-  "avoue": {
-    "speaker": "Moi",
-    "background": "/assets/chambre.png",
-    "sound": "/assets/click.mp3",
-    "font": "normal",
-    "text": [
-      {
-        "text": "I chose to reorient myself. It's a risk, but I can't stay here anymore."
-      }
-    ]
+   "avoue":{
+   
+    "background":"none",
+    "font":"italic",
+    "color":"#ff6600",
+    "text":
+    {
+      "text":"Vous avez fini le chapitre 1"
+   }
   }
   }},
 
@@ -2302,11 +2502,10 @@
     "speaker": "Moi",
     "background": "/assets/chambre.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
-        "background": "/assets/messagerie.png",
+        "background": "/assets/chambre.png",
         "color": "#ff6600",
         "font": "italic",
         "text": "The protagonist is reorienting himself."
@@ -2338,7 +2537,6 @@
   "attendre": {
     "speaker": "Moi",
     "background": "/assets/parcoursup.png",
-    "sound": "/assets/click.mp3",
     "font": "normal",
     "text": [
       {
@@ -2427,7 +2625,6 @@
     "speaker": "Moi",
     "font": "normal",
     "background": "/assets/parcoursup.png",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2508,7 +2705,6 @@
     "background": "/assets/parcoursup.png",
     "speaker": "Moi",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2536,7 +2732,6 @@
     "background": "/assets/parcoursup.png",
     "speaker": "Moi",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2561,7 +2756,6 @@
     "background": "/assets/parcoursup.png",
     "speaker": "Moi",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2589,7 +2783,6 @@
     "background": "/assets/parcoursup.png",
     "speaker": "Moi",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2614,7 +2807,6 @@
     "speaker": "Moi",
     "background": "/assets/macdo.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2688,21 +2880,20 @@
   },
 
   "carrierep": {
-    "background": "/assets/background.png",
+    "background": "/assets/img.png",
     "speaker": "Moi",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
+        "background": "/assets/macdo.png",
         "color": "#ff6600",
         "font": "italic",
         "text": "The protagonist chooses to abandon his studies completely."
       },
+
       {
-        "background": "/assets/img.png"
-      },
-      {
+        "background": "/assets/img.png",
         "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
       }
     ]
@@ -2712,7 +2903,6 @@
     "speaker": "Moi",
     "background": "/assets/parcoursup.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2750,7 +2940,6 @@
     "speaker": "Moi",
     "background": "/assets/chambre.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2788,7 +2977,6 @@
     "speaker": "Moi",
     "background": "/assets/macdo.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2811,7 +2999,7 @@
         ]
       },
       {
-        "background": "/assets/wapp.png"
+        "background": "/assets/video.mp4"
       },
       {
         "background": "/assets/macdo.png",
@@ -2835,7 +3023,6 @@
     "speaker": "Moi",
     "background": "/assets/parcoursup.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2904,15 +3091,15 @@
   },
 
   "carriereo": {
-    "background": "/assets/background.png",
+    "background": "/assets/macdo.png",
     "speaker": "Moi",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
         "color": "#ff6600",
         "font": "italic",
+        "background":"/assets/macdo.png",
         "text": "The protagonist chooses to abandon his studies completely."
       },
       {
@@ -2928,7 +3115,6 @@
     "speaker": "Moi",
     "background": "/assets/parcoursup.png",
     "font": "normal",
-    "sound": "/assets/click.mp3",
 
     "text": [
       {
@@ -2951,13 +3137,10 @@
         ]
       },
       {
-        "background": "/assets/video1.png",
+        "background": "/assets/video.mp4",
         "text": "*There will be the interview we did for the webdoc. It will show a fulfilled person after their reorientation answering several questions.*"
       },
-      {
-        "background": "/assets/video2.png",
-        "text": "*There will be the interview we did for the webdoc. It will show a fulfilled person after their reorientation answering several questions.*"
-      },
+
       {
         "background": "/assets/chambre.png",
         "font": "italic",
@@ -3033,7 +3216,1952 @@
   "chapter3": {
     "title": "Chapter 3: Third Year",
     "description": "Your path becomes clearer. Each step brings you closer to your future.",
-    "scenes": {}
-  }
+    "scenes": {
+      
+  "start": {
+    "speaker": "Moi",
+ 
+    "font": "normal",
+    "background": "/assets/amphi.png",
 
-}
+    "text": [
+      {
+        "background": "/assets/parcoursup.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist opens the BUT MMI response."
+      },
+      {
+        "background": "/assets/parcoursup.png",
+        "speaker": "Parcoursup",
+        "font": "digital",
+        "text": "You have been accepted."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[Amazing, I'm going to tell my family about it right away.]"
+      },
+      {
+        "font": "digital",
+        "background": "/assets/appel.png",
+        "text": "Guess who got accepted to BUT MMI!"
+      },
+      {
+        "font": "digital",
+        "background": "/assets/appel.png",
+        "speaker": "Mom",
+        "character": "/assets/maman.png",
+        "text": "Oh, that's wonderful, sweetheart! I'm so proud of you."
+      },
+      {
+        "font": "digital",
+        "background": "/assets/appel.png",
+        "speaker": "Dad",
+        "character": "/assets/papa.png",
+        "text": "You handled it, my child."
+      },
+      {
+        "font": "digital",
+        "background": "/assets/appel.png",
+        "speaker": "Junior",
+        "character": "/assets/junior.png",
+        "text": "It was time."
+      },
+      {
+        "background": "/assets/amphi.png",
+        "speaker": "M. Delon",
+        "character": "/assets/delon.png",
+        "text": "The first semester has been very satisfactory for your class. It is now time to choose your course for next year. You can either continue on the initial course in development, or do a work-study program in crea com or development. Think carefully and, above all, think carefully!"
+      },
+      {
+        "background": "/assets/amphi.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has to choose."
+      }
+    ],
+    "choices": [
+      { "label": "Choose your path", "next": "choisir" }
+    ]
+  },
+
+  "choisir": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/amphi.png",
+
+    "text": [
+      {
+        "background": "/assets/amphi.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to choose his path."
+      },
+      {
+        "background": "/assets/amphi.png",
+        "font": "italic",
+        "text": [
+          "[Well... work-study program or internship. Creation, communication, or development. Everyone seems to know what to choose, except me. Creative work appeals to me, but I'm afraid I'll lack inspiration. Communication also appeals to me, but I'm not sure I'd like being constantly focused on other people.]",
+          "[And development... I like logic and code clarity, but I wonder if I really have the patience to do it every day. Work-study programs are practical; they give you a real rhythm, experience, and a salary.]",
+          "[But if I'm wrong, I'm stuck for the whole year. The internship is lighter, more flexible... but I'm afraid of putting off the moment when I have to make a decision.]"
+        ]
+      },
+      {
+        "background": "/assets/amphi.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses their path between a work-study program in crea com, a work-study program in development, or an internship in development."
+      }
+    ],
+    "choices": [
+      { "label": "Go to crea com as a work-study student", "next": "creacom" },
+      { "label": "Go to development in initial training", "next": "devfi" }
+    ]
+  },
+
+  "devfi": {
+    "speaker": "Moi",
+ 
+    "font": "normal",
+    "background": "/assets/entretien.png",
+
+    "text": [
+      {
+        "background": "/assets/amphi.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to continue his training in web development as part of his initial training."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[ My classes are over. It was a good year. I passed my first year, just as I wanted to. But now I'm not sure what to do. My parents asked me what I wanted to do this summer, but I still don't know. I'll tell them that I want to:]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between going on a vacation, finding a summer job, or doing nothing."
+      }
+    ],
+    "choices": [
+      { "label": "Go on vacation", "next": "vacances3" },
+      { "label": "Find a summer job", "next": "job3" },
+      { "label": "Rest", "next": "repos3" }
+    ]
+  },
+
+  "repos3": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to rest during his vacation."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is nothing, just rest. A summer job will only tire me out more than anything else. I don't really want to go on vacation. I'm discouraged that I haven't found a work-study program, and above all, I don't have the money.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I couldn't find a work-study program, so now I'm in the initial branch where I have to find an internship... I'm not getting discouraged, though, because an internship is still a valuable experience and it will probably be easier to get one. I'm going to be very proactive this time around. I'm redoing my resume and portfolio. This time, I'm going to prepare thoroughly for my interviews.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Professor",
+        "character": "/assets/prof.png",
+        "text": "Okay, now I'll explain about your internship. It's mandatory to do 8 weeks, but you can also do longer. It can be a good experience and may lead to future contacts."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      { "label": "8-week internship", "next": "8weekdev" },
+      { "label": "4-month internship", "next": "4monthdev" }
+    ]
+  },
+
+  "job3": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to find a summer job."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is to find a summer job. I don't really want to go on vacation, especially since I don't have the money and no work-study program when I go back to school, and I'll have some savings set aside before I go back to class.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I couldn't find a work-study program, so now I'm in the initial branch where I have to find an internship... I'm not getting discouraged, though, because an internship is still a valuable experience and it will probably be easier to get one. I'm going to be very proactive this time around. I'm redoing my resume and portfolio. This time, I'm going to prepare thoroughly for my interviews.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Professor",
+        "character": "/assets/prof.png",
+        "text": "Okay, now I'll explain about your internship. It's mandatory to do 8 weeks, but you can also do longer. It can be a good experience and may lead to future contacts."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      { "label": "8-week internship", "next": "8weekdev" },
+      { "label": "4-month internship", "next": "4monthdev" }
+    ]
+  },
+
+  "vacances3": {
+    "speaker": "Moi",
+    
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to go on vacation."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is go on vacation. It will help me de-stress, so I won't need to look for a student job, and I don't want to stay here doing nothing. I'm going to visit some new cities before going back to school.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I couldn't find a work-study program, so now I'm in the initial branch where I have to find an internship... I'm not getting discouraged, though, because an internship is still a valuable experience and it will probably be easier to get one. I'm going to be very proactive this time around. I'm redoing my resume and portfolio. This time, I'm going to prepare thoroughly for my interviews.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Professor",
+        "character": "/assets/prof.png",
+        "text": "Okay, now I'll explain about your internship. It's mandatory to do 8 weeks, but you can also do longer. It can be a good experience and may lead to future contacts."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      { "label": "8-week internship", "next": "8weekdev" },
+      { "label": "4-month internship", "next": "4monthdev" }
+    ]
+  },
+
+  "4monthdev": {
+    "speaker": "Moi",
+  
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses the 4-month internship."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I made the right choice in choosing this four-month internship. I get paid, and it's great. I'm very satisfied, even though I have to work during the summer holidays. It doesn't matter.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your mentor for the next four months. No need to be nervous—feel free to relax around me. I'm not going to eat you, after all. To start with, I'll show you around our company and give you some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[ The tutor seems really nice. I feel like I'll fit in well. Okay, I'm still not 100% comfortable, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome3" },
+      { "label": "prefers to be supervised", "next": "encadre3" }
+    ]
+  },
+
+  "8weekdev": {
+    "speaker": "Moi",
+    
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses the 8-week internship."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I made a mistake. After I accepted, I was told that the company would not pay me. I should have chosen the other one. ]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your manager for the next 8 weeks. No need to be nervous—feel free to relax around me. To start with, I'll give you a tour of our company and some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[The manager seems really nice, I feel like I'll fit in well. I'm not 100% comfortable yet, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome3" },
+      { "label": "prefers to be supervised", "next": "encadre3" }
+    ]
+  },
+
+  "encadre3": {
+    "speaker": "Moi",
+  
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to say that he prefers to be supervised."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": "To feel comfortable, I need clear guidance. I like to have step-by-step explanations of what is expected of me."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Okay, to be honest with you, we expect work-study students to be independent in their work."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Oh dear, I should have said that if he gave me more time, I would become more and more independent...]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[I finished my internship and the holidays are almost over. The internship demoralized me. They were constantly on my back, telling me I wasn't independent enough. I really wasn't expecting that. I had to fight to stay at the company. I would have left if it had been any longer. I really don't feel good about it, and I'm dreading the next internship that awaits me.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I dreaded going back to school, but it's time to get back to work. I have to pull myself together—I'm not on vacation anymore. I'm in my third year now, and it's a straight path to the professional world! In fact, I'm wondering whether or not to do a master's degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between doing a master's degree or starting work after his final year."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Do a master's degree",
+        "next": "master"
+      },
+      {
+        "label": "Work after this year",
+        "next": "travailler"
+      }
+    ]
+  },
+
+  "autonome3": {
+    "speaker": "Moi",
+  
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to say that he prefers to be independent."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": "Honestly, I feel better when I'm given autonomy. I like to do things my way and manage my own tasks."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Okay, that's great. That's what we expect from our student — to be independent. We'll see how it goes."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Phew, I think I answered correctly! Now all I have to do is prove myself.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[I've finished my internship and the holidays are almost over. I'm really happy with how things have gone. At the beginning, I never would have thought that I would thrive in my studies and, above all, change direction!]."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Well, I've had a good rest, but it's time to get back to work. I need to pull myself together—I'm not on vacation anymore. I'm in my third year now, and it's a straight path to the professional world! In fact, I'm wondering whether or not to do a master's degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between doing a master's degree or starting work after his final year."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Do a master's degree.",
+        "next": "master3"
+      },
+      {
+        "label": "Work after this year.",
+        "next": "travailler3"
+      }
+    ]
+  },
+
+  "travailler3": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/.png",
+
+    "text": [
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to work after completing his studies."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I think I'm going to quit. I've already studied a lot, and I don't want to be in a study program anymore.]"
+      },
+      {
+        "background": "/assets/backgroundtravail.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": " Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "master3": {
+    "speaker": "Moi",
+    
+    "font": "normal",
+    "background": "/assets/interface.png",
+
+    "text": [
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to pursue a master's degree."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[The master's degree is a good choice and it allows me to obtain a higher-level degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Classmate",
+        "character": "/assets/classmate.png",
+        "text": "Hey, I wanted to know if you had already planned to attend the university open houses? I looked into where I wanted to go, but it's hard to decide because they're all on pretty much the same day. I'll look into it, but what about you? "
+      },
+      {
+        "background": "/assets/classe2.png",
+        "text": "That's true, I hadn't thought about that. I'll do some research right away to find out."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Oh no, all the open days for the master's programs I want to apply for are on the same day. I'm going to have to choose between the two programs.]"
+      },
+      {
+        "background": "/assets/interface.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between attending the open house for the master's degree in web development or the master's degree in Artificial Intelligence."
+      }
+    ],
+    "choices": [
+      { "label": "Web development", "next": "dev" },
+      { "label": "Artificial Intelligence", "next": "ia" }
+    ]
+  },
+
+  "ia": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/background.png",
+
+    "text": [
+      {
+        "background": "/assets/interface.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to attend the open house for the master's degree in AI."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Oh, it was incredible. I got to talk to professors, and the program is really interesting, but I admit I would have liked to visit the other master's program to compare. I'm still going to put both master's programs on the My Master's platform.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "digital",
+        "text": "Smartphone notification"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "[The results are out, and I'm really scared to look at them. They'll determine what I do next if I don't get into the master's program I want. It's going to be complicated.]"
+      },
+      {
+        "background": "/assets/interface.png",
+        "font": "digital",
+        "speaker": "Notification",
+        "text": "You have been accepted into the master's program in AI. "
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "Unbelievable! I hoped for it so much, and I got it! Now all I need is to pass my year!"
+      },
+
+      {
+        "background": "/assets/background.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "dev": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/background.png",
+
+    "text": [
+      {
+        "background": "/assets/interface.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to attend the open house for the master's degree in web development."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Oh, it was incredible. I got to talk to professors, and the program is really interesting, but I admit I would have liked to visit the other master's program to compare. I'm still going to put both master's programs on the My Master's platform.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "digital",
+        "text": "Smartphone notification"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "[The results are out, and I'm really scared to look at them. They'll determine what I do next if I don't get into the master's program I want. It's going to be complicated.]"
+      },
+      {
+        "background": "/assets/interface.png",
+        "font": "digital",
+        "speaker": "Notification",
+        "text": "You have been accepted into the master's program in web development. "
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "Unbelievable! I hoped for it so much, and I got it! Now all I need is to pass my year!"
+      },
+
+      {
+        "background": "/assets/background.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "creacom": {
+    "speaker": "Moi",
+    
+    "font": "normal",
+    "background": "/assets/entretien.png",
+
+    "text": [
+      {
+        "background": "/assets/amphi.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to continue his training in the crea com program through a work-study program."
+      },
+      {
+        "background": "/assets/amphi.png",
+        "font": "italic",
+        "text": [
+          "[I love crea com. It's the only thing I feel truly at home doing, where I can imagine, test, and create without getting bored after five minutes. So choosing a work-study program in this field almost makes me feel like I'm finally moving forward in something that suits me.]",
+          "[Now I have to find a company, write a decent resume, put together a portfolio that proves I know what I'm doing, and go to interviews. Just thinking about it makes me anxious! But this time, it's stress that's worth it: this time, I'm getting closer to a real career goal.]"
+        ]
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "digital",
+        "text": "Message notification"
+      },
+      {
+        "background": "/assets/messagerie.png",
+        "font": "digital",
+        "speaker": "Employer",
+        "text": "Your application has been accepted. We would like to invite you for an interview next week."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Great! I finally have an interview! I absolutely must prepare myself.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": [
+          "[I try to breathe calmly. They're not expecting an experienced professional, just someone who wants to learn. And at least I can say that without lying. I think about my portfolio: not perfect, but honest.]",
+          "[My resume: not very long, but consistent. That should be enough to show that I'm serious. I feel nervous, but also... a little proud to be here. A few months ago, I wouldn't have even imagined myself standing in front of a communications agency trying my luck.]"
+        ]
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Hello! Let's keep it simple: I mainly want to understand who you are and how you work. Is that okay with you?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "Yes, of course."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Perfect. First question, which is important to us: what really attracts you to creation and communication?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between responding with sincere and specific motivation or responding with vague references."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Talk about my passion for creation and communication",
+        "next": "passion"
+      },
+      {
+        "label": "Talk about the financial income that the apprenticeship will bring me",
+        "next": "argent"
+      }
+    ]
+  },
+
+  "argent": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/.png",
+
+    "text": [
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist vaguely mentions the income that the internship will generate."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "font": "italic",
+        "text": "I'm not sure... I'm mostly looking forward to getting a salary, and I like drawing stuff."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "character": "/assets/recrutor.png",
+        "text": "Thank you. Now, the second question, probably the most crucial one: what do you think you can bring to the agency, even as a work-study student?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between praising his skills or showing curiosity."
+      }
+    ],
+    "choices": [
+      { "label": "Praise my skills", "next": "eloge" },
+      { "label": "Show my curiosity", "next": "curiosite" }
+    ]
+  },
+
+  "passion": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/entretien.png",
+
+    "text": [
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to choose to talk about his passion for creation and communication."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "I like creation because I really want to tell things visually. Crea Com allows me to connect aesthetics to an intention, a message. It’s this mix between meaning and image that really attracts me."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Thank you. Now, the second question, probably the most decisive one: what do you think you can bring to the agency, even as a work-study student?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between praising his skills or showing curiosity."
+      }
+    ],
+    "choices": [
+      { "label": "Praise my skills", "next": "eloge" },
+      { "label": "Show my curiosity", "next": "curiosite" }
+    ]
+  },
+
+  "eloge": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/entretien.png",
+
+    "text": [
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to praise his skills."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "A lot of things! I think I'm already good enough to do complete projects without too much supervision."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Last point: work-study programs are demanding. How do you deal with pressure, deadlines, and unexpected events?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between claiming that he is very organized and meticulous or showing his confidence and admitting that he always improvises."
+      }
+    ],
+    "choices": [
+      { "label": "Say that I am organized", "next": "orga" },
+      { "label": "Say that I improvise very well", "next": "impro" }
+    ]
+  },
+
+  "impro": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/chambre2.png",
+
+    "text": [
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to show his confidence and admit that he often improvises."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "I improvise. It always works out."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Very well, thank you for your answers. Can you show me your portfolio?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "Yes, of course."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "[II hand him my portfolio, confidently.]"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "I see. You have good graphic intuition. What you lack is consistency and structure—but that's exactly what work-study programs can give you."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "That's exactly what I'm looking for."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Perfect. In that case... we'll review your application."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I feel like it went badly. I must have responded inappropriately at some point... I hope I'm wrong and that I'll get a response soon.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": [
+          "[It's been two weeks since I applied and I still haven't heard back. I haven't been able to get any other interviews, so if I'm rejected, I'll have to change course and go into development in initial training.]",
+          "[I need to know as soon as possible what decision they've made.]"
+        ]
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "text": "Hello, I had an interview two weeks ago for a work-study position in design and communications. I would like to know if my application has been accepted."
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "text": "Hello, I'm sorry, but you don't fit the profile we're looking for. I wish you the best of luck in your search for a work-study program."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": [
+          "[I suspected it would turn out this way, but still... I must have messed up my answers or failed to explain what I meant. And now, the work-study program is dead in the water. All the agencies are turning me down, or worse, they're not even responding. I'm stuck, all I have left is the development track as an intern...]",
+          "[But that's not what I wanted at all. I prefer creative communications! Posters, logos, campaigns... not coding all day long... At least I'm free until the start of the next school year, since the internship search doesn't start until January.]"
+        ]
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[My classes are over. It was a good year. I passed my first year, but I haven't found a work-study program yet. I'm going to keep looking because I really want to study creative communications. Oh, and my parents asked me what I wanted to do this summer, but I still don't know. I'll tell them that I want to: ]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between going on a vacation, finding a summer job, or doing nothing."
+      }
+    ],
+    "choices": [
+      { "label": "Go on vacation", "next": "vacances2" },
+      { "label": "Find a summer job", "next": "job2" },
+      { "label": "Rest", "next": "repos2" }
+    ]
+  },
+
+  "repos2": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to rest during his vacation."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is nothing, just rest. A summer job will only tire me out more than anything else. I don't really want to go on vacation. I'm discouraged that I haven't found a work-study program, and above all, I don't have the money.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I couldn't find a work-study program, so now I'm in the initial branch where I have to find an internship... I'm not getting discouraged, though, because an internship is still a valuable experience and it will probably be easier to get one. I'm going to be very proactive this time around. I'm redoing my resume and portfolio. This time, I'm going to prepare thoroughly for my interviews.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Professor",
+        "character": "/assets/prof.png",
+        "text": "Okay, now I'll explain about your internship. It's mandatory to do 8 weeks, but you can also do longer. It can be a good experience and may lead to future contacts."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      { "label": "8-week internship", "next": "8week" },
+      { "label": "4-month internship", "next": "4month" }
+    ]
+  },
+
+  "job2": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to find a summer job."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is to find a summer job. I don't really want to go on vacation, especially since I don't have the money and no work-study program when I go back to school, and I'll have some savings set aside before I go back to class.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I couldn't find a work-study program, so now I'm in the initial branch where I have to find an internship... I'm not getting discouraged, though, because an internship is still a valuable experience and it will probably be easier to get one. I'm going to be very proactive this time around. I'm redoing my resume and portfolio. This time, I'm going to prepare thoroughly for my interviews.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Professor",
+        "character": "/assets/prof.png",
+        "text": "Okay, now I'll explain about your internship. It's mandatory to do 8 weeks, but you can also do longer. It can be a good experience and may lead to future contacts."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      { "label": "8-week internship", "next": "8week" },
+      { "label": "4-month internship", "next": "4month" }
+    ]
+  },
+
+  "vacances2": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to go on vacation."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is go on vacation. It will help me de-stress, so I won't need to look for a student job, and I don't want to stay here doing nothing. I'm going to visit some new cities before going back to school.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I couldn't find a work-study program, so now I'm in the initial branch where I have to find an internship... I'm not getting discouraged, though, because an internship is still a valuable experience and it will probably be easier to get one. I'm going to be very proactive this time around. I'm redoing my resume and portfolio. This time, I'm going to prepare thoroughly for my interviews.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Professor",
+        "character": "/assets/prof.png",
+        "text": "Okay, now I'll explain about your internship. It's mandatory to do 8 weeks, but you can also do longer. It can be a good experience and may lead to future contacts."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      { "label": "8-week internship", "next": "8week" },
+      { "label": "4-month internship", "next": "4month" }
+    ]
+  },
+
+  "8week": {
+    "speaker": "Moi",
+ 
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses the 8-week internship."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I made a mistake. After I accepted, I was told that the company would not pay me. I should have chosen the other one. ]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your manager for the next 8 weeks. No need to be nervous—feel free to relax around me. To start with, I'll give you a tour of our company and some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[The manager seems really nice, I feel like I'll fit in well. I'm not 100% comfortable yet, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome2" },
+      { "label": "prefers to be supervised", "next": "encadre2" }
+    ]
+  },
+
+  "autonome2": {
+    "speaker": "Moi",
+ 
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to say that he prefers to be independent."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": "Honestly, I feel better when I'm given autonomy. I like to do things my way and manage my own tasks."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Okay, that's great. That's what we expect from our student — to be independent. We'll see how it goes."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Phew, I think I answered correctly! Now all I have to do is prove myself.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[I've finished my internship and the holidays are almost over. I'm really happy with how things have gone. At the beginning, I never would have thought that I would thrive in my studies and, above all, change direction!]."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Well, I've had a good rest, but it's time to get back to work. I need to pull myself together—I'm not on vacation anymore. I'm in my third year now, and it's a straight path to the professional world! In fact, I'm wondering whether or not to do a master's degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between doing a master's degree or starting work after his final year."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Do a master's degree.",
+        "next": "master"
+      },
+      {
+        "label": "Work after this year.",
+        "next": "travailler"
+      }
+    ]
+  },
+
+  "travailler": {
+    "speaker": "Moi",
+ 
+    "font": "normal",
+    "background": "/assets/.png",
+
+    "text": [
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to work after completing his studies."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I think I'm going to quit. I've already studied a lot, and I don't want to be in a study program anymore.]"
+      },
+      {
+        "background": "/assets/backgroundtravail.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": " Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "curiosite": {
+    "speaker": "Moi",
+    
+    "font": "normal",
+    "background": "/assets/entretien.png",
+
+    "text": [
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to show his curiosity and desire to learn."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "I can bring a fresh perspective, curiosity, and above all, a genuine desire to understand how you work. I am motivated, ready to get involved, and eager to absorb everything I can learn from the team."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Very well. Last point: work-study programs are demanding. How do you handle the pressure, deadlines, and unexpected events?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between claiming that he is very organized and meticulous or showing his confidence and admitting that he always improvises."
+      }
+    ],
+    "choices": [
+      { "label": "Say that I am organized", "next": "orga" },
+      { "label": "Say that I improvise very well", "next": "impro" }
+    ]
+  },
+
+  "orga": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/chambre2.png",
+
+    "text": [
+      {
+        "background": "/assets/entretien.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to affirm that he is an organized person."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "I still have things to improve, but I've learned to structure my work and break tasks down into smaller pieces. And when I get stuck, I ask for help rather than letting things drag on. I'm really making progress in that area."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Very well, thank you for your answers. Can you show me your portfolio?"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "Yes, of course."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "[II hand him my portfolio, confidently.]"
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "I see. You have good graphic intuition. What you lack is consistency and structure—but that's exactly what work-study programs can give you."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "text": "That's exactly what I'm looking for."
+      },
+      {
+        "background": "/assets/entretien.png",
+        "speaker": "Recrutor",
+        "text": "Perfect. In that case... we'll review your application."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[It went pretty well. I hope I'll get an answer soon.]"
+      },
+      {
+        "background": "/assets/appel_entrant.png",
+        "text": "Call notification"
+      },
+      {
+        "background": "/assets/appel_encours.png",
+        "font": "digital",
+        "text": "Hello?"
+      },
+      {
+        "background": "/assets/appel.png",
+        "speaker": "Recrutor",
+        "font": "digital",
+        "text": "Hello. I am calling to inform you that you have been selected for the work-study position."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": [
+          "[I did it, I got the work-study program! Finally, something that really interest me—crea com is exactly what I want to do.]",
+          "[It's incredible, really. This is great news. I'll be able to earn money while continuing my training, and I'll improve my skills more quickly. It's a really wonderful opportunity. I'll have to tell my parents about it.]"
+        ]
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[My classes are over. It was a good year. I have my work-study programme and I passed my first year. It's really my year. Now I'm hesitating. My parents asked me what I wanted to do this summer, but I still don't know. I'll tell them that I want to: ]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between going on vacation, finding a summer job, or doing nothing."
+      }
+    ],
+    "choices": [
+      { "label": "Go on vacation", "next": "vacances1" },
+      { "label": "Find a summer job", "next": "job1" },
+      { "label": "Rest", "next": "repos1" }
+    ]
+  },
+
+  "repos1": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to do nothing with his vacation."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is nothing, just rest.  A summer job before my work-study program will just tire me out more than anything else. I don't really want to go on vacation, especially since I don't have the money.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[A new year is beginning, and I will do everything I can to succeed and show the company that they made the right decision in hiring me!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Here I am in my new job. I have to prove myself and make a good impression. I really want to get along well with my colleagues.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your manager for the next two years. No need to be nervous—feel free to relax around me. I'm not going to eat you, after all. To start with, I'll give you a tour of our company and some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[The manager seems really nice, I feel like I'll fit in well. I'm not 100% comfortable yet, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome" },
+      { "label": "prefers to be supervised", "next": "encadre" }
+    ]
+  },
+
+  "job1": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to find a summer job."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing is to find a summer job. I don't really want to go on vacation, especially since I don't have the money, and I'll have some savings set aside before I start my work-study program.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[A new year is beginning, and I will do everything I can to succeed and show the company that they made the right decision in hiring me!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Here I am in my new job. I have to prove myself and make a good impression. I really want to get along well with my colleagues.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your manager for the next two years. No need to be nervous—feel free to relax around me. I'm not going to eat you, after all. To start with, I'll give you a tour of our company and some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[The manager seems really nice, I feel like I'll fit in well. I'm not 100% comfortable yet, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome" },
+      { "label": "prefers to be supervised", "next": "encadre" }
+    ]
+  },
+
+  "vacances1": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to go on vacation."
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[The best thing to do is go on vacation. I'm going to work, so I don't need to look for a student job, and I don't want to stay here doing nothing. I'm going to visit new cities before entering the working world.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[A new year is beginning, and I will do everything I can to succeed and show the company that they made the right decision in hiring me!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Here I am in my new job. I have to prove myself and make a good impression. I really want to get along well with my colleagues.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your manager for the next two years. No need to be nervous—feel free to relax around me. I'm not going to eat you, after all. To start with, I'll give you a tour of our company and some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[The manager seems really nice, I feel like I'll fit in well. I'm not 100% comfortable yet, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome" },
+      { "label": "prefers to be supervised", "next": "encadre" }
+    ]
+  },
+
+  "encadre": {
+    "speaker": "Moi",
+    
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to say that he prefers to be supervised."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": "To feel comfortable, I need clear guidance. I like to have step-by-step explanations of what is expected of me."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Okay, to be honest with you, we expect work-study students to be independent in their work."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Oh dear, I should have said that if he gave me more time, I would become more and more independent...]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I'm really fed up with this company. They're always asking me to be independent, but I want a little more guidance. I need to gain experience with a mentor. I don't want to do it on my own because I know I won't reach the level I want to.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[ I don't understand. I've applied everywhere, I've been to see recruiters on site, I've had interviews, but I've always been rejected. The school deadline has passed and I don't have my work-study program, so I'm going to have to go into initial training, which really upsets me... I've been asked to find an internship now, so I'm going to start looking since time is running out.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[This time, I was successful. I applied and was accepted, but I don't know which internship to choose. Some say they can take me on for eight weeks, and others for four months. I'm hesitating.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between an 8-week internship or a 4-month internship."
+      }
+    ],
+    "choices": [
+      {
+        "label": "8-week internship",
+        "next": "8week"
+      },
+      {
+        "label": "4-month internship",
+        "next": "4month"
+      }
+    ]
+  },
+
+  "4month": {
+    "speaker": "Moi",
+  
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/chambre2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses the 4-month internship."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I made the right choice in choosing this four-month internship. I get paid, and it's great. I'm very satisfied, even though I have to work during the summer holidays. It doesn't matter.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Welcome! I will be your mentor for the next four months. No need to be nervous—feel free to relax around me. I'm not going to eat you, after all. To start with, I'll show you around our company and give you some tips on how to survive here..."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[ The tutor seems really nice. I feel like I'll fit in well. Okay, I'm still not 100% comfortable, but I think it'll be fine!]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, I have an important question for you: when you work, do you prefer to be given autonomy or to be guided step by step?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between telling him that he likes to be independent or that he prefers to be supervised."
+      }
+    ],
+    "choices": [
+      { "label": "prefers to be independent", "next": "autonome2" },
+      { "label": "prefers to be supervised", "next": "encadre2" }
+    ]
+  },
+
+  "encadre2": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to say that he prefers to be supervised."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": "To feel comfortable, I need clear guidance. I like to have step-by-step explanations of what is expected of me."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Okay, to be honest with you, we expect work-study students to be independent in their work."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Oh dear, I should have said that if he gave me more time, I would become more and more independent...]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "italic",
+        "text": "[I finished my internship and the holidays are almost over. The internship demoralized me. They were constantly on my back, telling me I wasn't independent enough. I really wasn't expecting that. I had to fight to stay at the company. I would have left if it had been any longer. I really don't feel good about it, and I'm dreading the next internship that awaits me.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[I dreaded going back to school, but it's time to get back to work. I have to pull myself together—I'm not on vacation anymore. I'm in my third year now, and it's a straight path to the professional world! In fact, I'm wondering whether or not to do a master's degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between doing a master's degree or starting work after his final year."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Do a master's degree",
+        "next": "master"
+      },
+      {
+        "label": "Work after this year",
+        "next": "travailler"
+      }
+    ]
+  },
+
+  "autonome": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/accueil.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to say that he prefers to be independent."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": "Honestly, I feel better when I'm given autonomy. I like to do things my way and manage my own tasks."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "Okay, that's great. That's what we expect from our work-study student—to be independent. We'll see how it goes."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[Phew, I think I answered correctly! Now all I have to do is prove myself.]"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "speaker": "Manager",
+        "character": "/assets/manager.png",
+        "text": "By the way, have you thought about taking your vacation days?"
+      },
+      {
+        "background": "/assets/accueil.png",
+        "text": " Not yet, but I'm still thinking about how to take my vacation time."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[I have 30 days of vacation time, but I'm hesitating between taking some of it throughout the year or saving it all for the summer holidays so I can relax]."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between taking his vacation days during the year or saving them for the summer holidays."
+      }
+    ],
+    "choices": [
+      {
+        "label": "Take my vacation days during the year",
+        "next": "congesannee"
+      },
+      {
+        "label": "Save my vacation days for the summer holidays",
+        "next": "congesete"
+      }
+    ]
+  },
+
+  "congesete": {
+    "speaker": "Moi",
+  
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to take his vacation during summer."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[It's the best choice I can make, that way I can get some rest and maybe even go on vacation with my friends for three weeks.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Well, I've had a good rest, but it's time to get back to work. I need to pull myself together—I'm not on vacation anymore. I'm in my third year now, and it's a straight path to the professional world! In fact, I'm wondering whether or not to do a master's degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between doing a master's degree or starting work after his final year."
+      }
+    ],
+    "choices": [
+      { "label": "Do a master's degree", "next": "master" },
+      { "label": "Work after this year", "next": "travailler" }
+    ]
+  },
+
+  "congesannee": {
+    "speaker": "Moi",
+   
+    "font": "normal",
+    "background": "/assets/classe2.png",
+
+    "text": [
+      {
+        "background": "/assets/accueil.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to take his vacation during the year."
+      },
+      {
+        "background": "/assets/accueil.png",
+        "font": "italic",
+        "text": "[It's the best choice. I won't be tired during the year, I'll organize myself well, it doesn't matter if I don't have any vacation this summer.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Well, I've had a good rest, but it's time to get back to work. I need to pull myself together—I'm not on vacation anymore. I'm in my third year now, and it's a straight path to the professional world! In fact, I'm wondering whether or not to do a master's degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between doing a master's degree or starting work after his final year."
+      }
+    ],
+    "choices": [
+      { "label": "Do a master's degree", "next": "master" },
+      { "label": "Work after this year", "next": "travailler" }
+    ]
+  },
+
+  "master": {
+    "speaker": "Moi",
+
+    "font": "normal",
+    "background": "/assets/interface.png",
+
+    "text": [
+      {
+        "background": "/assets/classe2.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist chooses to pursue a master's degree."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[The master's degree is a good choice and it allows me to obtain a higher-level degree.]"
+      },
+      {
+        "background": "/assets/classe2.png",
+        "speaker": "Classmate",
+        "character": "/assets/classmate.png",
+        "text": "Hey, I wanted to know if you had already planned to attend the university open houses? I looked into where I wanted to go, but it's hard to decide because they're all on pretty much the same day. I'll look into it, but what about you? "
+      },
+      {
+        "background": "/assets/classe2.png",
+        "text": "That's true, I hadn't thought about that. I'll do some research right away to find out."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Oh no, all the open days for the master's programs I want to apply for are on the same day. I'm going to have to choose between the two programs.]"
+      },
+      {
+        "background": "/assets/interface.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist has the choice between attending the open house for the master's degree in art direction or the master's degree in UI/UX design."
+      }
+    ],
+    "choices": [
+      { "label": "Art Direction", "next": "da" },
+      { "label": "UI/UI Design", "next": "uiux" }
+    ]
+  },
+
+  "uiux": {
+    "speaker": "Moi",
+ 
+    "font": "normal",
+    "background": "/assets/background.png",
+
+    "text": [
+      {
+        "background": "/assets/interface.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to attend the open house for the master's degree in UI/UX Design."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Oh, it was incredible. I got to talk to professors, and the program is really interesting, but I admit I would have liked to visit the other master's program to compare. I'm still going to put both master's programs on the My Master's platform.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "digital",
+        "text": "Smartphone notification"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "[The results are out, and I'm really scared to look at them. They'll determine what I do next if I don't get into the master's program I want. It's going to be complicated.]"
+      },
+      {
+        "background": "/assets/interface.png",
+        "font": "digital",
+        "speaker": "Notification",
+        "text": "You have been accepted into the master's program in UI/UX Design. "
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "Unbelievable! I hoped for it so much, and I got it! Now all I need is to pass my year!"
+      },
+
+      {
+        "background": "/assets/background.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  },
+
+  "da": {
+    "speaker": "Moi",
+  
+    "font": "normal",
+    "background": "/assets/background.png",
+
+    "text": [
+      {
+        "background": "/assets/interface.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "The protagonist decides to attend the open house for the master's degree in art direction."
+      },
+      {
+        "background": "/assets/classe2.png",
+        "font": "italic",
+        "text": "[Oh, it was incredible. I got to talk to professors, and the program is really interesting, but I admit I would have liked to visit the other master's program to compare. I'm still going to put both master's programs on the My Master's platform.]"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "font": "digital",
+        "text": "Smartphone notification"
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "[The results are out, and I'm really scared to look at them. They'll determine what I do next if I don't get into the master's program I want. It's going to be complicated.]"
+      },
+      {
+        "background": "/assets/interface.png",
+        "font": "digital",
+        "speaker": "Notification",
+        "text": "You have been accepted into the master's program in art direction. "
+      },
+      {
+        "background": "/assets/chambre2.png",
+        "text": "Unbelievable! I hoped for it so much, and I got it! Now all I need is to pass my year!"
+      },
+
+      {
+        "background": "/assets/background.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "Thank you for experiencing the life of a student. Now you can see what it's like for a student who is reorienting. You can play again or decide to learn more in the “Documentation” tab."
+      }
+    ]
+  
+    
+}}}}

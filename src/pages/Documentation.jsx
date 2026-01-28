@@ -342,26 +342,78 @@ const Documentation = ({ language, onNavigate }) => {
       sections: [
         {
           title: "Introduction",
-          content: <p>La santé mentale est un état de bien-être qui permet de faire face aux difficultés de la vie. Chez les étudiants, le stress et l'anxiété sont en forte augmentation.</p>
+          content:
+            <div> <p>La santé mentale correspond à un état de bien-être psychologique qui permet à une personne de se sentir bien dans sa vie quotidienne, de faire face aux difficultés, de développer ses capacités et d’entretenir des relations sociales équilibrées. Elle ne se limite pas à l’absence de troubles psychiques : elle inclut aussi le sentiment d’épanouissement, la confiance en soi, la gestion des émotions et la capacité à demander de l’aide lorsque cela est nécessaire.
+            </p>
+              <p>Chez les étudiant·es, la santé mentale est devenue un enjeu majeur de l’enseignement supérieur. Les études et rapports récents montrent une augmentation importante des situations de mal-être psychologique, touchant une large partie de la population étudiante. Stress, anxiété, épuisement, découragement ou sentiment de solitude sont des réalités fréquentes, parfois banalisées, mais qui peuvent avoir des conséquences importantes sur les parcours scolaires et personnels.
+              </p>
+            </div>
         },
         {
-          title: "Facteurs de risque étudiant",
+          title: "Une période de vie particulièrement fragile",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>La période étudiante est une transition fragile (autonomie, pression académique). S'ajoutent souvent précarité financière et isolement.</p>
+              <p style={{ marginBottom: '1rem' }}>La vie étudiante correspond à une période de transition majeure. Elle marque souvent le passage à l’âge adulte, avec de nombreux changements simultanés : départ du domicile familial, nouvelle autonomie, gestion du budget, organisation du temps, construction de l’identité personnelle et professionnelle. Ces transformations peuvent être sources d’enthousiasme, mais aussi de fortes tensions psychologiques.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>À cela s’ajoutent les exigences du monde universitaire : charge de travail importante, évaluations régulières, pression de la réussite, comparaison avec les autres étudiants et incertitude face à l’avenir professionnel. Pour certains, ces facteurs peuvent provoquer un sentiment d’échec, une perte de motivation ou une anxiété durable.
+              </p>
             </div>
           )
         },
         {
-          title: "Lien avec la réorientation",
-          content: <p>Le doute, la peur de l'échec et le regard des autres rendent la réorientation stressante. Elle peut être vécue comme un échec personnel, risquant de fragiliser la santé mentale.</p>
+          title: "Un mal-être largement répandu",
+          content:
+            <div>
+              <p>Les données disponibles montrent que la santé mentale des étudiant·es s’est nettement dégradée ces dernières années. Une part importante des étudiant·es déclare souffrir de stress intense, de fatigue mentale ou de troubles anxieux. De nombreux jeunes évoquent également des épisodes dépressifs, des difficultés de concentration ou un sentiment de découragement face à leurs études.</p>
+              <p>Le mal-être étudiant est souvent renforcé par la précarité financière. Le coût de la vie étudiante, les difficultés d’accès au logement, la nécessité de travailler en parallèle des études ou l’insécurité matérielle peuvent alourdir la charge mentale. Ces contraintes réduisent le temps de repos, fragilisent l’équilibre personnel et augmentent le risque d’épuisement.
+              </p>
+              <p>L’isolement social constitue un autre facteur important. Certains étudiant·es peinent à créer des liens, notamment lors d’un changement de ville, d’établissement ou de filière. La réorientation peut accentuer ce sentiment de solitude, car elle implique parfois de recommencer dans un nouvel environnement, sans repères ni réseau social établi.
+              </p>
+            </div>
         },
         {
-          title: "Dispositifs de soutien",
+          title: " Santé mentale et réorientation",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>Il est crucial de ne pas rester seul. Des services de santé universitaire (SSE), des psychologues et des lignes d'écoute existent.</p>
-              <p>Développer des compétences psychosociales (gestion du stress) fait partie de la prévention.</p>
+              <p style={{ marginBottom: '1rem' }}>La question de la santé mentale est étroitement liée aux parcours de réorientation. Le doute sur son choix d’études, la peur de se tromper, le regard des proches ou la pression sociale peuvent générer un fort stress émotionnel. Beaucoup d’étudiant·es vivent la réorientation comme un échec personnel, alors qu’il s’agit souvent d’une étape normale dans un parcours.
+              </p>
+              <p>Un mal-être psychologique non pris en compte peut conduire à un décrochage, à l’abandon des études ou à une perte de confiance durable. À l’inverse, un accompagnement adapté et une meilleure reconnaissance de la diversité des parcours peuvent aider les étudiant·es à se réorienter dans de meilleures conditions, en préservant leur équilibre mental.
+              </p>
+            </div>
+          )
+        },
+        {
+          title: "  Une approche globale de la santé mentale",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Les institutions éducatives rappellent que la santé mentale doit être abordée de manière globale et préventive. Il ne s’agit pas seulement de soigner des troubles, mais aussi de créer des environnements favorables au bien-être. Cela passe par la qualité de l’accueil des étudiant·es, la clarté des informations, la bienveillance pédagogique et la reconnaissance des difficultés rencontrées.
+              </p>
+              <p>Les référentiels de santé mentale insistent sur l’importance de développer les compétences psychosociales : apprendre à gérer le stress, à reconnaître ses émotions, à demander de l’aide et à maintenir un équilibre entre vie personnelle et études. Ces compétences jouent un rôle clé dans la prévention des situations de crise.
+              </p>
+            </div>
+          )
+        },
+        {
+          title: "Dispositifs de soutien et politiques publiques",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Face à l’ampleur du phénomène, les pouvoirs publics et les établissements d’enseignement supérieur ont mis en place différents dispositifs pour soutenir la santé mentale des étudiant·es. Des actions de prévention, des campagnes de sensibilisation et des services d’écoute psychologique ont été développés sur les campus.
+              </p>
+              <p>Des mesures nationales ont également été proposées pour améliorer le bien-être étudiant, notamment à travers le renforcement de l’accompagnement psychologique, la formation des personnels éducatifs au repérage des signes de détresse et le développement de partenariats avec des acteurs de la santé.
+                L’objectif est de rompre l’isolement, de lutter contre la stigmatisation liée aux difficultés psychiques et de favoriser une culture du soutien et de l’entraide dans le monde étudiant.
+              </p>
+            </div>
+          )
+        },
+
+        {
+          title: " Un enjeu central pour la réussite étudiante",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>La santé mentale est aujourd’hui reconnue comme un facteur déterminant de la réussite et de la persévérance dans les études. Un étudiant qui se sent soutenu, écouté et compris est plus à même de s’engager dans son parcours, de surmonter les difficultés et de construire un projet cohérent.
+              </p>
+              <p>Prendre en compte la santé mentale des étudiant·es, c’est reconnaître que la réussite ne dépend pas uniquement des capacités académiques, mais aussi du bien-être psychologique, du contexte de vie et de la possibilité de faire des choix éclairés, y compris celui de se réorienter.
+              </p>
             </div>
           )
         },
@@ -371,7 +423,8 @@ const Documentation = ({ language, onNavigate }) => {
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
               <li style={{ marginBottom: '0.5rem' }}><a href="https://www.emd.fr/sante-mentale-etudiants/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>EMD – Santé mentale des étudiants</a></li>
               <li style={{ marginBottom: '0.5rem' }}><a href="https://eduscol.education.fr/4063/agir-pour-favoriser-la-sante-mentale-et-le-bien-etre-des-eleves" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Eduscol – Agir pour la santé mentale</a></li>
-              <li><a href="https://rrapps-bfc.org/sites/default/files/publications/fichiers/2023/2023-ReferentielSanteMentale.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>RRAPPS – Référentiel Santé Mentale</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://rrapps-bfc.org/sites/default/files/publications/fichiers/2023/2023-ReferentielSanteMentale.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>RRAPPS – Référentiel Santé Mentale</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2021-10/15-mesures-sur-le-bien--tre-des-tudiants-en-sant-avril-2018--13355.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministère de l’Enseignement supérieur – 15 mesures pour le bien-être des étudiant·es en santé</a></li>
             </ul>
           )
         }
@@ -382,30 +435,118 @@ const Documentation = ({ language, onNavigate }) => {
       color: "#E0BBE4",
       sections: [
         {
-          title: "1. Quelles aides pour les alternants ?",
+          title: "1. Introduction",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>En alternance, on cumule salaire et statut étudiant, ce qui ouvre droit à plusieurs aides :</p>
+              <p style={{ marginBottom: '1rem' }}>Faire le choix de l’alternance, que ce soit en contrat d’apprentissage ou en contrat de professionnalisation, permet de cumuler formation théorique et expérience professionnelle. Mais même avec un salaire, les dépenses liées au logement, au transport et à la vie quotidienne peuvent être lourdes, surtout quand on débute. Heureusement, plusieurs dispositifs existent pour soutenir les alternants.</p>
+            </div>
+          )
+        },
+        {
+          title: "2. Quelles aides peut‑on obtenir quand on est en alternance ?",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Lorsque l’on est alternant, on peut prétendre à différentes aides financières pour alléger les charges liées à la formation, notamment :</p>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>✔ Aides au logement :</strong></p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Logement :</strong> APL (CAF) et Mobili-Jeune (Action Logement).</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Garanties logement :</strong> Garantie Visale (caution gratuite) et Avance Loca-Pas.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Autres :</strong> Prime d'activité (CAF), aides au transport, aide au permis de conduire (500€).</li>
+                <li>APL ( Aide personnalisée au logement - CAF) : comme pour tout locataire, l’APL versée par la CAF permet de réduire le montant du loyer en fonction des revenus, de la composition du foyer et du type de logement. Les alternants peuvent en bénéficier comme tout étudiant salarié.
+                </li>
+                <li>Mobili‑Jeune® (Action Logement):  une aide spécifique proposée par Action Logement, destinée aux alternants de moins de 30 ans en contrat d’apprentissage ou de professionnalisation. Elle prend en charge une partie du loyer, après déduction de l’APL, généralement comprise entre 10 et 100 € par mois selon le loyer et les ressources, jusqu’à l’équivalent d’environ 1 100 € par année de formation.
+                </li>
+              </ul >
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>✔ Garanties et facilités pour accéder à un logement</strong></p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li>Garantie Visale : une caution gratuite offerte par Action Logement qui se porte garant pour l’alternant auprès des bailleurs, facilitant l’accès au logement sans avoir de garant personnel.
+                </li>
+                <li>Avance Loca‑Pass® : avance sans intérêts pouvant aller jusqu’à 1 200 € pour financer le dépôt de garantie demandé par le propriétaire.
+                </li>
+              </ul >
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>✔ Autres aides financières/pratiques</strong></p>
+              <p> Outre le logement, d’autres aides peuvent compléter le soutien à l’alternant :</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li>Prime d’activité : versée par la CAF pour compléter les revenus modestes des alternants salariés, augmentant leur pouvoir d’achat.
+                </li>
+                <li>Tarifs réduits ou subventions pour le transport : certaines régions ou services offrent des réductions pour les trajets domicile‑travail ou transports en commun.
+                </li>
+                <li>Aide au permis de conduire : subvention autour de 500 € pour faciliter la mobilité pour les besoins professionnels.
+                </li>
+                <li>Aides régionales ou OPCO : possibilités de soutien pour l’achat de matériel professionnel ou lors d’une mobilité en formation ou stage à l’étranger.
+                </li>
+              </ul >
+
+            </div >
+          )
+        },
+        {
+          title: "3. Focalisation sur l’aide Mobili‑Jeune®",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>L’aide Mobili‑Jeune® est l’un des principaux dispositifs spécifiques à l’alternance. Elle prend en charge une partie du loyer (entre 10€ et 100€ par mois) après déduction des APL, pour une durée max de 11 mois par an.</p>
+              <p style={{ marginBottom: '0.5rem' }}><strong>Qui peut y prétendre ?</strong></p>
+              <ul style={{ paddingLeft: '2rem', marginBottom: '1rem' }}>
+                <li>Moins de 30 ans.</li>
+                <li>Contrat d’apprentissage ou de professionnalisation (secteur privé non agricole).</li>
+                <li>Salaire &le; 120% SMIC.</li>
+                <li>Locataire proche du travail/formation ou double loyer.</li>
+              </ul>
+              <p style={{ marginBottom: '0.5rem' }}><strong>Comment est‑elle calculée ?</strong></p>
+              <p> L’aide Mobili‑Jeune est complémentaire aux autres aides au logement : elle est calculée sur le loyer après déduction de l’APL, de manière à alléger encore le coût global du logement pour l’étudiant.
+              </p>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>Montant et durée</strong></p>
+              <ul>
+                <li>Elle peut aller de 10 € à 100 € par mois, selon la situation.</li>
+                <li>Elle est versée pour une durée maximale de 11 mois par année de formation, cumulable sur deux années consécutives ou non.</li>
+              </ul>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>Démarches :</strong></p>
+              <p> La demande doit être faite en ligne sur le site d’Action Logement, généralement entre 3 mois avant le début du contrat et jusqu’à 5 mois après son démarrage. Il faut fournir les pièces justificatives comme le contrat d’alternance, le bail de location et un RIB.
+              </p>
+
+            </div>
+          )
+        },
+        {
+          title: "4. D’autres aides ou dispositifs à connaître",
+          content: (
+            <div>
+              <p>Même au‑delà du logement, plusieurs autres aides et dispositifs peuvent compléter le soutien à l’alternant :</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>APL / ALS / ALF (CAF) :</strong> Réduction loyer indépendante de Mobili-Jeune.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Prime d’activité :</strong> aide mensuelle complémentaire pour les salariés aux revenus modestes.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Garantie Visale :</strong> rassurent les propriétaires et facilitent l’obtention d’un bail.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Avance Loca-Pass :</strong>  facilite l’entrée dans les logements en prenant en charge le dépôt de garantie sans frais</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Aides locales :</strong>  certaines régions proposent des aides pour les transports, l’équipement ou les projets liés à l’alternance — elles varient selon les territoires.
+                </li>
               </ul>
             </div>
           )
         },
         {
-          title: "2. Focus sur Mobili-Jeune",
+          title: "5. Conseils pratiques",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>C'est une aide spécifique pour les alternants de moins de 30 ans avec un salaire &le; SMIC.</p>
-              <p>Elle prend en charge une partie du loyer (entre 10€ et 100€ par mois) APRÈS déduction des APL. La demande se fait sur le site d'Action Logement.</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Faire les démarches tôt :</strong> beaucoup de ces aides (comme Mobili‑Jeune ou l’avance Loca‑Pass) doivent être demandées dans des délais précis autour du début du contrat d’alternance.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Cumuler intelligemment :</strong>l’aide Mobili‑Jeune peut se cumuler avec l’APL, la garantie Visale ou l’avance Loca‑Pass pour réduire au maximum le coût du logement.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Conserver les justificatifs :</strong>  un dossier complet accélère l’étude des aides.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Utiliser les simulateurs :</strong> (CAF, Action Logement ou 1jeune1solution) pour estimer ses droits.
+                </li>
+              </ul>
             </div>
           )
         },
         {
-          title: "3. Conseils",
-          content: <p>Faites vos démarches tôt ! Les aides comme Mobili-Jeune ont des délais stricts (demande proche du début du contrat).</p>
+          title: "6. Conclusion",
+          content: <p>Être alternant ne signifie pas être seul face aux dépenses. Grâce à une combinaison d’aides CAF, Action Logement et d’aides complémentaires (prime d’activité, transports, garant), il est possible de réduire significativement les charges liées à l’entrée dans un logement et à la vie quotidienne. L’important est de connaître ces dispositifs, préparer les démarches à l’avance et bien assembler son dossier pour maximiser ses chances de bénéficier de tous les soutiens auxquels on a droit.
+          </p>
         },
         {
           title: "Sources",
@@ -413,6 +554,9 @@ const Documentation = ({ language, onNavigate }) => {
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
               <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F38630" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-Public - Apprenti aides financières</a></li>
               <li style={{ marginBottom: '0.5rem' }}><a href="https://www.actionlogement.fr/l-aide-mobili-jeune" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Action Logement - Aide MOBILI-JEUNE</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.letudiant.fr/etudes/alternance/alternance-quelles-aides-financieres-peut-on-obtenir.html" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>L’Étudiant, Aides financières pour alternants : logement et dispositifs</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.concepteursdavenirs.fr/liste-aide-financiere-alternance" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Concepteurs d’Avenirs, Liste des aides financières pour l’alternance</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-var/offre-de-service/logement/je-suis-etudiant-etou-apprenti/je-suis-etudiant-en-alternance" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF du Var, Je suis étudiant ou apprenti en alternance</a></li>
               <li><a href="https://money.wizbii.com/advices/aide-alternance-le-guide-pour-la-rentree" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Wizbii - Guide rentrée alternance</a></li>
             </ul>
           )
@@ -424,21 +568,125 @@ const Documentation = ({ language, onNavigate }) => {
       color: "#957DAD",
       sections: [
         {
-          title: "1. Qu’est-ce que l’APL ?",
-          content: <p>Une aide financière versée par la CAF pour réduire le montant du loyer. Elle dépend du revenu, du loyer, du type de logement et de la localisation.</p>
+          title: "1. Introduction",
+          content: <p>Pour de nombreux étudiants, accéder à un logement constitue un défi financier majeur. Le coût des loyers, associé aux dépenses du quotidien, peut représenter un obstacle important. Pour accompagner les étudiants, l’État français propose plusieurs dispositifs d’aide, parmi lesquels l’APL (Aide Personnalisée au Logement) est l’un des plus connus. Comprendre son fonctionnement, ses conditions et ses démarches est essentiel pour sécuriser un logement tout en allégeant le budget étudiant.
+          </p>
         },
         {
-          title: "2. Conditions",
-          content: <p>Être locataire d'un logement conventionné, être étudiant, et respecter les critères de ressources.</p>
+          title: "2. Qu’est-ce que l’APL ?",
+          content:
+            <div>
+              <p>L’APL est une aide financière destinée à réduire le montant du loyer ou de la mensualité d’emprunt d’un logement. Elle est calculée en fonction :
+              </p>
+              <ul>
+                <li>Du revenu de l’étudiant (ou de ses parents, selon le cas)</li>
+                <li>Du montant du loyer</li>
+                <li>Du type de logement</li>
+                <li>De la localisation géographique</li>
+              </ul>
+              <p>L’objectif est de rendre le logement plus accessible, particulièrement pour les étudiants en situation de mobilité, ceux qui s’installent loin de leur famille ou qui doivent financer seuls leurs études.
+              </p>
+            </div>
         },
         {
-          title: "3. Demande",
+          title: "3. Qui peut en bénéficier ?",
+          content:
+            <div>
+              <p>L’APL n’est pas réservée à tous les étudiants. Les conditions principales sont les suivantes :
+              </p>
+              <ul>
+                <li>Être locataire ou colocataire d’un logement conventionné (c’est-à-dire reconnu par la CAF pour recevoir l’aide).
+                </li>
+                <li>Être étudiant, apprenti ou en formation professionnelle.
+
+                </li>
+                <li>Résider en France de manière régulière.</li>
+                <li>Respecter certaines conditions de ressources, qui varient selon la situation personnelle et familiale.</li>
+              </ul>
+              <p>Il est important de noter que l’APL est différente des autres aides au logement, comme l’ALF (Allocation de Logement à caractère Familial) ou l’ALS (Allocation de Logement Social), qui s’adressent à des publics spécifiques.
+              </p>
+            </div>
+        },
+        {
+          title: "4. Comment faire sa demande ?",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>Tout se fait en ligne sur le site de la CAF. Il faut fournir le bail, un RIB, et des justificatifs de revenus.</p>
-              <p>Attention : l'aide n'est pas rétroactive, faites la demande dès l'entrée dans le logement.</p>
-            </div>
+              <p style={{ marginBottom: '1rem' }}>La demande d’APL peut se faire en ligne via le site de la CAF ou via des plateformes partenaires, et suit plusieurs étapes clés :
+              </p>
+              <ol>
+                <li>Créer un compte CAF ou se connecter à son espace personnel.
+
+                </li>
+                <li>Renseigner sa situation : type de logement, montant du loyer, coordonnées du bailleur, statut étudiant.
+                </li>
+                <li>Fournir les justificatifs nécessaires, notamment :
+                  <ul>
+                    <li>Contrat de location ou attestation du bailleur</li>
+                    <li>Relevé d’identité bancaire (RIB)</li>
+                    <li>Justificatif de ressources personnelles ou familiales</li>
+                    <li>Carte d’étudiant ou attestation de scolarité</li>
+                  </ul>
+                </li>
+                <li>Attendre le calcul et la notification : la CAF détermine le montant de l’aide et informe l’étudiant.
+                </li>
+                <li>Versement de l’aide : l’APL est directement versée au bailleur ou à l’étudiant selon les cas.
+                </li>
+              </ol>
+              <p>Le délai de traitement peut varier, mais il est conseillé de faire la demande avant la signature du bail ou dès l’installation dans le logement.
+              </p></div>
           )
+        },
+        {
+          title: "5. Les documents essentiels",
+          content:
+            <div>
+              <p>Pour une demande complète et rapide, certains documents sont systématiquement demandés :
+              </p>
+              <ul>
+                <li>Contrat de location ou bail récent</li>
+                <li>Attestation d’hébergement si nécessaire</li>
+                <li>Justificatifs de revenus (salaires, bourses, aides éventuelles)</li>
+                <li>Carte ou certificat de scolarité</li>
+                <li>RIB pour les versements</li>
+              </ul>
+              <p>Diplomeo et les CAF locales insistent sur l’importance de préparer soigneusement ces documents pour éviter tout retard dans le traitement de la demande.
+              </p>
+            </div>
+        },
+        {
+          title: "6. Points importants à savoir",
+          content:
+            <div>
+              <ul>
+                <li>L’APL n’est pas automatique : il faut la demander et respecter toutes les conditions.</li>
+                <li>Le montant varie chaque mois en fonction des revenus déclarés et du loyer réel.</li>
+                <li>L’APL peut compléter d’autres aides étudiantes ou bourses, mais il est essentiel de vérifier les règles de cumul.</li>
+                <li>Une mise à jour régulière des informations est nécessaire pour éviter des trop-perçus ou des interruptions de versement.</li>
+
+              </ul>
+            </div>
+        },
+        {
+          title: "7. Conseils pratiques pour les étudiants",
+          content:
+            <div>
+              <ol>
+                <li><strong>Anticiper la demande :</strong> préparer les documents et créer son compte CAF dès que possible.
+                </li>
+                <li><strong>Vérifier la convention du logement :</strong> seuls certains logements sont éligibles à l’APL.</li>
+                <li><strong>Suivre son dossier en ligne :</strong> la CAF offre un suivi complet pour savoir si des informations manquent.</li>
+                <li><strong>Se faire accompagner :</strong> associations étudiantes, services sociaux des universités et plateformes comme Gestetud peuvent guider les étudiants dans les démarches.
+                </li>
+                <li><strong>Évaluer son budget réel :</strong> même avec l’APL, il est essentiel de calculer ses dépenses pour ne pas rencontrer de difficultés financières.
+                </li>
+              </ol>
+            </div>
+        },
+        {
+          title: "8. Conclusion",
+          content:
+            <p>L’APL constitue un soutien crucial pour les étudiants, en permettant de réduire significativement le coût du logement et de se concentrer sur leurs études. Comprendre les conditions d’éligibilité, préparer les documents nécessaires et suivre attentivement les démarches permet de maximiser ses chances de recevoir cette aide et de sécuriser son logement. Bien gérée, cette aide contribue à réduire le stress financier et favorise la réussite académique.
+            </p>
         },
         {
           title: "Sources",
@@ -446,10 +694,16 @@ const Documentation = ({ language, onNavigate }) => {
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
               <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-nord/offre-de-service/logement/l-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF - Aide au logement étudiant</a></li>
               <li style={{ marginBottom: '0.5rem' }}><a href="https://www.gestetud.fr/apl-etudiant-toutes-les-conditions-et-demarches-pour-beneficier-de-laide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Gestetud - Conditions et démarches</a></li>
-              <li><a href="https://diplomeo.com/actualite-quel_document_pour_demande_apl" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo - Documents APL</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-quel_document_pour_demande_apl" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo - Documents APL</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.capital.fr/immobilier/apl-etudiant-1397706" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Capital - APL étudiant</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-nord/offre-de-service/logement/l-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF du Nord - Aide au logement étudiant</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-de-la-vienne/offre-de-service/logement/je-suis-etudiante/faire-votre-demande-d-aide-au-logement/les-etapes-cles-pour-faire-sa-demande-d-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF de la Vienne - Les étapes clés pour faire sa demande d’aide au logement étudiant</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://caf.fr/allocataires/caf-du-var/offre-de-service/logement/je-suis-etudiant-etou-apprenti/les-etapes-cles-pour-faire-sa-demande-d-aide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF du Var - Les étapes clés pour faire sa demande d’aide au logement étudiant</a></li>
+              <li><a href="https://www.gestetud.fr/apl-etudiant-toutes-les-conditions-et-demarches-pour-beneficier-de-laide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Gestetud - APL étudiant : conditions et démarches</a></li>
             </ul>
           )
-        }
+        },
+
       ]
     }
   ];
@@ -464,15 +718,19 @@ const Documentation = ({ language, onNavigate }) => {
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>
-                Academic reorientation is a key moment in a student's life. While it can represent an opportunity to better align with one's interests and ambitions, it is often accompanied by stress and uncertainty.
+                Family pressure can be defined as the set of implicit or explicit expectations, recommendations, or demands that parents place on their children regarding their academic and professional paths. It can take many different forms:
+                Expectations of academic success: some parents insist that their children choose fields considered prestigious or offering “good career prospects”.
+                Comparisons with other students or family members: measuring a student’s success against that of a sibling or friends can create a constant feeling of inadequacy.
+                Indirect control: some families adopt a subtle stance, valuing certain choices while minimizing others, thus guiding the student’s decision without direct confrontation.
+                When excessive, these pressures can limit a student’s ability to listen to their own desires and make autonomous decisions, particularly during a reorientation.
               </p>
               <p style={{ marginBottom: '1rem' }}>
-                Family pressure is defined as the set of implicit or explicit expectations, recommendations, or demands from parents regarding their children's academic and professional path. It can take very diverse forms:
+                Family pressure can be defined as the set of implicit or explicit expectations, recommendations, or demands that parents place on their children regarding their academic and professional paths. It can take many different forms:
               </p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Expectations of academic success:</strong> some parents insist that their children choose fields deemed prestigious or with "good career prospects".</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Comparisons with other students or family members:</strong> measuring the student's success against that of a sibling or friends can create a constant feeling of inadequacy.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Indirect control:</strong> some families adopt a subtle posture, valuing certain choices or minimizing others, thus guiding the student's decision without direct confrontation.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Expectations of academic success:</strong> some parents insist that their children choose fields considered prestigious or offering “good career prospects”.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Comparisons with other students or family members:</strong> measuring a student’s success against that of a sibling or friends can create a constant feeling of inadequacy.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Indirect control:</strong> some families adopt a subtle stance, valuing certain choices while minimizing others, thus guiding the student’s decision without direct confrontation.</li>
               </ul>
             </div>
           )
@@ -482,34 +740,38 @@ const Documentation = ({ language, onNavigate }) => {
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>
-                Parental pressure is not necessarily malicious. In most cases, it stems from concerns for the child's protection and well-being. However, several factors can accentuate this pressure:
+                Parental pressure is not necessarily malicious. In most cases, it stems from a desire to protect the child and ensure their well-being. However, several factors can intensify this pressure:
+                Fear of failure: parents want their child to have a “secure” and stable path in order to avoid financial or professional difficulties in the future.
+                Cultural or social heritage: in some families, certain professions or fields are socially valued, and deviating from this norm may be perceived as a risk or a disappointment.
+                Personal projections: some parents project their own ambitions or regrets onto their children, unconsciously influencing their choices.
+                This combination of protection, social norms, and personal projections can make the pressure invisible yet powerful, as the student feels a constant need to meet expectations without necessarily understanding why.
               </p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Fear of failure:</strong> Parents want their child to have a "secure" and stable path to avoid financial or professional difficulties in the future.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Cultural or social heritage:</strong> In some families, certain professions or fields are socially valued, and deviating from this norm can be perceived as a risk or disappointment.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Personal projections:</strong> Some parents project their own ambitions or regrets onto their children, unconsciously influencing their choices.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Fear of failure:</strong> parents want their child to have a “secure” and stable path in order to avoid financial or professional difficulties in the future.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Cultural or social heritage:</strong> in some families, certain professions or fields are socially valued, and deviating from this norm may be perceived as a risk or a disappointment.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Personal projections:</strong> some parents project their own ambitions or regrets onto their children, unconsciously influencing their choices.</li>
               </ul>
             </div>
           )
         },
         {
-          title: "3. The effects of family pressure on the student",
+          title: "3. The effects of family pressure on students",
           content: (
             <div>
               <p style={{ marginBottom: '1rem' }}>
-                The consequences of this pressure can be multiple and affect several aspects of the student's life:
+                The consequences of this pressure can be numerous and affect several aspects of a student’s life:
               </p>
               <p style={{ marginBottom: '1rem' }}>
-                <strong>Stress and anxiety:</strong> The fear of disappointing can cause physical and psychological symptoms: sleep disorders, headaches, tension, chronic anxiety, or even academic burnout.
+                <strong>Stress and anxiety:</strong> the fear of disappointing others can lead to physical and psychological symptoms such as sleep disorders, headaches, tension, chronic anxiety, or even academic burnout.
               </p>
               <p style={{ marginBottom: '1rem' }}>
-                <strong>Self-doubt and loss of motivation:</strong> The student may feel incapable of making an autonomous choice or following a path that suits them. This lack of confidence can hinder their ability to explore new options or reorient themselves.
+                <strong>Self-doubt and loss of motivation:</strong> the student may feel incapable of making an autonomous choice or pursuing a path that truly suits them. This lack of confidence can hinder their ability to explore new options or consider reorientation.
               </p>
               <p style={{ marginBottom: '1rem' }}>
-                <strong>Late or conflicting decisions:</strong> Some students delay their reorientation for fear of offending their parents, or alternate between several options without ever deciding.
+                <strong>Delayed or conflicted decisions:</strong> some students postpone reorientation out of fear of upsetting their parents, or alternate between several options without ever making a decision.
               </p>
               <p>
-                <strong>Impact on well-being and mental health:</strong> Continuous pressure can contribute to depression, social isolation, or loss of interest in studies.
+                <strong>Impact on well-being and mental health:</strong> continuous pressure can contribute to depression, social isolation, or a loss of interest in studies.
               </p>
             </div>
           )
@@ -522,10 +784,13 @@ const Documentation = ({ language, onNavigate }) => {
                 Before managing pressure, it is essential to recognize and analyze it:
               </p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}>Observe situations where you feel judged or constrained.</li>
-                <li style={{ marginBottom: '0.5rem' }}>Distinguish between parental benevolence and emotional burden.</li>
-                <li style={{ marginBottom: '0.5rem' }}>Understand the motivations behind parental expectations (security, prestige, personal experience).</li>
+                <li style={{ marginBottom: '0.5rem' }}>Observing situations where one feels judged or constrained.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Distinguishing between parental care and what becomes an emotional burden.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Understanding the motivations behind parents’ expectations (security, prestige, personal experience).</li>
               </ul>
+
+              This approach allows the student to gain perspective and put words to their feelings, an essential step for effective communication with loved ones.
+
             </div>
           )
         },
@@ -536,30 +801,36 @@ const Documentation = ({ language, onNavigate }) => {
               <p style={{ marginBottom: '1rem' }}>
                 Managing family pressure is a gradual process that combines communication, preparation, and external support:
               </p>
-              <p style={{ marginBottom: '1rem' }}><strong>Open and respectful dialogue:</strong> Expressing your motivations and explaining the reorientation project can reduce tensions.</p>
-              <p style={{ marginBottom: '1rem' }}><strong>Information and planning:</strong> Presenting concrete information reassures parents.</p>
-              <p style={{ marginBottom: '1rem' }}><strong>External support:</strong> Guidance counselors or psychologists can help.</p>
-              <p><strong>Set your own priorities:</strong> Identify what is most important to you (passion, personal fulfillment).</p>
+              <p style={{ marginBottom: '1rem' }}><strong>Open and respectful dialogue:</strong> expressing one’s motivations and explaining the reorientation project can reduce tensions. For example, showing why a change of field better matches one’s skills and ambitions helps legitimize the choice.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>Information and planning:</strong> presenting concrete information (programs, career prospects, professional opportunities) reassures parents and demonstrates that the decision is thoughtful rather than impulsive.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>External support:</strong> career counselors, school psychologists, tutors, or peers who have experienced reorientation can offer an objective perspective, help clarify goals, and strengthen self-confidence.</p>
+              <p><strong>Setting personal priorities:</strong> the student must identify what matters most to them: passion, personal fulfillment, skill development, career prospects, or personal balance. This serves as a guide during family discussions.
+              </p>
+              <p><strong>Accepting time and adjustments:</strong> reorientation may require several steps and discussions before parents understand and accept the choice. Patience and perseverance are key to finding a compromise between family expectations and personal aspirations.
+
+              </p>
             </div>
           )
         },
         {
           title: "6. Conclusion",
-          content: <p>Reorientation is never a failure, but a moment of personal reflection and growth. Family pressure, although often motivated by concern for the child's well-being, can represent an obstacle if it becomes too strong or misunderstood.</p>
+          content: <p>Reorientation is never a failure, but rather a moment of personal reflection and growth. Family pressure, although often motivated by concern for the child’s well-being, can become an obstacle if it becomes too strong or poorly understood. Understanding its mechanisms, identifying its effects, and implementing communication and support strategies allows students to make informed and calm decisions while respecting both their aspirations and their family relationships.
+          </p>
         },
         {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://sherpas.com/blog/la-pression-des-parents-pour-les-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Sherpas, La pression des parents pour les études</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-gerer_pression_parents_etudes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo, Gérer la pression des parents sur les études</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://objectif-ast.fr/influence-famille-choix-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Objectif AST, L’influence de la famille sur le choix des études</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://campus.studywatt.fr/articles/stress-des-etudiants-a-la-rentree-6-causes-courantes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>StudyWatt, Stress des étudiants</a></li>
-              <li><a href="https://www.kotplanet.be/conseils-vie-etudiante/comment-gerer-la-pression-de-tes-parents-pour-tes-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>KotPlanet, Comment gérer la pression de tes parents</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://sherpas.com/blog/la-pression-des-parents-pour-les-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Sherpas, Parental pressure for studies</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-gerer_pression_parents_etudes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo, Managing parental pressure on studies</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://objectif-ast.fr/influence-famille-choix-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Objectif AST, The influence of family on study choices</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://campus.studywatt.fr/articles/stress-des-etudiants-a-la-rentree-6-causes-courantes" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>StudyWatt, Student stress</a></li>
+              <li><a href="https://www.kotplanet.be/conseils-vie-etudiante/comment-gerer-la-pression-de-tes-parents-pour-tes-etudes/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>KotPlanet, How to manage parental pressure</a></li>
             </ul>
           )
         }
       ]
+
     },
     {
       title: "Academic Failure",
@@ -567,50 +838,59 @@ const Documentation = ({ language, onNavigate }) => {
       sections: [
         {
           title: "Introduction",
-          content: <p>Academic failure in higher education refers to all situations where a student fails to validate their years, courses, or degree, and sometimes ends up dropping out of their curriculum before obtaining a degree. This phenomenon affects a significant portion of students and is a major issue.</p>
+          content: <p>Academic failure in higher education refers to all situations in which a student is unable to validate their academic years, courses, or degree, and sometimes ends up dropping out before obtaining a diploma. This phenomenon affects a significant proportion of students and represents a major challenge.</p>
         },
         {
-          title: " What is failure and dropping out?",
+          title: " What are academic failure and dropout?",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>A student is considered in a situation of academic failure when they fail their exams, do not validate teaching units, or stagnate in their results. University dropout goes further: it involves a student who definitively leaves their curriculum without a degree.</p>
-              <p>In France, it is estimated that more than 20% of students leave higher education without a degree, with a significant concentration of these dropouts in the first year.</p>
+              <p style={{ marginBottom: '1rem' }}>A student is considered to be in a situation of academic failure when they fail exams, are unable to validate teaching units, or stagnate in their results. University dropout goes further: it refers to a student who permanently leaves their program without obtaining a degree.</p>
+              <p>In France, it is estimated that more than 20% of students leave higher education without a degree, with a significant concentration of these dropouts occurring during the first year of a bachelor’s degree, where up to 25% of entrants stop their studies before the end of the year.</p>
             </div>
           )
         },
         {
-          title: " The main causes of academic failure",
+          title: " Main causes of academic failure",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>Failure and dropout generally result from a set of interconnected difficulties:</p>
+              <p style={{ marginBottom: '1rem' }}>Failure and dropout are not caused by a single factor; they generally result from a combination of interconnected difficulties—personal, academic, social, and institutional:</p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}><strong>1. Unsuitable orientation:</strong> Many students choose a program that does not match their interests or level.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>2. Academic difficulties:</strong> The requirements of higher education are higher than high school. Gaps or a lack of method can lead to failures.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>3. Social integration:</strong> A feeling of not belonging to the university community and isolation contribute to dropout.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>4. Personal problems:</strong> Stress, anxiety, fragile mental health, or fatigue.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>5. Financial constraints:</strong> Precariousness forcing work alongside studies reduces the time available to succeed.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>1. Inadequate orientation:</strong> Many students choose a program that does not match their interests, level, or expectations, sometimes because they followed poorly adapted advice or lacked sufficient information at the time of orientation. This mismatch between training and personal aspirations is one of the most frequent causes of dropout.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>2. Academic difficulties:</strong>The demands of higher education are often greater than those encountered in high school. Gaps in basic knowledge, poor preparation, or a lack of effective learning methods can lead to repeated failures. The absence of pedagogical support or appropriate assistance reinforces these difficulties.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>3. Social integration:</strong>A feeling of not belonging to the academic community, a lack of social connections, or the impression of not being supported strongly contribute to dropout. Integration into a new environment requires an adjustment period that is not always facilitated.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>4. Personal issues:</strong> Stress, anxiety, lack of motivation, mental fatigue, or discouragement can affect the ability to study and persevere. A student facing personal difficulties can quickly feel overwhelmed, especially if they do not find support to talk about their situation or receive guidance.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>5. Financial constraints:</strong>Material insecurity is a recurring cause of dropout: difficulties paying for housing, living expenses, and study-related costs force some students to work alongside their studies, reducing the time available for coursework and increasing the risk of failure.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> 6. Organization and pedagogy of institutions:</strong>In some cases, overly rigid programs, a lack of pedagogical support, or unengaging teaching methods can reinforce feelings of failure. Poorly structured curricula, insufficient methodological help, or inaccessible learning materials increase the risk of dropout.</li>
               </ul>
             </div>
           )
         },
         {
-          title: " The consequences of academic failure",
+          title: " Consequences of academic failure",
           content: (
-            <ul style={{ paddingLeft: '2rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}>Delay or loss of degree.</li>
-              <li style={{ marginBottom: '0.5rem' }}>Difficulties in professional insertion.</li>
-              <li style={{ marginBottom: '0.5rem' }}>Psychological impact (discouragement, loss of confidence).</li>
-              <li style={{ marginBottom: '0.5rem' }}>Increased economic pressure.</li>
-            </ul>
+            <div>
+              <p>The effects of failure or dropout are not limited to academic results:</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}>Delay or loss of a degree, which can make access to certain jobs more difficult.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Difficulties with professional integration, as not having a degree can limit access to qualified or stable employment.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Psychological impact (discouragement, loss of confidence), with feelings of hopelessness, reduced self-esteem, or lack of perspective, which can affect mental health.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}>Increased economic pressure, especially if the student accumulates debt, precarious contracts, or poorly paid jobs after leaving their studies.
+                </li>
+              </ul>
+            </div>
           )
         },
         {
-          title: " How to prevent and bounce back?",
+          title: " How to prevent failure and bounce back",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}><strong>Support and guidance:</strong> Orientation services and psychologists are valuable resources.</p>
-              <p style={{ marginBottom: '1rem' }}><strong>Reorientation and adaptation:</strong> Changing paths is not a definitive failure, but a step.</p>
-              <p><strong>Financial and social support:</strong> Financial aid, scholarships, social support.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>Support and guidance:</strong> Career services, university psychologists, tutoring programs, or peer support groups are valuable resources to help students stay on track, develop effective study strategies, and manage motivation.</p>
+              <p style={{ marginBottom: '1rem' }}><strong>Reorientation and adaptation:</strong> Changing paths or institutions is not a sign of definitive failure, but often a normal step in an academic journey. Tools such as orientation assessments, transition modules (e.g., bridge programs), or simply discussing one’s project with advisors can help students recover and rebuild a coherent plan.</p>
+              <p><strong>Financial and social support:</strong>Financial aid, scholarships, social support services, or information platforms can reduce material pressure and allow students to focus more fully on their studies.</p>
             </div>
           )
         },
@@ -618,43 +898,70 @@ const Documentation = ({ language, onNavigate }) => {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://info-jeunes.fr/etudes-superieures-comment-rebondir-en-cas-de-decrochage/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Info-Jeunes — Études supérieures : comment rebondir</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://resources.readyeducation.com/hubfs/Ready%20France/FR%20-%20GUIDE%20-%20dropouts%20-%20Jan%2023.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ready Education — Guide sur les abandons</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://shs.hal.science/halshs-04628088/document" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>HAL Sciences Sociales — Article sur le décrochage</a></li>
-              <li><a href="https://diplomeo.com/actualite-echec_etude_superieures" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo — Actualité sur l’échec</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://info-jeunes.fr/etudes-superieures-comment-rebondir-en-cas-de-decrochage/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Info-Jeunes — Higher education: how to bounce back</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://resources.readyeducation.com/hubfs/Ready%20France/FR%20-%20GUIDE%20-%20dropouts%20-%20Jan%2023.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ready Education — Dropout guide</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://shs.hal.science/halshs-04628088/document" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>HAL Social Sciences — Article on dropout</a></li>
+              <li><a href="https://diplomeo.com/actualite-echec_etude_superieures" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo — News on academic failure</a></li>
             </ul>
           )
         }
       ]
+
     },
     {
       title: "Administrative Reorientation",
       color: "#FDFFAB",
       sections: [
         {
-          title: "Definition",
-          content: <p>Administrative reorientation corresponds to all the official procedures that a student must carry out when they wish to change formation, field, or institution. It involves a new administrative registration and engaging in precise procedures.</p>
+          title: "What is administrative reorientation?",
+          content: <p>Administrative reorientation refers to all the official procedures that a student must complete when they wish to change their program, field of study, or institution in higher education. Unlike a simple personal reflection, administrative reorientation involves specific procedures that formalize a new academic path and allow the student to retain an officially recognized student status within the institution.
+          </p>
         },
         {
-          title: "The process and steps",
+          title: "When and how to reorient?",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>Reorientation can take place during the year (often end of the 1st semester) or at the end of the academic year.</p>
-              <p style={{ marginBottom: '1rem' }}>Procedures:</p>
+              <p style={{ marginBottom: '1rem' }}>Reorientation can occur at different stages of a university journey. It may take place during the academic year, often at the end of the first semester, or at the end of the academic year, when the student decides not to continue in the initially chosen program. In all cases, it involves a new administrative enrollment, sometimes within the same institution and sometimes in another.</p>
+              <p style={{ marginBottom: '1rem' }}>Steps:</p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}>Inquire about access modalities (Parcoursup or direct university).</li>
-                <li style={{ marginBottom: '0.5rem' }}>Compile a file (motivations, results).</li>
-                <li style={{ marginBottom: '0.5rem' }}>Passage through an educational commission to evaluate the coherence of the project.</li>
+                <li style={{ marginBottom: '0.5rem' }}>Find out about admission procedures (Parcoursup or direct university application).</li>
+                <li style={{ marginBottom: '0.5rem' }}>Prepare an application file (motivations, academic results).</li>
+                <li style={{ marginBottom: '0.5rem' }}>Review by an academic committee to assess the coherence of the project.</li>
               </ul>
             </div>
           )
         },
         {
-          title: "Impact and support",
+          title: "Procedures and conditions to be met",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>Reorientation has consequences on student status: scholarships, housing, social security. It is crucial to verify the conservation of ECTS credits.</p>
-              <p>Guidance and schooling services support students to avoid administrative errors.</p>
+              <p style={{ marginBottom: '1rem' }}>From an administrative standpoint, reorientation is not automatic. It depends on specific rules, strict timelines, and the intake capacities of programs. When a student wishes to change programs, they must inform themselves about admission modalities: some reorientations are handled directly by the university, while others go through the Parcoursup platform, particularly when applying for first-year entry into a new program.</p>
+              <p>Reorientation procedures often require compiling an application file, submitting preferences, and sometimes justifying one’s project. Institutions may review applications through academic committees, which assess the coherence of the academic path, previous results, and the student’s motivation. The goal is to ensure that the new orientation better matches the student’s profile and personal project.</p>
+            </div>
+          )
+        },
+        {
+          title: "Getting support during reorientation",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Academic advising and student services play a central role in administrative reorientation. They support students in understanding procedures, help them anticipate the consequences of changing paths, and inform them about existing support systems. This guidance is essential to avoid administrative errors, loss of student rights, or late enrollments.</p>
+            </div>
+          )
+        },
+        {
+          title: "Impact on academic path and student life",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Administrative reorientation also has significant consequences for student life. It can affect scholarship payments, student housing, health coverage, and the recognition of previously earned credits. In some cases, validated ECTS credits can be retained and transferred to the new program, allowing students not to start entirely from scratch.</p>
+            </div>
+          )
+        },
+        {
+          title: "A legitimate step toward academic success",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Once perceived as a failure, reorientation is now recognized as a possible and legitimate step in a student’s academic journey. Public policies increasingly encourage better recognition of diverse trajectories and seek to secure transitions. Administrative reorientation thus fits into a logic of success, allowing students to progressively build a project better aligned with their aspirations, skills, and personal realities.</p>
+              <p style={{ marginBottom: '1rem' }}>When well prepared and supported, administrative reorientation becomes a tool for regaining control over one’s academic path, correcting an initial choice, and moving toward a program that better aligns with personal goals.</p>
             </div>
           )
         },
@@ -662,72 +969,137 @@ const Documentation = ({ language, onNavigate }) => {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F31063" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-public.fr – Réorientation</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.education.gouv.fr/la-reorientation-dans-l-enseignement-superieur-306702" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministère de l’Éducation nationale</a></li>
-              <li><a href="https://www.youzful-by-ca.fr/les-etudes-superieures/comment-reussir-sa-reorientation-la-fac" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Youzful – Réussir sa réorientation</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F31063" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-public.fr – Reorientation</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.education.gouv.fr/la-reorientation-dans-l-enseignement-superieur-306702" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministry of National Education</a></li>
+              <li><a href="https://www.youzful-by-ca.fr/les-etudes-superieures/comment-reussir-sa-reorientation-la-fac" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Youzful – Succeeding in reorientation</a></li>
             </ul>
           )
         }
       ]
     },
+
     {
       title: "Scholarships",
       color: "#FFB7B2",
       sections: [
         {
-          title: "Functioning",
-          content: <p>The higher education scholarship based on social criteria is financial aid from the State. It aims to reduce inequalities and allow access to studies.</p>
+          title: "How it works",
+          content: <p>The higher education scholarship based on social criteria is a financial aid provided by the State to support students who face economic difficulties. Its goal is to reduce inequalities and allow a greater number of young people to access higher education and pursue their studies under good conditions. This aid complements family support and can cover part of the expenses related to student life (housing, food, transportation, materials).
+          </p>
         },
         {
           title: "Application and Conditions",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>The application is made via the <strong>Student Social File (DSE)</strong> each year. It is essential, even in case of reorientation.</p>
-              <p>The amount depends on family income, charges, and distance. It is paid over 10 months.</p>
+              <p style={{ marginBottom: '1rem' }}>To receive a scholarship, the student must submit an application each year through the <strong>Student Social File (DSE)</strong>. This step is mandatory every year, even in the case of reorientation.</p>
+              <p>This process is essential, whether continuing studies or changing academic paths. The DSE takes into account the student’s personal situation, family income, and study choices. Since processing the application may take time, it is strongly recommended to submit it as early as possible.
+              </p>
+              <p>A student may benefit from up to 7 scholarship entitlements in total throughout their higher education. These entitlements can be used over several years, including in the event of a change in orientation, provided that the student progresses in their academic path (for example, by validating ECTS credits at university). This means that reorientation does not automatically result in the loss of the scholarship.
+              </p>
             </div>
           )
         },
         {
           title: "Scholarships and Reorientation",
-          content: <p>A student is entitled to 7 scholarship rights in total. Reorientation does not cause the loss of the scholarship as long as progression in studies is justified (validation of ECTS credits).</p>
+          content:
+            <div>
+              <p>A student may benefit from up to 7 scholarship entitlements in total throughout their higher education. These entitlements can be used over several years, including in the event of a change in orientation, provided that the student progresses in their academic path (for example, by validating ECTS credits at university). This means that reorientation does not automatically result in the loss of the scholarship.
+              </p>
+              <p>The amount of the scholarship depends on several criteria: household income, the number of dependents in the family, and the distance between the family home and the place of study. The scholarship is paid over 10 months and its amount varies according to predefined levels. To retain this aid, the student must meet certain obligations, particularly regular attendance at classes and exams.
+              </p>
+              <p>In a reorientation pathway, the scholarship plays a crucial role. It allows students to commit to a new program with greater financial security, while encouraging them to stay well informed about their rights and the procedures required to continue benefiting from this aid.
+              </p>
+            </div>
         },
         {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.enseignementsup-recherche.gouv.fr/fr/bo/21/Hebdo26/ESRS2117943C.htm" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministère de l’Enseignement supérieur - Modalités</a></li>
-              <li><a href="https://www.etudiant.gouv.fr/fr/jusqu-7-bourses-successives-durant-vos-etudes-2974" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Étudiant.gouv - 7 bourses successives</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.enseignementsup-recherche.gouv.fr/fr/bo/21/Hebdo26/ESRS2117943C.htm" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministry of Higher Education – Eligibility rules</a></li>
+              <li><a href="https://www.etudiant.gouv.fr/fr/jusqu-7-bourses-successives-durant-vos-etudes-2974" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Etudiant.gouv – Up to 7 consecutive scholarships</a></li>
             </ul>
           )
         }
       ]
     },
+
     {
       title: "Mental Health",
       color: "#BFD7ED",
       sections: [
         {
           title: "Introduction",
-          content: <p>Mental health is a state of well-being that allows one to cope with life's difficulties. Among students, stress and anxiety are sharply increasing.</p>
+          content:
+            <div>
+              <p>Mental health refers to a state of psychological well-being that allows a person to feel good in their daily life, cope with difficulties, develop their abilities, and maintain balanced social relationships. It is not limited to the absence of mental disorders; it also includes a sense of fulfillment, self-confidence, emotional regulation, and the ability to seek help when necessary.
+              </p>
+              <p>Among students, mental health has become a major issue in higher education. Recent studies and reports show a significant increase in psychological distress affecting a large proportion of the student population. Stress, anxiety, exhaustion, discouragement, or feelings of loneliness are common realities—sometimes trivialized—but they can have serious consequences on academic and personal trajectories.
+              </p>
+            </div>
         },
         {
-          title: "Student risk factors",
+          title: "A particularly vulnerable life stage",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>The student period is a fragile transition (autonomy, academic pressure). Financial precariousness and isolation are often added.</p>
+              <p style={{ marginBottom: '1rem' }}>Student life represents a major transition period. It often marks the passage into adulthood, with many simultaneous changes: leaving the family home, gaining autonomy, managing a budget, organizing time, and building personal and professional identity. These transformations can be sources of excitement but also of significant psychological strain.
+              </p>
+              <p style={{ marginBottom: '1rem' }}>Added to this are the demands of the academic world: heavy workloads, frequent assessments, pressure to succeed, comparison with other students, and uncertainty about future career prospects. For some, these factors can lead to feelings of failure, loss of motivation, or long-lasting anxiety.
+              </p>
             </div>
           )
         },
         {
-          title: "Link with reorientation",
-          content: <p>Doubt, fear of failure, and the gaze of others make reorientation stressful. It can be experienced as a personal failure, risking mental health fragility.</p>
+          title: "Widespread psychological distress",
+          content:
+            <div>
+              <p>Available data show that students’ mental health has significantly deteriorated in recent years. A large proportion of students report experiencing intense stress, mental fatigue, or anxiety disorders. Many young people also mention depressive episodes, concentration difficulties, or feelings of discouragement regarding their studies.</p>
+              <p>Student distress is often exacerbated by financial insecurity. The cost of student life, difficulties accessing housing, the need to work alongside studies, or material insecurity can increase mental load. These constraints reduce rest time, weaken personal balance, and heighten the risk of burnout.
+              </p>
+              <p>Social isolation is another major factor. Some students struggle to build connections, especially when changing cities, institutions, or fields of study. Reorientation can intensify this sense of loneliness, as it sometimes requires starting over in a new environment without established reference points or social networks.
+              </p>
+            </div>
         },
         {
-          title: "Support systems",
+          title: " Mental health and reorientation",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>It is crucial not to remain alone. University health services (SSE), psychologists, and helplines exist.</p>
-              <p>Developing psychosocial skills (stress management) is part of prevention.</p>
+              <p style={{ marginBottom: '1rem' }}>Mental health issues are closely linked to reorientation pathways. Doubts about study choices, fear of making the wrong decision, the взгляд of relatives, or social pressure can generate strong emotional stress. Many students experience reorientation as a personal failure, even though it is often a normal step in an academic journey.
+              </p>
+              <p>Unaddressed psychological distress can lead to dropout, abandonment of studies, or long-term loss of confidence. Conversely, appropriate support and better recognition of diverse academic paths can help students reorient under better conditions while preserving their mental well-being.
+              </p>
+            </div>
+          )
+        },
+        {
+          title: " A comprehensive approach to mental health",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Educational institutions emphasize that mental health must be addressed in a global and preventive manner. It is not only about treating disorders, but also about creating environments that promote well-being. This includes the quality of student reception, clarity of information, pedagogical care, and recognition of the difficulties encountered.
+              </p>
+              <p>Mental health frameworks stress the importance of developing psychosocial skills: learning to manage stress, recognize emotions, seek help, and maintain a balance between personal life and studies. These skills play a key role in preventing crisis situations.
+              </p>
+            </div>
+          )
+        },
+        {
+          title: "Support systems and public policies",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>In response to the scale of the issue, public authorities and higher education institutions have implemented various measures to support student mental health. Preventive actions, awareness campaigns, and psychological listening services have been developed on campuses.
+              </p>
+              <p>National measures have also been introduced to improve student well-being, particularly through strengthening psychological support, training educational staff to identify signs of distress, and developing partnerships with health professionals. The goal is to break isolation, combat stigma related to mental health difficulties, and foster a culture of support and mutual aid within the student community.
+              </p>
+            </div>
+          )
+        },
+        {
+          title: " A central issue for student success",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>Mental health is now recognized as a key determinant of academic success and persistence. A student who feels supported, listened to, and understood is more likely to engage in their academic path, overcome difficulties, and build a coherent project.
+              </p>
+              <p>Taking student mental health into account means recognizing that success does not depend solely on academic abilities, but also on psychological well-being, life context, and the ability to make informed choices—including the decision to reorient.
+              </p>
             </div>
           )
         },
@@ -735,89 +1107,282 @@ const Documentation = ({ language, onNavigate }) => {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.emd.fr/sante-mentale-etudiants/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>EMD – Santé mentale des étudiants</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://eduscol.education.fr/4063/agir-pour-favoriser-la-sante-mentale-et-le-bien-etre-des-eleves" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Eduscol – Agir pour la santé mentale</a></li>
-              <li><a href="https://rrapps-bfc.org/sites/default/files/publications/fichiers/2023/2023-ReferentielSanteMentale.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>RRAPPS – Référentiel Santé Mentale</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.emd.fr/sante-mentale-etudiants/" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>EMD – Student mental health</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://eduscol.education.fr/4063/agir-pour-favoriser-la-sante-mentale-et-le-bien-etre-des-eleves" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Eduscol – Promoting mental health</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://rrapps-bfc.org/sites/default/files/publications/fichiers/2023/2023-ReferentielSanteMentale.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>RRAPPS – Mental Health Framework</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.enseignementsup-recherche.gouv.fr/sites/default/files/2021-10/15-mesures-sur-le-bien--tre-des-tudiants-en-sant-avril-2018--13355.pdf" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Ministry of Higher Education – 15 measures for student well-being in health studies</a></li>
             </ul>
           )
         }
       ]
     },
     {
-      title: "Work-Study Aid",
+      title: "Apprenticeship Support",
       color: "#E0BBE4",
       sections: [
         {
-          title: "1. What aid for work-study students?",
+          title: "1. Introduction",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>In work-study programs, salary and student status are combined, which opens rights to several aids:</p>
+              <p style={{ marginBottom: '1rem' }}>Choosing an apprenticeship, whether through an apprenticeship contract or a professional training contract, allows students to combine theoretical education with professional experience. However, even with a salary, expenses related to housing, transportation, and daily living can be heavy—especially at the beginning. Fortunately, several support schemes exist to help apprentices.</p>
+            </div>
+          )
+        },
+        {
+          title: "2. What financial aid is available for apprentices?",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>As an apprentice, you may be eligible for various types of financial assistance to reduce costs related to training, including:</p>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>✔ Housing assistance:</strong></p>
               <ul style={{ paddingLeft: '2rem' }}>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Housing:</strong> APL (CAF) and Mobili-Jeune (Action Logement).</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Housing guarantees:</strong> Visale Guarantee (free deposit) and Loca-Pas Advance.</li>
-                <li style={{ marginBottom: '0.5rem' }}><strong>Others:</strong> Activity bonus (CAF), transport aid, driving license aid (€500).</li>
+                <li>APL (Personalized Housing Assistance – CAF): as with any tenant, APL provided by the CAF helps reduce rent based on income, household composition, and type of accommodation. Apprentices are eligible in the same way as working students.
+                </li>
+                <li>Mobili-Jeune® (Action Logement): a specific aid offered by Action Logement for apprentices under 30 with an apprenticeship or professional training contract. It covers part of the rent after APL deduction, generally between €10 and €100 per month depending on rent and income, up to approximately €1,100 per training year.
+                </li>
+              </ul>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>✔ Guarantees and support to access housing</strong></p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li>Visale Guarantee: a free guarantee provided by Action Logement that acts as a guarantor for the apprentice, making it easier to access housing without a personal guarantor.
+                </li>
+                <li>Loca-Pass® Advance: an interest-free advance of up to €1,200 to finance the security deposit required by the landlord.
+                </li>
+              </ul>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>✔ Other financial and practical support</strong></p>
+              <p>In addition to housing, other forms of assistance can further support apprentices:</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li>Activity bonus: paid by the CAF to supplement the modest income of working apprentices, increasing their purchasing power.
+                </li>
+                <li>Reduced fares or transport subsidies: some regions or services offer discounts for commuting or public transportation.
+                </li>
+                <li>Driving license assistance: a subsidy of around €500 to facilitate mobility for professional needs.
+                </li>
+                <li>Regional or OPCO aid: possible support for purchasing professional equipment or during mobility periods such as training or internships abroad.
+                </li>
+              </ul>
+
+            </div>
+          )
+        },
+        {
+          title: "3. Focus on the Mobili-Jeune® scheme",
+          content: (
+            <div>
+              <p style={{ marginBottom: '1rem' }}>The Mobili-Jeune® scheme is one of the main forms of support specifically for apprentices. It covers part of the rent (between €10 and €100 per month) after APL deduction, for a maximum duration of 11 months per year.</p>
+              <p style={{ marginBottom: '0.5rem' }}><strong>Who is eligible?</strong></p>
+              <ul style={{ paddingLeft: '2rem', marginBottom: '1rem' }}>
+                <li>Under 30 years old.</li>
+                <li>Apprenticeship or professional training contract (private non-agricultural sector).</li>
+                <li>Salary ≤ 120% of the minimum wage.</li>
+                <li>Tenant living near the workplace/training location or paying double rent.</li>
+              </ul>
+              <p style={{ marginBottom: '0.5rem' }}><strong>How is it calculated?</strong></p>
+              <p>The Mobili-Jeune aid complements other housing assistance: it is calculated based on rent after APL deduction, further reducing the overall housing cost for the student.
+              </p>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>Amount and duration</strong></p>
+              <ul>
+                <li>Between €10 and €100 per month, depending on the situation.</li>
+                <li>Paid for a maximum of 11 months per training year, and can be combined over two consecutive or non-consecutive years.</li>
+              </ul>
+
+              <p style={{ marginBottom: '0.5rem' }}><strong>Application process:</strong></p>
+              <p>The application must be submitted online on the Action Logement website, generally between 3 months before the start of the contract and up to 5 months after it begins. Supporting documents such as the apprenticeship contract, rental agreement, and bank details are required.
+              </p>
+
+            </div>
+          )
+        },
+        {
+          title: "4. Other support schemes to be aware of",
+          content: (
+            <div>
+              <p>Beyond housing, several other forms of assistance can further support apprentices:</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong>APL / ALS / ALF (CAF):</strong> Rent reduction independent of Mobili-Jeune.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Activity bonus:</strong> Monthly supplementary benefit for low-income workers.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Visale Guarantee:</strong> Reassures landlords and facilitates obtaining a lease.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Loca-Pass Advance:</strong> Makes moving into housing easier by covering the security deposit at no cost.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong>Local aid:</strong> Some regions offer assistance for transport, equipment, or apprenticeship-related projects—these vary by location.
+                </li>
               </ul>
             </div>
           )
         },
         {
-          title: "2. Focus on Mobili-Jeune",
+          title: "5. Practical advice",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>This is specific aid for work-study students under 30 with a salary &le; Minimum Wage.</p>
-              <p>It covers part of the rent (between €10 and €100 per month) AFTER deduction of APL. The application is made on the Action Logement website.</p>
+              <ul style={{ paddingLeft: '2rem' }}>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Apply early:</strong> many of these aids (such as Mobili-Jeune or the Loca-Pass advance) must be requested within specific timeframes around the start of the apprenticeship contract.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Combine support wisely:</strong> Mobili-Jeune can be combined with APL, the Visale Guarantee, or the Loca-Pass advance to minimize housing costs.</li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Keep all documents:</strong> a complete file speeds up the processing of applications.
+                </li>
+                <li style={{ marginBottom: '0.5rem' }}><strong> Use simulators:</strong> (CAF, Action Logement, or 1jeune1solution) to estimate your eligibility.
+                </li>
+              </ul>
             </div>
           )
         },
         {
-          title: "3. Advice",
-          content: <p>Start your procedures early! Aids like Mobili-Jeune have strict deadlines (application close to the start of the contract).</p>
+          title: "6. Conclusion",
+          content: <p>Being an apprentice does not mean facing expenses alone. Thanks to a combination of CAF assistance, Action Logement schemes, and complementary support (activity bonus, transport aid, guarantees), it is possible to significantly reduce costs related to housing and daily living. The key is to be aware of these schemes, prepare applications in advance, and carefully build your file to maximize access to all available support.
+          </p>
         },
         {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F38630" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-Public - Apprenti aides financières</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.actionlogement.fr/l-aide-mobili-jeune" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Action Logement - Aide MOBILI-JEUNE</a></li>
-              <li><a href="https://money.wizbii.com/advices/aide-alternance-le-guide-pour-la-rentree" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Wizbii - Guide rentrée alternance</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.service-public.gouv.fr/particuliers/vosdroits/F38630" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Service-Public – Financial aid for apprentices</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.actionlogement.fr/l-aide-mobili-jeune" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Action Logement – MOBILI-JEUNE aid</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.letudiant.fr/etudes/alternance/alternance-quelles-aides-financieres-peut-on-obtenir.html" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>L’Étudiant – Financial aid for apprentices</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.concepteursdavenirs.fr/liste-aide-financiere-alternance" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Concepteurs d’Avenirs – List of apprenticeship financial aid</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-var/offre-de-service/logement/je-suis-etudiant-etou-apprenti/je-suis-etudiant-en-alternance" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF du Var – Apprentices and students</a></li>
+              <li><a href="https://money.wizbii.com/advices/aide-alternance-le-guide-pour-la-rentree" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Wizbii – Apprenticeship back-to-school guide</a></li>
             </ul>
           )
         }
       ]
     },
+
     {
-      title: "APL (Housing Aid)",
+      title: "APL (Housing Assistance)",
       color: "#957DAD",
       sections: [
         {
-          title: "1. What is APL?",
-          content: <p>Financial aid paid by the CAF to reduce the amount of rent. It depends on income, rent, type of housing, and location.</p>
+          title: "1. Introduction",
+          content: <p>For many students, accessing housing represents a major financial challenge. Rent costs, combined with everyday expenses, can be a significant obstacle. To support students, the French government offers several financial aid schemes, among which APL (Personalized Housing Assistance) is one of the most well-known. Understanding how it works, its eligibility conditions, and application process is essential to secure housing while easing the student budget.
+          </p>
         },
         {
-          title: "2. Conditions",
-          content: <p>Be a tenant of a contracted housing, be a student, and meet resource criteria.</p>
+          title: "2. What is APL?",
+          content:
+            <div>
+              <p>APL is a financial aid designed to reduce the amount of rent or monthly loan payments for housing. It is calculated based on:
+              </p>
+              <ul>
+                <li>The student’s income (or their parents’ income, depending on the situation)</li>
+                <li>The amount of rent</li>
+                <li>The type of accommodation</li>
+                <li>The geographical location</li>
+              </ul>
+              <p>The goal is to make housing more affordable, particularly for students who are mobile, living far from their family, or fully financing their studies on their own.
+              </p>
+            </div>
         },
         {
-          title: "3. Application",
+          title: "3. Who is eligible?",
+          content:
+            <div>
+              <p>APL is not available to all students. The main eligibility conditions are:
+              </p>
+              <ul>
+                <li>Being a tenant or co-tenant of an approved (CAF-recognized) housing unit.</li>
+                <li>Being a student, apprentice, or enrolled in vocational training.</li>
+                <li>Residing legally in France.</li>
+                <li>Meeting specific income conditions, which vary depending on personal and family circumstances.</li>
+              </ul>
+              <p>It is important to note that APL differs from other housing benefits, such as ALF (Family Housing Allowance) or ALS (Social Housing Allowance), which target specific groups.
+              </p>
+            </div>
+        },
+        {
+          title: "4. How to apply?",
           content: (
             <div>
-              <p style={{ marginBottom: '1rem' }}>Everything is done online on the CAF website. You must provide the lease, a bank account confirmation (RIB), and proof of income.</p>
-              <p>Attention: the aid is not retroactive, apply as soon as you enter the housing.</p>
+              <p style={{ marginBottom: '1rem' }}>The APL application can be submitted online via the CAF website or partner platforms and follows several key steps:
+              </p>
+              <ol>
+                <li>Create a CAF account or log in to your personal space.</li>
+                <li>Provide details about your situation: type of accommodation, rent amount, landlord’s contact details, and student status.</li>
+                <li>Submit the required supporting documents, including:
+                  <ul>
+                    <li>Rental agreement or landlord’s certificate</li>
+                    <li>Bank account details (RIB)</li>
+                    <li>Proof of personal or family income</li>
+                    <li>Student ID card or enrollment certificate</li>
+                  </ul>
+                </li>
+                <li>Wait for the calculation and notification: CAF determines the amount of aid and informs the student.</li>
+                <li>Payment of the aid: APL is paid directly to the landlord or to the student, depending on the case.</li>
+              </ol>
+              <p>Processing times may vary, but it is recommended to apply before signing the lease or as soon as you move into the accommodation.
+              </p>
             </div>
           )
+        },
+        {
+          title: "5. Essential documents",
+          content:
+            <div>
+              <p>For a complete and fast application, certain documents are always required:
+              </p>
+              <ul>
+                <li>Rental contract or recent lease agreement</li>
+                <li>Accommodation certificate, if applicable</li>
+                <li>Proof of income (salary, scholarships, possible benefits)</li>
+                <li>Student card or enrollment certificate</li>
+                <li>Bank account details (RIB) for payments</li>
+              </ul>
+              <p>Diplomeo and local CAF offices emphasize the importance of carefully preparing these documents to avoid delays in processing the application.
+              </p>
+            </div>
+        },
+        {
+          title: "6. Important points to know",
+          content:
+            <div>
+              <ul>
+                <li>APL is not automatic: you must apply for it and meet all eligibility requirements.</li>
+                <li>The amount may vary each month depending on declared income and actual rent.</li>
+                <li>APL can complement other student aid or scholarships, but it is essential to check combination rules.</li>
+                <li>Regular updates of personal information are necessary to avoid overpayments or interruptions.</li>
+              </ul>
+            </div>
+        },
+        {
+          title: "7. Practical advice for students",
+          content:
+            <div>
+              <ol>
+                <li><strong>Anticipate the application:</strong> prepare documents and create your CAF account as early as possible.</li>
+                <li><strong>Check housing approval:</strong> only certain housing units are eligible for APL.</li>
+                <li><strong>Monitor your application online:</strong> CAF provides full tracking to identify missing information.</li>
+                <li><strong>Seek support:</strong> student associations, university social services, and platforms like Gestetud can help guide students through the process.</li>
+                <li><strong>Assess your real budget:</strong> even with APL, it is essential to calculate expenses to avoid financial difficulties.</li>
+              </ol>
+            </div>
+        },
+        {
+          title: "8. Conclusion",
+          content:
+            <p>APL is a crucial support for students, helping significantly reduce housing costs and allowing them to focus on their studies. Understanding eligibility criteria, preparing the necessary documents, and carefully following the application process maximizes the chances of receiving this aid and securing accommodation. When properly managed, this support reduces financial stress and contributes to academic success.
+            </p>
         },
         {
           title: "Sources",
           content: (
             <ul style={{ listStyle: 'none', padding: 0, fontSize: '0.9rem' }}>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-nord/offre-de-service/logement/l-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF - Aide au logement étudiant</a></li>
-              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.gestetud.fr/apl-etudiant-toutes-les-conditions-et-demarches-pour-beneficier-de-laide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Gestetud - Conditions et démarches</a></li>
-              <li><a href="https://diplomeo.com/actualite-quel_document_pour_demande_apl" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo - Documents APL</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-nord/offre-de-service/logement/l-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF – Student housing assistance</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.gestetud.fr/apl-etudiant-toutes-les-conditions-et-demarches-pour-beneficier-de-laide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Gestetud – Conditions and procedures</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://diplomeo.com/actualite-quel_document_pour_demande_apl" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Diplomeo – APL required documents</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.capital.fr/immobilier/apl-etudiant-1397706" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Capital – APL for students</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-du-nord/offre-de-service/logement/l-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF du Nord – Student housing assistance</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://www.caf.fr/allocataires/caf-de-la-vienne/offre-de-service/logement/je-suis-etudiante/faire-votre-demande-d-aide-au-logement/les-etapes-cles-pour-faire-sa-demande-d-aide-au-logement-etudiant" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF de la Vienne – Key steps to apply for student housing assistance</a></li>
+              <li style={{ marginBottom: '0.5rem' }}><a href="https://caf.fr/allocataires/caf-du-var/offre-de-service/logement/je-suis-etudiant-etou-apprenti/les-etapes-cles-pour-faire-sa-demande-d-aide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>CAF du Var – Key steps to apply for student housing assistance</a></li>
+              <li><a href="https://www.gestetud.fr/apl-etudiant-toutes-les-conditions-et-demarches-pour-beneficier-de-laide-au-logement" target="_blank" rel="noopener noreferrer" style={{ color: '#E27D60' }}>Gestetud – APL for students: conditions and procedures</a></li>
             </ul>
           )
-        }
+        },
+
       ]
     }
+    
   ];
 
   const themes = language === 'en' ? themesEn : themesFr;

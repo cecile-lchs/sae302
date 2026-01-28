@@ -1,1727 +1,2368 @@
 {
+
   "chapter1": {
-    "title": "Chapitre 1 : Première Année",
-    "description": "Les doutes s’installent. Un choix s’impose.",
-     "scenes": {
-   "start": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "character": "/assets/directeur.png",
-        "background": "/assets/amphi.png",
-        "speaker": "Directeur",
-        "sound": "/assets/brouhaha.mp3",
-        "text": [
-          "Bonjour à tous. Bienvenue à l'Université d'Orléans, un lieu où l'imagination rencontre la logique et où chaque bug est une opportunité de créativité. ",
-          "Cette année, comme tous les ans, nous allons explorer des domaines passionnants : de l'intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore un peu mystérieuses.",
-          "Mais au-delà des langages et des frameworks, ce que nous cherchons à vous transmettre, c'est l'esprit critique, la curiosité, et la capacité à résoudre des problèmes... même ceux qui semblent impossibles au premier abord. Merci."
-        ]
-      },
-      {
-        "background": "/assets/classe.png",
-        "character": "/assets/prof.png",
-        "sound": "/assets/brouhaha.mp3",
-        "speaker": "Professeur",
-        "text": "Je suis votre professeur de calcul formel, Antoine Robert. J'ai été comme vous : étudiant dans cette université, assis sur les mêmes bancs que vous. À force d'écouter les cours et de travailler dur, j'ai réussi à obtenir ce poste d'enseignant. Je suis maintenant enseignant-chercheur, ce qui implique..."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre continuer d'écouter le professeur ou discuter avec son voisin."
-      },
-      "Cliquez encore pour voir les options..."
-    ],
-    "choices": [
-      { "label": "Continuer à écouter", "next": "ecouter" },
-      { "label": "Discuter", "next": "discuter" }
-    ]
-  },
-  "ecouter": {
-    "background": "/assets/classe.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker":"none",
-        "text": "Le protagoniste continue d'écouter son professeur."
-      },
-      {
-        "speaker": "Professeur",
-        "character": "/assets/prof.png",
-        "text": [
-          {
-            "text": [
-              "- ... enseigner dans les écoles tout en menant des recherches le reste du temps. Maintenant que vous connaissez mon parcours, je vais discuter du contenu de mon cours.",
-              "Nous aurons un examen final à la fin du semestre et une dizaine de travaux dirigés et pratiques pour nous y préparer. Chaque cours sera divisé en deux parties -..."
-            ]
-          }
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a de nouveau le choix entre continuer d'écouter le professeur ou discuter avec son voisin."
-      }
-    ],
-    "choices": [
-      { "label": "Continuer à écouter", "next": "ecouter2" },
-      { "label": "Discuter", "next": "discuter2" }
-    ]
-  },
-  "discuter": {
-    "background": "/assets/classe.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste entame une conversation avec son voisin."
-      },
-      {
-        "text": "[Je devrais essayer de me faire des amis. Je me tourne vers mon voisin.]"
-      },
-      {
-        "text": "Salut !"
-      },
-      {
-        "character": "/assets/voisin.png",
-        "speaker": "Voisin",
-        "text": "Salut ! Tu viens d'Orléans ?"
-      },
-      {
-        "text": "Pas du tout, je suis d'Alsace ! Et toi ?"
-      },
-      {
-        "character": "/assets/voisin.png",
-        "speaker": "Voisin",
-        "text": "Je suis d'Orléans. Je m'appelle Martin, et toi ?"
-      },
-      {
-        "text": "[Intérieurement je passe le reste du cours à discuter avec Martin, et la fin de la journée arrive sans que je m'en rende compte.]"
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "none",
-        "text": "Notification de message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "speaker": "Martin",
-        "character": "/assets/voisin.png",
-        "text": "Via messages Salut ! Tu veux venir à la soirée d'intégration ?"
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre accompagner Martin à la soirée d'intégration ou rester chez lui."
-      }
-    ],
-    "choices": [
-      { "label": "Aller à la soirée", "next": "aller" },
-      { "label": "Décliner l'invitation", "next": "decliner" }
-    ]
-  },
-  "ecouter2": {
-    "speaker": "Moi",
-    "background": "/assets/classe.png",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste continue d'écouter son professeur."
-      },
-      {
-        "character": "/assets/prof.png",
-        "speaker": "Professeur",
-        "text": "Dans l'une, nous aborderons le cours de manière théorique et illustrerons avec des exemples. J'attends de vous que vous preniez des notes et posiez des questions dès que vous ne comprenez pas quelque chose. Dans la seconde, je -..."
-      },
-      {
-        "text": "[Intérieurement j'écoute M. Robert en silence. Le reste de la journée passe lentement, et j'attends avec impatience le moment de rentrer chez moi.]"
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "Notification",
-        "text": "Notification Smartphone"
-      },
-      {
-        "background": "/assets/interface.png",
-        "speaker": "Notification",
-        "text": "L'offre d'emploi « Job Étudiant » publiée par Leclerc Orléans correspond à votre profil."
-      }
-    ],
-    "choices": [
-      { "label": "Postuler", "next": "postuler" },
-      { "label": "Ignorer", "next": "ignorer" }
-    ]
-  },
-
-  "ignorer": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste ignore l'offre d'emploi."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "character": "/assets/directeur.png",
-        "speaker": "Directeur",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "background": "/assets/interface.png",
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[Recalé... Je pensais que ce serait un choc... mais en fait, c'est plus un mélange étrange de sentiments. De la surprise... et en même temps, pas vraiment. Au lycée, j'étais bon. Vraiment bon. Tout le monde me disait que j'avais du potentiel, que j'étais  fait pour les études . Pourtant, j'ai complètement décroché.]",
-          "[La vérité, c'est que... ça ne m'intéressait pas. J'ai essayé de me convaincre du contraire, j'ai suivi la voie que tout le monde attendait de moi, mais chaque cours me semblait... vide. Loin de ce que je voulais vraiment faire. Et forcément, comme je n'étais pas motivé... Je ne me suis pas donné à fond. J'ai fait le minimum vital, parfois rien du tout. Comment j'aurais pu réussir comme ça ? C'était pas pour moi. Et je ne m'en rends compte que maintenant, trop tard.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Notification de message"
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
-      },
-      {
-        "speaker": "none",
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite5" },
-      { "label": "Mentir", "next": "mentir5" }
-    ]
-  },
-  "mentir5": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "text": "Le protagoniste ment à ses parents sur son échec."
-      },
-      {
-        "text": [
-          "[Comment je pourrais expliquer ça à mes parents ?  Jai échoué parce que je ny croyais pas vraiment  ? Ça sonne tellement ridicule... Il faut que je me pose les bonnes questions.]",
-          "Quest-ce que je veux faire ? Quest-ce qui me motive vraiment ? Continuer dans une voie qui ne me convient pas ne mènera qu'à d'autres échecs. Bon... il faut que je trouve quelque chose qui me corresponde. Et cette fois... il faudra que je m'y mette vraiment."
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être très difficile pour moi de trouver une formation qui m'accepte.]",
-          "[Pourquoi je n'ai pas réalisé plus tôt dans l'année que j'allais droit dans le mur ?! Je suis obligé de me tourner vers des études qui ne font jamais le plein et acceptent n'importe quelles notes, comme les lettres ou l'histoire. Je suis loin de mon idéal, mais on ne sait jamais ! Peut-être qu'en fait je suis fait pour ce genre d'études. C'est totalement différent de l'informatique, après tout !]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-  "verite5": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste dit la vérité à ses parents."
-      },
-      {
-        "text": "Il faut que j'assume. Je ne pourrai jamais prendre un nouveau départ si je cache un truc aussi important à mes propres parents."
-      },
-      {
-        "character": "/assets/maman.png",
-        "background": "/assets/appel.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": " Non. J'ai été refusé."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Quoi ? Tu n'as pas été accepté ? Mais pourquoi ?"
-      },
-      {
-        "text": " Je Je me suis pas assez investi dans mes études. J'avais du mal à m'intéresser à ce que je faisais et je n'ai pas donné le meilleur de moi-même."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Oh mon chéri On savait que ça pouvait être dur, mais entendre ça, ça fait mal."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "On est déçus, oui ! Mais ... On croyait vraiment que tu pourrais réussir. Ce n'est pas seulement de la déception pour toi on est tristes de te voir souffrir et perdre confiance."
-      },
-      {
-        "text": "Je suis désolé."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Écoute ce n'est pas la fin du monde. Tu as fait une erreur, c'est tout. Mais tu dois comprendre ce qui n'a pas marché pour améliorer la situation. On va regarder les options possibles pour toi ensemble."
-      },
-      {
-        "text": "Je veux me donner à fond cette fois. Je ne veux pas refaire les mêmes erreurs."
-      },
-      {
-        "text": [
-          "[Je pensais que ce serait une catastrophe que ça finirait en cris, en reproches, ... Mais ils ne m'ont pas rejeté. Ils voulaient comprendre. Ils m'ont écouté. Ils m'ont même dit qu'ils croyaient encore en moi.]",
-          "[J'ai bien fait d'avouer. De toute façon, le cacher n'aurait rien changé et maintenant, au moins, je ne suis plus seul. J'ai l'impression d'avoir enfin arrêté de fuir.]"
-        ]
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d'histoire ou de lettres."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-
-
-  "discuter2": {
-    "background": "/assets/classe.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste entame une conversation avec son voisin."
-      },
-      {
-        "text": "[Je devrais essayer de me faire des amis. Je me tourne vers mon voisin.]"
-      },
-      {
-        "text": "Salut !"
-      },
-      {
-        "character": "/assets/voisin.png",
-        "speaker": "Voisin",
-        "text": "Salut ! Tu viens d'Orléans ?"
-      },
-      {
-        "text": "Pas du tout, je suis d'Alsace ! Et toi ?"
-      },
-      {
-        "character": "/assets/voisin.png",
-        "speaker": "Voisin",
-        "text": "Je suis d'Orléans. Je m'appelle Martin, et toi ?"
-      },
-      {
-        "text": "[Intérieurement je passe le reste du cours à discuter avec Martin, et la fin de la journée arrive sans que je m'en rende compte.]"
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "/assets/voisin.png",
-        "speaker": "Martin",
-        "text": "Via messages Salut ! Tu veux venir à la soirée d'intégration ?"
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre accompagner Martin à la soirée d'intégration ou rester chez lui."
-      }
-    ],
-    "choices": [
-      { "label": "Aller à la soirée", "next": "aller2" },
-      { "label": "Décliner l'invitation", "next": "decliner2" }
-    ]
-  },
-  "decliner2": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste décline l'invitation de Martin."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "background": "/assets/appli.png",
-        "speaker": "none",
-        "text": "L'offre d'emploi  Job Étudiant  publiée par Leclerc Orléans correspond à votre profil."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre postuler à l'offre d'emploi ou l'ignorer."
-      }
-    ],
-    "choices": [
-      { "label": "Postuler", "next": "postuler3" },
-      { "label": "Ignorer", "next": "ignorer3" }
-    ]
-  },
-  "ignorer3": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste ignore l'offre d'emploi."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "character": "/assets/directeur.png",
-        "speaker": "Directeur",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "background": "/assets/interface.png",
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": "[Je ressasse chaque moment de l'année en boucle, essayant de comprendre où j'ai pu merder. J'avais de très bonnes notes au lycée, j'étais même l'un des meilleurs de ma classe. Qu'est-ce qui a pu se passer ?]"
-      },
-      {
-        "speaker": "none",
-        "text": "Notification de message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
-      },
-      {
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite0" },
-      { "label": "Mentir", "next": "mentir0" }
-    ]
-  },
-
-
-  "mentir0": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste ment à ses parents sur son échec."
-      },
-      {
-        "text": [
-          "[Comment je pourrais expliquer ça à mes parents ?  Jai échoué parce que je ny croyais pas vraiment  ? Ça sonne tellement ridicule... Il faut que je me pose les bonnes questions.]",
-          "[Quest-ce que je veux faire ? Quest-ce qui me motive vraiment ? Continuer dans une voie qui ne me convient pas ne mènera qu'à d'autres échecs. Bon... il faut que je trouve quelque chose qui me corresponde. Et cette fois... il faudra que je m'y mette vraiment.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être très difficile pour moi de trouver une formation qui m'accepte. Pourquoi je n'ai pas réalisé plus tôt que j'allais droit dans le mur cette année ?!...] ",
-          "[Je suis obligé de me tourner vers des études qui ne font jamais le plein et acceptent n'importe quelles notes, comme les lettres ou l'histoire. Je suis loin de mon idéal, mais on ne sait jamais ! Peut-être qu'en fait je suis fait pour ce genre d'études. C'est totalement différent de l'informatique, après tout !]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-  "verite0": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "[Je ne peux plus continuer à leur cacher la situation. Faire semblant d'assurer, de tenir le coup... c'est épuisant. Et c'est encore plus dur maintenant que je sais que j'ai échoué.]"
-      },
-      {
-        "background": "/assets/appel.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": " Non. J'ai été refusé."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Quoi ? Tu n'as pas été accepté ? Mais pourquoi ?"
-      },
-      {
-        "text": " Je Je me suis pas assez investi dans mes études. J'avais du mal à m'intéresser à ce que je faisais et je n'ai pas donné le meilleur de moi-même."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Oh mon chéri On savait que ça pouvait être dur, mais entendre ça, ça fait mal."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "On est déçus, oui ! Mais ... On croyait vraiment que tu pourrais réussir. Ce n'est pas seulement de la déception pour toi on est tristes de te voir souffrir et perdre confiance."
-      },
-      {
-        "text": "Je suis désolé."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Écoute ce n'est pas la fin du monde. Tu as fait une erreur, c'est tout. Mais tu dois comprendre ce qui n'a pas marché pour améliorer la situation. On va regarder les options possibles pour toi ensemble."
-      },
-      {
-        "text": "Je veux me donner à fond cette fois. Je ne veux pas refaire les mêmes erreurs."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "text": [
-          "[Je pensais que ce serait une catastrophe que ça finirait en cris, en reproches, ... Mais ils ne m'ont pas rejeté. Ils voulaient comprendre. Ils m'ont écouté. Ils m'ont même dit qu'ils croyaient encore en moi.]",
-          "[J'ai bien fait d'avouer. De toute façon, le cacher n'aurait rien changé et maintenant, au moins, je ne suis plus seul. J'ai l'impression d'avoir enfin arrêté de fuir.]"
-        ]
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d'histoire ou de lettres."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "postuler3": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste postule à l'offre d'emploi."
-      },
-      {
-        "speaker": "Notification",
-        "text": "Votre candidature a été acceptée."
-      },
-      {
-        "background":"/assets/amphi.png",
-        "speaker": "Directeur",
-        "character": "/assets/directeur.png",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "character": "/assets/voisin.png",
-        "speaker": "Martin",
-        "text": "Je suis au-dessus de la moyenne dans toutes les matières, héhé !"
-      },
-      {
-        "text": "Je suis sûrement meilleur que toi, haha !"
-      },
-      {
-        "background": "/assets/interface.png",
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "character": "/assets/voisin.png",
-        "speaker": "Martin",
-        "background": "/assets/amphi.png",
-        "text": "Haha ! Alors, tu es meilleur que moi, c'est ça ?"
-      },
-      {
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "background":"/assets/chambre.png",
-        "text": [
-          "[Recalé... Je pensais que ce serait un choc... mais en fait, c'est plus un mélange étrange de sentiments. De la surprise... et en même temps, pas vraiment. Au lycée, j'étais bon. Vraiment bon. Tout le monde me disait que j'avais du potentiel, que j'étais  fait pour les études . Pourtant, j'ai complètement décroché.]",
-          "[La vérité, c'est que... ça ne m'intéressait pas. J'ai essayé de me convaincre du contraire, j'ai suivi la voie que tout le monde attendait de moi, mais chaque cours me semblait... vide. Loin de ce que je voulais vraiment faire. Et forcément, comme je n'étais pas motivé...]",
-          "[Je ne me suis pas donné à fond. J'ai fait le minimum vital, parfois rien du tout. Comment j'aurais pu réussir comme ça ? C'était pas pour moi. Et je ne m'en rends compte que maintenant, trop tard.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?",
-        "character": "/assets/maman.png",
-        "sound": "/assets/click.mp3"
-      },
-      {
-        "speaker": "none",
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite7" },
-      { "label": "Mentir", "next": "mentir7" }
-    ]
-  },
-
-
-  "mentir7": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste ment à ses parents sur son échec."
-      },
-      {
-        "text": [
-          "[Comment expliquer ça à mes parents ?  J'ai raté parce que je n'arrivais plus à gérer le boulot et les cours.  Ça sonne comme une excuse bidon.]",
-          "[J'ai cravaché pour m'en sortir, pour être indépendant, pour ne pas leur demander de l'aide tout le temps... Si je retrouve une formation vite fait... une réorientation, une passerelle, un truc...]",
-          "[Peut-être qu'ils ne verront rien. Je dirai juste que c'est un choix, un changement de cap. Il faut que je rattrape le coup... absolument.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à chercher des infos. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être super chaud de trouver une formation qui m'accepte. Pourquoi j'ai pas capté que j'allais dans le mur plus tôt dans l'année ?!...]",
-          "[Je suis obligé de me rabattre sur des filières qui ne font jamais le plein et qui acceptent large, peu importe le dossier, genre lettres ou histoire. Je suis loin de mon idéal, mais qui sait ? Peut-être que je suis fait pour ça, en fait. C'est carrément autre chose que l'info, après tout !]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-  "verite7": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "[Mais je ne peux plus continuer à leur cacher la situation. Faire semblant d'assurer, de tenir le coup... c'est épuisant. Et c'est encore plus dur maintenant que je sais que j'ai échoué.]"
-      },
-      {
-        "background": "/assets/appel.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": "Non. J'ai été refusé."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Oh mon chéri"
-      },
-      {
-        "text": "Je... Je suis désolé. J'ai fait tout ce que je pouvais, mais entre les cours et le boulot... j'y arrivais plus. Je rentrais trop tard, j'étais crevé, j'arrivais même plus à réviser correctement. J'ai essayé de tenir, vraiment... mais j'ai pas réussi."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Tu n'as pas à t'excuser. Tu t'es battu pour t'en sortir, tu as bossé dur pour gagner ton argent et suivre tes études. C'était pas ta faute. C'était juste... trop pour toi."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "On voyait bien que tu étais épuisé ces derniers mois. Tu ne pouvais pas tout porter tout seul. On est fiers de toi, tu entends ? Pas déçus. Fiers de ton courage."
-      },
-      {
-        "text": "Je pensais que... vous m'en voudriez. Que vous seriez déçus de moi."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Déçus ? Allons donc... Tu as travaillé, tu as pris tes responsabilités, tu as fait de ton mieux dans une situation difficile. Ce n'est pas un échec honteux. Même des adultes n'arrivent pas toujours à gérer aussi bien."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "On va réfléchir ensemble à ce que tu veux faire. Que ce soit repartir à zéro, changer de voie, ou alléger ton emploi du temps... Tu n'es pas seul."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "text": [
-         "[Ils... m'ont soutenu. Ils ont vraiment compris. Je croyais qu'ils seraient déçus, qu'ils me reprocheraient mes choix... Mais ils m'ont écouté. Ils m'ont cru. Et ils n'ont pas minimisé ce que j'ai vécu.]",
-         "[J'ai bien fait de leur dire. J'avais tout gardé pour moi depuis si longtemps, à porter ce poids tout seul... Je me sens plus léger. Je ne suis pas seul. Ils sont avec moi, et je vais recommencer sans refaire d'erreurs.]"
-        ]
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d'histoire ou de lettres"
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "aller2": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se rend à la soirée."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "character": "/assets/directeur.png",
-        "speaker": "Directeur",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "text": [
-          "[Je n'arrive pas y croire. Recalé. Comment c'est possible ? Au lycée, j'étais bon. Vraiment bon. J'apprenais vite, j'avais des bonnes notes sans trop forcer On me disait même que j'étais promis à un grand avenir. Je suis pas stupide. Alors qu'est-ce qui a merdé ? ...Non.]",
-          "[Je sais exactement ce qui a merdé. Les sorties. Les soirées. Les retards. Les cours écoutés d'une oreille... ou pas écoutés du tout. Les rendus bâclés à la dernière minute, quand je les rendais tout court.]",
-          "[Je pensais passer entre les gouttes quand même. Que j'étais assez doué pour m'en sortir sans bosser. Comme au lycée. Je me suis sabordé tout seul.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
-      },
-      {
-        "speaker": "none",
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite6" },
-      { "label": "Mentir", "next": "mentir6" }
-    ]
-  },
-
-
-  "mentir6": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "text": "Le protagoniste a choisi de le cacher à ses parents."
-      },
-      {
-        "text": [
-          "[Comment je pourrais dire ça à mes parents ? Ils seraient furieux. Déçus. Je ne peux pas rentrer et leur annoncer ça. Si je retrouve une formation vite fait... une réorientation, une passerelle, un truc...]",
-          "[Peut-être qu'ils ne verront rien. Je dirai juste que c'est un choix, un changement de cap. Il faut que je rattrape le coup... absolument.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[Protagoniste Intérieurement j'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être très difficile pour moi de trouver une formation qui m'accepte.]",
-          "[Je suis obligé de me tourner vers des études qui ne font jamais le plein et acceptent facilement, peu importe le dossier, genre lettres ou histoire.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-  "verite6": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "[Il faut que j'assume.]"
-      },
-      {
-        "background": "/assets/appel.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": "Non. J'ai été refusé."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Recalé ? Comment ça recalé ? Ils t'avaient dit que c'était jouable si tu faisais des efforts au deuxième semestre !"
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Attends. Ils t'ont refusé pour quoi, au juste ?"
-      },
-      {
-        "text": "Ils ont dit que mes résultats n'étaient pas à la hauteur. Que mes notes sont trop justes et que je ne suis pas assez sérieux."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Et voilà... C'est exactement ce qu'on te répète depuis des mois ! A force de sortir tout le temps et de dormir en cours, ça allait finir par te retomber dessus !"
-      },
-      {
-        "text": "Je sais... Je suis désolé. J'ai vraiment merdé. Je pensais que ça passerait, que j'aurais le temps de rattraper."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Le problème, c'est que tu n'as pas pris la situation au sérieux quand il le fallait. On est déçus, mais surtout inquiets pour ton avenir."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "En plus, tu vas avoir un mal fou à te réorienter. On est déjà fin juin, et Parcoursup a fermé il y a un moment."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Tu vas devoir trouver une formation près de la maison pour qu'on te surveille."
-      },
-      {
-        "text": "... D'accord. Je ne veux plus refaire les mêmes erreurs."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "On va regarder les options ensemble. Mais cette fois, tu t'y tiens. On ne veut plus te voir gâcher ton avenir comme ça."
-      },
-      {
-        "text": "J'ai compris. Et je promets de m'y mettre sérieusement. Merci... de me laisser une seconde chance."
-      },
-      {
-        "background":"/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être très difficile pour moi de trouver une formation qui m'accepte.]",
-          "[Je suis obligé de me tourner vers des études qui ne font jamais le plein et qui acceptent facilement les élèves peu importe leur dossier, comme les lettres ou l'histoire.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "postuler": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste postule à l'offre d'emploi."
-      },
-      {
-        "speaker": "Notification",
-        "text": "Votre candidature a été acceptée."
-      },
-      {
-        "character": "/assets/directeur.png",
-        "speaker": "Directeur",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "text": [
-          "[Je m'y attendais un peu... mais ça fait quand même mal. Je voulais faire mieux. Je voulais prouver que je pouvais gérer les études et le boulot en même temps, mais j'ai pas tenu. Toutes ces soirées à rentrer tard du travail... A m'endormir sur mes devoirs... ]",
-          "[A repousser les révisions parce que j'étais trop crevé pour réfléchir. C'était trop pour moi. J'ai cru que je pourrais encaisser, que ça irait, que c'était normal d'être fatigué, mais j'avais la tête ailleurs en cours, et j'ai pas réussi à suivre le rythme. J'ai l'impression d'avoir fait tout ce que je pouvais, et pourtant, ça n'a pas suffi.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?",
-        "character": "/assets/maman.png"
-      },
-      {
-        "speaker": "none",
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite" },
-      { "label": "Mentir", "next": "mentir" }
-    ]
-  },
-
-
-  "mentir": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste cache son échec à ses parents."
-      },
-      {
-        "text": [
-          "[Je ne peux pas croire que je dois leur dire ça. Ils vont être furieux. Déçus. Je ne peux pas rentrer et leur dire ça. Si je trouve une autre formation rapidement... une réorientation, une passerelle, n'importe quoi]",
-          "[Peut-être qu'ils ne remarqueront rien. Je dirai juste que c'est un choix, un changement de direction. Je dois arranger les choses... absolument.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à faire des recherches. Avec Parcoursup qui a fermé il y a plusieurs semaines, ça va être très difficile pour moi de trouver un programme qui m'acceptera.]",
-          "[Pourquoi n'ai-je pas réalisé plus tôt dans l'année que je fonçais droit dans le mur ?!... Je suis forcé de me tourner vers des sujets qui ne remplissent jamais les classes et qui acceptent facilement les étudiants quelles que soient leurs notes, comme la littérature ou l'histoire.]",
-          "[Je suis loin de mon idéal, mais qui sait ? Peut-être que je suis fait pour ce genre d'études. C'est complètement différent de l'informatique, après tout !]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      {
-        "label": "S'inscrire en Licence de Lettres",
-        "next": "ment"
-      },
-      {
-        "label": "S'inscrire en Licence d'Histoire",
-        "next": "ment"
-      }
-    ]
-  },
-  "aller": {
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se rend à la soirée"
-      },
-      {
-        "background": "/assets/amphi.png",
-        "character": "/assets/directeur.png",
-        "speaker": "Directeur",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "sound": "/assets/brouhaha.mp3",
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[ Je n'arrive pas à y croire. Recalé. Comment est-ce possible ? Au lycée, j'étais bon. Vraiment bon. J'apprenais vite, j'avais de bonnes notes sans trop forcer Les gens me disaient même que j'étais destiné à de grandes choses. Je ne suis pas stupide.]",
-          "[Alors qu'est-ce qui a mal tourné ? ...Non. Je sais exactement ce qui a mal tourné. Sortir. Faire la fête. Être en retard. Les cours que je n'écoutais qu'à moitié... ou pas du tout. Les devoirs bâclés à la dernière minute, si je les faisais. Je pensais que je m'en sortirais quand même.]",
-          "[Que j'étais assez bon pour m'en sortir sans travailler. Tout comme au lycée. Je me suis saboté moi-même.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?",
-        "background": "/assets/interface.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "sound": "/assets/click.mp3"
-      },
-      {
-        "speaker": "none",
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère ou mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite2" },
-      { "label": "Mentir", "next": "mentir2" }
-    ]
-  },
-  "mentir2": {
-    "background": "/assets/background.png",
-    "character": "/assets/protagoniste.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "text": "Le protagoniste ment à ses parents sur son échec."
-      },
-      {
-        "text": [
-          "[Comment pourrais-je leur dire ? Ils seraient furieux. Déçus. Je ne peux pas rentrer à la maison et leur dire ça. Si je peux trouver un autre cours rapidement... un changement de direction, un programme parallèle, n'importe quoi...]",
-          "[Peut-être qu'ils ne remarqueront rien. Je dirai juste que c'est un choix, un changement de direction. Je dois arranger les choses... absolument.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": "[J'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, il sera très difficile pour moi de trouver un programme qui m'acceptera. Je suis obligé de me tourner vers des programmes qui ne font jamais le plein et acceptent facilement les étudiants, quelles que soient leurs notes, comme la littérature ou l'histoire.]"
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-
-
-  "verite2": {
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "[Il faut que j'assume.]"
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": "Non. J'ai été refusé."
-      },
-      {
-        "speaker": "Maman",
-        "character": "/assets/maman.png",
-        "text": "Recalé ? Comment ça recalé ? Ils t'avaient dit que c'était faisable si tu faisais des efforts au deuxième semestre !"
-      },
-      {
-        "speaker": "Papa",
-        "character": "/assets/papa.png",
-        "text": "Attends. Ils t'ont refusé pour quoi, exactement ?"
-      },
-      {
-        "text": "Ils ont dit que mes résultats n'étaient pas à la hauteur. Que mes notes sont trop justes et que je ne suis pas assez sérieux."
-      },
-      {
-        "speaker": "Maman",
-        "character": "/assets/maman.png",
-        "text": "Et voilà... C'est exactement ce qu'on te répète depuis des mois ! A force de sortir tout le temps et de dormir en cours, ça allait finir par te retomber dessus !"
-      },
-      {
-        "text": "Je sais Je suis désolé. J'ai vraiment merdé. Je pensais que ça passerait, que j'aurais le temps de rattraper."
-      },
-      {
-        "speaker": "Papa",
-        "character": "/assets/papa.png",
-        "text": "Le problème, c'est que tu n'as pas pris la situation au sérieux quand il le fallait. On est déçus, mais surtout inquiets pour ton avenir."
-      },
-      {
-        "speaker": "Maman",
-        "character": "/assets/maman.png",
-        "text": "En plus, tu vas avoir un mal fou à te réorienter. On est déjà fin juin, et Parcoursup a fermé il y a un moment."
-      },
-      {
-        "speaker": "Papa",
-        "character": "/assets/papa.png",
-        "text": "Tu vas devoir trouver une formation près de la maison pour qu'on te surveille."
-      },
-      {
-        "text": "... D'accord. Je ne veux plus refaire les mêmes erreurs."
-      },
-      {
-        "speaker": "Maman",
-        "character": "/assets/maman.png",
-        "text": "On va regarder les options ensemble. Mais cette fois, tu t'y tiens. On ne veut plus te voir gâcher ton avenir comme ça."
-      },
-      {
-        "text": "J'ai compris. Et je promets de m'y mettre sérieusement. Merci... de me laisser une seconde chance."
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être très difficile pour moi de trouver une formation qui m'accepte.]",
-          "[Je suis obligé de me tourner vers des études qui ne font jamais le plein et qui acceptent facilement les étudiants peu importe le dossier, comme les lettres ou l'histoire.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "decliner": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste décline l'invitation de Martin."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "none",
-        "text": "Notification smartphone"
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "Notification",
-        "text": "L'offre d'emploi  Job Étudiant  publiée par Leclerc Orléans correspond à votre profil."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre postuler à l'offre d'emploi ou l'ignorer."
-      }
-    ],
-    "choices": [
-      { "label": "Postuler", "next": "postuler2" },
-      { "label": "Ignorer", "next": "ignorer2" }
-    ]
-  },
-  "ignorer2": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "text": "Le protagoniste ignore l'offre d'emploi."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "character": "/assets/directeur.png",
-        "speaker": "Directeur",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "background": "/assets/interface.png",
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "sound": "/assets/brouhaha.mp3",
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": "[Je ressasse chaque moment de l'année en boucle, essayant de comprendre où j'ai pu merder. J'avais de très bonnes notes au lycée, j'étais même l'un des meilleurs de ma classe. Qu'est-ce qui a pu se passer ?]"
-      },
-      {
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
-      },
-      {
-        "speaker": "none",
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite4" },
-      { "label": "Mentir", "next": "mentir4" }
-    ]
-  },
-
-
-  "mentir4": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "text": "Le protagoniste cache son échec à ses parents."
-      },
-      {
-        "text": [
-          "[Comment pourrais-je expliquer ça à mes parents ?  J'ai échoué parce que je n'y croyais pas vraiment  ? Ça sonne tellement ridicule... Je dois me poser les bonnes questions.]",
-          "[Qu'est-ce que je veux faire ? Qu'est-ce qui me motive vraiment ? Continuer sur une voie qui ne me convient pas ne mènera qu'à plus d'échecs. Bon... Il faut que je trouve quelque chose qui me convienne. Et cette fois... je m'engagerai vraiment.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup il y a plusieurs semaines, il sera très difficile pour moi de trouver un programme qui m'acceptera.]",
-          "[Pourquoi n'ai-je pas réalisé plus tôt cette année que je fonçais droit dans le mur ?!... Je suis forcé de me tourner vers des études qui ne remplissent jamais les classes et acceptent les étudiants quelles que soient leurs notes, comme la littérature ou l'histoire. Je suis loin de mon idéal, mais on ne sait jamais ! Peut-être qu'en fait, je suis fait pour ce genre d'études. C'est totalement différent de l'informatique, après tout !]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-  "verite4": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "Je dois faire face. Je ne pourrai jamais prendre un nouveau départ si je cache quelque chose d'aussi important à mes propres parents."
-      },
-      {
-        "background": "/assets/appel.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse pour mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": "Non. J'ai été refusé."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Quoi ? Tu n'as pas été accepté ? Mais pourquoi ?"
-      },
-      {
-        "text": "Je... Je n'ai pas mis assez d'efforts dans mes études. J'avais du mal à m'intéresser à ce que je faisais et... je n'ai pas donné le meilleur de moi-même."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Oh... mon chéri. On savait que ça pourrait être difficile, mais... l'entendre fait mal."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "On est déçus, oui ! Mais ... on croyait vraiment que tu pourrais réussir. Ce n'est pas seulement de la déception pour toi on est aussi tristes de te voir souffrir et perdre confiance."
-      },
-      {
-        "text": "Je suis désolé."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Écoute... ce n'est pas la fin du monde. Tu as fait une erreur, c'est tout. Mais tu dois comprendre ce qui n'a pas marché pour pouvoir améliorer la situation. On va regarder les options qui s'offrent à toi ensemble."
-      },
-      {
-        "text": "Je veux me donner à fond cette fois. Je ne veux plus refaire les mêmes erreurs."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "text": [
-          "[Ils... m'ont soutenu. Ils ont vraiment compris. Je pensais qu'ils seraient déçus, qu'ils me blâmeraient pour mes choix... Mais ils m'ont écouté. Ils m'ont cru. Et ils n'ont pas minimisé ce que j'avais traversé.]",
-          "[J'ai bien fait d'être honnête. Le cacher n'aurait rien changé de toute façon... et maintenant, au moins, je ne suis plus seul. J'ai l'impression d'avoir enfin arrêté de fuir.]"
-        ]
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Je n'ai trouvé d'autres programmes où je suis sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d'histoire ou de lettres."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "postuler2": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste postule à l'offre d'emploi."
-      },
-      {
-        "speaker": "Notification",
-        "text": "Votre candidature a été acceptée."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "speaker": "Directeur",
-        "character": "/assets/directeur.png",
-        "text": "Merci à tous pour cette année. J'ai eu le plaisir de rencontrer des étudiants très talentueux et débordants d'idées. Je compte sur vous pour continuer sur cette lancée l'année prochaine. Les relevés de notes sont disponibles sur le site de l'université."
-      },
-      {
-        "character": "/assets/martin.png",
-        "speaker": "Martin",
-        "text": "Je suis au-dessus de la moyenne dans toutes les matières, héhé !"
-      },
-      {
-        "text": "Je suis sûrement meilleur que toi, haha !"
-      },
-      {
-        "background": "/assets/interface.png",
-        "sound": "/assets/brouhaha.mp3",
-        "speaker": "Relevé de notes",
-        "text": "Vous n'avez pas reçu l'approbation du conseil départemental pour le passage en deuxième année."
-      },
-      {
-        "background": "/assets/amphi.png",
-        "character": "/assets/martin.png",
-        "speaker": "Martin",
-        "text": "Haha ! Alors, tu es meilleur que moi, c'est ça ?"
-      },
-      {
-        "text": "..."
-      },
-      {
-        "text": "[J'attends la fin de la journée avec la boule au ventre, subissant les moqueries de mes amis. Il me faut plusieurs heures pour réaliser pleinement ce qui se passe.]"
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[Recalé... Je pensais que ce serait un choc... mais en fait, c'est plus un mélange étrange de sentiments. De la surprise... et en même temps, pas vraiment. Au lycée, j'étais bon. Vraiment bon. Tout le monde me disait que j'avais du potentiel, que j'étais  fait pour les études . ]",
-          "[Cette année, comme chaque année, nous explorerons des domaines fascinants : de l'intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore un peu mystérieuses.]",
-          "[Pourtant, j'ai complètement décroché. La vérité, c'est que... ça ne m'intéressait pas. J'ai essayé de me convaincre du contraire, j'ai suivi la voie que tout le monde attendait de moi, mais chaque cours me semblait... vide. Loin de ce que je voulais vraiment faire. Et forcément, comme je n'étais pas motivé... ]",
-          "[Cette année, comme chaque année, nous explorerons des domaines fascinants : de l'intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore un peu mystérieuses.]",
-          "[Je ne me suis pas donné à fond. J'ai fait le minimum vital, parfois rien du tout. Comment aurais-je pu réussir comme ça ? Ce n'était pas pour moi. Et je ne m'en rends compte que maintenant, trop tard.]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Notification Message"
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "maman",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
-      },
-      {
-        "text": "L'utilisateur a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
-      }
-    ],
-    "choices": [
-      { "label": "Dire la vérité", "next": "verite3" },
-      { "label": "Mentir", "next": "mentir3" }
-    ]
-  },
-
-
-  "mentir3": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a choisi de le cacher à ses parents."
-      },
-      {
-        "text": [
-          "[Comment expliquer ça à mes parents ?  J'ai raté parce que je n'arrivais plus à gérer le boulot et les cours.  Ça sonne comme une excuse bidon.]",
-          "[J'ai cravaché pour m'en sortir, pour être indépendant, pour ne pas leur demander de l'aide tout le temps... Si je retrouve une formation vite fait... une réorientation, une passerelle, un truc...]",
-          "[Peut-être qu'ils ne verront rien. Je dirai juste que c'est un choix, un changement de cap. Il faut que je rattrape le coup... absolument.]"
-        ]
-      },
-      {
-        "background": "/assets/appart.png",
-        "text": [
-          "[J'ai passé la nuit à chercher des infos. Avec la fermeture de Parcoursup il y a plusieurs semaines, ça va être super chaud de trouver une formation qui m'accepte. Pourquoi j'ai pas capté que j'allais dans le mur plus tôt dans l'année ?!...]",
-          "[Je suis obligé de me rabattre sur des filières qui ne font jamais le plein et qui acceptent large, peu importe le dossier, genre lettres ou histoire. Je suis loin de mon idéal, mais qui sait ? Peut-être que je suis fait pour ça, en fait. C'est carrément autre chose que l'info, après tout !]"
-        ]
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "ment" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "ment" }
-    ]
-  },
-  "verite3": {
-    "background": "/assets/background.png",
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "[Mais je ne peux plus continuer à leur cacher la situation. Faire semblant d'assurer, de tenir le coup... c'est épuisant. Et c'est encore plus dur maintenant que je sais que j'ai échoué.]"
-      },
-      {
-        "background": "/assets/appel.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": "Non. J'ai été refusé."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Oh mon chéri"
-      },
-      {
-        "text": "Je... Je suis désolé. J'ai fait tout ce que je pouvais, mais entre les cours et le boulot... j'y arrivais plus. Je rentrais trop tard, j'étais crevé, j'arrivais même plus à réviser correctement. J'ai essayé de tenir, vraiment... mais j'ai pas réussi."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Tu n'as pas à t'excuser. Tu t'es battu pour t'en sortir, tu as bossé dur pour gagner ton argent et suivre tes études. C'était pas ta faute. C'était juste... trop pour toi."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "On voyait bien que tu étais épuisé ces derniers mois. Tu ne pouvais pas tout porter tout seul. On est fiers de toi, tu entends ? Pas déçus. Fiers de ton courage."
-      },
-      {
-        "text": "Je pensais que... vous m'en voudriez. Que vous seriez déçus de moi."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Déçus ? Allons donc... Tu as travaillé, tu as pris tes responsabilités, tu as fait de ton mieux dans une situation difficile. Ce n'est pas un échec honteux. Même des adultes n'arrivent pas toujours à gérer aussi bien."
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "On va réfléchir ensemble à ce que tu veux faire. Que ce soit repartir à zéro, changer de voie, ou alléger ton emploi du temps... Tu n'es pas seul."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "text": [
-         "[Ils... m'ont soutenu. Ils ont vraiment compris. Je croyais qu'ils seraient déçus, qu'ils me reprocheraient mes choix... Mais ils m'ont écouté. Ils m'ont cru. Et ils n'ont pas minimisé ce que j'ai vécu.]",
-         "[J'ai bien fait de leur dire. J'avais tout gardé pour moi depuis si longtemps, à porter ce poids tout seul... Je me sens plus léger. Je ne suis pas seul. Ils sont avec moi, et je vais recommencer sans refaire d'erreurs.]"
-        ]
-      },
-      {
-        "background": "/assets/messagerie.png",
-        "character": "/assets/maman.png",
-        "speaker": "none",
-        "text": "Notification"
-      },
-      {
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d'histoire ou de lettres"
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "verite": {
-    "speaker": "Moi",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "speaker": "none",
-        "text": "Le protagoniste se confie à ses parents."
-      },
-      {
-        "text": "[Mais je ne peux plus continuer à leur cacher la situation. Faire semblant d'assurer, de tenir le coup... c'est épuisant. Et c'est encore plus dur maintenant que je sais que j'ai échoué.]"
-      },
-      {
-        "background": "/assets/appel.png",
-        "character": "/assets/maman.png",
-        "speaker": "Maman",
-        "text": "Coucou mon chéri ! Tu vas bien ? Tu as l'air... inquiet."
-      },
-      {
-        "text": "Oui... J'ai reçu la réponse concernant mon passage en deuxième année."
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Enfin. Alors ? C'est bon ?"
-      },
-      {
-        "text": "... Non. J'ai été refusé."
-      },
-      {
-        "speaker": "Maman",
-        "text": "Oh... mon chéri..."
-      },
-      {
-        "text": "Je... Je suis désolé. J'ai fait tout ce que je pouvais, mais entre les cours et le boulot... j'y arrivais plus. Je rentrais trop tard, j'étais crevé, j'arrivais même plus à réviser correctement. J'ai essayé de tenir, vraiment... mais j'ai pas réussi."
-      },
-      {
-        "speaker": "Maman",
-        "text": "On voyait bien que tu étais épuisé ces derniers mois. Tu ne pouvais pas tout porter tout seul. On est fiers de toi, tu entends ? Pas déçus. Fiers de ton courage."
-      },
-      {
-        "text": "Je pensais que... vous m'en voudriez. Que vous seriez déçus de moi"
-      },
-      {
-        "character": "/assets/papa.png",
-        "speaker": "Papa",
-        "text": "Déçus ? Allons donc... Tu as travaillé, tu as pris tes responsabilités, tu as fait de ton mieux dans une situation difficile. Ce n'est pas un échec honteux. Même des adultes n'arrivent pas toujours à gérer aussi bien."
-      },
-      {
-        "speaker": "Maman",
-        "text": "On va réfléchir ensemble à ce que tu veux faire. Que ce soit repartir à zéro, changer de voie, ou alléger ton emploi du temps... Tu n'es pas seul."
-      },
-      {
-        "background": "/assets/chambre.png",
-        "text": "[Ils... m'ont soutenu. Ils ont vraiment compris. Je croyais qu'ils seraient déçus, qu'ils me reprocheraient mes choix... Mais ils m'ont écouté. Ils m'ont cru. Et ils n'ont pas minimisé ce que j'ai vécu. J'ai bien fait de leur dire. J'avais tout gardé pour moi depuis si longtemps, à porter ce poids tout seul... Je me sens plus léger. Je ne suis pas seul. Ils sont avec moi, et je vais recommencer sans refaire d'erreurs.]"
-      },
-      {
-        "background": "/assets/chambre.png",
-        "speaker": "none",
-        "text": "Notification"
-      },
-      {
-        "speaker": "Maman",
-        "character": "/assets/maman.png",
-        "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec tes notes catastrophiques. Choisis entre une licence d'histoire ou de lettres."
-      },
-      {
-        "speaker": "none",
-        "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d'histoire à Orléans."
-      }
-    ],
-    "choices": [
-      { "label": "S'inscrire en Licence de Lettres", "next": "avoue" },
-      { "label": "S'inscrire en Licence d'Histoire", "next": "avoue" }
-    ]
-  },
-  "avoue": {
-    "speaker": "Moi",
-    "background": "/assets/chambre.png",
-    "sound": "/assets/click.mp3",
-    "text": [
-      {
-        "text": "J'ai choisi de me réorienter. C'est un risque, mais je ne peux plus rester ici."
-      }
-    ]
-  }
-    }
-  },
-  "chapter2": {
-    "title": "Chapitre 2 : Deuxième Année",
-    "description": "Une nouvelle voie s’ouvre. À toi de la saisir.",
+    "title": "Chapitre 1 : Première année",
+    "description": "Les doutes s’installent. Un choix doit être fait",
     "scenes": {
       "start": {
+        "background": "/assets/classe.png",
         "speaker": "Moi",
-        "background": "/assets/chambre.png",
-        "sound": "/assets/click.mp3",
+        "font": "normal",
         "text": [
           {
-            "background": "/assets/messagerie.png",
-            "text": "Le protagoniste se réoriente."
-          },
-          {
-            "background": "/assets/chambre.png",
+            "character": "/assets/directeur.png",
+            "background": "/assets/amphi.png",
+            "speaker": "Directeur",
+            "sound": "/assets/brouhaha.mp3",
             "text": [
-              "Je suis encore au milieu de cette nouvelle formation... et pourtant j'ai déjà l'impression d'échouer. Le pire, c'est que ça n'a rien à voir avec la difficulté. Les cours sont simples, je comprends tout de suite, je fais mes exercices vite, presque mécaniquement. Sur le papier, je suis un bon étudiant. Mais à l'intérieur... il n'y a rien.",
-              "Aucun intérêt. Aucune envie. Je pensais qu'un nouveau départ changerait tout. Je croyais que c'était juste une question de fatigue, ou de mauvaise orientation la première fois. Je croyais que si je recommençais ailleurs, si je le prenais au sérieux, si je suivais les règles, j'arriverais enfin à quelque chose. Mais non. Je retombe exactement au même endroit.",
-              "Je glisse encore, mais cette fois sans excuse. Je n'ai même plus l'énergie d'être en colère contre moi-même. Juste... le vide. Et ce sentiment que, peu importe ce que je fais, je n'avance pas. Et maintenant... je n'ai que trois options.",
-              "Continuer jusqu'à la fin de l'année, serrer les dents, endurer cette formation mentalement épuisante juste pour ne pas perdre ma bourse, abandonner et aller travailler au McDonald's, gagner un peu d'argent, me dire que « c'est mieux que rien », même si ce n'est pas ce que je veux, ou tout arrêter... et ne rien faire. Rester chez moi, regarder les jours passer jusqu'à la prochaine rentrée scolaire où je pourrai me réorienter."
+              "Bonjour à tous. Bienvenue à l’Université d’Orléans, un lieu où l’imagination rencontre la logique et où chaque bug est une opportunité de créativité.",
+              "Cette année, comme chaque année, nous explorerons des domaines fascinants : de l’intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore quelque peu mystérieuses.",
+              "Mais au-delà des langages et des frameworks, ce que nous cherchons à vous transmettre, c’est l’esprit critique, la curiosité et la capacité à résoudre des problèmes… même ceux qui semblent impossibles au premier abord. Merci."
             ]
           },
           {
-            "background": "/assets/chambre.png",
-            "text": "Le protagoniste a le choix entre se forcer à continuer sa licence, abandonner les cours pour aller travailler ou décrocher jusqu'à la prochaine rentrée."
+            "background": "/assets/classe.png",
+            "character": "/assets/prof.png",
+            "sound": "/assets/brouhaha.mp3",
+            "speaker": "Professeur",
+            "text": "Je suis votre professeur de calcul formel, Antoine Robert. J’étais autrefois exactement comme vous : étudiant dans cette université, assis aux mêmes places que vous. En écoutant les cours et en travaillant dur, j’ai réussi à obtenir ce poste d’enseignant. Je suis aujourd’hui professeur-chercheur, ce qui implique…"
+          },
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "background": "/assets/classe.png",
+            "text": "Le protagoniste a le choix entre continuer à écouter le professeur ou discuter avec la personne assise à côté de lui."
           }
         ],
         "choices": [
-          { "label": "Continuer la formation", "next": "continuerp" },
-          { "label": "Aller travailler au McDonald's", "next": "macdop" },
-          { "label": "Attendre la rentrée prochaine", "next": "attendre" }
+          { "label": "Continuer à écouter", "next": "ecouter" },
+          { "label": "Discuter", "next": "discuter" }
+        ]
+      },
+
+      "ecouter": {
+        "background": "/assets/classe.png",
+        "speaker": "Moi",
+        "font": "normal",
+        "text": [
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "text": "Le protagoniste continue d’écouter son professeur."
+          },
+          {
+            "speaker": "Professeur",
+            "character": "/assets/prof.png",
+            "text": [
+              {
+                "text": [
+                  "- … enseigner dans des établissements tout en menant des recherches le reste du temps. Maintenant que vous connaissez mon parcours, je vais vous présenter le contenu de mon cours.",
+                  "Nous aurons un examen final à la fin du semestre ainsi qu’une dizaine de TD et de TP pour nous y préparer. Chaque séance sera divisée en deux parties -…"
+                ]
+              }
+            ]
+          },
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "text": "Le protagoniste a de nouveau le choix entre continuer à écouter le professeur ou discuter avec la personne assise à côté de lui."
+          }
+        ],
+        "choices": [
+          { "label": "Continuer à écouter", "next": "ecouter2" },
+          { "label": "Discuter", "next": "discuter2" }
+        ]
+      },
+
+      "discuter": {
+        "speaker": "Moi",
+        "background": "/assets/messagerie.png",
+        "font": "normal",
+        "text": [
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "background": "/assets/classe.png",
+            "text": "Le protagoniste entame une conversation avec la personne assise à côté de lui."
+          },
+          {
+            "background": "/assets/classe.png",
+            "font": "italic",
+            "text": "[Je devrais essayer de me faire des amis. Je me tourne vers mon voisin.]"
+          },
+          {
+            "background": "/assets/classe.png",
+            "text": "Salut !"
+          },
+          {
+            "background": "/assets/classe.png",
+            "character": "/assets/voisin.png",
+            "speaker": "Camarade",
+            "text": "Salut ! Tu viens d’Orléans ?"
+          },
+          {
+            "background": "/assets/classe.png",
+            "text": "Pas du tout, je viens d’Alsace ! Et toi ?"
+          },
+          {
+            "background": "/assets/classe.png",
+            "character": "/assets/voisin.png",
+            "speaker": "Camarade",
+            "text": "Moi je viens d’Orléans. Je m’appelle Martin, et toi ?"
+          },
+          {
+            "background": "/assets/classe.png",
+            "font": "italic",
+            "text": "[Je passe le reste du cours à discuter avec Martin, et la fin de la journée arrive sans que je m’en rende compte.]"
+          },
+          {
+            "background": "/assets/chambre.png",
+            "font": "digital",
+            "text": "Notification de message"
+          },
+          {
+            "background": "/assets/messagerie.png",
+            "speaker": "Martin",
+            "font": "digital",
+            "character": "/assets/voisin.png",
+            "text": "Salut ! Tu veux venir à la soirée d’intégration ?"
+          },
+          {
+            "background": "/assets/messagerie.png",
+            "color": "#ff6600",
+            "font": "italic",
+            "text": "Le protagoniste a le choix entre accompagner Martin à la soirée d’intégration de l’université ou rester chez lui."
+          }
+        ],
+        "choices": [
+          { "label": "Aller à la soirée", "next": "aller" },
+          { "label": "Refuser l’invitation", "next": "decliner" }
+        ]
+      },
+
+      "ecouter2": {
+        "background": "/assets/appli.png",
+        "speaker": "Moi",
+        "font": "normal",
+        "text": [
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "background": "/assets/classe.png",
+            "text": "Le protagoniste continue d’écouter son professeur."
+          },
+          {
+            "character": "/assets/prof.png",
+            "speaker": "Professeur",
+            "background": "/assets/classe.png",
+            "text": "Dans la première, nous aborderons le cours de manière théorique et l’illustrerons par des exemples. J’attends de vous que vous preniez des notes et que vous posiez des questions dès que quelque chose n’est pas clair. Dans la seconde, je -…"
+          },
+          {
+            "background": "/assets/classe.png",
+            "text": "[J’écoute M. Robert en silence. Le reste de la journée passe lentement, et j’attends avec impatience le moment où je pourrai rentrer chez moi.]"
+          },
+          {
+            "background": "/assets/chambre.png",
+            "font": "digital",
+            "text": "Notification du smartphone"
+          },
+          {
+            "background": "/assets/job.png",
+            "font": "digital",
+            "speaker": "Notification",
+            "text": "L’offre d’emploi « Job étudiant » publiée par Leclerc Orléans correspond à votre profil."
+          },
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "background": "/assets/appli.png",
+            "text": "Le protagoniste a le choix entre postuler à l’offre d’emploi ou l’ignorer."
+          }
+        ],
+        "choices": [
+          { "label": "Postuler", "next": "postuler" },
+          { "label": "Ignorer", "next": "ignorer" }
+        ]
+      },
+
+      "ignorer": {
+        "speaker": "Moi",
+        "font": "normal",
+        "background": "/assets/messagerie.png",
+        "text": [
+          {
+            "color": "#ff6600",
+            "font": "italic",
+            "background": "/assets/appli.png",
+            "text": "Le protagoniste ignore l’offre d’emploi."
+          },
+          {
+            "background": "/assets/amphi.png",
+            "character": "/assets/directeur.png",
+            "speaker": "Directeur",
+            "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’an prochain. Les relevés de notes sont disponibles sur le site de l’université."
+          },
+          {
+            "background": "/assets/interface.png",
+            "speaker": "Relevé de notes",
+            "text": "Vous n’avez pas reçu l’accord du conseil pédagogique pour passer en deuxième année."
+          },
+          {
+            "background": "/assets/amphi.png",
+            "text": "..."
+          },
+          {
+            "background": "/assets/amphi.png",
+            "text": "[J’attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui est en train d’arriver.]"
+          }
+        ]
+  },
+
+  "discuter2": {
+  "background": "/assets/messagerie.png",
+  "speaker": "Moi",
+ 
+  "font": "normal",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/classe.png",
+      "text": "Le protagoniste engage une conversation avec la personne assise à côté de lui."
+    },
+    {
+      "background": "/assets/classe.png",
+      "text": "[Je devrais essayer de me faire des amis. Je me tourne vers mon voisin.]"
+    },
+    {
+      "background": "/assets/classe.png",
+      "text": "Salut !"
+    },
+    {
+      "background": "/assets/classe.png",
+      "character": "/assets/voisin.png",
+      "speaker": "Camarade",
+      "text": "Salut ! Tu viens d’Orléans ?"
+    },
+    {
+      "background": "/assets/classe.png",
+      "text": "Pas du tout, je viens d’Alsace ! Et toi ?"
+    },
+    {
+      "background": "/assets/classe.png",
+      "character": "/assets/voisin.png",
+      "speaker": "Camarade",
+      "text": "Moi je viens d’Orléans. Je m’appelle Martin, et toi ?"
+    },
+    {
+      "background": "/assets/classe.png",
+      "text": "[Je passe le reste du cours à discuter avec Martin, et la fin de la journée arrive sans que je m’en rende compte.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/voisin.png",
+      "font": "digital",
+      "speaker": "Martin",
+      "text": "Salut ! Tu veux venir à la soirée d’intégration ?"
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste a le choix entre accompagner Martin à la soirée d’intégration de l’université ou rester chez lui."
+    }
+  ],
+  "choices": [
+    { "label": "Aller à la soirée", "next": "aller2" },
+    { "label": "Refuser l’invitation", "next": "decliner2" }
+  ]
+},
+
+"decliner2": {
+  "speaker": "Moi",
+
+  "font": "normal",
+  "background": "/assets/appli.png",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste refuse l’invitation de Martin."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/job.png",
+      "font": "digital",
+      "text": "L’offre d’emploi « Job étudiant » publiée par Leclerc Orléans correspond à votre profil."
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/appli.png",
+      "text": "Le protagoniste a le choix entre postuler à l’offre d’emploi ou l’ignorer."
+    }
+  ],
+  "choices": [
+    { "label": "Postuler", "next": "postuler3" },
+    { "label": "Ignorer", "next": "ignorer3" }
+  ]
+},
+
+"ignorer3": {
+  "speaker": "Moi",
+  "font": "normal",
+  "background": "/assets/messagerie.png",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/appli.png",
+      "text": "Le protagoniste ignore l’offre d’emploi."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/directeur.png",
+      "speaker": "Directeur",
+      "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’an prochain. Les notes sont disponibles sur le site de l’université."
+    },
+    {
+      "background": "/assets/interface.png",
+      "speaker": "Relevé de notes",
+      "text": "Vous n’avez pas reçu l’autorisation du conseil pédagogique pour entrer en deuxième année."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "text": "..."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "font": "italic",
+      "text": "[J’attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour comprendre pleinement ce qui est en train d’arriver.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": "[Je repense sans cesse à chaque moment de l’année, en essayant de comprendre ce que j’aurais pu faire différemment. J’avais d’excellentes notes au lycée ; j’étais même parmi les meilleurs de ma classe. Qu’est-ce qui a bien pu se passer ?]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de messagerie"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Tu as reçu tes notes ? Tu passes en deuxième année ?"
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
+    }
+  ],
+  "choices": [
+    { "label": "Dire la vérité", "next": "verite0" },
+    { "label": "Mentir", "next": "mentir0" }
+  ]
+},
+
+"aller2": {
+  "speaker": "Moi",
+
+  "background": "/assets/messagerie.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste se rend à la soirée."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/directeur.png",
+      "speaker": "Directeur",
+      "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’année prochaine. Les résultats sont disponibles sur le site de l’université."
+    },
+    {
+      "background": "/assets/interface.png",
+      "speaker": "Relevé de notes",
+      "text": "Vous n’avez pas obtenu l’accord du conseil pédagogique pour passer en deuxième année."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "text": "..."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "font": "italic",
+      "text": "[J’attends la fin de la journée avec un nœud à l’estomac. Il me faut plusieurs heures pour réaliser pleinement ce qui est en train d’arriver.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[… Je n’arrive pas à y croire. Refusé. Comment est-ce possible ? Au lycée, j’étais bon. Vraiment bon. J’apprenais vite, j’avais de bonnes notes sans trop forcer… On me disait même que j’étais destiné à de grandes choses. Je ne suis pas stupide. Alors… qu’est-ce qui a mal tourné ? ...Non.]",
+        "[Je sais exactement ce qui a mal tourné. Sortir. Faire la fête. Arriver en retard. Des cours que j’écoutais à moitié… ou pas du tout. Des devoirs faits à la dernière minute, quand je les faisais.]",
+        "[Je pensais que ça passerait quand même. Que j’étais assez doué pour m’en sortir sans travailler. Comme au lycée. Je me suis saboté tout seul.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Tu as reçu tes résultats ? Tu passes en deuxième année ?"
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste a le choix entre dire la vérité à sa mère au sujet de son échec ou lui mentir."
+    }
+  ],
+  "choices": [
+    { "label": "Dire la vérité", "next": "verite6" },
+    { "label": "Mentir", "next": "mentir6" }
+  ]
+},
+"mentir6": {
+  "speaker": "Moi",
+
+  "font": "normal",
+  "background": "/assets/chambre.png",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste choisit de cacher la vérité à ses parents."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Comment pourrais-je leur dire ça ? Ils seraient furieux. Déçus. Je ne peux pas rentrer et leur annoncer ça. Si je trouve rapidement une autre formation… une réorientation, un cursus parallèle, n’importe quoi…]",
+        "[Peut-être qu’ils ne remarqueront rien. Je dirai simplement que c’est un choix, un changement de voie. Je dois arranger les choses… absolument.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[J’ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup depuis plusieurs semaines, il va être très difficile de trouver une formation qui m’accepte.]",
+        "[Je suis obligé de me tourner vers des études qui ne font jamais le plein et qui acceptent facilement, peu importe les notes, comme les lettres ou l’histoire.]"
+      ]
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/chambre.png",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "ment"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "ment"
+    }
+  ]
+},
+
+"verite6": {
+  "speaker": "Moi",
+  "background": "/assets/chambre.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste se confie à ses parents."
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "italic",
+      "text": "[Je dois affronter la situation.]"
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Ça va ? Tu as l’air… inquiet."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Oui… j’ai reçu la réponse concernant mon passage en deuxième année."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/papa.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "text": "Enfin. Alors ? C’est bon ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "…Non. J’ai été refusé."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Refusé ? Comment ça, refusé ? Ils t’avaient dit que c’était possible si tu faisais des efforts au second semestre !"
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/papa.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "text": "Attends. Ils t’ont refusé pour quoi exactement ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Ils ont dit que mes résultats n’étaient pas suffisants. Que mes notes sont trop basses et que je ne suis pas assez sérieux."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "font": "digital",
+      "text": "Eh bien voilà… C’est exactement ce qu’on te répète depuis des mois ! Sortir tout le temps et dormir en cours, ça devait forcément finir par te retomber dessus !"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je sais… Je suis désolé. J’ai vraiment tout gâché. Je pensais que ça passerait, que j’aurais le temps de me rattraper."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/papa.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "text": "Le problème, c’est que tu n’as pas pris la situation au sérieux quand il le fallait. Nous sommes déçus, mais surtout inquiets pour ton avenir."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "font": "digital",
+      "text": "En plus, tu vas avoir beaucoup de mal à te réorienter. On est déjà fin juin et Parcoursup est fermé depuis un moment."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "font": "digital",
+      "text": "Tu vas devoir chercher une formation près de la maison, pour qu’on puisse te surveiller."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "… D’accord. Je ne veux plus refaire les mêmes erreurs."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "On regardera les options ensemble. Mais cette fois, tu t’y tiens. On ne veut plus te voir saboter ton avenir."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je comprends. Et je promets de m’y mettre sérieusement. Merci… de me donner une seconde chance."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[J’ai passé la nuit à faire des recherches. Avec Parcoursup fermé depuis plusieurs semaines, il va être très difficile de trouver une formation qui m’accepte.]",
+        "[Je suis contraint de me tourner vers des filières qui ne font jamais le plein et acceptent facilement les étudiants, quelles que soient leurs notes, comme les lettres ou l’histoire.]"
+      ]
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/chambre.png",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "avoue"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "avoue"
+    }
+  ]
+},
+"postuler": {
+  "speaker": "Moi",
+  "background": "/assets/messagerie.png",
+  "font": "normal",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/appli.png",
+      "text": "Le protagoniste postule à l’offre d’emploi."
+    },
+    {
+      "background": "/assets/job.png",
+      "font": "digital",
+      "speaker": "Notification",
+      "text": "Votre candidature a été acceptée."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/directeur.png",
+      "speaker": "Directeur",
+      "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’an prochain. Les relevés de notes sont disponibles sur le site de l’université."
+    },
+    {
+      "background": "/assets/appli.png",
+      "speaker": "Transcript of grades",
+      "text": "Vous n’avez pas reçu l’avis favorable du conseil pédagogique pour accéder à la deuxième année."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "text": "..."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "font": "italic",
+      "text": "[J’attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui est en train de se passer.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Je m’y attendais un peu… mais ça fait quand même mal. J’aurais voulu faire mieux. Je voulais prouver que je pouvais gérer les études et le travail en même temps, mais je n’y suis pas arrivé. Toutes ces nuits à rentrer tard du travail… à m’endormir sur mes devoirs…]",
+        "[Repousser les révisions parce que j’étais trop épuisé pour réfléchir. C’était trop pour moi. Je pensais pouvoir gérer, que ça irait, que c’était normal d’être fatigué, mais en cours mon esprit était ailleurs et je n’arrivais pas à suivre. J’ai l’impression d’avoir fait tout ce que je pouvais, et pourtant ce n’était pas suffisant.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?",
+      "character": "/assets/maman.png"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre dire la vérité à sa mère ou lui mentir."
+    }
+  ],
+  "choices": [
+    { "label": "Dire la vérité", "next": "verite" },
+    { "label": "Mentir", "next": "mentir" }
+  ]
+},
+
+"mentir": {
+  "speaker": "Moi",
+  "font": "normal",
+  "background": "/assets/chambre.png",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste cache son échec à ses parents."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Je n’arrive pas à croire que je doive leur dire ça. Ils seraient furieux. Déçus. Je ne peux pas rentrer et leur annoncer ça. Si je trouve rapidement une autre formation… une réorientation, un cursus parallèle, n’importe quoi…]",
+        "[Peut-être qu’ils ne remarqueront rien. Je dirai simplement que c’est un choix, un changement de voie. Je dois arranger les choses… absolument.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[J’ai passé la nuit à faire des recherches. Parcoursup ayant fermé il y a plusieurs semaines, il va être très difficile de trouver une formation qui m’accepte.]",
+        "[Pourquoi n’ai-je pas réalisé plus tôt que je fonçais droit dans un mur cette année ?!... Je suis contraint de me tourner vers des filières qui ne font jamais le plein et qui acceptent facilement les étudiants, quelle que soit leur moyenne, comme les lettres ou l’histoire.]",
+        "[Je suis loin de mon idéal, mais qui sait ? Peut-être que je suis fait pour ce genre d’études. C’est totalement différent de l’informatique, après tout !]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "ment"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "ment"
+    }
+  ]
+},
+
+"aller": {
+  "speaker": "Moi",
+  "font": "normal",
+  "background": "/assets/messagerie.png",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste va à la soirée"
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/directeur.png",
+      "speaker": "Director",
+      "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’an prochain. Les notes sont disponibles sur le site de l’université."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "speaker": "Transcript of grades",
+      "text": "Vous n’avez pas reçu l’avis favorable du conseil pédagogique pour accéder à la deuxième année."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "sound": "/assets/brouhaha.mp3",
+      "text": "..."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "font": "italic",
+      "text": "[J’attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui est en train de se passer.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[…Je n’arrive pas à y croire. Refusé. Comment est-ce possible ? Au lycée, j’étais bon. Vraiment bon. J’apprenais vite, j’avais de bonnes notes sans trop d’efforts… On me disait même que j’étais promis à de grandes choses. Je ne suis pas stupide.]",
+        "[Alors… qu’est-ce qui a mal tourné ? ...Non. Je sais exactement ce qui a mal tourné. Sortir. Faire la fête. Être en retard. Des cours que j’écoutais à moitié… ou pas du tout. Des devoirs bâclés à la dernière minute, quand je les faisais.]",
+        "[Je pensais que je m’en sortirais quand même. Que j’étais assez bon pour réussir sans travailler. Comme au lycée. Je me suis saboté.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "digital",
+      "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?",
+      "character": "/assets/maman.png",
+      "speaker": "Maman"
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste a le choix entre dire la vérité à sa mère ou lui mentir."
+    }
+  ],
+  "choices": [
+    { "label": "Dire la vérité", "next": "verite2" },
+    { "label": "Mentir", "next": "mentir2" }
+  ]
+},
+
+"mentir2": {
+  "background": "/assets/chambre.png",
+  "speaker": "Moi",
+  "font": "normal",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste ment à ses parents à propos de son échec."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Comment pourrais-je leur dire ? Ils seraient furieux. Déçus. Je ne peux pas rentrer chez moi et leur annoncer ça. Si je peux trouver rapidement une autre formation… un changement de voie, un cursus parallèle, n’importe quoi…]",
+        "[Peut-être qu’ils ne remarqueront rien. Je dirai simplement que c’est un choix, un changement de direction. Je dois arranger les choses… absolument.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": "[J’ai passé la nuit à faire des recherches. Parcoursup ayant fermé il y a plusieurs semaines, il sera très difficile de trouver une formation qui m’accepte. Je suis contraint de me tourner vers des filières qui ne font jamais le plein et qui acceptent facilement les étudiants, quelle que soit leur moyenne, comme les lettres ou l’histoire.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "ment"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "ment"
+    }
+  ]
+},
+"verite2": {
+  "speaker": "Moi",
+  "background": "/assets/chambre.png",
+  "font": "normal",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste se confie à ses parents."
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "italic",
+      "text": "[Je dois affronter la réalité.]"
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Ça va ? Tu as l’air… inquiet."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Oui… j’ai reçu la réponse pour mon passage en deuxième année."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Enfin. Alors ? C’est bon ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "…Non. J’ai été refusé."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "character": "/assets/maman.png",
+      "text": "Refusé ? Comment ça, refusé ? Ils t’avaient dit que c’était faisable si tu faisais des efforts au second semestre !"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "character": "/assets/papa.png",
+      "text": "Attends. Ils t’ont refusé pour quelle raison exactement ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Ils ont dit que mes résultats n’étaient pas suffisants. Que mes notes étaient trop basses et que je ne me montrais pas assez sérieux."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "character": "/assets/maman.png",
+      "text": "Eh bien voilà… C’est exactement ce qu’on te répète depuis des mois ! Sortir tout le temps et dormir en cours, ça devait forcément te retomber dessus !"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je sais… Je suis désolé. J’ai vraiment tout gâché. Je pensais que ça passerait, que j’aurais le temps de me rattraper."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "character": "/assets/papa.png",
+      "text": "Le problème, c’est que tu n’as pas pris la situation au sérieux quand il le fallait. Nous sommes déçus, mais surtout inquiets pour ton avenir."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "character": "/assets/maman.png",
+      "text": "En plus, tu vas avoir du mal à te réorienter. On est déjà fin juin, et Parcoursup est fermé depuis un moment."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "character": "/assets/papa.png",
+      "text": "Tu vas rentrer et chercher une formation près de la maison, comme ça on pourra te surveiller."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "… D’accord. Je ne veux pas refaire les mêmes erreurs."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "character": "/assets/maman.png",
+      "text": "On regardera les options ensemble. Mais cette fois, tu t’y tiens. On ne veut plus te voir saboter ton avenir comme ça."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je comprends. Et je promets de faire de mon mieux. Merci… de me donner une seconde chance."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[J’ai passé la nuit à faire des recherches. Parcoursup ayant fermé il y a plusieurs semaines, il sera très difficile de trouver une formation qui m’accepte.]",
+        "[Je suis contraint de me tourner vers des filières qui ne font jamais le plein et qui acceptent facilement les étudiants, quelle que soit leur moyenne, comme les lettres ou l’histoire.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "avoue"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "avoue"
+    }
+  ]
+},
+
+"decliner": {
+  "speaker": "Moi",
+  "font": "normal",
+  "background": "/assets/appli.png",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste décline l’invitation de Martin."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification du smartphone"
+    },
+    {
+      "background": "/assets/job.png",
+      "speaker": "Notification",
+      "font": "digital",
+      "text": "L’offre d’emploi « Job étudiant » publiée par Leclerc Orléans correspond à votre profil."
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/appli.png",
+      "text": "Le protagoniste a le choix entre postuler à l’offre ou l’ignorer."
+    }
+  ],
+  "choices": [
+    { "label": "Postuler", "next": "postuler2" },
+    { "label": "Ignorer", "next": "ignorer2" }
+  ]
+},
+
+"ignorer2": {
+  "speaker": "Moi",
+  "font": "normal",
+  "background": "/assets/messagerie.png",
+  "text": [
+    {
+      "background": "/assets/appli.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste ignore l’offre d’emploi."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/directeur.png",
+      "speaker": "Directeur",
+      "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’an prochain. Les notes sont disponibles sur le site de l’université."
+    },
+    {
+      "background": "/assets/interface.png",
+      "speaker": "Transcript of grades",
+      "text": "Vous n’avez pas reçu l’avis favorable du conseil pédagogique pour accéder à la deuxième année."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "sound": "/assets/brouhaha.mp3",
+      "text": "..."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "font": "italic",
+      "text": "[J’attends la fin de la journée avec la boule au ventre. Il me faut plusieurs heures pour réaliser pleinement ce qui est en train de se passer.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": "[Je repasse chaque moment de l’année en boucle, essayant de comprendre ce que j’aurais pu faire de travers. J’avais de très bonnes notes au lycée ; j’étais même parmi les meilleurs de ma classe. Qu’est-ce qui a bien pu se passer ?]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
+    }
+  ],
+  "choices": [
+    { "label": "Dire la vérité", "next": "verite4" },
+    { "label": "Mentir", "next": "mentir4" }
+  ]
+}, 
+
+"mentir4": {
+  "background": "/assets/chambre.png",
+  "speaker": "Moi",
+  "font": "normal",
+  "text": [
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste cache son échec à ses parents."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Comment pourrais-je expliquer ça à mes parents ? « J’ai échoué parce que je n’y croyais pas vraiment » ? Ça sonne tellement ridicule… Je dois me poser les bonnes questions.]",
+        "[Qu’est-ce que je veux faire ? Qu’est-ce qui me motive réellement ? Continuer dans une voie qui ne me correspond pas ne mènera qu’à d’autres échecs. Bon… je dois trouver quelque chose qui me convient. Et cette fois… je m’y investirai vraiment.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[J’ai passé la nuit à faire des recherches. Avec la fermeture de Parcoursup depuis plusieurs semaines, il va être très difficile de trouver une formation qui m’accepte.]",
+        "[Pourquoi n’ai-je pas réalisé plus tôt cette année que je fonçais droit dans le mur ?!... Je suis contraint de me tourner vers des études qui font rarement le plein et qui acceptent les étudiants quelle que soit leur moyenne, comme les lettres ou l’histoire. Je suis loin de mon idéal, mais on ne sait jamais ! Peut-être qu’en réalité, je suis fait pour ce type d’études. C’est totalement différent de l’informatique, après tout !]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "ment"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "ment"
+    }
+  ]
+},
+
+"verite4": {
+  "background": "/assets/messagerie.png",
+  "speaker": "Moi",
+  "font": "normal",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste se confie à ses parents."
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "italic",
+      "text": "[Je dois l’assumer. Je ne pourrai jamais repartir sur de bonnes bases si je cache quelque chose d’aussi important à mes propres parents.]"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Ça va ? Tu as l’air… inquiet."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Oui… j’ai reçu la réponse pour mon passage en deuxième année."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/papa.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "text": "Enfin. Alors ? C’est bon ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "…Non. J’ai été refusé."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Quoi ? Tu n’as pas été accepté ? Mais… pourquoi ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je… je ne me suis pas assez investi dans mes études. J’avais du mal à m’intéresser à ce que je faisais et… je n’ai pas donné le meilleur de moi-même."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "Oh… mon chéri. On savait que ça pouvait être difficile, mais… l’entendre comme ça, ça fait mal."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Nous sommes déçus, oui ! Mais… nous croyions vraiment que tu pouvais réussir. Ce n’est pas seulement une déception pour toi… nous sommes aussi tristes de te voir souffrir et perdre confiance."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je suis désolé."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Écoute… ce n’est pas la fin du monde. Tu as fait une erreur, c’est tout. Mais il faut que tu comprennes ce qui n’a pas fonctionné pour pouvoir améliorer la situation. On regardera ensemble les options qui s’offrent à toi."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je veux vraiment m’investir cette fois. Je ne veux plus refaire les mêmes erreurs."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Ils… m’ont soutenu. Ils ont vraiment compris. Je pensais qu’ils seraient déçus, qu’ils me reprocheraient mes choix… Mais ils m’ont écouté. Ils m’ont cru. Et ils n’ont pas minimisé ce que j’ai traversé.]",
+        "[J’ai bien fait de dire la vérité. La cacher n’aurait rien changé de toute façon… et maintenant, au moins, je ne suis plus seul. J’ai l’impression d’avoir enfin arrêté de fuir.]"
+      ]
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Je n’ai trouvé aucune autre formation où je sois sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d’histoire ou de lettres."
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "avoue"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "avoue"
+    }
+  ]
+},
+
+"postuler2": {
+  "speaker": "Moi",
+  "background": "/assets/messagerie.png",
+  "font": "normal",
+  "text": [
+    {
+      "background": "/assets/appli.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste postule à l’offre d’emploi."
+    },
+    {
+      "background": "/assets/appli.png",
+      "font": "digital",
+      "speaker": "Notification",
+      "text": "Votre candidature a été acceptée."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "speaker": "Directeur",
+      "text": "Merci à tous pour cette année. J’ai eu le plaisir de rencontrer des étudiants très talentueux, débordant d’idées. Je compte sur vous pour continuer sur cette lancée l’an prochain. Les notes sont disponibles sur le site de l’université."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/voisin.png",
+      "speaker": "Martin",
+      "text": "Je suis au-dessus de la moyenne dans toutes les matières, héhé !"
+    },
+    {
+      "background": "/assets/amphi.png",
+      "text": "Je suis clairement meilleur que toi, haha !"
+    },
+    {
+      "background": "/assets/interface.png",
+      "sound": "/assets/brouhaha.mp3",
+      "speaker": "Transcript of grades",
+      "text": "Vous n’avez pas reçu l’avis favorable du conseil pédagogique pour accéder à la deuxième année."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "character": "/assets/voisin.png",
+      "speaker": "Martin",
+      "text": "Haha ! Alors comme ça, tu serais meilleur que moi ?"
+    },
+    {
+      "background": "/assets/amphi.png",
+      "text": "..."
+    },
+    {
+      "background": "/assets/amphi.png",
+      "font": "italic",
+      "text": "[J’attends la fin de la journée avec la boule au ventre, en subissant les moqueries de mes amis. Il me faut plusieurs heures pour réaliser pleinement ce qui est en train de se passer.]"
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Refusé… Je pensais que ce serait un choc… mais en réalité, c’est plutôt un étrange mélange de sentiments. De la surprise… et en même temps, pas vraiment. Au lycée, j’étais bon. Vraiment bon. Tout le monde me disait que j’avais du potentiel, que j’étais « fait pour les études ».]",
+        "[Cette année, comme chaque année, nous allons explorer des domaines fascinants : de l’intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore mystérieuses.]",
+        "[Et pourtant, j’ai complètement décroché. La vérité, c’est que… ça ne m’intéressait pas. J’ai essayé de me convaincre du contraire, j’ai suivi la voie que tout le monde attendait de moi, mais chaque cours me semblait… vide. Loin de ce que je voulais vraiment faire. Et forcément, comme je n’étais pas motivé…]",
+        "[Cette année, comme chaque année, nous allons explorer des domaines fascinants : de l’intelligence artificielle aux systèmes distribués, du développement web aux architectures quantiques encore mystérieuses.]",
+        "[Je n’ai pas donné le meilleur de moi-même. J’ai fait le strict minimum, parfois rien du tout. Comment aurais-je pu réussir comme ça ? Ce n’était pas fait pour moi. Et je ne m’en rends compte que maintenant, trop tard.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification de message"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Coucou mon chéri ! Tu as eu tes notes ? Tu passes en deuxième année ?"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre dire la vérité à sa mère sur son échec ou lui mentir."
+    }
+  ],
+  "choices": [
+    { "label": "Dire la vérité", "next": "verite3" },
+    { "label": "Mentir", "next": "mentir3" }
+  ]
+},
+
+"mentir3": {
+  "speaker": "Moi",
+  "background": "/assets/chambre.png",
+  "font": "normal",
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/messagerie.png",
+      "text": "Le protagoniste choisit de cacher la vérité à ses parents."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Comment pourrais-je expliquer ça à mes parents ? « J’ai échoué parce que je n’arrivais plus à gérer le travail et les études ». Ça ressemble à une excuse.]",
+        "[J’ai travaillé dur pour m’en sortir, pour être indépendant, pour ne pas avoir à leur demander de l’aide tout le temps… Si je peux trouver rapidement une autre formation… une réorientation, un cursus parallèle, n’importe quoi…]",
+        "[Peut-être qu’ils ne remarqueront rien. Je dirai simplement que c’est un choix, un changement de voie. Je dois arranger les choses… absolument.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[J’ai passé la nuit à chercher des informations. Avec la fermeture de Parcoursup depuis plusieurs semaines, il va être très difficile de trouver une formation qui m’accepte. Pourquoi n’ai-je pas réalisé plus tôt que je fonçais droit dans le mur cette année ?!... ]",
+        "[Je suis contraint de me tourner vers des études qui font rarement le plein et qui acceptent les étudiants quelle que soit leur moyenne, comme les lettres ou l’histoire. Je suis loin de mon idéal, mais qui sait ? Peut-être que je suis fait pour ce type d’études. C’est totalement différent de l’informatique, après tout !]"
+      ]
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "background": "/assets/chambre.png",
+      "text": "Le protagoniste a le choix entre se réorienter vers une licence de lettres ou d’histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S’inscrire en licence de lettres",
+      "next": "ment"
+    },
+    {
+      "label": "S’inscrire en licence d’histoire",
+      "next": "ment"
+    }
+  ]
+},
+"verite3": {
+  "speaker": "Moi",
+  "font": "normal",
+  "background": "/assets/messagerie.png",
+
+  "text": [
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste se confie à ses parents."
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "italic",
+      "text": "[Mais je ne peux plus continuer à leur cacher la situation. Faire semblant que je m'en sors, que je tiens le coup... c'est épuisant. Et c'est encore plus difficile maintenant que je sais que j'ai échoué.]"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "Salut mon cœur ! Est-ce que ça va ? Tu as l'air... inquiet."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Oui... j'ai reçu la réponse concernant mon passage en deuxième année."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Enfin. Alors ? C'est bon ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "…Non. J'ai été refusé."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "Oh… mon cœur…"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je... je suis désolé. J'ai fait tout ce que je pouvais, mais entre les cours et le travail... je n'y arrivais plus. Je rentrais trop tard, j'étais épuisé, je n'arrivais même plus à étudier correctement. J'ai essayé de continuer, vraiment... mais je n'y arrivais pas."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Tu n'as pas à t'excuser. Tu t'es battu pour t'en sortir, tu as travaillé dur pour gagner ton argent et suivre tes études. Ce n'est pas de ta faute. C'était juste... trop pour toi."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "On a vu à quel point tu étais épuisé ces derniers mois. Tu ne pouvais pas tout porter tout seul. On est fiers de toi, tu m'entends ? Pas déçus. Fiers de ton courage."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je pensais que... vous seriez en colère contre moi. Que vous seriez déçus de moi."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Déçus ? Allons... Tu as travaillé dur, tu as pris tes responsabilités, tu as fait de ton mieux dans une situation difficile. Ce n'est pas un échec honteux. Même les adultes n'arrivent pas toujours à tout gérer."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "On va réfléchir ensemble à ce que tu veux faire. Recommencer, changer de voie ou alléger ta charge… Tu n'es pas seul."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Ils... m'ont soutenu. Ils ont vraiment compris. Je pensais qu'ils seraient déçus, qu'ils me reprocheraient mes choix... Mais ils m'ont écouté. Ils m'ont cru. Et ils n'ont pas minimisé ce que j'avais traversé.]",
+        "[J'ai bien fait de leur en parler. J'avais tout gardé pour moi pendant si longtemps, portant ce poids seul... Je me sens plus léger maintenant. Je ne suis pas seul. Ils sont avec moi, et je vais recommencer sans refaire les mêmes erreurs.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification du smartphone"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec des notes catastrophiques. Choisis entre une licence d'histoire ou une licence de lettres."
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix de se réorienter vers une licence de lettres ou d'histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S'inscrire en licence de lettres",
+      "next": "avoue"
+    },
+    {
+      "label": "S'inscrire en licence d'histoire",
+      "next": "avoue"
+    }
+  ]
+},
+
+"verite": {
+  "speaker": "Moi",
+  "background": "/assets/messagerie.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste se confie à ses parents."
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "font": "italic",
+      "text": "[Mais je ne peux plus continuer à leur cacher la situation. Faire semblant que je m'en sors, que je tiens le coup... c'est épuisant. Et c'est encore plus difficile maintenant que je sais que j'ai échoué.]"
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Hey, mon cœur ! Comment tu vas ? Tu as l'air... inquiet."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Oui... j'ai reçu la réponse concernant mon passage en deuxième année."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "Enfin. Alors ? Tu as été accepté ?"
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "...Non. J'ai été refusé."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Oh... mon chéri..."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je... je suis désolé. J'ai fait tout ce que je pouvais, mais entre les cours et le travail... je n'y arrivais plus. Je rentrais trop tard, j'étais épuisé, je n'arrivais même plus à étudier correctement. J'ai essayé de continuer, vraiment... mais je n'y arrivais pas."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "On a vu à quel point tu étais épuisé ces derniers mois. Tu ne pouvais pas tout porter tout seul. On est fiers de toi, tu m'entends ? Pas déçus. Fiers de ton courage."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "Je pensais que... vous seriez en colère contre moi. Que vous seriez déçus de moi"
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/papa.png",
+      "font": "digital",
+      "speaker": "Papa",
+      "text": "Déçus ? Allons... Tu as travaillé dur, tu as pris tes responsabilités, tu as fait de ton mieux dans une situation difficile. Ce n'est pas un échec honteux. Même les adultes n'arrivent pas toujours à tout gérer."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "On va réfléchir ensemble à ce que tu veux faire. Recommencer, changer de voie ou alléger ta charge... Tu n'es pas seul."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Ils... m'ont soutenu. Ils ont vraiment compris. Je pensais qu'ils seraient déçus, qu'ils me reprocheraient mes choix... Mais ils m'ont écouté. Ils m'ont cru.]",
+        "[Et ils n'ont pas minimisé ce que j'ai traversé. J'ai bien fait de leur dire. J'avais tout gardé pour moi pendant si longtemps, portant ce fardeau seul... Je me sens plus léger.]",
+        "[Je ne suis pas seul. Ils sont avec moi, et je vais recommencer sans refaire les mêmes erreurs.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "digital",
+      "text": "Notification"
+    },
+    {
+      "background": "/assets/messagerie.png",
+      "speaker": "Maman",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "text": "Je n'ai trouvé que ces deux formations où je suis sûre que tu seras accepté, même en juin et avec tes notes catastrophiques. Choisis entre une licence d'histoire ou de lettres."
+    },
+    {
+      "color": "#ff6600",
+      "background": "/assets/messagerie.png",
+      "font": "italic",
+      "text": "Le protagoniste a le choix de se réorienter vers une licence de lettres ou d'histoire à Orléans."
+    }
+  ],
+  "choices": [
+    {
+      "label": "S'inscrire en licence de lettres",
+      "next": "avoue"
+    },
+    {
+      "label": "S'inscrire en licence d'histoire",
+      "next": "avoue"
+    }
+  ]
+},
+
+"avoue": {
+  "speaker": "Moi",
+  "background": "/assets/chambre.png",
+  "font": "normal",
+  "text": [
+    {
+      "text": "J'ai choisi de me réorienter. C'est un risque, mais je ne peux plus rester ici."
+    }
+  ]
+}
+    }},
+
+
+
+
+
+"chapter2": {
+  "title": "Chapitre 2 : Deuxième année",
+  "description": "Un nouveau chemin s’ouvre à toi. À toi de le prendre",
+  "scenes": {
+    "start": {
+      "speaker": "Moi",
+      "background": "/assets/chambre.png",
+      "font": "normal",
+ 
+
+      "text": [
+        {
+          "background": "/assets/messagerie.png",
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste se réoriente."
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": [
+            "[Je suis encore en plein dans cette nouvelle formation... et pourtant j’ai déjà l’impression d’échouer. Le pire, c’est que ça n’a rien à voir avec la difficulté. Les cours sont simples, je comprends tout tout de suite, je fais mes exercices rapidement, presque mécaniquement. Sur le papier, je suis un bon étudiant. Mais à l’intérieur... il n’y a rien.]",
+            "[Aucun intérêt. Aucune envie. Je pensais qu’un nouveau départ changerait tout. Je pensais que c’était juste une question de fatigue, ou une mauvaise orientation la première fois. Je croyais que si je recommençais ailleurs, si je prenais ça au sérieux, si je suivais les règles, j’arriverais enfin à quelque chose. Mais non. Je retombe exactement au même endroit.]",
+            "[Je rechute, mais cette fois sans excuse. Je n’ai même plus l’énergie d’être en colère contre moi-même. Juste... le vide. Et cette sensation que quoi que je fasse, je n’avance pas. Et maintenant... il ne me reste plus que trois options.]",
+            "[Continuer jusqu’à la fin de l’année, serrer les dents, subir cette formation mentalement épuisante juste pour ne pas perdre ma bourse, abandonner et aller travailler chez McDonald’s, gagner un peu d’argent, me dire que « c’est mieux que rien », même si ce n’est pas ce que je veux, ou tout abandonner complètement... et ne rien faire. Rester à la maison, regarder les jours passer jusqu’à la prochaine rentrée pour pouvoir me réorienter.]"
+          ]
+        },
+        {
+          "background": "/assets/chambre.png",
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste a le choix entre se forcer à continuer sa licence, abandonner les cours pour aller travailler ou se désorienter jusqu’à la prochaine rentrée."
+        }
+      ],
+      "choices": [
+        { "label": "Continuer la formation", "next": "continuerp" },
+        { "label": "Aller travailler chez McDonald's", "next": "macdop" },
+        { "label": "Attendre la prochaine rentrée", "next": "attendre" }
+      ]
+    },
+
+    "attendre": {
+      "speaker": "Moi",
+      "background": "/assets/parcoursup.png",
+   
+      "font": "normal",
+      "text": [
+        {
+          "background": "/assets/chambre.png",
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste abandonne les études pour le reste de l’année."
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": [
+            "[J’ai peur, bien sûr. Peur du vide, peur de la question « tu fais quoi en ce moment ? », peur du regard des autres. Mais je suis plus fatigué qu’effrayé. Fatigué de me forcer, fatigué d’échouer, fatigué de me battre dans une direction qui n’est pas la mienne.]",
+            "[Je vais réfléchir à ce que je veux vraiment, arrêter de me précipiter dans des choix par panique. Quand Parcoursup rouvrira, je chercherai quelque chose qui me parle vraiment, qui me correspond. Cette fois, je ne me tromperai pas. Il faut que j’en parle à mes parents.]"
+          ]
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "J’ai décidé d’arrêter les études pour le reste de l’année. Je ne vais rien faire jusqu’à la réouverture de Parcoursup. J’ai... besoin de faire une pause et de réfléchir."
+        },
+        {
+          "background": "/assets/salon.png",
+          "character": "/assets/maman.png",
+          "speaker": "Maman",
+          "text": "Arrêter... complètement ? Tu veux dire... rester à la maison sans rien faire ?"
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "Oui. Je me force depuis trop longtemps à faire quelque chose qui ne me correspond pas. Je veux prendre le temps de comprendre ce que je veux vraiment avant de recommencer."
+        },
+        {
+          "background": "/assets/salon.png",
+          "character": "/assets/papa.png",
+          "speaker": "Papa",
+          "text": "Je comprends... mais tu sais que ce n’est pas facile. Ne rien faire peut être dur. Tu risques de t’ennuyer, de perdre ton rythme."
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "Je sais... mais je préfère ça plutôt que de continuer à m’épuiser pour quelque chose qui ne me motive pas. J’ai besoin de ce temps pour réfléchir et préparer ma vraie réorientation."
+        },
+        {
+          "background": "/assets/salon.png",
+          "character": "/assets/maman.png",
+          "speaker": "Maman",
+          "text": "On s’inquiète pour toi... mais on voit aussi que tu es sérieux dans ce que tu dis. On sera là pour t’aider à organiser ce temps, pour t’éviter de sombrer."
+        },
+        {
+          "background": "/assets/salon.png",
+          "speaker": "Papa",
+          "character": "/assets/papa.png",
+          "text": "Exactement. Tu prends du recul pour pouvoir repartir sur de meilleures bases. On te soutient. Mais promets-nous de continuer à réfléchir activement et d’utiliser ce temps pour toi."
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "Je vous le promets."
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": "[Je devrais me renseigner sur les réorientations.]"
+        },
+        {
+          "background": "/assets/wapp.png"
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": [
+            "[Je pense avoir trouvé plusieurs formations qui me correspondent parfaitement. Il y a le BUT MMI, qui me permettrait de mettre en avant ma créativité tout en utilisant mes compétences en informatique.]",
+            "[Il y a aussi le BTS MCO (management commercial opérationnel), qui m’aiderait à développer mes capacités de leadership. Et enfin, un BTS tourisme qui pourrait faire le lien avec la formation que je fais cette année. J’ai fait ces différents choix sur Parcoursup.]"
+          ]
+        }
+      ],
+      "choices": [
+        { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+        { "label": "Ouvrir la réponse du BTS MCO", "next": "mco1" },
+        { "label": "Ouvrir la réponse du BTS tourisme", "next": "bts1" }
+      ]
+    },
+
+    "continuerp": {
+      "speaker": "Moi",
+      "font": "normal",
+      "background": "/assets/parcoursup.png",
+
+      "text": [
+        {
+          "background": "/assets/chambre.png",
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste choisit de terminer son année scolaire."
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": "[Je ne devrais pas me forcer.]"
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": [
+            "[J’ai décidé de continuer cette formation jusqu’à la fin de l’année. Je veux persévérer, ne pas abandonner, prouver que je peux aller jusqu’au bout. Mais... est-ce vraiment ce que je veux faire de ma vie ?]",
+            "[J’assiste à tous les cours, je valide, mais je n’arrive pas à ressentir le moindre intérêt ou passion. Mais... est-ce que je continue ici uniquement par sécurité, ou devrais-je tenter autre chose ? Parcoursup va bientôt rouvrir, et peut-être que je pourrais trouver quelque chose qui m’intéresse vraiment. Mais est-ce que je serais capable de me réorienter encore une fois ? Je devrais me renseigner.]"
+          ]
+        },
+        {
+          "background": "/assets/video.mp4"
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": "[Waouh ! Après avoir vu ça, je suis sûr que je dois me réorienter. Il faut que j’en parle à mes parents.]"
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "Je pense que je vais encore me réorienter. Cette formation... ce n’est pas pour moi. Je veux essayer quelque chose qui m’intéresse vraiment."
+        },
+        {
+          "background": "/assets/salon.png",
+          "speaker": "Maman",
+          "character": "/assets/maman.png",
+          "text": "Encore une réorientation... Tu es sûr de toi, mon cœur ? Ça fait beaucoup de changements."
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "Oui, je sais... mais rester ici ne m’apporte rien. Je réussis mes cours, mais je ne me sens pas à ma place. J’ai besoin de trouver une voie qui me motive vraiment."
+        },
+        {
+          "background": "/assets/salon.png",
+          "speaker": "Papa",
+          "character": "/assets/papa.png",
+          "text": "C’est courageux de le reconnaître. Ce n’est pas facile de changer encore. Mais si tu penses que c’est le mieux pour toi, on te soutiendra. On a vu à quel point tu as travaillé dur cette année. Tant que tu la termines, ça ira."
+        },
+        {
+          "background": "/assets/salon.png",
+          "speaker": "Maman",
+          "character": "/assets/maman.png",
+          "text": "On sera là, comme toujours. L’important, c’est que tu fasses quelque chose qui te fasse avancer et qui te rende heureux."
+        },
+        {
+          "background": "/assets/salon.png",
+          "text": "Merci... Je sais que ce sera difficile, mais j’ai vraiment envie d’essayer."
+        },
+        {
+          "background": "/assets/chambre.png",
+          "font": "italic",
+          "text": [
+            "[Je pense avoir trouvé plusieurs formations qui me correspondent parfaitement. Il y a le BUT MMI, qui me permettrait de mettre en avant ma créativité tout en utilisant mes compétences en informatique. Il y a aussi le BTS MCO (management commercial opérationnel), qui m’aiderait à développer mes capacités de leadership.]",
+            "[Et enfin, un BTS tourisme qui pourrait faire le lien avec la formation que je fais cette année. J’ai fait ces différents choix sur Parcoursup.]"
+          ]
+        }
+      ],
+      "choices": [
+        { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+        { "label": "Ouvrir la réponse du BTS MCO", "next": "mco1" },
+        { "label": "Ouvrir la réponse du BTS tourisme", "next": "bts1" }
+      ]
+    },
+
+    "mco1": {
+      "background": "/assets/parcoursup.png",
+      "speaker": "Moi",
+      "font": "normal",
+
+      "text": [
+        {
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste ouvre la réponse du BTS MCO."
+        },
+        {
+          "speaker": "Parcoursup",
+          "text": "Vous avez été refusé."
+        },
+        {
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste a le choix entre ouvrir la réponse du BUT MMI et celle du BTS tourisme."
+        }
+      ],
+      "choices": [
+        { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+        { "label": "Ouvrir la réponse du BTS tourisme", "next": "bts2" }
+      ]
+    },
+
+    "bts2": {
+      "background": "/assets/parcoursup.png",
+      "speaker": "Moi",
+      "font": "normal",
+
+      "text": [
+        {
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste ouvre la réponse du BTS tourisme."
+        },
+        {
+          "speaker": "Parcoursup",
+          "text": "Vous avez été refusé."
+        },
+        {
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste ne peut que choisir d’ouvrir la réponse du BUT MMI."
+        }
+      ],
+      "choices": [
+        { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" }
+      ]
+    },
+
+    "bts1": {
+      "background": "/assets/parcoursup.png",
+      "speaker": "Moi",
+      "font": "normal",
+
+      "text": [
+        {
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste ouvre la réponse du BTS tourisme."
+        },
+        {
+          "speaker": "Parcoursup",
+          "text": "Vous avez été refusé."
+        },
+        {
+          "color": "#ff6600",
+          "font": "italic",
+          "text": "Le protagoniste a le choix entre ouvrir la réponse du BUT MMI et celle du BTS MCO."
+        }
+      ],
+      "choices": [
+        { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+        { "label": "Ouvrir la réponse du BTS MCO", "next": "mco2" }
+      ]
+    },
+    "mco2": {
+  "background": "/assets/parcoursup.png",
+  "speaker": "Moi",
+  "font": "normal",
+
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste ouvre la réponse du BTS MCO."
+    },
+    {
+      "speaker": "Parcoursup",
+      "text": "Vous avez été refusé."
+    },
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste ne peut que choisir d’ouvrir la réponse du BUT MMI."
+    }
+  ],
+  "choices": [
+    { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" }
+  ]
+},
+
+"macdop": {
+  "speaker": "Moi",
+  "background": "/assets/macdo.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste choisit d’abandonner ses études pour aller travailler chez McDonald's."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": "[Je ne devrais pas me forcer à continuer ces études. Il faut que j’en parle à mes parents.]"
+    },
+    {
+      "background": "/assets/salon.png",
+      "text": "Je pense que je vais arrêter les études et... travailler chez McDonald's."
+    },
+    {
+      "background": "/assets/salon.png",
+      "speaker": "Maman",
+      "character": "/assets/maman.png",
+      "text": "Chez McDonald's ? Tu veux dire... comme travail ? Maintenant ?"
+    },
+    {
+      "background": "/assets/salon.png",
+      "text": "Oui. Je... je n’y arrive plus. En cours, ça va, ce n’est pas ça... mais je n’ai aucun intérêt, j’ai l’impression de ne pas avancer. J’échoue encore, et... j’ai juste envie de faire quelque chose."
+    },
+    {
+      "background": "/assets/salon.png",
+      "speaker": "Papa",
+      "character": "/assets/papa.png",
+      "text": "Tu es sûr de toi ? C’est une grosse décision. Ce n’est pas juste une fuite ?"
+    },
+    {
+      "background": "/assets/salon.png",
+      "text": "C’est justement ça. Je ne sais même plus si je fuis. Je sais juste que je ne peux pas rester une année de plus dans quelque chose qui me vide. Et si je travaille... au moins... j’avance. D’une manière ou d’une autre."
+    },
+    {
+      "background": "/assets/salon.png",
+      "speaker": "Maman",
+      "character": "/assets/maman.png",
+      "text": "On sera là, mais promets-nous de ne pas te fermer des portes pour l’avenir. McDonald's, c’est un tremplin, pas une fin."
+    },
+    {
+      "background": "/assets/macdo.png",
+      "font": "italic",
+      "text": [
+        "[Travailler chez McDonald's, c’est mieux que de rester dans une formation qui me vidait. Je gagne ma vie, je peux respirer, je me sens un peu plus léger. Mais... est-ce que je dois rester ici juste pour la sécurité, ou tenter autre chose ?]",
+        "[Parcoursup va bientôt rouvrir, et peut-être que je pourrais trouver quelque chose qui m’intéresse vraiment. Mais est-ce que je serais capable de me réorienter encore une fois ? Je devrais me renseigner.]"
+      ]
+    },
+    {
+      "background": "/assets/wapp.png"
+    },
+    {
+      "background": "/assets/macdo.png",
+      "font": "italic",
+      "text": "[Waouh ! Maintenant que j’ai parlé de tout ça, ça va être encore plus dur de faire un choix.]"
+    },
+    {
+      "background": "/assets/macdo.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre continuer à travailler chez McDonald's ou chercher une formation pour la rentrée."
+    }
+  ],
+  "choices": [
+    { "label": "Abandonner définitivement les études", "next": "carrierep" },
+    { "label": "Chercher une nouvelle formation", "next": "formation" }
+  ]
+},
+
+"carrierep": {
+  "background": "/assets/background.png",
+  "speaker": "Moi",
+  "font": "normal",
+
+  "text": [
+    {
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste choisit d’abandonner définitivement ses études."
+    },
+    {
+      "background": "/assets/img.png"
+    },
+    {
+      "text": "Merci d’avoir vécu l’expérience de la vie étudiante. Vous pouvez maintenant voir le parcours d’un étudiant en réorientation. Vous pouvez rejouer ou en apprendre davantage dans l’onglet « Documentation »."
+    }
+  ]
+},
+
+"formation": {
+  "speaker": "Moi",
+  "background": "/assets/parcoursup.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "background": "/assets/macdo.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste décide de continuer à travailler chez McDonald's jusqu’à la prochaine rentrée."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Je pense avoir trouvé plusieurs formations qui me correspondent parfaitement. Il y a le BUT MMI, qui me permettrait de mettre en avant ma créativité tout en utilisant mes compétences en informatique.]",
+        "[Il y a aussi le BTS MCO (management commercial opérationnel), qui m’aiderait à développer mes capacités de leadership. Et enfin, un BTS tourisme qui pourrait faire le lien avec la formation que je fais cette année.]"
+      ]
+    },
+    {
+      "background": "/assets/parcoursup.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre ouvrir la réponse du BUT MMI, du BTS MCO et du BTS tourisme."
+    }
+  ],
+  "choices": [
+    { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+    { "label": "Ouvrir la réponse du BTS MCO", "next": "mco1" },
+    { "label": "Ouvrir la réponse du BTS tourisme", "next": "bts1" }
+  ]
+},
+
+"ment": {
+  "speaker": "Moi",
+  "background": "/assets/chambre.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "background": "/assets/messagerie.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste se réoriente."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Je suis encore en plein dans cette nouvelle formation... et pourtant j’ai déjà l’impression d’échouer. Le pire, c’est que ça n’a rien à voir avec la difficulté. Les cours sont simples, je comprends tout tout de suite, je fais mes exercices rapidement, presque mécaniquement. Sur le papier, je suis un bon étudiant.]",
+        "[Mais à l’intérieur... il n’y a rien. Aucun intérêt. Aucune envie. Je pensais qu’un nouveau départ changerait tout. Je pensais que c’était juste une question de fatigue, ou une mauvaise orientation la première fois.]",
+        "[Mais non. Je retombe exactement au même endroit. Je rechute encore, sans excuse cette fois. Je n’ai même plus l’énergie d’être en colère contre moi-même. Juste... le vide. Et cette sensation que quoi que je fasse, je n’avance pas. Le désespoir m’étouffe.]",
+        "[Je ne veux pas voir leurs visages quand ils réaliseront que je ne sais toujours pas où je vais. Et le pire, c’est que je suis coincé. Je ne peux pas abandonner et ne rien faire : sans bourse ni revenus, je perdrai mon appartement.]",
+        "[Je ne peux pas finir à la rue parce que je n’ai pas tenu. Alors je continue, me forçant chaque matin à retourner dans une formation qui ne m’apporte rien, juste pour garder un toit.]",
+        "[Il ne me reste que deux options : continuer jusqu’à la fin de l’année pour sauver ma bourse, ou abandonner maintenant et aller travailler chez McDonald's.]"
+      ]
+    },
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre se forcer à continuer sa formation ou abandonner pour aller travailler."
+    }
+  ],
+  "choices": [
+    { "label": "Continuer la formation", "next": "continuero" },
+    { "label": "Aller travailler chez McDonald's", "next": "macdoo" }
+  ]
+},
+
+"macdoo": {
+  "speaker": "Moi",
+  "background": "/assets/macdo.png",
+  "font": "normal",
+  "text": [
+    {
+      "background": "/assets/chambre.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste choisit d’abandonner les études pour aller travailler chez McDonald's."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": "[Je ne devrais pas me forcer à continuer ces études.]"
+    },
+    {
+      "background": "/assets/macdo.png",
+      "font": "italic",
+      "text": [
+        "[Travailler chez McDonald's vaut mieux que rester dans une formation qui me vidait. Je gagne ma vie, je peux respirer, je me sens un peu plus léger.]",
+        "[Parcoursup va bientôt rouvrir, et peut-être que je pourrais trouver quelque chose qui m’intéresse vraiment. Mais est-ce que je serais capable de me réorienter encore une fois ? Je devrais me renseigner.]"
+      ]
+    },
+    {
+      "background": "/assets/wapp.png"
+    },
+    {
+      "background": "/assets/macdo.png",
+      "font": "italic",
+      "text": "[Waouh ! Maintenant que j’ai parlé de tout ça, ça va être encore plus dur de faire un choix.]"
+    },
+    {
+      "background": "/assets/macdo.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre continuer à travailler chez McDonald's ou chercher une formation pour la rentrée."
+    }
+  ],
+  "choices": [
+    { "label": "Abandonner définitivement les études", "next": "carriereo" },
+    { "label": "Chercher une nouvelle formation", "next": "formationo" }
+  ]
+},
+
+"formationo": {
+  "speaker": "Moi",
+  "background": "/assets/parcoursup.png",
+  "font": "normal",
+
+  "text": [
+    {
+      "background": "/assets/macdo.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste décide de continuer à travailler chez McDonald's jusqu’à la prochaine rentrée."
+    },
+    {
+      "background": "/assets/chambre.png",
+      "font": "italic",
+      "text": [
+        "[Je pense avoir trouvé plusieurs formations qui me correspondent parfaitement. Il y a le BUT MMI, qui me permettrait de mettre en avant ma créativité tout en utilisant mes compétences en informatique.]",
+        "[Il y a aussi le BTS MCO (management commercial opérationnel) et un BTS tourisme qui pourrait faire le lien avec la formation que je fais cette année. Mais avant de candidater, je dois en parler à mes parents.]"
+      ]
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": [
+        "Je dois vous dire la vérité. L’année dernière, j’ai échoué dans ma formation... et je ne vous l’ai pas dit. J’avais trop honte. Ces derniers mois, j’ai travaillé chez McDonald's pour payer mon appartement et m’en sortir.",
+        "Mais je ne veux pas rester là indéfiniment. Je compte chercher une formation pour la rentrée prochaine, quelque chose qui me corresponde vraiment."
+      ]
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/maman.png",
+      "speaker": "Maman",
+      "text": "Tu... tu nous as caché tout ça ? Mais pourquoi ? On aurait pu t’aider."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "text": "J’avais peur de vous décevoir. J’ai essayé de gérer seul, mais j’ai compris que je devais être honnête avec vous. Maintenant, je veux avancer, mais dans la bonne direction."
+    },
+    {
+      "background": "/assets/appel.png",
+      "font": "digital",
+      "character": "/assets/papa.png",
+      "speaker": "Papa",
+      "text": "C’est beaucoup à encaisser... mais tu as fait ce qu’il fallait pour tenir jusqu’ici. Ce n’est pas un échec personnel. Tu as trouvé un moyen de continuer à vivre et à payer ton loyer sans notre aide, et c’est une vraie preuve de maturité."
+    },
+    {
+      "background": "/assets/appel.png",
+      "character": "/assets/maman.png",
+      "font": "digital",
+      "speaker": "Maman",
+      "text": "Oui... et maintenant que tu veux reprendre des études, on te soutiendra. L’important, c’est que tu sois honnête avec nous et que tu fasses un choix réfléchi."
+    },
+    {
+      "background": "/assets/parcoursup.png",
+      "color": "#ff6600",
+      "font": "italic",
+      "text": "Le protagoniste a le choix entre ouvrir la réponse du BUT MMI, du BTS MCO et du BTS tourisme."
+    }
+  ],
+  "choices": [
+    { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+    { "label": "Ouvrir la réponse du BTS MCO", "next": "mco1" },
+    { "label": "Ouvrir la réponse du BTS tourisme", "next": "bts1" }
+  ]
+},
+
+  "carriereo": {
+    "background": "/assets/background.png",
+    "speaker": "Moi",
+    "font": "normal",
+
+    "text": [
+      {
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "Le protagoniste choisit d’abandonner complètement ses études."
+      },
+      {
+        "background": "/assets/img.png"
+      },
+      {
+        "text": "Merci d’avoir vécu la vie d’un étudiant. Vous pouvez maintenant voir à quoi ressemble le parcours d’un étudiant en réorientation. Vous pouvez rejouer ou décider d’en apprendre davantage dans l’onglet « Documentation »."
+      }
+    ]
+  },
+
+  "continuero": {
+    "speaker": "Moi",
+    "background": "/assets/parcoursup.png",
+    "font": "normal",
+
+    "text": [
+      {
+        "background": "/assets/chambre.png",
+        "color": "#ff6600",
+        "font": "italic",
+        "text": "Le protagoniste choisit de terminer son année scolaire."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "font": "italic",
+        "text": "[Je ne devrais pas me forcer.]"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "font": "italic",
+        "text": [
+          "[J’ai décidé de continuer cette formation jusqu’à la fin de l’année. Je veux persévérer, ne pas abandonner, prouver que je peux aller jusqu’au bout. Mais… est-ce vraiment ce que je veux faire de ma vie ?]",
+          "[J’assiste à tous les cours, je valide, mais je n’arrive pas à ressentir le moindre intérêt ou la moindre passion. Mais… est-ce que je continue ici uniquement par sécurité, ou devrais-je tenter autre chose ? Parcoursup va bientôt rouvrir, et peut-être que je pourrais trouver quelque chose qui m’intéresse vraiment. Mais serais-je capable de me réorienter encore une fois ? Je devrais me renseigner.]"
+        ]
+      },
+      {
+        "background": "/assets/video1.png",
+        "text": "*Il y aura l’interview que nous avons réalisée pour le webdoc. Elle montrera une personne épanouie après sa réorientation, répondant à plusieurs questions.*"
+      },
+      {
+        "background": "/assets/video2.png",
+        "text": "*Il y aura l’interview que nous avons réalisée pour le webdoc. Elle montrera une personne épanouie après sa réorientation, répondant à plusieurs questions.*"
+      },
+      {
+        "background": "/assets/chambre.png",
+        "font": "italic",
+        "text": "[Wow ! Maintenant que j’ai vu ça, je suis sûr que j’ai besoin de me réorienter. Mais… je dois en parler à mes parents avant que les choses ne deviennent trop compliquées.]"
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "text": "J’ai besoin de vous parler… et… ce n’est pas facile. Je n’ai pas été honnête avec vous."
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "speaker": "Papa",
+        "character": "/assets/papa.png",
+        "text": "Que se passe-t-il ?"
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "text": "L’année dernière… j’ai raté ma formation. Je vous l’ai caché parce que j’avais peur de vous décevoir, alors j’en ai commencé une nouvelle en secret. Et cette formation ne fonctionne pas non plus. Je veux encore me réorienter."
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "speaker": "Maman",
+        "character": "/assets/maman.png",
+        "text": "Tu as échoué, et tu ne nous l’as pas dit ? Pourquoi nous avoir caché ça ?"
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "text": "Parce que j’avais peur. Parce que je me sentais comme un échec. Et je me suis dit qu’en changeant d’établissement, vous n’auriez pas besoin de le savoir… que je rattraperais tout sans que vous ne remarquiez rien."
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "speaker": "Papa",
+        "character": "/assets/papa.png",
+        "text": "Nous ne sommes pas en colère. Nous sommes… tristes que tu aies pensé devoir porter ce poids tout seul. Tu aurais pu nous en parler. Nous t’aurions aidé."
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "speaker": "Maman",
+        "character": "/assets/maman.png",
+        "text": "Mon cœur… tu n’as rien à te reprocher. Tu traverses une période difficile. Mais mentir et te renfermer n’a fait que t’isoler davantage. Si tu veux changer de voie, nous t’écouterons. Mais nous avons besoin que tu sois honnête avec nous."
+      },
+      {
+        "background": "/assets/appel.png",
+        "font": "digital",
+        "text": "Je suis désolé."
+      },
+      {
+        "background": "/assets/chambre.png",
+        "font": "italic",
+        "text": [
+          "[Je pense avoir trouvé plusieurs formations qui me correspondent vraiment. Il y a le BUT MMI, qui me permettrait d’exprimer ma créativité tout en mettant en pratique mes compétences en informatique.]",
+          "[Il y a aussi le BTS MCO (management commercial opérationnel), qui m’aiderait à développer mes compétences en leadership. Et enfin, un BTS tourisme, qui pourrait être en lien avec la formation que je suis actuellement. J’ai fait ces différents choix sur Parcoursup.]"
         ]
       }
-    }
-  },
+    ],
+    "choices": [
+      { "label": "Ouvrir la réponse du BUT MMI", "next": "mmi" },
+      { "label": "Ouvrir la réponse du BTS MCO", "next": "mco1" },
+      { "label": "Ouvrir la réponse du BTS tourisme", "next": "bts1" }
+    ]
+  
+  }
+}
+},
 
   "chapter3": {
     "title": "Chapitre 3 : Troisième Année",
     "description": "Ta voie se précise. Chaque étape te rapproche de ton avenir.",
     "scenes": {}
   }
-     }
+  }
+    
     

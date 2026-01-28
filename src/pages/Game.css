@@ -154,10 +154,46 @@
 }
 
 .dialogue-text {
+  flex: 1;
   margin: 0;
   font-style: normal;
   font-weight: 500;
-  padding-left: 70px;
+  /* padding-left: 70px; removed to let flex handle layout */
+}
+
+.dialogue-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+  width: 100%;
+}
+
+.audio-control-btn {
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  padding: 0;
+  margin-top: -5px; /* slight adjustment to align with text top */
+}
+
+.audio-control-btn:hover {
+  background: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.audio-control-btn svg {
+  fill: #555;
+  width: 24px;
+  height: 24px;
 }
 
 .font-normal {

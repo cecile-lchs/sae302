@@ -18,7 +18,6 @@ import messagerie from "../assets/messagerie.png";
 import appli from "../assets/appli.png";
 import appart from "../assets/appart.png";
 import appel from "../assets/appel.png";
-import job from "../assets/job.png";
 import salon from "../assets/salon.png";
 import classe2 from "../assets/classe2.png";
 import macdo from "../assets/macdo.png";
@@ -26,9 +25,39 @@ import entretien from "../assets/entretien.png";
 import accueil from "../assets/accueil.png";
 import chambre2 from "../assets/chambre2.png";
 import messagerieEn from "../assets/messagerieEn.png";
+import interfaceEn from "../assets/interface.png";
 import appelEn from "../assets/appelEn.png";
-import jobEn from "../assets/jobEn.png";
-import appliEn from "../assets/appliEn.png";
+import appliFr from "../assets/appliFr.png";
+import message1 from "../assets/messagesEn/message1.png";
+import message2 from "../assets/messagesEn/message2.png";
+import message3 from "../assets/messagesEn/message3.png";
+import message4 from "../assets/messagesEn/message4.png";
+import message5 from "../assets/messagesEn/message5.png";
+import message6 from "../assets/messagesEn/message6.png";
+import message7 from "../assets/messagesEn/message7.png";
+import message8 from "../assets/messagesEn/message8.png";
+import message9 from "../assets/messagesEn/message9.png";
+import message10 from "../assets/messagesEn/message10.png";
+import message11 from "../assets/messagesEn/message11.png";
+import message12 from "../assets/messagesEn/message12.png";
+import message13 from "../assets/messagesEn/message13.png";
+import message14 from "../assets/messagesEn/message14.png";
+import message15 from "../assets/messagesEn/message15.png";
+import message16 from "../assets/messagesEn/message16.png";
+import message17 from "../assets/messagesEn/message17.png";
+import message18 from "../assets/messagesEn/message18.png";
+import message19 from "../assets/messagesEn/message19.png";
+import message20 from "../assets/messagesEn/message20.png";
+import message21 from "../assets/messagesEn/message21.png";
+import message22 from "../assets/messagesEn/message22.png";
+import message23 from "../assets/messagesEn/message23.png";
+import message24 from "../assets/messagesEn/message24.png";
+import delon from "../assets/delon.png";
+import lucas from "../assets/lucas.png";
+import parcoursup from "../assets/parcoursup.png";
+
+
+
 import videoBg from "../assets/video.mp4"; // Import video
 import "./Game.css";
 
@@ -42,6 +71,7 @@ import char6 from "../assets/perso6/neutre_bouche_fermee.png";
 
 
 const characterAssets = import.meta.glob('../assets/perso*/*.png', { eager: true });
+const soundAssets = import.meta.glob('../assets/messages/*.mp3', { eager: true });
 
 const CHARACTERS = [
   { id: 1, src: char1, name: "Adventurer" },
@@ -82,7 +112,6 @@ const backgrounds = {
   "/assets/appli.png": appli,
   "/assets/appart.png": appart,
   "/assets/appel.png": appel,
-  "/assets/job.png": job,
   "/assets/video.mp4": videoBg, // Add video to map
   "/assets/macdo.png": macdo,
   "/assets/salon.png": salon,
@@ -91,9 +120,36 @@ const backgrounds = {
   "/assets/accueil.png": accueil,
   "/assets/entretien.png": entretien,
   "/assets/messagerieEn.png": messagerieEn,
-  "/assets/appliEn.png": appliEn,
-  "/assets/jobEn.png": jobEn,
-  "/assets/appelEn.png": appelEn
+  "/assets/appli.png": appli,
+  "/assets/interface.png": interfaceEn,
+  "/assets/appliFr.png": appliFr,
+  "/assets/appelEn.png": appelEn,
+  "/assets/messagesEn/message1.png": message1,
+  "/assets/messagesEn/message2.png": message2,
+  "/assets/messagesEn/message3.png": message3,
+  "/assets/messagesEn/message4.png": message4,
+  "/assets/messagesEn/message5.png": message5,
+  "/assets/messagesEn/message6.png": message6,
+  "/assets/messagesEn/message7.png": message7,
+  "/assets/messagesEn/message8.png": message8,
+  "/assets/messagesEn/message9.png": message9,
+  "/assets/messagesEn/message10.png": message10,
+  "/assets/messagesEn/message11.png": message11,
+  "/assets/messagesEn/message12.png": message12,
+  "/assets/messagesEn/message13.png": message13,
+  "/assets/messagesEn/message14.png": message14,
+  "/assets/messagesEn/message15.png": message15,
+  "/assets/messagesEn/message16.png": message16,
+  "/assets/messagesEn/message17.png": message17,
+  "/assets/messagesEn/message18.png": message18,
+  "/assets/messagesEn/message19.png": message19,
+  "/assets/messagesEn/message20.png": message20,
+  "/assets/messagesEn/message21.png": message21,
+  "/assets/messagesEn/message22.png": message22,
+  "/assets/messagesEn/message23.png": message23,
+  "/assets/messagesEn/message24.png": message24,
+  "/assets/parcoursup.png": parcoursup,
+  "/assets/messages/meesage1.mp3": message1,
 
 
 };
@@ -111,6 +167,19 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   const [showChoices, setShowChoices] = useState(false);
   const [dialogueIndex, setDialogueIndex] = useState(0);
   const [videoEnded, setVideoEnded] = useState(false);
+
+  // Audio State
+  const [currentAudio, setCurrentAudio] = useState(null);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [audioDuration, setAudioDuration] = useState(0);
+  const [audioCurrentTime, setAudioCurrentTime] = useState(0);
+
+  const formatTime = (time) => {
+    if (isNaN(time)) return "0:00";
+    const minutes = Math.floor(time / 60);
+    const seconds = Math.floor(time % 60);
+    return `${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+  };
 
 
   // Helper to flatten the dialogue logic
@@ -236,6 +305,13 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   const rawSceneData = currentScenes[scene] || {};
 
   const handleSceneChange = (nextScene, choiceLabel) => {
+    // Stop any playing audio before changing scene
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+      setCurrentAudio(null);
+      setIsAudioPlaying(false);
+    }
 
     // Log choice if provided
     if (choiceLabel && onHistoryUpdate) {
@@ -282,21 +358,91 @@ export default function Game({ language, userData, setUserData, activeChapter = 
   };
 
   // --- Sound Logic ---
+  // --- Sound Logic ---
   useEffect(() => {
+    // Cleanup previous audio if it exists
+    if (currentAudio) {
+      currentAudio.pause();
+      currentAudio.currentTime = 0;
+    }
+
     // Sound Logic - simplified
-    const soundPath = activeStep.sound; // The flattened step has the sound prop resolved
+    let soundPath = activeStep.sound; // The flattened step has the sound prop resolved
 
     if (soundPath) {
+      // Resolve asset path if needed
+      if (soundPath.startsWith('/assets/messages/')) {
+        const relativeKey = `..${soundPath}`;
+        if (soundAssets[relativeKey]) {
+          soundPath = soundAssets[relativeKey].default;
+        }
+      }
+
       console.log("Attempting to play sound:", soundPath);
       const audio = new Audio(soundPath);
-      audio.play().catch(e => console.warn("Audio play failed/need interaction:", e));
+
+      // Event listeners for UI state
+      const updatePlayState = () => setIsAudioPlaying(false);
+      const updatePauseState = () => setIsAudioPlaying(false);
+      const updatePlayingState = () => setIsAudioPlaying(true);
+      const updateMetadata = () => setAudioDuration(audio.duration);
+      const updateTime = () => setAudioCurrentTime(audio.currentTime);
+
+      audio.addEventListener('ended', updatePlayState);
+      audio.addEventListener('pause', updatePauseState);
+      audio.addEventListener('play', updatePlayingState);
+      audio.addEventListener('loadedmetadata', updateMetadata);
+      audio.addEventListener('timeupdate', updateTime);
+
+      audio.play().catch(e => {
+        console.warn("Audio play failed/need interaction:", e);
+        setIsAudioPlaying(false);
+      });
+
+      setCurrentAudio(audio);
+      setIsAudioPlaying(true); // Assume it starts playing or will try to
+
+      return () => {
+        audio.removeEventListener('ended', updatePlayState);
+        audio.removeEventListener('pause', updatePauseState);
+        audio.removeEventListener('play', updatePlayingState);
+        audio.removeEventListener('loadedmetadata', updateMetadata);
+        audio.removeEventListener('timeupdate', updateTime);
+        audio.pause();
+        audio.currentTime = 0;
+        setAudioDuration(0);
+        setAudioCurrentTime(0);
+      };
+    } else {
+      setCurrentAudio(null);
+      setIsAudioPlaying(false);
+      setAudioDuration(0);
+      setAudioCurrentTime(0);
     }
-  }, [scene, dialogueIndex]);
+  }, [scene, activeStep.sound]); // Only re-run if scene changes or sound file changes
+
+  const toggleAudio = (e) => {
+    e.stopPropagation();
+    if (currentAudio) {
+      if (isAudioPlaying) {
+        currentAudio.pause();
+      } else {
+        currentAudio.play();
+      }
+    }
+  };
 
   const getCurrentBackground = () => {
-    const bgPath = activeStep.background || rawSceneData.background; // Fallback to raw if logic fails?
-    // actually getFlattenedDialogue merges root props, so activeStep.background should handle it.
-    // unless activeStep is empty?
+    let bgPath = activeStep.background || rawSceneData.background || "";
+
+    // Dynamic background logic
+    if (bgPath === "/assets/img.png" && userData && userData.character) {
+      const dynamicBgKey = `../assets/perso${userData.character}/macdo.png`;
+      if (characterAssets[dynamicBgKey]) {
+        return characterAssets[dynamicBgKey].default;
+      }
+    }
+
     return backgrounds[bgPath] || bgPath;
   };
 
@@ -538,12 +684,35 @@ export default function Game({ language, userData, setUserData, activeChapter = 
                 return null;
               })()}
 
-              <p className={`dialogue-text ${activeStep.font ? `font-${activeStep.font}` : ''}`} style={activeStep.color ? { color: activeStep.color } : {}}>
-                {(() => {
-                  const txt = getCurrentText();
-                  return typeof txt === 'object' ? txt.text : txt;
-                })()}
-              </p>
+              <div className="dialogue-content">
+                <p className={`dialogue-text ${activeStep.font ? `font-${activeStep.font}` : ''}`} style={activeStep.color ? { color: activeStep.color } : {}}>
+                  {(() => {
+                    const txt = getCurrentText();
+                    return typeof txt === 'object' ? txt.text : txt;
+                  })()}
+                </p>
+
+                {/* Audio Control Button */}
+                {currentAudio && (
+                  <div className="audio-controls" style={{ display: 'flex', alignItems: 'center', gap: '10px', marginTop: '10px' }}>
+                    <button
+                      className="audio-control-btn"
+                      onClick={toggleAudio}
+                      title={isAudioPlaying ? "Pause" : "Play"}
+                    >
+                      {isAudioPlaying ? (
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none" /><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" /></svg>
+                      ) : (
+                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#ffffff"><path d="M0 0h24v24H0z" fill="none" /><path d="M8 5v14l11-7z" /></svg>
+                      )}
+                    </button>
+                    <span className="audio-timer" style={{ fontSize: '0.9rem', color: '#ddd' }}>
+                      {formatTime(audioCurrentTime)} / {formatTime(audioDuration)}
+                    </span>
+                  </div>
+                )}
+              </div>
+
               {/* Show hint if there are more lines OR if there are choices next */}{
                 ((rawSceneData.choices) || (dialogueIndex < dialogueQueue.length - 1)) && (
                   <div className="dialogue-hint">
@@ -570,6 +739,8 @@ export default function Game({ language, userData, setUserData, activeChapter = 
               "/assets/prof.png": prof,
               "/assets/papa.png": papa,
               "/assets/maman.png": maman,
+              "/assets/delon.png": delon,
+              "/assets/lucas.png": lucas,
             };
 
             return charMap[charPath] || charPath;
