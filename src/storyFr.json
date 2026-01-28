@@ -1599,8 +1599,7 @@
         { "label": "Aller travailler chez McDonald's", "next": "macdop" },
         { "label": "Attendre la prochaine année scolaire", "next": "attendre" }
       ]
-    }
-  },
+    },
 
   "attendre": {
     "speaker": "Moi",
@@ -1964,8 +1963,8 @@
   ]
 }
 
+  }
 },
-
 "chapter3": {
   "title": "Chapitre 3 : Troisième année",
   "description": "Ton chemin devient plus clair. Chaque étape te rapproche de ton avenir.",
@@ -2016,7 +2015,6 @@
           "font": "digital",
           "background": "/assets/appel.png",
           "speaker": "Junior",
-          "character": "/assets/junior.png",
           "text": "Il était temps."
         },
         {
