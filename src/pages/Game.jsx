@@ -115,7 +115,7 @@ const backgrounds = {
   "/assets/video.mp4": videoBg, // Add video to map
   "/assets/macdo.png": macdo,
   "/assets/salon.png": salon,
-  "/assets/class2.png": classe2,
+  "/assets/classe2.png": classe2,
   "/assets/chambre2.png": chambre2,
   "/assets/accueil.png": accueil,
   "/assets/entretien.png": entretien,
